@@ -6,7 +6,15 @@
 # https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 
 from scrapy import signals
-
+from scrapy.exceptions import IgnoreRequest
+from gzip import GzipFile
+from io import BytesIO
+import json
+import logging
+def dezip(data):
+    buf = BytesIO(data)
+    f = GzipFile(fileobj=buf)
+    return f.read()
 
 class WeiboScrapyApiSpiderMiddleware(object):
     # Not all methods need to be defined. If a method is not defined,
@@ -54,6 +62,19 @@ class WeiboScrapyApiSpiderMiddleware(object):
 
     def spider_opened(self, spider):
         spider.logger.info('Spider opened: %s' % spider.name)
+
+class blank_result_retry_DownloaderMiddleware(object):
+    def process_response(self, request, response, spider):
+        if 'https://m.weibo.cn/api/container/getIndex?type=uid&value='in response.url and response.status==200:      # 限制该Middleware只作用于该url（去掉robot.txt）
+            data = dezip(response.body)  # 在DownloaderMiddleware中response,text无法获取字符串，且response.encoding无法获取，利用chrome查询之后，发现是encoding=gzip
+            if json.loads(data)['data']['cards'] == [] and request.meta['retry_time'] < 3:
+                request.meta['retry_time'] += 1
+                logging.warning('blank_result_retry({}): {}'.format(request.meta['retry_time'], response.url))
+                return request.replace(dont_filter=True)
+            elif json.loads(data)['data']['cards'] == [] and request.meta['retry_time'] == 3:
+                logging.warning('blank_result_retry({})_dump: {}'.format(request.meta['retry_time'], response.url))
+                raise IgnoreRequest
+        return response
 
 
 class WeiboScrapyApiDownloaderMiddleware(object):
