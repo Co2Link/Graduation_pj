@@ -121,4 +121,4 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 ## Custom setting
-DBNAME = 'mongodb_test'
+DBNAME = 'mongodb_test_1'

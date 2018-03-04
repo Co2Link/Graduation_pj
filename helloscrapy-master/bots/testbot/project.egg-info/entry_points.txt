@@ -1,3 +1,0 @@
-[scrapy]
-settings = testbot.settings
-

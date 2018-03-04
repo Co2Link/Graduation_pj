@@ -22,7 +22,7 @@ NEWSPIDER_MODULE = 'weibo_scrapy_api.spiders'
 ROBOTSTXT_OBEY = True
 
 LOG_ENABLED=True
-LOG_FILE ='log_6'
+# LOG_FILE ='log_6'
 
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
