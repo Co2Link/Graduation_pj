@@ -1,0 +1,251 @@
+2018-03-05 22:25:35 [scrapy.utils.log] INFO: Scrapy 1.5.0 started (bot: scrapy_test)
+2018-03-05 22:25:35 [scrapy.utils.log] INFO: Versions: lxml 4.1.1.0, libxml2 2.9.5, cssselect 1.0.3, parsel 1.2.0, w3lib 1.17.0, Twisted 17.5.0, Python 3.6.2 |Continuum Analytics, Inc.| (default, Jul 20 2017, 12:30:02) [MSC v.1900 64 bit (AMD64)], pyOpenSSL 17.5.0 (OpenSSL 1.0.2n  7 Dec 2017), cryptography 2.1.4, Platform Windows-10-10.0.10586-SP0
+2018-03-05 22:25:35 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'scrapy_test', 'LOG_FILE': 'logs\\default\\icrawler\\0fdf1f52208111e88a7b1c1b0d1dd35e.log', 'NEWSPIDER_MODULE': 'scrapy_test.spiders', 'ROBOTSTXT_OBEY': True, 'SPIDER_MODULES': ['scrapy_test.spiders'], 'USER_AGENT': 'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)'}
+2018-03-05 22:25:35 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2018-03-05 22:25:35 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2018-03-05 22:25:35 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2018-03-05 22:25:35 [scrapy.middleware] INFO: Enabled item pipelines:
+['scrapy_test.pipelines.ScrapyAppPipeline']
+2018-03-05 22:25:35 [scrapy.core.engine] INFO: Spider opened
+2018-03-05 22:25:36 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-03-05 22:25:36 [scrapy.extensions.telnet] DEBUG: Telnet console listening on 127.0.0.1:6023
+2018-03-05 22:25:37 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://bbs.ooro2.com/robots.txt> (referer: None)
+2018-03-05 22:25:37 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://bbs.ooro2.com/> (referer: None)
+2018-03-05 22:25:38 [scrapy.spidermiddlewares.offsite] DEBUG: Filtered offsite request to 'shang.qq.com': <GET http://shang.qq.com/wpa/qunwpa?idkey=73aa121f3f8d3aca1d361526d5ab0acf0bfdad169e87d4ceca28b5ee8e7c2cc5>
+2018-03-05 22:25:38 [scrapy.spidermiddlewares.offsite] DEBUG: Filtered offsite request to 'wpa.qq.com': <GET http://wpa.qq.com/msgrd?v=3&uin=445307&site=qq&menu=yes>
+2018-03-05 22:25:38 [scrapy.spidermiddlewares.offsite] DEBUG: Filtered offsite request to 'www.paopaoro.com': <GET http://www.paopaoro.com>
+2018-03-05 22:25:38 [scrapy.spidermiddlewares.offsite] DEBUG: Filtered offsite request to 'www.roxiaozhan.com': <GET http://www.roxiaozhan.com>
+2018-03-05 22:25:38 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://bbs.ooro2.com/space-username-%E6%B3%A1%E6%B3%A1.html> (referer: http://bbs.ooro2.com/)
+2018-03-05 22:25:38 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://bbs.ooro2.com/space-username-darkclouds.html> (referer: http://bbs.ooro2.com/)
+2018-03-05 22:25:38 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://bbs.ooro2.com/index.php?gid=4> (referer: http://bbs.ooro2.com/)
+2018-03-05 22:25:38 [scrapy.core.scraper] DEBUG: Scraped from <200 http://bbs.ooro2.com/space-username-%E6%B3%A1%E6%B3%A1.html>
+{'url': 'http://bbs.ooro2.com/space-username-%E6%B3%A1%E6%B3%A1.html'}
+2018-03-05 22:25:38 [scrapy.core.scraper] DEBUG: Scraped from <200 http://bbs.ooro2.com/space-username-darkclouds.html>
+{'url': 'http://bbs.ooro2.com/space-username-darkclouds.html'}
+2018-03-05 22:25:38 [scrapy.core.scraper] DEBUG: Scraped from <200 http://bbs.ooro2.com/index.php?gid=4>
+{'url': 'http://bbs.ooro2.com/index.php?gid=4'}
+2018-03-05 22:25:38 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://bbs.ooro2.com/redirect.php?tid=40648&goto=lastpost#lastpost> (referer: http://bbs.ooro2.com/)
+2018-03-05 22:25:38 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://bbs.ooro2.com/redirect.php?tid=42922&goto=lastpost#lastpost> (referer: http://bbs.ooro2.com/)
+2018-03-05 22:25:38 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://bbs.ooro2.com/forum-9-1.html> (referer: http://bbs.ooro2.com/)
+2018-03-05 22:25:38 [scrapy.core.scraper] DEBUG: Scraped from <200 http://bbs.ooro2.com/redirect.php?tid=40648&goto=lastpost>
+{'url': 'http://bbs.ooro2.com/redirect.php?tid=40648&goto=lastpost'}
+2018-03-05 22:25:39 [scrapy.core.scraper] DEBUG: Scraped from <200 http://bbs.ooro2.com/redirect.php?tid=42922&goto=lastpost>
+{'url': 'http://bbs.ooro2.com/redirect.php?tid=42922&goto=lastpost'}
+2018-03-05 22:25:39 [scrapy.core.scraper] DEBUG: Scraped from <200 http://bbs.ooro2.com/forum-9-1.html>
+{'url': 'http://bbs.ooro2.com/forum-9-1.html'}
+2018-03-05 22:25:39 [scrapy.core.engine] DEBUG: Crawled (403) <GET http://bbs.ooro2.com/oororeg.php> (referer: http://bbs.ooro2.com/)
+2018-03-05 22:25:39 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://bbs.ooro2.com/thread-24598-1-1.html> (referer: http://bbs.ooro2.com/)
+2018-03-05 22:25:39 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://bbs.ooro2.com/index.php?gid=8> (referer: http://bbs.ooro2.com/)
+2018-03-05 22:25:39 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 http://bbs.ooro2.com/oororeg.php>: HTTP status code is not handled or not allowed
+2018-03-05 22:25:39 [scrapy.core.engine] DEBUG: Crawled (403) <GET http://bbs.ooro2.com/misc.php?action=nav> (referer: http://bbs.ooro2.com/)
+2018-03-05 22:25:39 [scrapy.core.scraper] DEBUG: Scraped from <200 http://bbs.ooro2.com/thread-24598-1-1.html>
+{'url': 'http://bbs.ooro2.com/thread-24598-1-1.html'}
+2018-03-05 22:25:39 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://bbs.ooro2.com/thread-24595-1-1.html> (referer: http://bbs.ooro2.com/)
+2018-03-05 22:25:39 [scrapy.core.scraper] DEBUG: Scraped from <200 http://bbs.ooro2.com/index.php?gid=8>
+{'url': 'http://bbs.ooro2.com/index.php?gid=8'}
+2018-03-05 22:25:39 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 http://bbs.ooro2.com/misc.php?action=nav>: HTTP status code is not handled or not allowed
+2018-03-05 22:25:39 [scrapy.core.scraper] DEBUG: Scraped from <200 http://bbs.ooro2.com/thread-24595-1-1.html>
+{'url': 'http://bbs.ooro2.com/thread-24595-1-1.html'}
+2018-03-05 22:25:39 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://bbs.ooro2.com/thread-24597-1-1.html> (referer: http://bbs.ooro2.com/)
+2018-03-05 22:25:39 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://bbs.ooro2.com/thread-24596-1-1.html> (referer: http://bbs.ooro2.com/)
+2018-03-05 22:25:39 [scrapy.core.scraper] DEBUG: Scraped from <200 http://bbs.ooro2.com/thread-24597-1-1.html>
+{'url': 'http://bbs.ooro2.com/thread-24597-1-1.html'}
+2018-03-05 22:25:39 [scrapy.core.engine] DEBUG: Crawled (403) <GET http://bbs.ooro2.com/notice.php?filter=threads> (referer: http://bbs.ooro2.com/)
+2018-03-05 22:25:39 [scrapy.core.engine] DEBUG: Crawled (403) <GET http://bbs.ooro2.com/notice.php?filter=friend> (referer: http://bbs.ooro2.com/)
+2018-03-05 22:25:39 [scrapy.core.scraper] DEBUG: Scraped from <200 http://bbs.ooro2.com/thread-24596-1-1.html>
+{'url': 'http://bbs.ooro2.com/thread-24596-1-1.html'}
+2018-03-05 22:25:39 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 http://bbs.ooro2.com/notice.php?filter=threads>: HTTP status code is not handled or not allowed
+2018-03-05 22:25:39 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://bbs.ooro2.com/> (referer: http://bbs.ooro2.com/)
+2018-03-05 22:25:39 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 http://bbs.ooro2.com/notice.php?filter=friend>: HTTP status code is not handled or not allowed
+2018-03-05 22:25:39 [scrapy.core.scraper] DEBUG: Scraped from <200 http://bbs.ooro2.com/>
+{'url': 'http://bbs.ooro2.com/'}
+2018-03-05 22:25:40 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://bbs.ooro2.com/redirect.php?tid=46843&goto=lastpost#lastpost> (referer: http://bbs.ooro2.com/)
+2018-03-05 22:25:40 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://bbs.ooro2.com/space.php?username=forget1234567> (referer: http://bbs.ooro2.com/)
+2018-03-05 22:25:40 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://bbs.ooro2.com/forum-21-1.html> (referer: http://bbs.ooro2.com/)
+2018-03-05 22:25:40 [scrapy.core.scraper] DEBUG: Scraped from <200 http://bbs.ooro2.com/redirect.php?tid=46843&goto=lastpost>
+{'url': 'http://bbs.ooro2.com/redirect.php?tid=46843&goto=lastpost'}
+2018-03-05 22:25:40 [scrapy.core.scraper] DEBUG: Scraped from <200 http://bbs.ooro2.com/space.php?username=forget1234567>
+{'url': 'http://bbs.ooro2.com/space.php?username=forget1234567'}
+2018-03-05 22:25:40 [scrapy.core.scraper] DEBUG: Scraped from <200 http://bbs.ooro2.com/forum-21-1.html>
+{'url': 'http://bbs.ooro2.com/forum-21-1.html'}
+2018-03-05 22:25:40 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://bbs.ooro2.com/forum-19-1.html> (referer: http://bbs.ooro2.com/)
+2018-03-05 22:25:40 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://bbs.ooro2.com/space-username-evqai083.html> (referer: http://bbs.ooro2.com/)
+2018-03-05 22:25:40 [scrapy.core.scraper] DEBUG: Scraped from <200 http://bbs.ooro2.com/forum-19-1.html>
+{'url': 'http://bbs.ooro2.com/forum-19-1.html'}
+2018-03-05 22:25:40 [scrapy.core.scraper] DEBUG: Scraped from <200 http://bbs.ooro2.com/space-username-evqai083.html>
+{'url': 'http://bbs.ooro2.com/space-username-evqai083.html'}
+2018-03-05 22:25:40 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://bbs.ooro2.com/redirect.php?tid=44793&goto=lastpost#lastpost> (referer: http://bbs.ooro2.com/)
+2018-03-05 22:25:40 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://bbs.ooro2.com/forum-18-1.html> (referer: http://bbs.ooro2.com/)
+2018-03-05 22:25:40 [scrapy.core.scraper] DEBUG: Scraped from <200 http://bbs.ooro2.com/redirect.php?tid=44793&goto=lastpost>
+{'url': 'http://bbs.ooro2.com/redirect.php?tid=44793&goto=lastpost'}
+2018-03-05 22:25:40 [scrapy.core.scraper] DEBUG: Scraped from <200 http://bbs.ooro2.com/forum-18-1.html>
+{'url': 'http://bbs.ooro2.com/forum-18-1.html'}
+2018-03-05 22:25:40 [scrapy.core.engine] DEBUG: Crawled (403) <GET http://bbs.ooro2.com/member.php?action=online> (referer: http://bbs.ooro2.com/)
+2018-03-05 22:25:40 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://bbs.ooro2.com/index.php?showoldetails=yes#online> (referer: http://bbs.ooro2.com/)
+2018-03-05 22:25:40 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 http://bbs.ooro2.com/member.php?action=online>: HTTP status code is not handled or not allowed
+2018-03-05 22:25:41 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://bbs.ooro2.com/forum-17-1.html> (referer: http://bbs.ooro2.com/)
+2018-03-05 22:25:41 [scrapy.core.scraper] DEBUG: Scraped from <200 http://bbs.ooro2.com/index.php?showoldetails=yes>
+{'url': 'http://bbs.ooro2.com/index.php?showoldetails=yes'}
+2018-03-05 22:25:41 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://bbs.ooro2.com/redirect.php?tid=49350&goto=lastpost#lastpost> (referer: http://bbs.ooro2.com/)
+2018-03-05 22:25:41 [scrapy.core.scraper] DEBUG: Scraped from <200 http://bbs.ooro2.com/forum-17-1.html>
+{'url': 'http://bbs.ooro2.com/forum-17-1.html'}
+2018-03-05 22:25:41 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://bbs.ooro2.com/space-username-jmive074.html> (referer: http://bbs.ooro2.com/)
+2018-03-05 22:25:41 [scrapy.core.scraper] DEBUG: Scraped from <200 http://bbs.ooro2.com/redirect.php?tid=49350&goto=lastpost>
+{'url': 'http://bbs.ooro2.com/redirect.php?tid=49350&goto=lastpost'}
+2018-03-05 22:25:41 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://bbs.ooro2.com/redirect.php?tid=41698&goto=lastpost#lastpost> (referer: http://bbs.ooro2.com/)
+2018-03-05 22:25:41 [scrapy.core.scraper] DEBUG: Scraped from <200 http://bbs.ooro2.com/space-username-jmive074.html>
+{'url': 'http://bbs.ooro2.com/space-username-jmive074.html'}
+2018-03-05 22:25:41 [scrapy.core.scraper] DEBUG: Scraped from <200 http://bbs.ooro2.com/redirect.php?tid=41698&goto=lastpost>
+{'url': 'http://bbs.ooro2.com/redirect.php?tid=41698&goto=lastpost'}
+2018-03-05 22:25:41 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://bbs.ooro2.com/space-username-ukces.html> (referer: http://bbs.ooro2.com/)
+2018-03-05 22:25:41 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://bbs.ooro2.com/space-username-hunikieDnu.html> (referer: http://bbs.ooro2.com/)
+2018-03-05 22:25:41 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://bbs.ooro2.com/forum-16-1.html> (referer: http://bbs.ooro2.com/)
+2018-03-05 22:25:41 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://bbs.ooro2.com/space-username-kyfok.html> (referer: http://bbs.ooro2.com/)
+2018-03-05 22:25:41 [scrapy.core.scraper] DEBUG: Scraped from <200 http://bbs.ooro2.com/space-username-ukces.html>
+{'url': 'http://bbs.ooro2.com/space-username-ukces.html'}
+2018-03-05 22:25:41 [scrapy.core.scraper] DEBUG: Scraped from <200 http://bbs.ooro2.com/space-username-hunikieDnu.html>
+{'url': 'http://bbs.ooro2.com/space-username-hunikieDnu.html'}
+2018-03-05 22:25:41 [scrapy.core.scraper] DEBUG: Scraped from <200 http://bbs.ooro2.com/forum-16-1.html>
+{'url': 'http://bbs.ooro2.com/forum-16-1.html'}
+2018-03-05 22:25:41 [scrapy.core.scraper] DEBUG: Scraped from <200 http://bbs.ooro2.com/space-username-kyfok.html>
+{'url': 'http://bbs.ooro2.com/space-username-kyfok.html'}
+2018-03-05 22:25:41 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://bbs.ooro2.com/space-username-akvsd.html> (referer: http://bbs.ooro2.com/)
+2018-03-05 22:25:41 [scrapy.core.scraper] DEBUG: Scraped from <200 http://bbs.ooro2.com/space-username-akvsd.html>
+{'url': 'http://bbs.ooro2.com/space-username-akvsd.html'}
+2018-03-05 22:25:41 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://bbs.ooro2.com/redirect.php?tid=29894&goto=lastpost#lastpost> (referer: http://bbs.ooro2.com/)
+2018-03-05 22:25:41 [scrapy.core.scraper] DEBUG: Scraped from <200 http://bbs.ooro2.com/redirect.php?tid=29894&goto=lastpost>
+{'url': 'http://bbs.ooro2.com/redirect.php?tid=29894&goto=lastpost'}
+2018-03-05 22:25:41 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://bbs.ooro2.com/space-username-swwillow.html> (referer: http://bbs.ooro2.com/)
+2018-03-05 22:25:41 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://bbs.ooro2.com/redirect.php?tid=49333&goto=lastpost#lastpost> (referer: http://bbs.ooro2.com/)
+2018-03-05 22:25:41 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://bbs.ooro2.com/forum-25-1.html> (referer: http://bbs.ooro2.com/)
+2018-03-05 22:25:42 [scrapy.core.scraper] DEBUG: Scraped from <200 http://bbs.ooro2.com/space-username-swwillow.html>
+{'url': 'http://bbs.ooro2.com/space-username-swwillow.html'}
+2018-03-05 22:25:42 [scrapy.core.scraper] DEBUG: Scraped from <200 http://bbs.ooro2.com/redirect.php?tid=49333&goto=lastpost>
+{'url': 'http://bbs.ooro2.com/redirect.php?tid=49333&goto=lastpost'}
+2018-03-05 22:25:42 [scrapy.core.scraper] DEBUG: Scraped from <200 http://bbs.ooro2.com/forum-25-1.html>
+{'url': 'http://bbs.ooro2.com/forum-25-1.html'}
+2018-03-05 22:25:42 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://bbs.ooro2.com/forum-15-1.html> (referer: http://bbs.ooro2.com/)
+2018-03-05 22:25:42 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://bbs.ooro2.com/redirect.php?tid=49188&goto=lastpost#lastpost> (referer: http://bbs.ooro2.com/)
+2018-03-05 22:25:42 [scrapy.core.scraper] DEBUG: Scraped from <200 http://bbs.ooro2.com/forum-15-1.html>
+{'url': 'http://bbs.ooro2.com/forum-15-1.html'}
+2018-03-05 22:25:42 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://bbs.ooro2.com/forum-10-1.html> (referer: http://bbs.ooro2.com/)
+2018-03-05 22:25:42 [scrapy.core.scraper] DEBUG: Scraped from <200 http://bbs.ooro2.com/redirect.php?tid=49188&goto=lastpost>
+{'url': 'http://bbs.ooro2.com/redirect.php?tid=49188&goto=lastpost'}
+2018-03-05 22:25:42 [scrapy.core.scraper] DEBUG: Scraped from <200 http://bbs.ooro2.com/forum-10-1.html>
+{'url': 'http://bbs.ooro2.com/forum-10-1.html'}
+2018-03-05 22:25:42 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://bbs.ooro2.com/space-username-tjuchenxit.html> (referer: http://bbs.ooro2.com/)
+2018-03-05 22:25:42 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://bbs.ooro2.com/redirect.php?tid=45576&goto=lastpost#lastpost> (referer: http://bbs.ooro2.com/)
+2018-03-05 22:25:42 [scrapy.core.scraper] DEBUG: Scraped from <200 http://bbs.ooro2.com/space-username-tjuchenxit.html>
+{'url': 'http://bbs.ooro2.com/space-username-tjuchenxit.html'}
+2018-03-05 22:25:42 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://bbs.ooro2.com/forum-28-1.html> (referer: http://bbs.ooro2.com/)
+2018-03-05 22:25:42 [scrapy.core.scraper] DEBUG: Scraped from <200 http://bbs.ooro2.com/redirect.php?tid=45576&goto=lastpost>
+{'url': 'http://bbs.ooro2.com/redirect.php?tid=45576&goto=lastpost'}
+2018-03-05 22:25:42 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://bbs.ooro2.com/redirect.php?tid=45766&goto=lastpost#lastpost> (referer: http://bbs.ooro2.com/)
+2018-03-05 22:25:42 [scrapy.core.scraper] DEBUG: Scraped from <200 http://bbs.ooro2.com/forum-28-1.html>
+{'url': 'http://bbs.ooro2.com/forum-28-1.html'}
+2018-03-05 22:25:42 [scrapy.core.scraper] DEBUG: Scraped from <200 http://bbs.ooro2.com/redirect.php?tid=45766&goto=lastpost>
+{'url': 'http://bbs.ooro2.com/redirect.php?tid=45766&goto=lastpost'}
+2018-03-05 22:25:42 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://bbs.ooro2.com/space-username-gunofdong.html> (referer: http://bbs.ooro2.com/)
+2018-03-05 22:25:42 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://bbs.ooro2.com/forum-5-1.html> (referer: http://bbs.ooro2.com/)
+2018-03-05 22:25:42 [scrapy.core.scraper] DEBUG: Scraped from <200 http://bbs.ooro2.com/space-username-gunofdong.html>
+{'url': 'http://bbs.ooro2.com/space-username-gunofdong.html'}
+2018-03-05 22:25:42 [scrapy.core.scraper] DEBUG: Scraped from <200 http://bbs.ooro2.com/forum-5-1.html>
+{'url': 'http://bbs.ooro2.com/forum-5-1.html'}
+2018-03-05 22:25:42 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://bbs.ooro2.com/index.php?gid=14> (referer: http://bbs.ooro2.com/)
+2018-03-05 22:25:42 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://bbs.ooro2.com/space.php?username=%E5%A4%A7%E9%BB%91%E5%85%94%E5%A5%B6%E7%B3%96> (referer: http://bbs.ooro2.com/)
+2018-03-05 22:25:42 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://bbs.ooro2.com/redirect.php?tid=29920&goto=lastpost#lastpost> (referer: http://bbs.ooro2.com/)
+2018-03-05 22:25:42 [scrapy.core.scraper] DEBUG: Scraped from <200 http://bbs.ooro2.com/index.php?gid=14>
+{'url': 'http://bbs.ooro2.com/index.php?gid=14'}
+2018-03-05 22:25:43 [scrapy.core.scraper] DEBUG: Scraped from <200 http://bbs.ooro2.com/space.php?username=%E5%A4%A7%E9%BB%91%E5%85%94%E5%A5%B6%E7%B3%96>
+{'url': 'http://bbs.ooro2.com/space.php?username=%E5%A4%A7%E9%BB%91%E5%85%94%E5%A5%B6%E7%B3%96'}
+2018-03-05 22:25:43 [scrapy.core.scraper] DEBUG: Scraped from <200 http://bbs.ooro2.com/redirect.php?tid=29920&goto=lastpost>
+{'url': 'http://bbs.ooro2.com/redirect.php?tid=29920&goto=lastpost'}
+2018-03-05 22:25:43 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://bbs.ooro2.com/space.php?username=Val.Bao> (referer: http://bbs.ooro2.com/)
+2018-03-05 22:25:43 [scrapy.core.scraper] DEBUG: Scraped from <200 http://bbs.ooro2.com/space.php?username=Val.Bao>
+{'url': 'http://bbs.ooro2.com/space.php?username=Val.Bao'}
+2018-03-05 22:25:43 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://bbs.ooro2.com/redirect.php?tid=49334&goto=lastpost#lastpost> (referer: http://bbs.ooro2.com/)
+2018-03-05 22:25:43 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://bbs.ooro2.com/forum-3-1.html> (referer: http://bbs.ooro2.com/)
+2018-03-05 22:25:43 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://bbs.ooro2.com/space-username-ileay.html> (referer: http://bbs.ooro2.com/)
+2018-03-05 22:25:43 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://bbs.ooro2.com/redirect.php?tid=44792&goto=lastpost#lastpost> (referer: http://bbs.ooro2.com/)
+2018-03-05 22:25:43 [scrapy.core.scraper] DEBUG: Scraped from <200 http://bbs.ooro2.com/redirect.php?tid=49334&goto=lastpost>
+{'url': 'http://bbs.ooro2.com/redirect.php?tid=49334&goto=lastpost'}
+2018-03-05 22:25:43 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://bbs.ooro2.com/space-username-xiaoyaoydh.html> (referer: http://bbs.ooro2.com/)
+2018-03-05 22:25:43 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://bbs.ooro2.com/forum-27-1.html> (referer: http://bbs.ooro2.com/)
+2018-03-05 22:25:43 [scrapy.core.scraper] DEBUG: Scraped from <200 http://bbs.ooro2.com/forum-3-1.html>
+{'url': 'http://bbs.ooro2.com/forum-3-1.html'}
+2018-03-05 22:25:43 [scrapy.core.scraper] DEBUG: Scraped from <200 http://bbs.ooro2.com/space-username-ileay.html>
+{'url': 'http://bbs.ooro2.com/space-username-ileay.html'}
+2018-03-05 22:25:43 [scrapy.core.scraper] DEBUG: Scraped from <200 http://bbs.ooro2.com/redirect.php?tid=44792&goto=lastpost>
+{'url': 'http://bbs.ooro2.com/redirect.php?tid=44792&goto=lastpost'}
+2018-03-05 22:25:43 [scrapy.core.scraper] DEBUG: Scraped from <200 http://bbs.ooro2.com/space-username-xiaoyaoydh.html>
+{'url': 'http://bbs.ooro2.com/space-username-xiaoyaoydh.html'}
+2018-03-05 22:25:43 [scrapy.core.scraper] DEBUG: Scraped from <200 http://bbs.ooro2.com/forum-27-1.html>
+{'url': 'http://bbs.ooro2.com/forum-27-1.html'}
+2018-03-05 22:25:43 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://bbs.ooro2.com/redirect.php?tid=48580&goto=lastpost#lastpost> (referer: http://bbs.ooro2.com/)
+2018-03-05 22:25:43 [scrapy.core.scraper] DEBUG: Scraped from <200 http://bbs.ooro2.com/redirect.php?tid=48580&goto=lastpost>
+{'url': 'http://bbs.ooro2.com/redirect.php?tid=48580&goto=lastpost'}
+2018-03-05 22:25:43 [scrapy.core.engine] DEBUG: Crawled (403) <GET http://bbs.ooro2.com/notice.php?filter=systempm> (referer: http://bbs.ooro2.com/)
+2018-03-05 22:25:43 [scrapy.core.engine] DEBUG: Crawled (403) <GET http://bbs.ooro2.com/search.php> (referer: http://bbs.ooro2.com/)
+2018-03-05 22:25:43 [scrapy.core.engine] DEBUG: Crawled (403) <GET http://bbs.ooro2.com/pm.php?filter=announcepm> (referer: http://bbs.ooro2.com/)
+2018-03-05 22:25:43 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://bbs.ooro2.com/index.php> (referer: http://bbs.ooro2.com/)
+2018-03-05 22:25:43 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://bbs.ooro2.com/forum-31-1.html> (referer: http://bbs.ooro2.com/)
+2018-03-05 22:25:43 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 http://bbs.ooro2.com/notice.php?filter=systempm>: HTTP status code is not handled or not allowed
+2018-03-05 22:25:43 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 http://bbs.ooro2.com/search.php>: HTTP status code is not handled or not allowed
+2018-03-05 22:25:43 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 http://bbs.ooro2.com/pm.php?filter=announcepm>: HTTP status code is not handled or not allowed
+2018-03-05 22:25:43 [scrapy.core.scraper] DEBUG: Scraped from <200 http://bbs.ooro2.com/index.php>
+{'url': 'http://bbs.ooro2.com/index.php'}
+2018-03-05 22:25:43 [scrapy.core.scraper] DEBUG: Scraped from <200 http://bbs.ooro2.com/forum-31-1.html>
+{'url': 'http://bbs.ooro2.com/forum-31-1.html'}
+2018-03-05 22:25:44 [scrapy.core.engine] DEBUG: Crawled (403) <GET http://bbs.ooro2.com/logging.php?action=login> (referer: http://bbs.ooro2.com/)
+2018-03-05 22:25:44 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://bbs.ooro2.com/forum-22-1.html> (referer: http://bbs.ooro2.com/)
+2018-03-05 22:25:44 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 http://bbs.ooro2.com/logging.php?action=login>: HTTP status code is not handled or not allowed
+2018-03-05 22:25:44 [scrapy.core.scraper] DEBUG: Scraped from <200 http://bbs.ooro2.com/forum-22-1.html>
+{'url': 'http://bbs.ooro2.com/forum-22-1.html'}
+2018-03-05 22:25:44 [scrapy.core.engine] DEBUG: Crawled (403) <GET http://bbs.ooro2.com/pm.php?filter=newpm> (referer: http://bbs.ooro2.com/)
+2018-03-05 22:25:44 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 http://bbs.ooro2.com/pm.php?filter=newpm>: HTTP status code is not handled or not allowed
+2018-03-05 22:25:44 [scrapy.core.engine] INFO: Closing spider (finished)
+2018-03-05 22:25:44 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 32061,
+ 'downloader/request_count': 68,
+ 'downloader/request_method_count/GET': 68,
+ 'downloader/response_bytes': 370218,
+ 'downloader/response_count': 68,
+ 'downloader/response_status_count/200': 58,
+ 'downloader/response_status_count/403': 10,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2018, 3, 5, 14, 25, 44, 688049),
+ 'httperror/response_ignored_count': 10,
+ 'httperror/response_ignored_status_count/403': 10,
+ 'item_scraped_count': 56,
+ 'log_count/DEBUG': 129,
+ 'log_count/INFO': 17,
+ 'offsite/domains': 4,
+ 'offsite/filtered': 4,
+ 'request_depth_max': 1,
+ 'response_received_count': 68,
+ 'scheduler/dequeued': 67,
+ 'scheduler/dequeued/memory': 67,
+ 'scheduler/enqueued': 67,
+ 'scheduler/enqueued/memory': 67,
+ 'start_time': datetime.datetime(2018, 3, 5, 14, 25, 36, 31028)}
+2018-03-05 22:25:44 [scrapy.core.engine] INFO: Spider closed (finished)
