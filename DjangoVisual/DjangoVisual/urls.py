@@ -20,4 +20,5 @@ from django.conf.urls import url
 urlpatterns = [
     path('admin/', admin.site.urls),
     url(r'api/', include('my_main.urls')),
+    url(r'Visual/',include('Visual.urls'))
 ]

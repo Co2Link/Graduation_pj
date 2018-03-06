@@ -1,8 +1,17 @@
 import  requests
-def main():
-    result=requests.post(url='http://127.0.0.1:8000/api/crawl/', data={"id":3597829674})
-    # requests.get(url='http://127.0.0.1:8000/api/crawl/', params={"uniqe_id": uniqe_id, "task_id": task_id})
+
+def clean():
+    result=requests.get(url='http://127.0.0.1:8000/api/clean/')
     print(result.text)
+def crawl(id):
+    result=requests.post(url='http://127.0.0.1:8000/api/crawl/', data={"id":id})
+    print(result.text)
+
+
+
+def main():
+    clean()
+
 
 
 
