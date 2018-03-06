@@ -1,0 +1,2072 @@
+2018-03-06 10:34:07 [scrapy.utils.log] INFO: Scrapy 1.5.0 started (bot: weibo_scrapy_api)
+2018-03-06 10:34:07 [scrapy.utils.log] INFO: Versions: lxml 4.1.1.0, libxml2 2.9.5, cssselect 1.0.3, parsel 1.2.0, w3lib 1.17.0, Twisted 17.5.0, Python 3.6.2 |Continuum Analytics, Inc.| (default, Jul 20 2017, 12:30:02) [MSC v.1900 64 bit (AMD64)], pyOpenSSL 17.5.0 (OpenSSL 1.0.2n  7 Dec 2017), cryptography 2.1.4, Platform Windows-10-10.0.10586-SP0
+2018-03-06 10:34:07 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'weibo_scrapy_api', 'CONCURRENT_REQUESTS_PER_IP': 300, 'DOWNLOAD_DELAY': 0.2, 'LOG_FILE': 'logs\\default\\fans\\d46c7ac220e611e8bee4001a7dda7113.log', 'NEWSPIDER_MODULE': 'weibo_scrapy_api.spiders', 'ROBOTSTXT_OBEY': True, 'SPIDER_MODULES': ['weibo_scrapy_api.spiders']}
+2018-03-06 10:34:07 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2018-03-06 10:34:07 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2018-03-06 10:34:07 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2018-03-06 10:34:08 [scrapy.middleware] INFO: Enabled item pipelines:
+['weibo_scrapy_api.pipelines.WeiboScrapyApiPipeline']
+2018-03-06 10:34:08 [scrapy.core.engine] INFO: Spider opened
+2018-03-06 10:34:08 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-03-06 10:34:08 [scrapy.extensions.telnet] DEBUG: Telnet console listening on 127.0.0.1:6023
+2018-03-06 10:34:09 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/robots.txt> (referer: None)
+2018-03-06 10:34:09 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302833597829674_-_INFO> (referer: None)
+2018-03-06 10:34:10 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?value=3597829674&containerid=1076033597829674&page=3> (referer: None)
+2018-03-06 10:34:10 [root] WARNING: ('dj_4', "name 'i' is not defined")
+2018-03-06 10:34:10 [root] WARNING: ('dj_4', "name 'i' is not defined")
+2018-03-06 10:34:10 [root] WARNING: ('dj_4', "name 'i' is not defined")
+2018-03-06 10:34:10 [root] WARNING: ('dj_4', "name 'i' is not defined")
+2018-03-06 10:34:10 [root] WARNING: ('dj_4', "name 'i' is not defined")
+2018-03-06 10:34:10 [root] WARNING: ('dj_4', "name 'i' is not defined")
+2018-03-06 10:34:10 [root] WARNING: ('dj_4', "name 'i' is not defined")
+2018-03-06 10:34:10 [root] WARNING: ('dj_4', "name 'i' is not defined")
+2018-03-06 10:34:10 [root] WARNING: ('dj_4', "name 'i' is not defined")
+2018-03-06 10:34:10 [root] WARNING: ('dj_4', "name 'i' is not defined")
+2018-03-06 10:34:10 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?value=3597829674&containerid=1076033597829674&page=3>
+
+2018-03-06 10:34:10 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?value=3597829674&containerid=1076033597829674&page=1> (referer: None)
+2018-03-06 10:34:10 [root] WARNING: ('dj_4', "name 'i' is not defined")
+2018-03-06 10:34:10 [root] WARNING: ('dj_4', "name 'i' is not defined")
+2018-03-06 10:34:10 [root] WARNING: ('dj_4', "name 'i' is not defined")
+2018-03-06 10:34:10 [root] WARNING: ('dj_4', "name 'i' is not defined")
+2018-03-06 10:34:10 [root] WARNING: ('dj_4', "name 'i' is not defined")
+2018-03-06 10:34:10 [root] WARNING: ('dj_4', "name 'i' is not defined")
+2018-03-06 10:34:10 [root] WARNING: ('dj_4', "name 'i' is not defined")
+2018-03-06 10:34:10 [root] WARNING: ('dj_4', "name 'i' is not defined")
+2018-03-06 10:34:10 [root] WARNING: ('dj_4', "name 'i' is not defined")
+2018-03-06 10:34:10 [root] WARNING: ('dj_4', "name 'i' is not defined")
+2018-03-06 10:34:10 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?value=3597829674&containerid=1076033597829674&page=1>
+
+2018-03-06 10:34:10 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?value=3597829674&containerid=1076033597829674&page=5> (referer: None)
+2018-03-06 10:34:10 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?value=3597829674&containerid=1076033597829674&page=2> (referer: None)
+2018-03-06 10:34:10 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?value=3597829674&containerid=1076033597829674&page=4> (referer: None)
+2018-03-06 10:34:10 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?value=3597829674&containerid=1076033597829674&page=6> (referer: None)
+2018-03-06 10:34:10 [root] WARNING: ('dj_4', "name 'i' is not defined")
+2018-03-06 10:34:10 [root] WARNING: ('dj_4', "name 'i' is not defined")
+2018-03-06 10:34:10 [root] WARNING: ('dj_4', "name 'i' is not defined")
+2018-03-06 10:34:10 [root] WARNING: ('dj_4', "name 'i' is not defined")
+2018-03-06 10:34:10 [root] WARNING: ('dj_4', "name 'i' is not defined")
+2018-03-06 10:34:10 [root] WARNING: ('dj_4', "name 'i' is not defined")
+2018-03-06 10:34:10 [root] WARNING: ('dj_4', "name 'i' is not defined")
+2018-03-06 10:34:10 [root] WARNING: ('dj_4', "name 'i' is not defined")
+2018-03-06 10:34:10 [root] WARNING: ('dj_4', "name 'i' is not defined")
+2018-03-06 10:34:10 [root] WARNING: ('dj_4', "name 'i' is not defined")
+2018-03-06 10:34:10 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?value=3597829674&containerid=1076033597829674&page=5>
+
+2018-03-06 10:34:10 [root] WARNING: ('dj_4', "name 'i' is not defined")
+2018-03-06 10:34:10 [root] WARNING: ('dj_4', "name 'i' is not defined")
+2018-03-06 10:34:10 [root] WARNING: ('dj_4', "name 'i' is not defined")
+2018-03-06 10:34:10 [root] WARNING: ('dj_4', "name 'i' is not defined")
+2018-03-06 10:34:10 [root] WARNING: ('dj_4', "name 'i' is not defined")
+2018-03-06 10:34:10 [root] WARNING: ('dj_4', "name 'i' is not defined")
+2018-03-06 10:34:10 [root] WARNING: ('dj_4', "name 'i' is not defined")
+2018-03-06 10:34:10 [root] WARNING: ('dj_4', "name 'i' is not defined")
+2018-03-06 10:34:10 [root] WARNING: ('dj_4', "name 'i' is not defined")
+2018-03-06 10:34:10 [root] WARNING: ('dj_4', "name 'i' is not defined")
+2018-03-06 10:34:10 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?value=3597829674&containerid=1076033597829674&page=2>
+
+2018-03-06 10:34:10 [root] WARNING: ('dj_4', "name 'i' is not defined")
+2018-03-06 10:34:10 [root] WARNING: ('dj_4', "name 'i' is not defined")
+2018-03-06 10:34:10 [root] WARNING: ('dj_4', "name 'i' is not defined")
+2018-03-06 10:34:10 [root] WARNING: ('dj_4', "name 'i' is not defined")
+2018-03-06 10:34:10 [root] WARNING: ('dj_4', "name 'i' is not defined")
+2018-03-06 10:34:10 [root] WARNING: ('dj_4', "name 'i' is not defined")
+2018-03-06 10:34:10 [root] WARNING: ('dj_4', "name 'i' is not defined")
+2018-03-06 10:34:10 [root] WARNING: ('dj_4', "name 'i' is not defined")
+2018-03-06 10:34:10 [root] WARNING: ('dj_4', "name 'i' is not defined")
+2018-03-06 10:34:10 [root] WARNING: ('dj_4', "name 'i' is not defined")
+2018-03-06 10:34:10 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-03-06 10:34:10 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?value=3597829674&containerid=1076033597829674&page=4>
+
+2018-03-06 10:34:10 [root] WARNING: ('dj_4', "name 'i' is not defined")
+2018-03-06 10:34:10 [root] WARNING: ('dj_4', "name 'i' is not defined")
+2018-03-06 10:34:10 [root] WARNING: ('dj_4', "name 'i' is not defined")
+2018-03-06 10:34:10 [root] WARNING: ('dj_4', "name 'i' is not defined")
+2018-03-06 10:34:10 [root] WARNING: ('dj_4', "name 'i' is not defined")
+2018-03-06 10:34:10 [root] WARNING: ('dj_4', "name 'i' is not defined")
+2018-03-06 10:34:10 [root] WARNING: ('dj_4', "name 'i' is not defined")
+2018-03-06 10:34:10 [root] WARNING: ('dj_4', "name 'i' is not defined")
+2018-03-06 10:34:10 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?value=3597829674&containerid=1076033597829674&page=6>
+
+2018-03-06 10:34:11 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?value=3597829674&containerid=1076033597829674&page=8> (referer: None)
+2018-03-06 10:34:11 [root] WARNING: ('dj_4', "name 'i' is not defined")
+2018-03-06 10:34:11 [root] WARNING: ('dj_4', "name 'i' is not defined")
+2018-03-06 10:34:11 [root] WARNING: ('dj_4', "name 'i' is not defined")
+2018-03-06 10:34:11 [root] WARNING: ('dj_4', "name 'i' is not defined")
+2018-03-06 10:34:11 [root] WARNING: ('dj_4', "name 'i' is not defined")
+2018-03-06 10:34:11 [root] WARNING: ('dj_4', "name 'i' is not defined")
+2018-03-06 10:34:11 [root] WARNING: ('dj_4', "name 'i' is not defined")
+2018-03-06 10:34:11 [root] WARNING: ('dj_4', "name 'i' is not defined")
+2018-03-06 10:34:11 [root] WARNING: ('dj_4', "name 'i' is not defined")
+2018-03-06 10:34:11 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?value=3597829674&containerid=1076033597829674&page=8>
+
+2018-03-06 10:34:11 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?value=3597829674&containerid=1076033597829674&page=10> (referer: None)
+2018-03-06 10:34:11 [root] WARNING: ('dj_4', "name 'i' is not defined")
+2018-03-06 10:34:11 [root] WARNING: ('dj_4', "name 'i' is not defined")
+2018-03-06 10:34:11 [root] WARNING: ('dj_4', "name 'i' is not defined")
+2018-03-06 10:34:11 [root] WARNING: ('dj_4', "name 'i' is not defined")
+2018-03-06 10:34:11 [root] WARNING: ('dj_4', "name 'i' is not defined")
+2018-03-06 10:34:11 [root] WARNING: ('dj_4', "name 'i' is not defined")
+2018-03-06 10:34:11 [root] WARNING: ('dj_4', "name 'i' is not defined")
+2018-03-06 10:34:11 [root] WARNING: ('dj_4', "name 'i' is not defined")
+2018-03-06 10:34:11 [root] WARNING: ('dj_4', "name 'i' is not defined")
+2018-03-06 10:34:11 [root] WARNING: ('dj_4', "name 'i' is not defined")
+2018-03-06 10:34:11 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?value=3597829674&containerid=1076033597829674&page=10>
+
+2018-03-06 10:34:12 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=1005053597829674> (referer: https://m.weibo.cn/api/container/getIndex?containerid=2302833597829674_-_INFO)
+2018-03-06 10:34:12 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=1005053597829674>
+
+2018-03-06 10:34:12 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?value=3597829674&containerid=1076033597829674&page=9> (referer: None)
+2018-03-06 10:34:12 [root] DEBUG: ('pages', 5)
+2018-03-06 10:34:12 [root] WARNING: ('dj_4', "name 'i' is not defined")
+2018-03-06 10:34:12 [root] WARNING: ('dj_4', "name 'i' is not defined")
+2018-03-06 10:34:12 [root] WARNING: ('dj_4', "name 'i' is not defined")
+2018-03-06 10:34:12 [root] WARNING: ('dj_4', "name 'i' is not defined")
+2018-03-06 10:34:12 [root] WARNING: ('dj_4', "name 'i' is not defined")
+2018-03-06 10:34:12 [root] WARNING: ('dj_4', "name 'i' is not defined")
+2018-03-06 10:34:12 [root] WARNING: ('dj_4', "name 'i' is not defined")
+2018-03-06 10:34:12 [root] WARNING: ('dj_4', "name 'i' is not defined")
+2018-03-06 10:34:12 [root] WARNING: ('dj_4', "name 'i' is not defined")
+2018-03-06 10:34:12 [root] WARNING: ('dj_4', "name 'i' is not defined")
+2018-03-06 10:34:12 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-03-06 10:34:12 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?value=3597829674&containerid=1076033597829674&page=9>
+
+2018-03-06 10:34:12 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3597829674&since_id=6> (referer: https://m.weibo.cn/api/container/getIndex?containerid=1005053597829674)
+2018-03-06 10:34:12 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?value=3597829674&containerid=1076033597829674&page=7> (referer: None)
+2018-03-06 10:34:12 [root] WARNING: ('dj_4', "name 'i' is not defined")
+2018-03-06 10:34:12 [root] WARNING: ('dj_4', "name 'i' is not defined")
+2018-03-06 10:34:12 [root] WARNING: ('dj_4', "name 'i' is not defined")
+2018-03-06 10:34:12 [root] WARNING: ('dj_4', "name 'i' is not defined")
+2018-03-06 10:34:12 [root] WARNING: ('dj_4', "name 'i' is not defined")
+2018-03-06 10:34:12 [root] WARNING: ('dj_4', "name 'i' is not defined")
+2018-03-06 10:34:12 [root] WARNING: ('dj_4', "name 'i' is not defined")
+2018-03-06 10:34:12 [root] WARNING: ('dj_4', "name 'i' is not defined")
+2018-03-06 10:34:12 [root] WARNING: ('dj_4', "name 'i' is not defined")
+2018-03-06 10:34:12 [root] WARNING: ('dj_4', "name 'i' is not defined")
+2018-03-06 10:34:12 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-03-06 10:34:12 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?value=3597829674&containerid=1076033597829674&page=7>
+
+2018-03-06 10:34:12 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3597829674&since_id=5> (referer: https://m.weibo.cn/api/container/getIndex?containerid=1005053597829674)
+2018-03-06 10:34:12 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3597829674&since_id=4> (referer: https://m.weibo.cn/api/container/getIndex?containerid=1005053597829674)
+2018-03-06 10:34:13 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3597829674&since_id=3> (referer: https://m.weibo.cn/api/container/getIndex?containerid=1005053597829674)
+2018-03-06 10:34:13 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3597829674&since_id=2> (referer: https://m.weibo.cn/api/container/getIndex?containerid=1005053597829674)
+2018-03-06 10:34:13 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3597829674&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=1005053597829674)
+2018-03-06 10:34:14 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3820342740&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3597829674&since_id=5)
+2018-03-06 10:34:14 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3820342740&since_id=1>
+
+2018-03-06 10:34:14 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3820342740&since_id=1>
+
+2018-03-06 10:34:14 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3820342740&since_id=1>
+
+2018-03-06 10:34:14 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3820342740&since_id=1>
+
+2018-03-06 10:34:14 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3820342740&since_id=1>
+
+2018-03-06 10:34:14 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302832917562085_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3597829674&since_id=5)
+2018-03-06 10:34:14 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3820342740&since_id=1>
+
+2018-03-06 10:34:14 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3820342740&since_id=1>
+
+2018-03-06 10:34:14 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3820342740&since_id=1>
+
+2018-03-06 10:34:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302832917562085_-_INFO>
+
+2018-03-06 10:34:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3820342740&since_id=1>
+
+2018-03-06 10:34:15 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302833820342740_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3597829674&since_id=5)
+2018-03-06 10:34:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3820342740&since_id=1>
+
+2018-03-06 10:34:15 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5455005079&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3597829674&since_id=5)
+2018-03-06 10:34:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3820342740&since_id=1>
+
+2018-03-06 10:34:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3820342740&since_id=1>
+
+2018-03-06 10:34:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302833820342740_-_INFO>
+
+2018-03-06 10:34:15 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302835455005079_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3597829674&since_id=5)
+2018-03-06 10:34:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3820342740&since_id=1>
+
+2018-03-06 10:34:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5455005079&since_id=1>
+
+2018-03-06 10:34:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3820342740&since_id=1>
+
+2018-03-06 10:34:15 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5284694933&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3597829674&since_id=5)
+2018-03-06 10:34:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5455005079&since_id=1>
+
+2018-03-06 10:34:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302835455005079_-_INFO>
+
+2018-03-06 10:34:16 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5455005079&since_id=1>
+
+2018-03-06 10:34:16 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302835284694933_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3597829674&since_id=5)
+2018-03-06 10:34:16 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5284694933&since_id=1>
+
+2018-03-06 10:34:16 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5455005079&since_id=1>
+
+2018-03-06 10:34:16 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5284694933&since_id=1>
+
+2018-03-06 10:34:16 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5455005079&since_id=1>
+
+2018-03-06 10:34:16 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302835284694933_-_INFO>
+
+2018-03-06 10:34:16 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5284694933&since_id=1>
+
+2018-03-06 10:34:16 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5455005079&since_id=1>
+
+2018-03-06 10:34:16 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5012596934&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3597829674&since_id=5)
+2018-03-06 10:34:16 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5284694933&since_id=1>
+
+2018-03-06 10:34:16 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5455005079&since_id=1>
+
+2018-03-06 10:34:16 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302835012596934_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3597829674&since_id=5)
+2018-03-06 10:34:17 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5284694933&since_id=1>
+
+2018-03-06 10:34:17 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5455005079&since_id=1>
+
+2018-03-06 10:34:17 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5284694933&since_id=1>
+
+2018-03-06 10:34:17 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5012596934&since_id=1>
+
+2018-03-06 10:34:17 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5043403714&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3597829674&since_id=5)
+2018-03-06 10:34:17 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302835012596934_-_INFO>
+
+2018-03-06 10:34:17 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5284694933&since_id=1>
+
+2018-03-06 10:34:17 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5012596934&since_id=1>
+
+2018-03-06 10:34:17 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5284694933&since_id=1>
+
+2018-03-06 10:34:17 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5012596934&since_id=1>
+
+2018-03-06 10:34:17 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302835043403714_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3597829674&since_id=5)
+2018-03-06 10:34:17 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5043403714&since_id=1>
+
+2018-03-06 10:34:17 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5284694933&since_id=1>
+
+2018-03-06 10:34:18 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5012596934&since_id=1>
+
+2018-03-06 10:34:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5557008184&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3597829674&since_id=5)
+2018-03-06 10:34:18 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5043403714&since_id=1>
+
+2018-03-06 10:34:18 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5284694933&since_id=1>
+
+2018-03-06 10:34:18 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5012596934&since_id=1>
+
+2018-03-06 10:34:18 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5043403714&since_id=1>
+
+2018-03-06 10:34:18 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302835043403714_-_INFO>
+
+2018-03-06 10:34:18 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5284694933&since_id=1>
+
+2018-03-06 10:34:18 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5012596934&since_id=1>
+
+2018-03-06 10:34:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302835557008184_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3597829674&since_id=5)
+2018-03-06 10:34:18 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5557008184&since_id=1>
+
+2018-03-06 10:34:18 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5043403714&since_id=1>
+
+2018-03-06 10:34:18 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5284694933&since_id=1>
+
+2018-03-06 10:34:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5012596934&since_id=1>
+
+2018-03-06 10:34:19 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3568098565&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3597829674&since_id=4)
+2018-03-06 10:34:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5557008184&since_id=1>
+
+2018-03-06 10:34:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5043403714&since_id=1>
+
+2018-03-06 10:34:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5284694933&since_id=1>
+
+2018-03-06 10:34:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5012596934&since_id=1>
+
+2018-03-06 10:34:19 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_1106676161&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3597829674&since_id=3)
+2018-03-06 10:34:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5557008184&since_id=1>
+
+2018-03-06 10:34:20 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302835557008184_-_INFO>
+
+2018-03-06 10:34:20 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5043403714&since_id=1>
+
+2018-03-06 10:34:20 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5284694933&since_id=1>
+
+2018-03-06 10:34:20 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5012596934&since_id=1>
+
+2018-03-06 10:34:20 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3568098565&since_id=1>
+
+2018-03-06 10:34:20 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5557008184&since_id=1>
+
+2018-03-06 10:34:20 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5043403714&since_id=1>
+
+2018-03-06 10:34:20 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5284694933&since_id=1>
+
+2018-03-06 10:34:20 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5012596934&since_id=1>
+
+2018-03-06 10:34:20 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3568098565&since_id=1>
+
+2018-03-06 10:34:20 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_1106676161&since_id=1>
+
+2018-03-06 10:34:21 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5557008184&since_id=1>
+
+2018-03-06 10:34:21 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5043403714&since_id=1>
+
+2018-03-06 10:34:21 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5284694933&since_id=1>
+
+2018-03-06 10:34:21 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5012596934&since_id=1>
+
+2018-03-06 10:34:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6262577096&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3597829674&since_id=1)
+2018-03-06 10:34:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302831106676161_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3597829674&since_id=3)
+2018-03-06 10:34:21 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3568098565&since_id=1>
+
+2018-03-06 10:34:21 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_1106676161&since_id=1>
+
+2018-03-06 10:34:21 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5043403714&since_id=1>
+
+2018-03-06 10:34:21 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5284694933&since_id=1>
+
+2018-03-06 10:34:21 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5012596934&since_id=1>
+
+2018-03-06 10:34:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302836262577096_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3597829674&since_id=1)
+2018-03-06 10:34:21 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3568098565&since_id=1>
+
+2018-03-06 10:34:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_1106676161&since_id=1>
+
+2018-03-06 10:34:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5043403714&since_id=1>
+
+2018-03-06 10:34:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5284694933&since_id=1>
+
+2018-03-06 10:34:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5012596934&since_id=1>
+
+2018-03-06 10:34:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6263364836&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3597829674&since_id=1)
+2018-03-06 10:34:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3568098565&since_id=1>
+
+2018-03-06 10:34:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6262577096&since_id=1>
+
+2018-03-06 10:34:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302831106676161_-_INFO>
+
+2018-03-06 10:34:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_1106676161&since_id=1>
+
+2018-03-06 10:34:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5284694933&since_id=1>
+
+2018-03-06 10:34:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5012596934&since_id=1>
+
+2018-03-06 10:34:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3568098565&since_id=1>
+
+2018-03-06 10:34:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6262577096&since_id=1>
+
+2018-03-06 10:34:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302836262577096_-_INFO>
+
+2018-03-06 10:34:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_1106676161&since_id=1>
+
+2018-03-06 10:34:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3568098565&since_id=1>
+
+2018-03-06 10:34:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6263364836&since_id=1>
+
+2018-03-06 10:34:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_1106676161&since_id=1>
+
+2018-03-06 10:34:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302836263364836_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3597829674&since_id=1)
+2018-03-06 10:34:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3568098565&since_id=1>
+
+2018-03-06 10:34:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6263364836&since_id=1>
+
+2018-03-06 10:34:24 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_1106676161&since_id=1>
+
+2018-03-06 10:34:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3958203082&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3597829674&since_id=1)
+2018-03-06 10:34:24 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3568098565&since_id=1>
+
+2018-03-06 10:34:24 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6263364836&since_id=1>
+
+2018-03-06 10:34:24 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_1106676161&since_id=1>
+
+2018-03-06 10:34:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302833958203082_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3597829674&since_id=1)
+2018-03-06 10:34:24 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3568098565&since_id=1>
+
+2018-03-06 10:34:24 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302836263364836_-_INFO>
+
+2018-03-06 10:34:24 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6263364836&since_id=1>
+
+2018-03-06 10:34:24 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_1106676161&since_id=1>
+
+2018-03-06 10:34:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6375453027&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3597829674&since_id=1)
+2018-03-06 10:34:24 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3568098565&since_id=1>
+
+2018-03-06 10:34:24 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3958203082&since_id=1>
+
+2018-03-06 10:34:25 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6263364836&since_id=1>
+
+2018-03-06 10:34:25 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_1106676161&since_id=1>
+
+2018-03-06 10:34:25 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3568098565&since_id=1>
+
+2018-03-06 10:34:25 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302833958203082_-_INFO>
+
+2018-03-06 10:34:25 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3958203082&since_id=1>
+
+2018-03-06 10:34:25 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6263364836&since_id=1>
+
+2018-03-06 10:34:25 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_1106676161&since_id=1>
+
+2018-03-06 10:34:25 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3568098565&since_id=1>
+
+2018-03-06 10:34:25 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6375453027&since_id=1>
+
+2018-03-06 10:34:25 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3958203082&since_id=1>
+
+2018-03-06 10:34:25 [root] DEBUG: ('Exception_3', 'E11000 duplicate key error collection: syn_2.fans_2 index: id_1 dup key: { : 2671109275 }')
+2018-03-06 10:34:25 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6263364836&since_id=1>
+
+2018-03-06 10:34:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_1106676161&since_id=1>
+
+2018-03-06 10:34:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302836375453027_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3597829674&since_id=1)
+2018-03-06 10:34:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3568098565&since_id=1>
+
+2018-03-06 10:34:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6375453027&since_id=1>
+
+2018-03-06 10:34:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3958203082&since_id=1>
+
+2018-03-06 10:34:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_1106676161&since_id=1>
+
+2018-03-06 10:34:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_1457575265&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3597829674&since_id=1)
+2018-03-06 10:34:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3568098565&since_id=1>
+
+2018-03-06 10:34:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6375453027&since_id=1>
+
+2018-03-06 10:34:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3958203082&since_id=1>
+
+2018-03-06 10:34:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_1106676161&since_id=1>
+
+2018-03-06 10:34:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302831457575265_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3597829674&since_id=1)
+2018-03-06 10:34:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3568098565&since_id=1>
+
+2018-03-06 10:34:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302836375453027_-_INFO>
+
+2018-03-06 10:34:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6375453027&since_id=1>
+
+2018-03-06 10:34:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3958203082&since_id=1>
+
+2018-03-06 10:34:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_1106676161&since_id=1>
+
+2018-03-06 10:34:27 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6359377314&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3597829674&since_id=1)
+2018-03-06 10:34:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3568098565&since_id=1>
+
+2018-03-06 10:34:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_1457575265&since_id=1>
+
+2018-03-06 10:34:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6375453027&since_id=1>
+
+2018-03-06 10:34:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3958203082&since_id=1>
+
+2018-03-06 10:34:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_1106676161&since_id=1>
+
+2018-03-06 10:34:27 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302836359377314_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3597829674&since_id=1)
+2018-03-06 10:34:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302831457575265_-_INFO>
+
+2018-03-06 10:34:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_1457575265&since_id=1>
+
+2018-03-06 10:34:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6375453027&since_id=1>
+
+2018-03-06 10:34:28 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3958203082&since_id=1>
+
+2018-03-06 10:34:28 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_1106676161&since_id=1>
+
+2018-03-06 10:34:28 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6359377314&since_id=1>
+
+2018-03-06 10:34:28 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_1457575265&since_id=1>
+
+2018-03-06 10:34:28 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6375453027&since_id=1>
+
+2018-03-06 10:34:28 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3958203082&since_id=1>
+
+2018-03-06 10:34:28 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6404133994&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3597829674&since_id=1)
+2018-03-06 10:34:28 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302836359377314_-_INFO>
+
+2018-03-06 10:34:28 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6359377314&since_id=1>
+
+2018-03-06 10:34:28 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_1457575265&since_id=1>
+
+2018-03-06 10:34:28 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6375453027&since_id=1>
+
+2018-03-06 10:34:28 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3958203082&since_id=1>
+
+2018-03-06 10:34:28 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302836404133994_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3597829674&since_id=1)
+2018-03-06 10:34:29 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6359377314&since_id=1>
+
+2018-03-06 10:34:29 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_1457575265&since_id=1>
+
+2018-03-06 10:34:29 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6375453027&since_id=1>
+
+2018-03-06 10:34:29 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3958203082&since_id=1>
+
+2018-03-06 10:34:29 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6404133994&since_id=1>
+
+2018-03-06 10:34:29 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6359377314&since_id=1>
+
+2018-03-06 10:34:29 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_1457575265&since_id=1>
+
+2018-03-06 10:34:29 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6375453027&since_id=1>
+
+2018-03-06 10:34:29 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3958203082&since_id=1>
+
+2018-03-06 10:34:29 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6404133994&since_id=1>
+
+2018-03-06 10:34:29 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6359377314&since_id=1>
+
+2018-03-06 10:34:30 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302836404133994_-_INFO>
+
+2018-03-06 10:34:30 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_1457575265&since_id=1>
+
+2018-03-06 10:34:30 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6375453027&since_id=1>
+
+2018-03-06 10:34:30 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3958203082&since_id=1>
+
+2018-03-06 10:34:30 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6413705027&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3597829674&since_id=1)
+2018-03-06 10:34:30 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302836413705027_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3597829674&since_id=1)
+2018-03-06 10:34:30 [root] DEBUG: ('Exception_3', 'E11000 duplicate key error collection: syn_2.fans_2 index: id_1 dup key: { : 2671109275 }')
+2018-03-06 10:34:30 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6404133994&since_id=1>
+
+2018-03-06 10:34:30 [root] DEBUG: ('Exception_3', 'E11000 duplicate key error collection: syn_2.fans_2 index: id_1 dup key: { : 2671109275 }')
+2018-03-06 10:34:30 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6359377314&since_id=1>
+
+2018-03-06 10:34:30 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_1457575265&since_id=1>
+
+2018-03-06 10:34:31 [root] DEBUG: ('Exception_3', 'E11000 duplicate key error collection: syn_2.fans_2 index: id_1 dup key: { : 2671109275 }')
+2018-03-06 10:34:31 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6375453027&since_id=1>
+
+2018-03-06 10:34:31 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3958203082&since_id=1>
+
+2018-03-06 10:34:31 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_1457575265&since_id=1>
+
+2018-03-06 10:34:31 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3958203082&since_id=1>
+
+2018-03-06 10:34:31 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3815732600&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3597829674&since_id=1)
+2018-03-06 10:34:31 [root] DEBUG: ('Exception_3', 'E11000 duplicate key error collection: syn_2.fans_2 index: id_1 dup key: { : 6120461013 }')
+2018-03-06 10:34:31 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6413705027&since_id=1>
+
+2018-03-06 10:34:31 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302836413705027_-_INFO>
+
+2018-03-06 10:34:31 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_1457575265&since_id=1>
+
+2018-03-06 10:34:32 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3958203082&since_id=1>
+
+2018-03-06 10:34:32 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302833815732600_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3597829674&since_id=1)
+2018-03-06 10:34:32 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6413705027&since_id=1>
+
+2018-03-06 10:34:32 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_1457575265&since_id=1>
+
+2018-03-06 10:34:32 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3815732600&since_id=1>
+
+2018-03-06 10:34:32 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6413705027&since_id=1>
+
+2018-03-06 10:34:32 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_1457575265&since_id=1>
+
+2018-03-06 10:34:32 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3815732600&since_id=1>
+
+2018-03-06 10:34:32 [root] DEBUG: ('Exception_3', 'E11000 duplicate key error collection: syn_2.fans_2 index: id_1 dup key: { : 2671109275 }')
+2018-03-06 10:34:32 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6413705027&since_id=1>
+
+2018-03-06 10:34:32 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302833815732600_-_INFO>
+
+2018-03-06 10:34:32 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_1457575265&since_id=1>
+
+2018-03-06 10:34:32 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302836160756023_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3597829674&since_id=1)
+2018-03-06 10:34:32 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6160756023&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3597829674&since_id=1)
+2018-03-06 10:34:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3815732600&since_id=1>
+
+2018-03-06 10:34:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_1457575265&since_id=1>
+
+2018-03-06 10:34:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3815732600&since_id=1>
+
+2018-03-06 10:34:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_1457575265&since_id=1>
+
+2018-03-06 10:34:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302836160756023_-_INFO>
+
+2018-03-06 10:34:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3815732600&since_id=1>
+
+2018-03-06 10:34:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6160756023&since_id=1>
+
+2018-03-06 10:34:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_1457575265&since_id=1>
+
+2018-03-06 10:34:33 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6364368270&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3597829674&since_id=1)
+2018-03-06 10:34:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3815732600&since_id=1>
+
+2018-03-06 10:34:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6160756023&since_id=1>
+
+2018-03-06 10:34:34 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_1457575265&since_id=1>
+
+2018-03-06 10:34:34 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3815732600&since_id=1>
+
+2018-03-06 10:34:34 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6160756023&since_id=1>
+
+2018-03-06 10:34:34 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_1457575265&since_id=1>
+
+2018-03-06 10:34:34 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302836364368270_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3597829674&since_id=1)
+2018-03-06 10:34:34 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3815732600&since_id=1>
+
+2018-03-06 10:34:34 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6364368270&since_id=1>
+
+2018-03-06 10:34:34 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6160756023&since_id=1>
+
+2018-03-06 10:34:34 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_1457575265&since_id=1>
+
+2018-03-06 10:34:34 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3815732600&since_id=1>
+
+2018-03-06 10:34:34 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6364368270&since_id=1>
+
+2018-03-06 10:34:34 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6160756023&since_id=1>
+
+2018-03-06 10:34:35 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_1457575265&since_id=1>
+
+2018-03-06 10:34:35 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6413176167&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3597829674&since_id=1)
+2018-03-06 10:34:35 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3815732600&since_id=1>
+
+2018-03-06 10:34:35 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302836364368270_-_INFO>
+
+2018-03-06 10:34:35 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6364368270&since_id=1>
+
+2018-03-06 10:34:35 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6160756023&since_id=1>
+
+2018-03-06 10:34:35 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302836413176167_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3597829674&since_id=1)
+2018-03-06 10:34:35 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3815732600&since_id=1>
+
+2018-03-06 10:34:35 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6364368270&since_id=1>
+
+2018-03-06 10:34:35 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6160756023&since_id=1>
+
+2018-03-06 10:34:35 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6413176167&since_id=1>
+
+2018-03-06 10:34:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3815732600&since_id=1>
+
+2018-03-06 10:34:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6364368270&since_id=1>
+
+2018-03-06 10:34:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6160756023&since_id=1>
+
+2018-03-06 10:34:36 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6011566673&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3597829674&since_id=2)
+2018-03-06 10:34:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6413176167&since_id=1>
+
+2018-03-06 10:34:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302836413176167_-_INFO>
+
+2018-03-06 10:34:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3815732600&since_id=1>
+
+2018-03-06 10:34:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6364368270&since_id=1>
+
+2018-03-06 10:34:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6160756023&since_id=1>
+
+2018-03-06 10:34:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6413176167&since_id=1>
+
+2018-03-06 10:34:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3815732600&since_id=1>
+
+2018-03-06 10:34:37 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6364368270&since_id=1>
+
+2018-03-06 10:34:37 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6160756023&since_id=1>
+
+2018-03-06 10:34:37 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302836011566673_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3597829674&since_id=2)
+2018-03-06 10:34:37 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6011566673&since_id=1>
+
+2018-03-06 10:34:37 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6413176167&since_id=1>
+
+2018-03-06 10:34:37 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6364368270&since_id=1>
+
+2018-03-06 10:34:37 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6160756023&since_id=1>
+
+2018-03-06 10:34:37 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6035722203&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3597829674&since_id=2)
+2018-03-06 10:34:37 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6011566673&since_id=1>
+
+2018-03-06 10:34:37 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6413176167&since_id=1>
+
+2018-03-06 10:34:37 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6364368270&since_id=1>
+
+2018-03-06 10:34:37 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6160756023&since_id=1>
+
+2018-03-06 10:34:38 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302836011566673_-_INFO>
+
+2018-03-06 10:34:38 [root] DEBUG: ('Exception_3', 'E11000 duplicate key error collection: syn_2.fans_2 index: id_1 dup key: { : 2671109275 }')
+2018-03-06 10:34:38 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6011566673&since_id=1>
+
+2018-03-06 10:34:38 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6413176167&since_id=1>
+
+2018-03-06 10:34:38 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6364368270&since_id=1>
+
+2018-03-06 10:34:38 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6160756023&since_id=1>
+
+2018-03-06 10:34:38 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302836035722203_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3597829674&since_id=2)
+2018-03-06 10:34:38 [root] DEBUG: ('Exception_3', 'E11000 duplicate key error collection: syn_2.fans_2 index: id_1 dup key: { : 2671109275 }')
+2018-03-06 10:34:38 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6035722203&since_id=1>
+
+2018-03-06 10:34:38 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6413176167&since_id=1>
+
+2018-03-06 10:34:38 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6364368270&since_id=1>
+
+2018-03-06 10:34:38 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6160756023&since_id=1>
+
+2018-03-06 10:34:38 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6011035994&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3597829674&since_id=2)
+2018-03-06 10:34:39 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6413176167&since_id=1>
+
+2018-03-06 10:34:39 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6364368270&since_id=1>
+
+2018-03-06 10:34:39 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6160756023&since_id=1>
+
+2018-03-06 10:34:39 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302836035722203_-_INFO>
+
+2018-03-06 10:34:39 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6413176167&since_id=1>
+
+2018-03-06 10:34:39 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6364368270&since_id=1>
+
+2018-03-06 10:34:39 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6160756023&since_id=1>
+
+2018-03-06 10:34:39 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3169224934&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3597829674&since_id=2)
+2018-03-06 10:34:39 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302836011035994_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3597829674&since_id=2)
+2018-03-06 10:34:39 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6011035994&since_id=1>
+
+2018-03-06 10:34:39 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6413176167&since_id=1>
+
+2018-03-06 10:34:39 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6364368270&since_id=1>
+
+2018-03-06 10:34:39 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6160756023&since_id=1>
+
+2018-03-06 10:34:40 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6011035994&since_id=1>
+
+2018-03-06 10:34:40 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6413176167&since_id=1>
+
+2018-03-06 10:34:40 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6364368270&since_id=1>
+
+2018-03-06 10:34:40 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6160756023&since_id=1>
+
+2018-03-06 10:34:40 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3169224934&since_id=1>
+
+2018-03-06 10:34:40 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302836011035994_-_INFO>
+
+2018-03-06 10:34:40 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6011035994&since_id=1>
+
+2018-03-06 10:34:40 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6413176167&since_id=1>
+
+2018-03-06 10:34:40 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6364368270&since_id=1>
+
+2018-03-06 10:34:40 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302833169224934_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3597829674&since_id=2)
+2018-03-06 10:34:40 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3169224934&since_id=1>
+
+2018-03-06 10:34:40 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6011035994&since_id=1>
+
+2018-03-06 10:34:41 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6413176167&since_id=1>
+
+2018-03-06 10:34:41 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6364368270&since_id=1>
+
+2018-03-06 10:34:41 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5984721214&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3597829674&since_id=2)
+2018-03-06 10:34:41 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3169224934&since_id=1>
+
+2018-03-06 10:34:41 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6011035994&since_id=1>
+
+2018-03-06 10:34:41 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6413176167&since_id=1>
+
+2018-03-06 10:34:41 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6364368270&since_id=1>
+
+2018-03-06 10:34:41 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302835984721214_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3597829674&since_id=2)
+2018-03-06 10:34:41 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3169224934&since_id=1>
+
+2018-03-06 10:34:42 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302833169224934_-_INFO>
+
+2018-03-06 10:34:42 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6011035994&since_id=1>
+
+2018-03-06 10:34:42 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6413176167&since_id=1>
+
+2018-03-06 10:34:42 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6364368270&since_id=1>
+
+2018-03-06 10:34:42 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_2903575264&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3597829674&since_id=2)
+2018-03-06 10:34:42 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5984721214&since_id=1>
+
+2018-03-06 10:34:42 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3169224934&since_id=1>
+
+2018-03-06 10:34:43 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6011035994&since_id=1>
+
+2018-03-06 10:34:43 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6413176167&since_id=1>
+
+2018-03-06 10:34:43 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6364368270&since_id=1>
+
+2018-03-06 10:34:43 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5984721214&since_id=1>
+
+2018-03-06 10:34:43 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3169224934&since_id=1>
+
+2018-03-06 10:34:43 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302835984721214_-_INFO>
+
+2018-03-06 10:34:43 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6011035994&since_id=1>
+
+2018-03-06 10:34:43 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6413176167&since_id=1>
+
+2018-03-06 10:34:43 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302832903575264_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3597829674&since_id=2)
+2018-03-06 10:34:43 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_2903575264&since_id=1>
+
+2018-03-06 10:34:43 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5984721214&since_id=1>
+
+2018-03-06 10:34:43 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3169224934&since_id=1>
+
+2018-03-06 10:34:44 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6011035994&since_id=1>
+
+2018-03-06 10:34:44 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6413176167&since_id=1>
+
+2018-03-06 10:34:44 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_2903575264&since_id=1>
+
+2018-03-06 10:34:44 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5984721214&since_id=1>
+
+2018-03-06 10:34:44 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3169224934&since_id=1>
+
+2018-03-06 10:34:44 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6011035994&since_id=1>
+
+2018-03-06 10:34:44 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3292973633&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3597829674&since_id=2)
+2018-03-06 10:34:44 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_2903575264&since_id=1>
+
+2018-03-06 10:34:44 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302832903575264_-_INFO>
+
+2018-03-06 10:34:44 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5984721214&since_id=1>
+
+2018-03-06 10:34:44 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3169224934&since_id=1>
+
+2018-03-06 10:34:45 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6011035994&since_id=1>
+
+2018-03-06 10:34:45 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302833292973633_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3597829674&since_id=2)
+2018-03-06 10:34:45 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_2903575264&since_id=1>
+
+2018-03-06 10:34:45 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5984721214&since_id=1>
+
+2018-03-06 10:34:45 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3169224934&since_id=1>
+
+2018-03-06 10:34:45 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6011035994&since_id=1>
+
+2018-03-06 10:34:45 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_1800262232&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3597829674&since_id=2)
+2018-03-06 10:34:45 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3292973633&since_id=1>
+
+2018-03-06 10:34:45 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_2903575264&since_id=1>
+
+2018-03-06 10:34:45 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5984721214&since_id=1>
+
+2018-03-06 10:34:45 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3169224934&since_id=1>
+
+2018-03-06 10:34:45 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6011035994&since_id=1>
+
+2018-03-06 10:34:45 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302831800262232_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3597829674&since_id=2)
+2018-03-06 10:34:45 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3292973633&since_id=1>
+
+2018-03-06 10:34:46 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_2903575264&since_id=1>
+
+2018-03-06 10:34:46 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302833292973633_-_INFO>
+
+2018-03-06 10:34:46 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5984721214&since_id=1>
+
+2018-03-06 10:34:46 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3169224934&since_id=1>
+
+2018-03-06 10:34:46 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6011035994&since_id=1>
+
+2018-03-06 10:34:46 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_1800262232&since_id=1>
+
+2018-03-06 10:34:46 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3292973633&since_id=1>
+
+2018-03-06 10:34:46 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_2903575264&since_id=1>
+
+2018-03-06 10:34:46 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5984721214&since_id=1>
+
+2018-03-06 10:34:46 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3169224934&since_id=1>
+
+2018-03-06 10:34:47 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6011035994&since_id=1>
+
+2018-03-06 10:34:47 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3148415223&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3597829674&since_id=2)
+2018-03-06 10:34:47 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_1800262232&since_id=1>
+
+2018-03-06 10:34:47 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3292973633&since_id=1>
+
+2018-03-06 10:34:47 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302831800262232_-_INFO>
+
+2018-03-06 10:34:47 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5984721214&since_id=1>
+
+2018-03-06 10:34:47 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3169224934&since_id=1>
+
+2018-03-06 10:34:47 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6011035994&since_id=1>
+
+2018-03-06 10:34:47 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_1800262232&since_id=1>
+
+2018-03-06 10:34:47 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3292973633&since_id=1>
+
+2018-03-06 10:34:47 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5984721214&since_id=1>
+
+2018-03-06 10:34:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3169224934&since_id=1>
+
+2018-03-06 10:34:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6011035994&since_id=1>
+
+2018-03-06 10:34:48 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302833148415223_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3597829674&since_id=2)
+2018-03-06 10:34:48 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5922651084&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3597829674&since_id=2)
+2018-03-06 10:34:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_1800262232&since_id=1>
+
+2018-03-06 10:34:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3148415223&since_id=1>
+
+2018-03-06 10:34:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3292973633&since_id=1>
+
+2018-03-06 10:34:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5984721214&since_id=1>
+
+2018-03-06 10:34:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3169224934&since_id=1>
+
+2018-03-06 10:34:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6011035994&since_id=1>
+
+2018-03-06 10:34:48 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302835922651084_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3597829674&since_id=2)
+2018-03-06 10:34:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_1800262232&since_id=1>
+
+2018-03-06 10:34:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3148415223&since_id=1>
+
+2018-03-06 10:34:49 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3292973633&since_id=1>
+
+2018-03-06 10:34:49 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5984721214&since_id=1>
+
+2018-03-06 10:34:49 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302833148415223_-_INFO>
+
+2018-03-06 10:34:49 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5922651084&since_id=1>
+
+2018-03-06 10:34:49 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_1800262232&since_id=1>
+
+2018-03-06 10:34:49 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3148415223&since_id=1>
+
+2018-03-06 10:34:49 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3292973633&since_id=1>
+
+2018-03-06 10:34:49 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5984721214&since_id=1>
+
+2018-03-06 10:34:49 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5462323436&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3597829674&since_id=2)
+2018-03-06 10:34:49 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5922651084&since_id=1>
+
+2018-03-06 10:34:49 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_1800262232&since_id=1>
+
+2018-03-06 10:34:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302835922651084_-_INFO>
+
+2018-03-06 10:34:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3148415223&since_id=1>
+
+2018-03-06 10:34:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3292973633&since_id=1>
+
+2018-03-06 10:34:50 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302835462323436_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3597829674&since_id=2)
+2018-03-06 10:34:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5922651084&since_id=1>
+
+2018-03-06 10:34:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_1800262232&since_id=1>
+
+2018-03-06 10:34:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3148415223&since_id=1>
+
+2018-03-06 10:34:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3292973633&since_id=1>
+
+2018-03-06 10:34:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5922651084&since_id=1>
+
+2018-03-06 10:34:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5462323436&since_id=1>
+
+2018-03-06 10:34:51 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_1800262232&since_id=1>
+
+2018-03-06 10:34:51 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3148415223&since_id=1>
+
+2018-03-06 10:34:51 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3292973633&since_id=1>
+
+2018-03-06 10:34:51 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302835462323436_-_INFO>
+
+2018-03-06 10:34:51 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5922651084&since_id=1>
+
+2018-03-06 10:34:51 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5462323436&since_id=1>
+
+2018-03-06 10:34:51 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_1800262232&since_id=1>
+
+2018-03-06 10:34:52 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3148415223&since_id=1>
+
+2018-03-06 10:34:52 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3292973633&since_id=1>
+
+2018-03-06 10:34:52 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5985436488&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3597829674&since_id=2)
+2018-03-06 10:34:52 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302835985436488_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3597829674&since_id=2)
+2018-03-06 10:34:52 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5922651084&since_id=1>
+
+2018-03-06 10:34:52 [root] DEBUG: ('Exception_3', 'E11000 duplicate key error collection: syn_2.fans_2 index: id_1 dup key: { : 3597829674 }')
+2018-03-06 10:34:52 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5462323436&since_id=1>
+
+2018-03-06 10:34:52 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_1800262232&since_id=1>
+
+2018-03-06 10:34:53 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3148415223&since_id=1>
+
+2018-03-06 10:34:53 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3292973633&since_id=1>
+
+2018-03-06 10:34:53 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5922651084&since_id=1>
+
+2018-03-06 10:34:53 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5462323436&since_id=1>
+
+2018-03-06 10:34:53 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_1800262232&since_id=1>
+
+2018-03-06 10:34:53 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3148415223&since_id=1>
+
+2018-03-06 10:34:53 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5985436488&since_id=1>
+
+2018-03-06 10:34:53 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302835985436488_-_INFO>
+
+2018-03-06 10:34:53 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5922651084&since_id=1>
+
+2018-03-06 10:34:53 [root] DEBUG: ('Exception_3', 'E11000 duplicate key error collection: syn_2.fans_2 index: id_1 dup key: { : 3216373447 }')
+2018-03-06 10:34:53 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5462323436&since_id=1>
+
+2018-03-06 10:34:53 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_1800262232&since_id=1>
+
+2018-03-06 10:34:53 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3148415223&since_id=1>
+
+2018-03-06 10:34:53 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3824620864&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3597829674&since_id=3)
+2018-03-06 10:34:54 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5985436488&since_id=1>
+
+2018-03-06 10:34:54 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5922651084&since_id=1>
+
+2018-03-06 10:34:54 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5462323436&since_id=1>
+
+2018-03-06 10:34:54 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_1800262232&since_id=1>
+
+2018-03-06 10:34:54 [root] DEBUG: ('Exception_3', 'E11000 duplicate key error collection: syn_2.fans_2 index: id_1 dup key: { : 3597829674 }')
+2018-03-06 10:34:54 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3148415223&since_id=1>
+
+2018-03-06 10:34:54 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302833824620864_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3597829674&since_id=3)
+2018-03-06 10:34:54 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5518063436&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3597829674&since_id=3)
+2018-03-06 10:34:54 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5985436488&since_id=1>
+
+2018-03-06 10:34:54 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5922651084&since_id=1>
+
+2018-03-06 10:34:54 [root] DEBUG: ('Exception_3', 'E11000 duplicate key error collection: syn_2.fans_2 index: id_1 dup key: { : 2671109275 }')
+2018-03-06 10:34:54 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5462323436&since_id=1>
+
+2018-03-06 10:34:54 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_1800262232&since_id=1>
+
+2018-03-06 10:34:54 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3148415223&since_id=1>
+
+2018-03-06 10:34:54 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5985436488&since_id=1>
+
+2018-03-06 10:34:55 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3824620864&since_id=1>
+
+2018-03-06 10:34:55 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5922651084&since_id=1>
+
+2018-03-06 10:34:55 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_1800262232&since_id=1>
+
+2018-03-06 10:34:55 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3148415223&since_id=1>
+
+2018-03-06 10:34:55 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302835518063436_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3597829674&since_id=3)
+2018-03-06 10:34:55 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5985436488&since_id=1>
+
+2018-03-06 10:34:55 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3824620864&since_id=1>
+
+2018-03-06 10:34:55 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302833824620864_-_INFO>
+
+2018-03-06 10:34:55 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5518063436&since_id=1>
+
+2018-03-06 10:34:55 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5922651084&since_id=1>
+
+2018-03-06 10:34:55 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_1800262232&since_id=1>
+
+2018-03-06 10:34:55 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5869261709&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3597829674&since_id=3)
+2018-03-06 10:34:56 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5985436488&since_id=1>
+
+2018-03-06 10:34:56 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3824620864&since_id=1>
+
+2018-03-06 10:34:56 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5518063436&since_id=1>
+
+2018-03-06 10:34:56 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5922651084&since_id=1>
+
+2018-03-06 10:34:56 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5985436488&since_id=1>
+
+2018-03-06 10:34:56 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302835518063436_-_INFO>
+
+2018-03-06 10:34:56 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3824620864&since_id=1>
+
+2018-03-06 10:34:56 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5518063436&since_id=1>
+
+2018-03-06 10:34:56 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5922651084&since_id=1>
+
+2018-03-06 10:34:56 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5985436488&since_id=1>
+
+2018-03-06 10:34:56 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5869261709&since_id=1>
+
+2018-03-06 10:34:57 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3824620864&since_id=1>
+
+2018-03-06 10:34:57 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5518063436&since_id=1>
+
+2018-03-06 10:34:57 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5922651084&since_id=1>
+
+2018-03-06 10:34:57 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302835869261709_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3597829674&since_id=3)
+2018-03-06 10:34:57 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5931087871&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3597829674&since_id=3)
+2018-03-06 10:34:57 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5985436488&since_id=1>
+
+2018-03-06 10:34:57 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5869261709&since_id=1>
+
+2018-03-06 10:34:57 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3824620864&since_id=1>
+
+2018-03-06 10:34:57 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5518063436&since_id=1>
+
+2018-03-06 10:34:57 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5985436488&since_id=1>
+
+2018-03-06 10:34:57 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5869261709&since_id=1>
+
+2018-03-06 10:34:57 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3824620864&since_id=1>
+
+2018-03-06 10:34:57 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5518063436&since_id=1>
+
+2018-03-06 10:34:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5985436488&since_id=1>
+
+2018-03-06 10:34:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302835869261709_-_INFO>
+
+2018-03-06 10:34:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5931087871&since_id=1>
+
+2018-03-06 10:34:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5869261709&since_id=1>
+
+2018-03-06 10:34:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3824620864&since_id=1>
+
+2018-03-06 10:34:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5518063436&since_id=1>
+
+2018-03-06 10:34:58 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302835931087871_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3597829674&since_id=3)
+2018-03-06 10:34:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5985436488&since_id=1>
+
+2018-03-06 10:34:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5931087871&since_id=1>
+
+2018-03-06 10:34:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5869261709&since_id=1>
+
+2018-03-06 10:34:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3824620864&since_id=1>
+
+2018-03-06 10:34:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5518063436&since_id=1>
+
+2018-03-06 10:34:58 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5953319023&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3597829674&since_id=3)
+2018-03-06 10:34:59 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5985436488&since_id=1>
+
+2018-03-06 10:34:59 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5931087871&since_id=1>
+
+2018-03-06 10:34:59 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5869261709&since_id=1>
+
+2018-03-06 10:34:59 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3824620864&since_id=1>
+
+2018-03-06 10:34:59 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5518063436&since_id=1>
+
+2018-03-06 10:34:59 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302835953319023_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3597829674&since_id=3)
+2018-03-06 10:34:59 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5985436488&since_id=1>
+
+2018-03-06 10:34:59 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302835931087871_-_INFO>
+
+2018-03-06 10:34:59 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5931087871&since_id=1>
+
+2018-03-06 10:34:59 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5869261709&since_id=1>
+
+2018-03-06 10:34:59 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3824620864&since_id=1>
+
+2018-03-06 10:35:00 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5518063436&since_id=1>
+
+2018-03-06 10:35:00 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5963857831&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3597829674&since_id=3)
+2018-03-06 10:35:00 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5953319023&since_id=1>
+
+2018-03-06 10:35:00 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5985436488&since_id=1>
+
+2018-03-06 10:35:00 [root] DEBUG: ('Exception_3', 'E11000 duplicate key error collection: syn_2.fans_2 index: id_1 dup key: { : 2671109275 }')
+2018-03-06 10:35:00 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5931087871&since_id=1>
+
+2018-03-06 10:35:00 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5869261709&since_id=1>
+
+2018-03-06 10:35:00 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3824620864&since_id=1>
+
+2018-03-06 10:35:00 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5518063436&since_id=1>
+
+2018-03-06 10:35:00 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302835963857831_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3597829674&since_id=3)
+2018-03-06 10:35:00 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5953319023&since_id=1>
+
+2018-03-06 10:35:00 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302835953319023_-_INFO>
+
+2018-03-06 10:35:00 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5985436488&since_id=1>
+
+2018-03-06 10:35:01 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5869261709&since_id=1>
+
+2018-03-06 10:35:01 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3824620864&since_id=1>
+
+2018-03-06 10:35:01 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5518063436&since_id=1>
+
+2018-03-06 10:35:01 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5963857831&since_id=1>
+
+2018-03-06 10:35:01 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5953319023&since_id=1>
+
+2018-03-06 10:35:01 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5985436488&since_id=1>
+
+2018-03-06 10:35:01 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5869261709&since_id=1>
+
+2018-03-06 10:35:01 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3824620864&since_id=1>
+
+2018-03-06 10:35:01 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5518063436&since_id=1>
+
+2018-03-06 10:35:01 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3057239322&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3597829674&since_id=3)
+2018-03-06 10:35:02 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5963857831&since_id=1>
+
+2018-03-06 10:35:02 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302835963857831_-_INFO>
+
+2018-03-06 10:35:02 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5953319023&since_id=1>
+
+2018-03-06 10:35:02 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5985436488&since_id=1>
+
+2018-03-06 10:35:02 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5869261709&since_id=1>
+
+2018-03-06 10:35:02 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3824620864&since_id=1>
+
+2018-03-06 10:35:03 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5518063436&since_id=1>
+
+2018-03-06 10:35:03 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5963857831&since_id=1>
+
+2018-03-06 10:35:03 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5953319023&since_id=1>
+
+2018-03-06 10:35:03 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5869261709&since_id=1>
+
+2018-03-06 10:35:03 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3824620864&since_id=1>
+
+2018-03-06 10:35:03 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5518063436&since_id=1>
+
+2018-03-06 10:35:03 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302833057239322_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3597829674&since_id=3)
+2018-03-06 10:35:03 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3057239322&since_id=1>
+
+2018-03-06 10:35:03 [root] DEBUG: ('Exception_3', 'E11000 duplicate key error collection: syn_2.fans_2 index: id_1 dup key: { : 2671109275 }')
+2018-03-06 10:35:03 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5963857831&since_id=1>
+
+2018-03-06 10:35:03 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5953319023&since_id=1>
+
+2018-03-06 10:35:04 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5869261709&since_id=1>
+
+2018-03-06 10:35:04 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3824620864&since_id=1>
+
+2018-03-06 10:35:04 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302835721891133_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3597829674&since_id=3)
+2018-03-06 10:35:04 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5721891133&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3597829674&since_id=3)
+2018-03-06 10:35:04 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3057239322&since_id=1>
+
+2018-03-06 10:35:04 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5953319023&since_id=1>
+
+2018-03-06 10:35:04 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5869261709&since_id=1>
+
+2018-03-06 10:35:04 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3824620864&since_id=1>
+
+2018-03-06 10:35:04 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5526115058&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3597829674&since_id=3)
+2018-03-06 10:35:04 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3057239322&since_id=1>
+
+2018-03-06 10:35:04 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302833057239322_-_INFO>
+
+2018-03-06 10:35:04 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5953319023&since_id=1>
+
+2018-03-06 10:35:04 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5869261709&since_id=1>
+
+2018-03-06 10:35:04 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3824620864&since_id=1>
+
+2018-03-06 10:35:05 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3057239322&since_id=1>
+
+2018-03-06 10:35:05 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302835721891133_-_INFO>
+
+2018-03-06 10:35:05 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5721891133&since_id=1>
+
+2018-03-06 10:35:05 [root] DEBUG: ('Exception_3', 'E11000 duplicate key error collection: syn_2.fans_2 index: id_1 dup key: { : 5943958271 }')
+2018-03-06 10:35:05 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5953319023&since_id=1>
+
+2018-03-06 10:35:05 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3824620864&since_id=1>
+
+2018-03-06 10:35:05 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302835526115058_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3597829674&since_id=3)
+2018-03-06 10:35:05 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3057239322&since_id=1>
+
+2018-03-06 10:35:05 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5526115058&since_id=1>
+
+2018-03-06 10:35:05 [root] DEBUG: ('Exception_3', 'E11000 duplicate key error collection: syn_2.fans_2 index: id_1 dup key: { : 5234339453 }')
+2018-03-06 10:35:05 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5721891133&since_id=1>
+
+2018-03-06 10:35:05 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5953319023&since_id=1>
+
+2018-03-06 10:35:05 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3057239322&since_id=1>
+
+2018-03-06 10:35:06 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5526115058&since_id=1>
+
+2018-03-06 10:35:06 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5721891133&since_id=1>
+
+2018-03-06 10:35:06 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5953319023&since_id=1>
+
+2018-03-06 10:35:06 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3057239322&since_id=1>
+
+2018-03-06 10:35:06 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302835526115058_-_INFO>
+
+2018-03-06 10:35:06 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5526115058&since_id=1>
+
+2018-03-06 10:35:06 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5721891133&since_id=1>
+
+2018-03-06 10:35:06 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5953319023&since_id=1>
+
+2018-03-06 10:35:06 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302835854329174_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3597829674&since_id=3)
+2018-03-06 10:35:06 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5854329174&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3597829674&since_id=3)
+2018-03-06 10:35:06 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3057239322&since_id=1>
+
+2018-03-06 10:35:06 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5526115058&since_id=1>
+
+2018-03-06 10:35:06 [root] DEBUG: ('Exception_3', 'E11000 duplicate key error collection: syn_2.fans_2 index: id_1 dup key: { : 5953172194 }')
+2018-03-06 10:35:06 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5721891133&since_id=1>
+
+2018-03-06 10:35:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5953319023&since_id=1>
+
+2018-03-06 10:35:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3057239322&since_id=1>
+
+2018-03-06 10:35:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5526115058&since_id=1>
+
+2018-03-06 10:35:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5721891133&since_id=1>
+
+2018-03-06 10:35:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5953319023&since_id=1>
+
+2018-03-06 10:35:07 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5099492216&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3597829674&since_id=3)
+2018-03-06 10:35:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302835854329174_-_INFO>
+
+2018-03-06 10:35:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5854329174&since_id=1>
+
+2018-03-06 10:35:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3057239322&since_id=1>
+
+2018-03-06 10:35:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5526115058&since_id=1>
+
+2018-03-06 10:35:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5721891133&since_id=1>
+
+2018-03-06 10:35:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5953319023&since_id=1>
+
+2018-03-06 10:35:08 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5854329174&since_id=1>
+
+2018-03-06 10:35:08 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3057239322&since_id=1>
+
+2018-03-06 10:35:08 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5526115058&since_id=1>
+
+2018-03-06 10:35:08 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5721891133&since_id=1>
+
+2018-03-06 10:35:08 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5953319023&since_id=1>
+
+2018-03-06 10:35:08 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302835099492216_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3597829674&since_id=3)
+2018-03-06 10:35:08 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3745393757&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3597829674&since_id=3)
+2018-03-06 10:35:08 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5099492216&since_id=1>
+
+2018-03-06 10:35:08 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5854329174&since_id=1>
+
+2018-03-06 10:35:08 [root] DEBUG: ('Exception_3', 'E11000 duplicate key error collection: syn_2.fans_2 index: id_1 dup key: { : 5857262411 }')
+2018-03-06 10:35:08 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3057239322&since_id=1>
+
+2018-03-06 10:35:08 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5526115058&since_id=1>
+
+2018-03-06 10:35:08 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5721891133&since_id=1>
+
+2018-03-06 10:35:08 [scrapy.extensions.logstats] INFO: Crawled 106 pages (at 106 pages/min), scraped 547 items (at 547 items/min)
+2018-03-06 10:35:09 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5953319023&since_id=1>
+
+2018-03-06 10:35:09 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5099492216&since_id=1>
+
+2018-03-06 10:35:09 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5854329174&since_id=1>
+
+2018-03-06 10:35:09 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3057239322&since_id=1>
+
+2018-03-06 10:35:09 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5526115058&since_id=1>
+
+2018-03-06 10:35:09 [root] DEBUG: ('Exception_3', 'E11000 duplicate key error collection: syn_2.fans_2 index: id_1 dup key: { : 5676159144 }')
+2018-03-06 10:35:09 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5721891133&since_id=1>
+
+2018-03-06 10:35:09 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5953319023&since_id=1>
+
+2018-03-06 10:35:09 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302833745393757_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3597829674&since_id=3)
+2018-03-06 10:35:09 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5099492216&since_id=1>
+
+2018-03-06 10:35:09 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302835099492216_-_INFO>
+
+2018-03-06 10:35:09 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3745393757&since_id=1>
+
+2018-03-06 10:35:09 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5854329174&since_id=1>
+
+2018-03-06 10:35:10 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3057239322&since_id=1>
+
+2018-03-06 10:35:10 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5526115058&since_id=1>
+
+2018-03-06 10:35:10 [root] DEBUG: ('Exception_3', 'E11000 duplicate key error collection: syn_2.fans_2 index: id_1 dup key: { : 5526115058 }')
+2018-03-06 10:35:10 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5721891133&since_id=1>
+
+2018-03-06 10:35:10 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5953319023&since_id=1>
+
+2018-03-06 10:35:10 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5765385252&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3597829674&since_id=3)
+2018-03-06 10:35:10 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5099492216&since_id=1>
+
+2018-03-06 10:35:10 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3745393757&since_id=1>
+
+2018-03-06 10:35:10 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5854329174&since_id=1>
+
+2018-03-06 10:35:10 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3057239322&since_id=1>
+
+2018-03-06 10:35:10 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5526115058&since_id=1>
+
+2018-03-06 10:35:10 [root] DEBUG: ('Exception_3', 'E11000 duplicate key error collection: syn_2.fans_2 index: id_1 dup key: { : 3963829719 }')
+2018-03-06 10:35:10 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5721891133&since_id=1>
+
+2018-03-06 10:35:10 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302833745393757_-_INFO>
+
+2018-03-06 10:35:11 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5099492216&since_id=1>
+
+2018-03-06 10:35:11 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3745393757&since_id=1>
+
+2018-03-06 10:35:11 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5854329174&since_id=1>
+
+2018-03-06 10:35:11 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5526115058&since_id=1>
+
+2018-03-06 10:35:11 [root] DEBUG: ('Exception_3', 'E11000 duplicate key error collection: syn_2.fans_2 index: id_1 dup key: { : 5290928346 }')
+2018-03-06 10:35:11 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5721891133&since_id=1>
+
+2018-03-06 10:35:11 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302835765385252_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3597829674&since_id=3)
+2018-03-06 10:35:11 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5099492216&since_id=1>
+
+2018-03-06 10:35:12 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5765385252&since_id=1>
+
+2018-03-06 10:35:12 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3745393757&since_id=1>
+
+2018-03-06 10:35:12 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5854329174&since_id=1>
+
+2018-03-06 10:35:12 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5526115058&since_id=1>
+
+2018-03-06 10:35:12 [root] DEBUG: ('Exception_3', 'E11000 duplicate key error collection: syn_2.fans_2 index: id_1 dup key: { : 1936446042 }')
+2018-03-06 10:35:12 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5721891133&since_id=1>
+
+2018-03-06 10:35:12 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3216373447&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3597829674&since_id=3)
+2018-03-06 10:35:12 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5099492216&since_id=1>
+
+2018-03-06 10:35:12 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5765385252&since_id=1>
+
+2018-03-06 10:35:13 [root] DEBUG: ('Exception_3', 'E11000 duplicate key error collection: syn_2.fans_2 index: id_1 dup key: { : 5233756683 }')
+2018-03-06 10:35:13 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3745393757&since_id=1>
+
+2018-03-06 10:35:13 [root] DEBUG: ('Exception_3', 'E11000 duplicate key error collection: syn_2.fans_2 index: id_1 dup key: { : 5476263321 }')
+2018-03-06 10:35:13 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5854329174&since_id=1>
+
+2018-03-06 10:35:13 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5526115058&since_id=1>
+
+2018-03-06 10:35:13 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5721891133&since_id=1>
+
+2018-03-06 10:35:13 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302833216373447_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3597829674&since_id=3)
+2018-03-06 10:35:13 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5099492216&since_id=1>
+
+2018-03-06 10:35:13 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302835765385252_-_INFO>
+
+2018-03-06 10:35:13 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5765385252&since_id=1>
+
+2018-03-06 10:35:13 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3745393757&since_id=1>
+
+2018-03-06 10:35:13 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5854329174&since_id=1>
+
+2018-03-06 10:35:13 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5526115058&since_id=1>
+
+2018-03-06 10:35:13 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5721891133&since_id=1>
+
+2018-03-06 10:35:13 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5329250400&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3597829674&since_id=3)
+2018-03-06 10:35:14 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3216373447&since_id=1>
+
+2018-03-06 10:35:14 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5099492216&since_id=1>
+
+2018-03-06 10:35:14 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5765385252&since_id=1>
+
+2018-03-06 10:35:14 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3745393757&since_id=1>
+
+2018-03-06 10:35:14 [root] DEBUG: ('Exception_3', 'E11000 duplicate key error collection: syn_2.fans_2 index: id_1 dup key: { : 5953319023 }')
+2018-03-06 10:35:14 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5854329174&since_id=1>
+
+2018-03-06 10:35:14 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5526115058&since_id=1>
+
+2018-03-06 10:35:14 [root] DEBUG: ('Exception_3', 'E11000 duplicate key error collection: syn_2.fans_2 index: id_1 dup key: { : 3057239322 }')
+2018-03-06 10:35:14 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5721891133&since_id=1>
+
+2018-03-06 10:35:14 [root] DEBUG: ('Exception_3', 'E11000 duplicate key error collection: syn_2.fans_2 index: id_1 dup key: { : 3815732600 }')
+2018-03-06 10:35:14 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3216373447&since_id=1>
+
+2018-03-06 10:35:14 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5099492216&since_id=1>
+
+2018-03-06 10:35:14 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302833216373447_-_INFO>
+
+2018-03-06 10:35:14 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5765385252&since_id=1>
+
+2018-03-06 10:35:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3745393757&since_id=1>
+
+2018-03-06 10:35:15 [root] DEBUG: ('Exception_3', 'E11000 duplicate key error collection: syn_2.fans_2 index: id_1 dup key: { : 2671109275 }')
+2018-03-06 10:35:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5854329174&since_id=1>
+
+2018-03-06 10:35:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5526115058&since_id=1>
+
+2018-03-06 10:35:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5721891133&since_id=1>
+
+2018-03-06 10:35:15 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302835329250400_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3597829674&since_id=3)
+2018-03-06 10:35:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3216373447&since_id=1>
+
+2018-03-06 10:35:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5329250400&since_id=1>
+
+2018-03-06 10:35:15 [root] DEBUG: ('Exception_3', 'E11000 duplicate key error collection: syn_2.fans_2 index: id_1 dup key: { : 3824620864 }')
+2018-03-06 10:35:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5099492216&since_id=1>
+
+2018-03-06 10:35:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5765385252&since_id=1>
+
+2018-03-06 10:35:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3745393757&since_id=1>
+
+2018-03-06 10:35:15 [root] DEBUG: ('Exception_3', 'E11000 duplicate key error collection: syn_2.fans_2 index: id_1 dup key: { : 5234339453 }')
+2018-03-06 10:35:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5526115058&since_id=1>
+
+2018-03-06 10:35:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5721891133&since_id=1>
+
+2018-03-06 10:35:15 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302833568098565_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3597829674&since_id=4)
+2018-03-06 10:35:16 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3216373447&since_id=1>
+
+2018-03-06 10:35:16 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5329250400&since_id=1>
+
+2018-03-06 10:35:16 [root] DEBUG: ('Exception_3', 'E11000 duplicate key error collection: syn_2.fans_2 index: id_1 dup key: { : 5852661929 }')
+2018-03-06 10:35:16 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5099492216&since_id=1>
+
+2018-03-06 10:35:16 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5765385252&since_id=1>
+
+2018-03-06 10:35:16 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3745393757&since_id=1>
+
+2018-03-06 10:35:16 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5526115058&since_id=1>
+
+2018-03-06 10:35:16 [root] DEBUG: ('Exception_3', 'E11000 duplicate key error collection: syn_2.fans_2 index: id_1 dup key: { : 5476263321 }')
+2018-03-06 10:35:16 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5721891133&since_id=1>
+
+2018-03-06 10:35:16 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3206188677&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3597829674&since_id=4)
+2018-03-06 10:35:16 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302835329250400_-_INFO>
+
+2018-03-06 10:35:16 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3216373447&since_id=1>
+
+2018-03-06 10:35:16 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5329250400&since_id=1>
+
+2018-03-06 10:35:16 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5099492216&since_id=1>
+
+2018-03-06 10:35:17 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5765385252&since_id=1>
+
+2018-03-06 10:35:17 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3745393757&since_id=1>
+
+2018-03-06 10:35:17 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5526115058&since_id=1>
+
+2018-03-06 10:35:17 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302833206188677_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3597829674&since_id=4)
+2018-03-06 10:35:17 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302833568098565_-_INFO>
+
+2018-03-06 10:35:17 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3216373447&since_id=1>
+
+2018-03-06 10:35:17 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5329250400&since_id=1>
+
+2018-03-06 10:35:17 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5099492216&since_id=1>
+
+2018-03-06 10:35:17 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5765385252&since_id=1>
+
+2018-03-06 10:35:17 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3745393757&since_id=1>
+
+2018-03-06 10:35:17 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3206188677&since_id=1>
+
+2018-03-06 10:35:17 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3216373447&since_id=1>
+
+2018-03-06 10:35:18 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5329250400&since_id=1>
+
+2018-03-06 10:35:18 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5099492216&since_id=1>
+
+2018-03-06 10:35:18 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5765385252&since_id=1>
+
+2018-03-06 10:35:18 [root] DEBUG: ('Exception_3', 'E11000 duplicate key error collection: syn_2.fans_2 index: id_1 dup key: { : 5487425616 }')
+2018-03-06 10:35:18 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3745393757&since_id=1>
+
+2018-03-06 10:35:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5648695353&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3597829674&since_id=4)
+2018-03-06 10:35:18 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302833206188677_-_INFO>
+
+2018-03-06 10:35:18 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3206188677&since_id=1>
+
+2018-03-06 10:35:18 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3216373447&since_id=1>
+
+2018-03-06 10:35:18 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5329250400&since_id=1>
+
+2018-03-06 10:35:18 [root] DEBUG: ('Exception_3', 'E11000 duplicate key error collection: syn_2.fans_2 index: id_1 dup key: { : 5585270924 }')
+2018-03-06 10:35:18 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5099492216&since_id=1>
+
+2018-03-06 10:35:18 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5765385252&since_id=1>
+
+2018-03-06 10:35:18 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3745393757&since_id=1>
+
+2018-03-06 10:35:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302835648695353_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3597829674&since_id=4)
+2018-03-06 10:35:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3206188677&since_id=1>
+
+2018-03-06 10:35:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3216373447&since_id=1>
+
+2018-03-06 10:35:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5329250400&since_id=1>
+
+2018-03-06 10:35:19 [root] DEBUG: ('Exception_3', 'E11000 duplicate key error collection: syn_2.fans_2 index: id_1 dup key: { : 5767895951 }')
+2018-03-06 10:35:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5099492216&since_id=1>
+
+2018-03-06 10:35:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5765385252&since_id=1>
+
+2018-03-06 10:35:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3745393757&since_id=1>
+
+2018-03-06 10:35:19 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5437107179&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3597829674&since_id=4)
+2018-03-06 10:35:19 [root] DEBUG: ('Exception_3', 'E11000 duplicate key error collection: syn_2.fans_2 index: id_1 dup key: { : 3597829674 }')
+2018-03-06 10:35:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5648695353&since_id=1>
+
+2018-03-06 10:35:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3206188677&since_id=1>
+
+2018-03-06 10:35:19 [root] DEBUG: ('Exception_3', 'E11000 duplicate key error collection: syn_2.fans_2 index: id_1 dup key: { : 2903575264 }')
+2018-03-06 10:35:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3216373447&since_id=1>
+
+2018-03-06 10:35:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5329250400&since_id=1>
+
+2018-03-06 10:35:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5099492216&since_id=1>
+
+2018-03-06 10:35:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5765385252&since_id=1>
+
+2018-03-06 10:35:20 [root] DEBUG: ('Exception_3', 'E11000 duplicate key error collection: syn_2.fans_2 index: id_1 dup key: { : 5767895951 }')
+2018-03-06 10:35:20 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3745393757&since_id=1>
+
+2018-03-06 10:35:20 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302835437107179_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3597829674&since_id=4)
+2018-03-06 10:35:20 [root] DEBUG: ('Exception_3', 'E11000 duplicate key error collection: syn_2.fans_2 index: id_1 dup key: { : 2671109275 }')
+2018-03-06 10:35:20 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5648695353&since_id=1>
+
+2018-03-06 10:35:20 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3206188677&since_id=1>
+
+2018-03-06 10:35:20 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302835648695353_-_INFO>
+
+2018-03-06 10:35:20 [root] DEBUG: ('Exception_3', 'E11000 duplicate key error collection: syn_2.fans_2 index: id_1 dup key: { : 3597829674 }')
+2018-03-06 10:35:20 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3216373447&since_id=1>
+
+2018-03-06 10:35:21 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5329250400&since_id=1>
+
+2018-03-06 10:35:21 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5765385252&since_id=1>
+
+2018-03-06 10:35:21 [root] DEBUG: ('Exception_3', 'E11000 duplicate key error collection: syn_2.fans_2 index: id_1 dup key: { : 5852422786 }')
+2018-03-06 10:35:21 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3745393757&since_id=1>
+
+2018-03-06 10:35:21 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5437107179&since_id=1>
+
+2018-03-06 10:35:21 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3206188677&since_id=1>
+
+2018-03-06 10:35:21 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3216373447&since_id=1>
+
+2018-03-06 10:35:21 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5329250400&since_id=1>
+
+2018-03-06 10:35:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5765385252&since_id=1>
+
+2018-03-06 10:35:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302835437107179_-_INFO>
+
+2018-03-06 10:35:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5437107179&since_id=1>
+
+2018-03-06 10:35:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3206188677&since_id=1>
+
+2018-03-06 10:35:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3216373447&since_id=1>
+
+2018-03-06 10:35:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5329250400&since_id=1>
+
+2018-03-06 10:35:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5765385252&since_id=1>
+
+2018-03-06 10:35:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302835663812111_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3597829674&since_id=4)
+2018-03-06 10:35:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5663812111&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3597829674&since_id=4)
+2018-03-06 10:35:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5437107179&since_id=1>
+
+2018-03-06 10:35:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3206188677&since_id=1>
+
+2018-03-06 10:35:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3216373447&since_id=1>
+
+2018-03-06 10:35:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5329250400&since_id=1>
+
+2018-03-06 10:35:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5765385252&since_id=1>
+
+2018-03-06 10:35:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5488159074&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3597829674&since_id=4)
+2018-03-06 10:35:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5437107179&since_id=1>
+
+2018-03-06 10:35:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3206188677&since_id=1>
+
+2018-03-06 10:35:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3216373447&since_id=1>
+
+2018-03-06 10:35:24 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5329250400&since_id=1>
+
+2018-03-06 10:35:24 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5765385252&since_id=1>
+
+2018-03-06 10:35:24 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302835663812111_-_INFO>
+
+2018-03-06 10:35:24 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5663812111&since_id=1>
+
+2018-03-06 10:35:24 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5437107179&since_id=1>
+
+2018-03-06 10:35:24 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3206188677&since_id=1>
+
+2018-03-06 10:35:24 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3216373447&since_id=1>
+
+2018-03-06 10:35:24 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5329250400&since_id=1>
+
+2018-03-06 10:35:24 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5765385252&since_id=1>
+
+2018-03-06 10:35:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302835488159074_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3597829674&since_id=4)
+2018-03-06 10:35:24 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5663812111&since_id=1>
+
+2018-03-06 10:35:24 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5488159074&since_id=1>
+
+2018-03-06 10:35:25 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5437107179&since_id=1>
+
+2018-03-06 10:35:25 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3206188677&since_id=1>
+
+2018-03-06 10:35:25 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5329250400&since_id=1>
+
+2018-03-06 10:35:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5710516698&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3597829674&since_id=4)
+2018-03-06 10:35:25 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5663812111&since_id=1>
+
+2018-03-06 10:35:25 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5488159074&since_id=1>
+
+2018-03-06 10:35:25 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5437107179&since_id=1>
+
+2018-03-06 10:35:25 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3206188677&since_id=1>
+
+2018-03-06 10:35:25 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5329250400&since_id=1>
+
+2018-03-06 10:35:25 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5663812111&since_id=1>
+
+2018-03-06 10:35:25 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302835488159074_-_INFO>
+
+2018-03-06 10:35:25 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5488159074&since_id=1>
+
+2018-03-06 10:35:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5437107179&since_id=1>
+
+2018-03-06 10:35:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3206188677&since_id=1>
+
+2018-03-06 10:35:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5329250400&since_id=1>
+
+2018-03-06 10:35:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302835710516698_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3597829674&since_id=4)
+2018-03-06 10:35:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5710516698&since_id=1>
+
+2018-03-06 10:35:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5488159074&since_id=1>
+
+2018-03-06 10:35:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5437107179&since_id=1>
+
+2018-03-06 10:35:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3206188677&since_id=1>
+
+2018-03-06 10:35:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5329250400&since_id=1>
+
+2018-03-06 10:35:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5202239601&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3597829674&since_id=4)
+2018-03-06 10:35:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5710516698&since_id=1>
+
+2018-03-06 10:35:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5488159074&since_id=1>
+
+2018-03-06 10:35:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5437107179&since_id=1>
+
+2018-03-06 10:35:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3206188677&since_id=1>
+
+2018-03-06 10:35:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5329250400&since_id=1>
+
+2018-03-06 10:35:27 [root] DEBUG: ('Exception_3', 'E11000 duplicate key error collection: syn_2.fans_2 index: id_1 dup key: { : 3597829674 }')
+2018-03-06 10:35:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5710516698&since_id=1>
+
+2018-03-06 10:35:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302835710516698_-_INFO>
+
+2018-03-06 10:35:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5488159074&since_id=1>
+
+2018-03-06 10:35:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3206188677&since_id=1>
+
+2018-03-06 10:35:27 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302835202239601_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3597829674&since_id=4)
+2018-03-06 10:35:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5710516698&since_id=1>
+
+2018-03-06 10:35:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5202239601&since_id=1>
+
+2018-03-06 10:35:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5488159074&since_id=1>
+
+2018-03-06 10:35:28 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3206188677&since_id=1>
+
+2018-03-06 10:35:28 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302835821454601_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3597829674&since_id=4)
+2018-03-06 10:35:28 [root] DEBUG: ('Exception_3', 'E11000 duplicate key error collection: syn_2.fans_2 index: id_1 dup key: { : 2671109275 }')
+2018-03-06 10:35:28 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5710516698&since_id=1>
+
+2018-03-06 10:35:28 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5202239601&since_id=1>
+
+2018-03-06 10:35:28 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5488159074&since_id=1>
+
+2018-03-06 10:35:28 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3206188677&since_id=1>
+
+2018-03-06 10:35:28 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5821454601&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3597829674&since_id=4)
+2018-03-06 10:35:28 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302835202239601_-_INFO>
+
+2018-03-06 10:35:28 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5202239601&since_id=1>
+
+2018-03-06 10:35:28 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5488159074&since_id=1>
+
+2018-03-06 10:35:28 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3206188677&since_id=1>
+
+2018-03-06 10:35:28 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302835821454601_-_INFO>
+
+2018-03-06 10:35:29 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5202239601&since_id=1>
+
+2018-03-06 10:35:29 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5488159074&since_id=1>
+
+2018-03-06 10:35:29 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_2671109275&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3597829674&since_id=5)
+2018-03-06 10:35:29 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5821454601&since_id=1>
+
+2018-03-06 10:35:29 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5202239601&since_id=1>
+
+2018-03-06 10:35:29 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5488159074&since_id=1>
+
+2018-03-06 10:35:29 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5821454601&since_id=1>
+
+2018-03-06 10:35:30 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5202239601&since_id=1>
+
+2018-03-06 10:35:30 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5488159074&since_id=1>
+
+2018-03-06 10:35:30 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_2671109275&since_id=1>
+
+2018-03-06 10:35:30 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5821454601&since_id=1>
+
+2018-03-06 10:35:30 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5202239601&since_id=1>
+
+2018-03-06 10:35:30 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5488159074&since_id=1>
+
+2018-03-06 10:35:30 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302833043741170_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3597829674&since_id=5)
+2018-03-06 10:35:30 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3043741170&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3597829674&since_id=5)
+2018-03-06 10:35:30 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_2671109275&since_id=1>
+
+2018-03-06 10:35:30 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5821454601&since_id=1>
+
+2018-03-06 10:35:30 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5202239601&since_id=1>
+
+2018-03-06 10:35:30 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5488159074&since_id=1>
+
+2018-03-06 10:35:30 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302832671109275_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3597829674&since_id=5)
+2018-03-06 10:35:30 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_2671109275&since_id=1>
+
+2018-03-06 10:35:31 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5821454601&since_id=1>
+
+2018-03-06 10:35:31 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5202239601&since_id=1>
+
+2018-03-06 10:35:31 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5488159074&since_id=1>
+
+2018-03-06 10:35:31 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302833043741170_-_INFO>
+
+2018-03-06 10:35:31 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_2671109275&since_id=1>
+
+2018-03-06 10:35:31 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3043741170&since_id=1>
+
+2018-03-06 10:35:31 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5821454601&since_id=1>
+
+2018-03-06 10:35:31 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5202239601&since_id=1>
+
+2018-03-06 10:35:32 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5488159074&since_id=1>
+
+2018-03-06 10:35:32 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302833044314272_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3597829674&since_id=5)
+2018-03-06 10:35:32 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3044314272&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3597829674&since_id=5)
+2018-03-06 10:35:32 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302832671109275_-_INFO>
+
+2018-03-06 10:35:32 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_2671109275&since_id=1>
+
+2018-03-06 10:35:32 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3043741170&since_id=1>
+
+2018-03-06 10:35:32 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5821454601&since_id=1>
+
+2018-03-06 10:35:32 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5202239601&since_id=1>
+
+2018-03-06 10:35:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5488159074&since_id=1>
+
+2018-03-06 10:35:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_2671109275&since_id=1>
+
+2018-03-06 10:35:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3043741170&since_id=1>
+
+2018-03-06 10:35:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5821454601&since_id=1>
+
+2018-03-06 10:35:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5202239601&since_id=1>
+
+2018-03-06 10:35:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5488159074&since_id=1>
+
+2018-03-06 10:35:33 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_2917562085&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3597829674&since_id=5)
+2018-03-06 10:35:33 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5559568571&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3597829674&since_id=5)
+2018-03-06 10:35:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302833044314272_-_INFO>
+
+2018-03-06 10:35:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3044314272&since_id=1>
+
+2018-03-06 10:35:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_2671109275&since_id=1>
+
+2018-03-06 10:35:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3043741170&since_id=1>
+
+2018-03-06 10:35:34 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5821454601&since_id=1>
+
+2018-03-06 10:35:34 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5202239601&since_id=1>
+
+2018-03-06 10:35:34 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5488159074&since_id=1>
+
+2018-03-06 10:35:34 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3044314272&since_id=1>
+
+2018-03-06 10:35:34 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_2671109275&since_id=1>
+
+2018-03-06 10:35:34 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3043741170&since_id=1>
+
+2018-03-06 10:35:34 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5821454601&since_id=1>
+
+2018-03-06 10:35:34 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5202239601&since_id=1>
+
+2018-03-06 10:35:34 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5488159074&since_id=1>
+
+2018-03-06 10:35:34 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302835559568571_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3597829674&since_id=5)
+2018-03-06 10:35:34 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_2917562085&since_id=1>
+
+2018-03-06 10:35:34 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5559568571&since_id=1>
+
+2018-03-06 10:35:35 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3044314272&since_id=1>
+
+2018-03-06 10:35:35 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_2671109275&since_id=1>
+
+2018-03-06 10:35:35 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3043741170&since_id=1>
+
+2018-03-06 10:35:35 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5821454601&since_id=1>
+
+2018-03-06 10:35:35 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5202239601&since_id=1>
+
+2018-03-06 10:35:35 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_2917562085&since_id=1>
+
+2018-03-06 10:35:35 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5559568571&since_id=1>
+
+2018-03-06 10:35:35 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3044314272&since_id=1>
+
+2018-03-06 10:35:35 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_2671109275&since_id=1>
+
+2018-03-06 10:35:35 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3043741170&since_id=1>
+
+2018-03-06 10:35:35 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5821454601&since_id=1>
+
+2018-03-06 10:35:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5202239601&since_id=1>
+
+2018-03-06 10:35:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_2917562085&since_id=1>
+
+2018-03-06 10:35:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302835559568571_-_INFO>
+
+2018-03-06 10:35:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5559568571&since_id=1>
+
+2018-03-06 10:35:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3044314272&since_id=1>
+
+2018-03-06 10:35:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_2671109275&since_id=1>
+
+2018-03-06 10:35:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3043741170&since_id=1>
+
+2018-03-06 10:35:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5821454601&since_id=1>
+
+2018-03-06 10:35:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5202239601&since_id=1>
+
+2018-03-06 10:35:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_2917562085&since_id=1>
+
+2018-03-06 10:35:36 [root] DEBUG: ('Exception_3', 'E11000 duplicate key error collection: syn_2.fans_2 index: id_1 dup key: { : 2671109275 }')
+2018-03-06 10:35:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5559568571&since_id=1>
+
+2018-03-06 10:35:37 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3044314272&since_id=1>
+
+2018-03-06 10:35:37 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_2671109275&since_id=1>
+
+2018-03-06 10:35:37 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3043741170&since_id=1>
+
+2018-03-06 10:35:37 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5821454601&since_id=1>
+
+2018-03-06 10:35:37 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5202239601&since_id=1>
+
+2018-03-06 10:35:37 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_2917562085&since_id=1>
+
+2018-03-06 10:35:37 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3044314272&since_id=1>
+
+2018-03-06 10:35:37 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_2671109275&since_id=1>
+
+2018-03-06 10:35:37 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3043741170&since_id=1>
+
+2018-03-06 10:35:37 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5821454601&since_id=1>
+
+2018-03-06 10:35:38 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5202239601&since_id=1>
+
+2018-03-06 10:35:38 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_2917562085&since_id=1>
+
+2018-03-06 10:35:38 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3044314272&since_id=1>
+
+2018-03-06 10:35:38 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_2671109275&since_id=1>
+
+2018-03-06 10:35:38 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3043741170&since_id=1>
+
+2018-03-06 10:35:38 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5821454601&since_id=1>
+
+2018-03-06 10:35:38 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_2917562085&since_id=1>
+
+2018-03-06 10:35:38 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3044314272&since_id=1>
+
+2018-03-06 10:35:38 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_2671109275&since_id=1>
+
+2018-03-06 10:35:38 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3043741170&since_id=1>
+
+2018-03-06 10:35:38 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5821454601&since_id=1>
+
+2018-03-06 10:35:38 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_2917562085&since_id=1>
+
+2018-03-06 10:35:39 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3044314272&since_id=1>
+
+2018-03-06 10:35:39 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_2671109275&since_id=1>
+
+2018-03-06 10:35:39 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3043741170&since_id=1>
+
+2018-03-06 10:35:39 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5821454601&since_id=1>
+
+2018-03-06 10:35:39 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_2917562085&since_id=1>
+
+2018-03-06 10:35:39 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3044314272&since_id=1>
+
+2018-03-06 10:35:39 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_2671109275&since_id=1>
+
+2018-03-06 10:35:39 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3043741170&since_id=1>
+
+2018-03-06 10:35:39 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5821454601&since_id=1>
+
+2018-03-06 10:35:39 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_2917562085&since_id=1>
+
+2018-03-06 10:35:40 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3044314272&since_id=1>
+
+2018-03-06 10:35:40 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_2671109275&since_id=1>
+
+2018-03-06 10:35:40 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3043741170&since_id=1>
+
+2018-03-06 10:35:40 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5821454601&since_id=1>
+
+2018-03-06 10:35:40 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_2917562085&since_id=1>
+
+2018-03-06 10:35:40 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3044314272&since_id=1>
+
+2018-03-06 10:35:40 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_2671109275&since_id=1>
+
+2018-03-06 10:35:40 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3043741170&since_id=1>
+
+2018-03-06 10:35:40 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_2917562085&since_id=1>
+
+2018-03-06 10:35:40 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3044314272&since_id=1>
+
+2018-03-06 10:35:41 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_2671109275&since_id=1>
+
+2018-03-06 10:35:41 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3043741170&since_id=1>
+
+2018-03-06 10:35:41 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_2917562085&since_id=1>
+
+2018-03-06 10:35:41 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3043741170&since_id=1>
+
+2018-03-06 10:35:41 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_2917562085&since_id=1>
+
+2018-03-06 10:35:41 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3043741170&since_id=1>
+
+2018-03-06 10:35:41 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_2917562085&since_id=1>
+
+2018-03-06 10:35:42 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_2917562085&since_id=1>
+
+2018-03-06 10:35:42 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_2917562085&since_id=1>
+
+2018-03-06 10:35:42 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_2917562085&since_id=1>
+
+2018-03-06 10:35:42 [scrapy.core.engine] INFO: Closing spider (finished)
+2018-03-06 10:35:42 [root] DEBUG: ('count_user', 1)
+2018-03-06 10:35:42 [root] DEBUG: ('count_fans_1', 60)
+2018-03-06 10:35:42 [root] DEBUG: ('count_fans_2', 794)
+2018-03-06 10:35:42 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 75617,
+ 'downloader/request_count': 139,
+ 'downloader/request_method_count/GET': 139,
+ 'downloader/response_bytes': 419396,
+ 'downloader/response_count': 139,
+ 'downloader/response_status_count/200': 139,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2018, 3, 6, 2, 35, 42, 420847),
+ 'item_scraped_count': 865,
+ 'log_count/DEBUG': 1057,
+ 'log_count/INFO': 8,
+ 'log_count/WARNING': 97,
+ 'request_depth_max': 3,
+ 'response_received_count': 139,
+ 'scheduler/dequeued': 138,
+ 'scheduler/dequeued/memory': 138,
+ 'scheduler/enqueued': 138,
+ 'scheduler/enqueued/memory': 138,
+ 'start_time': datetime.datetime(2018, 3, 6, 2, 34, 8, 366822)}
+2018-03-06 10:35:42 [scrapy.core.engine] INFO: Spider closed (finished)
