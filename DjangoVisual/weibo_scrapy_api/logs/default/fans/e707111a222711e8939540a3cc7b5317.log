@@ -1,0 +1,1488 @@
+2018-03-08 00:52:23 [scrapy.utils.log] INFO: Scrapy 1.5.0 started (bot: weibo_scrapy_api)
+2018-03-08 00:52:23 [scrapy.utils.log] INFO: Versions: lxml 4.1.1.0, libxml2 2.9.5, cssselect 1.0.3, parsel 1.4.0, w3lib 1.19.0, Twisted 17.5.0, Python 3.6.4 |Anaconda, Inc.| (default, Jan 16 2018, 10:22:32) [MSC v.1900 64 bit (AMD64)], pyOpenSSL 17.5.0 (OpenSSL 1.0.2n  7 Dec 2017), cryptography 2.1.4, Platform Windows-10-10.0.15063-SP0
+2018-03-08 00:52:23 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'weibo_scrapy_api', 'CONCURRENT_REQUESTS_PER_IP': 300, 'DOWNLOAD_DELAY': 0.2, 'LOG_FILE': 'logs\\default\\fans\\e707111a222711e8939540a3cc7b5317.log', 'NEWSPIDER_MODULE': 'weibo_scrapy_api.spiders', 'ROBOTSTXT_OBEY': True, 'SPIDER_MODULES': ['weibo_scrapy_api.spiders']}
+2018-03-08 00:52:23 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2018-03-08 00:52:23 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2018-03-08 00:52:23 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2018-03-08 00:52:23 [scrapy.middleware] INFO: Enabled item pipelines:
+['weibo_scrapy_api.pipelines.WeiboScrapyApiPipeline']
+2018-03-08 00:52:23 [scrapy.core.engine] INFO: Spider opened
+2018-03-08 00:52:23 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-03-08 00:52:23 [scrapy.extensions.telnet] DEBUG: Telnet console listening on 127.0.0.1:6023
+2018-03-08 00:52:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/robots.txt> (referer: None)
+2018-03-08 00:52:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302833912883937_-_INFO> (referer: None)
+2018-03-08 00:52:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?value=3912883937&containerid=1076033912883937&page=1> (referer: None)
+2018-03-08 00:52:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?value=3912883937&containerid=1076033912883937&page=2> (referer: None)
+2018-03-08 00:52:24 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?value=3912883937&containerid=1076033912883937&page=1>
+
+2018-03-08 00:52:24 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?value=3912883937&containerid=1076033912883937&page=2>
+
+2018-03-08 00:52:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?value=3912883937&containerid=1076033912883937&page=3> (referer: None)
+2018-03-08 00:52:24 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?value=3912883937&containerid=1076033912883937&page=3>
+
+2018-03-08 00:52:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?value=3912883937&containerid=1076033912883937&page=4> (referer: None)
+2018-03-08 00:52:24 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?value=3912883937&containerid=1076033912883937&page=4>
+
+2018-03-08 00:52:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?value=3912883937&containerid=1076033912883937&page=5> (referer: None)
+2018-03-08 00:52:25 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?value=3912883937&containerid=1076033912883937&page=5>
+
+2018-03-08 00:52:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?value=3912883937&containerid=1076033912883937&page=6> (referer: None)
+2018-03-08 00:52:25 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?value=3912883937&containerid=1076033912883937&page=6>
+
+2018-03-08 00:52:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?value=3912883937&containerid=1076033912883937&page=7> (referer: None)
+2018-03-08 00:52:25 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?value=3912883937&containerid=1076033912883937&page=7>
+
+2018-03-08 00:52:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?value=3912883937&containerid=1076033912883937&page=8> (referer: None)
+2018-03-08 00:52:25 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?value=3912883937&containerid=1076033912883937&page=8>
+
+2018-03-08 00:52:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?value=3912883937&containerid=1076033912883937&page=9> (referer: None)
+2018-03-08 00:52:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?value=3912883937&containerid=1076033912883937&page=9>
+
+2018-03-08 00:52:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?value=3912883937&containerid=1076033912883937&page=10> (referer: None)
+2018-03-08 00:52:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?value=3912883937&containerid=1076033912883937&page=10>
+
+2018-03-08 00:52:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=1005053912883937> (referer: https://m.weibo.cn/api/container/getIndex?containerid=2302833912883937_-_INFO)
+2018-03-08 00:52:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=1005053912883937>
+
+2018-03-08 00:52:26 [root] DEBUG: ('pages', 86)
+2018-03-08 00:52:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=10> (referer: https://m.weibo.cn/api/container/getIndex?containerid=1005053912883937)
+2018-03-08 00:52:27 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=9> (referer: https://m.weibo.cn/api/container/getIndex?containerid=1005053912883937)
+2018-03-08 00:52:27 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=8> (referer: https://m.weibo.cn/api/container/getIndex?containerid=1005053912883937)
+2018-03-08 00:52:27 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=7> (referer: https://m.weibo.cn/api/container/getIndex?containerid=1005053912883937)
+2018-03-08 00:52:27 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=6> (referer: https://m.weibo.cn/api/container/getIndex?containerid=1005053912883937)
+2018-03-08 00:52:27 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=5> (referer: https://m.weibo.cn/api/container/getIndex?containerid=1005053912883937)
+2018-03-08 00:52:28 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=3> (referer: https://m.weibo.cn/api/container/getIndex?containerid=1005053912883937)
+2018-03-08 00:52:28 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=4> (referer: https://m.weibo.cn/api/container/getIndex?containerid=1005053912883937)
+2018-03-08 00:52:28 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=2> (referer: https://m.weibo.cn/api/container/getIndex?containerid=1005053912883937)
+2018-03-08 00:52:28 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=1005053912883937)
+2018-03-08 00:52:29 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=36> (referer: https://m.weibo.cn/api/container/getIndex?containerid=1005053912883937)
+2018-03-08 00:52:29 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=34> (referer: https://m.weibo.cn/api/container/getIndex?containerid=1005053912883937)
+2018-03-08 00:52:29 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=35> (referer: https://m.weibo.cn/api/container/getIndex?containerid=1005053912883937)
+2018-03-08 00:52:29 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=33> (referer: https://m.weibo.cn/api/container/getIndex?containerid=1005053912883937)
+2018-03-08 00:52:30 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=32> (referer: https://m.weibo.cn/api/container/getIndex?containerid=1005053912883937)
+2018-03-08 00:52:30 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=31> (referer: https://m.weibo.cn/api/container/getIndex?containerid=1005053912883937)
+2018-03-08 00:52:30 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=87> (referer: https://m.weibo.cn/api/container/getIndex?containerid=1005053912883937)
+2018-03-08 00:52:30 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6054753774&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=10)
+2018-03-08 00:52:30 [root] WARNING: ('fans_2_error', 'UNIQUE constraint failed: my_main_fans_2_item_dj.id')
+2018-03-08 00:52:31 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-03-08 00:52:31 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6054753774&since_id=1>
+
+2018-03-08 00:52:31 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6115567889&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=9)
+2018-03-08 00:52:31 [root] WARNING: ('fans_2_error', 'UNIQUE constraint failed: my_main_fans_2_item_dj.id')
+2018-03-08 00:52:31 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-03-08 00:52:31 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6115567889&since_id=1>
+
+2018-03-08 00:52:31 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_2879661937&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=8)
+2018-03-08 00:52:31 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_2879661937&since_id=1>
+
+2018-03-08 00:52:31 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_2683291560&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=7)
+2018-03-08 00:52:31 [root] WARNING: ('fans_2_error', 'UNIQUE constraint failed: my_main_fans_2_item_dj.id')
+2018-03-08 00:52:31 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-03-08 00:52:31 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_2683291560&since_id=1>
+
+2018-03-08 00:52:32 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5647843509&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=5)
+2018-03-08 00:52:32 [root] WARNING: ('fans_2_error', 'UNIQUE constraint failed: my_main_fans_2_item_dj.id')
+2018-03-08 00:52:32 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-03-08 00:52:32 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5647843509&since_id=1>
+
+2018-03-08 00:52:32 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302835647843509_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=5)
+2018-03-08 00:52:32 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302835647843509_-_INFO>
+
+2018-03-08 00:52:32 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5313729699&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=4)
+2018-03-08 00:52:32 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302832683291560_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=7)
+2018-03-08 00:52:32 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5313729699&since_id=1>
+
+2018-03-08 00:52:32 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302832683291560_-_INFO>
+
+2018-03-08 00:52:32 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5593148302&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=2)
+2018-03-08 00:52:33 [root] WARNING: ('fans_2_error', 'UNIQUE constraint failed: my_main_fans_2_item_dj.id')
+2018-03-08 00:52:33 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-03-08 00:52:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5593148302&since_id=1>
+
+2018-03-08 00:52:33 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_2406328824&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=1)
+2018-03-08 00:52:33 [root] WARNING: ('fans_2_error', 'UNIQUE constraint failed: my_main_fans_2_item_dj.id')
+2018-03-08 00:52:33 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-03-08 00:52:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_2406328824&since_id=1>
+
+2018-03-08 00:52:33 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_2319947231&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=36)
+2018-03-08 00:52:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_2319947231&since_id=1>
+
+2018-03-08 00:52:33 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302832319947231_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=36)
+2018-03-08 00:52:34 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302832319947231_-_INFO>
+
+2018-03-08 00:52:34 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5943551948&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=35)
+2018-03-08 00:52:34 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_1141927880&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=33)
+2018-03-08 00:52:34 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5943551948&since_id=1>
+
+2018-03-08 00:52:34 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_1141927880&since_id=1>
+
+2018-03-08 00:52:34 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5703491355&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=32)
+2018-03-08 00:52:34 [root] WARNING: ('fans_2_error', 'UNIQUE constraint failed: my_main_fans_2_item_dj.id')
+2018-03-08 00:52:34 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-03-08 00:52:34 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5703491355&since_id=1>
+
+2018-03-08 00:52:34 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302835703491355_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=32)
+2018-03-08 00:52:35 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302835703491355_-_INFO>
+
+2018-03-08 00:52:35 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_2796003885&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=31)
+2018-03-08 00:52:35 [root] WARNING: ('fans_2_error', 'UNIQUE constraint failed: my_main_fans_2_item_dj.id')
+2018-03-08 00:52:35 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-03-08 00:52:35 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_2796003885&since_id=1>
+
+2018-03-08 00:52:35 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302832796003885_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=31)
+2018-03-08 00:52:35 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5819095895&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=31)
+2018-03-08 00:52:35 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302832796003885_-_INFO>
+
+2018-03-08 00:52:35 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5819095895&since_id=1>
+
+2018-03-08 00:52:36 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302835819095895_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=31)
+2018-03-08 00:52:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302835819095895_-_INFO>
+
+2018-03-08 00:52:36 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3187425914&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=31)
+2018-03-08 00:52:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3187425914&since_id=1>
+
+2018-03-08 00:52:36 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302833187425914_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=31)
+2018-03-08 00:52:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302833187425914_-_INFO>
+
+2018-03-08 00:52:36 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5762999974&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=31)
+2018-03-08 00:52:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5762999974&since_id=1>
+
+2018-03-08 00:52:37 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302835762999974_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=31)
+2018-03-08 00:52:37 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5494956615&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=31)
+2018-03-08 00:52:37 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302835762999974_-_INFO>
+
+2018-03-08 00:52:37 [root] WARNING: ('fans_2_error', 'UNIQUE constraint failed: my_main_fans_2_item_dj.id')
+2018-03-08 00:52:37 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-03-08 00:52:37 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5494956615&since_id=1>
+
+2018-03-08 00:52:37 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302835494956615_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=31)
+2018-03-08 00:52:37 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_1730374461&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=31)
+2018-03-08 00:52:37 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302835494956615_-_INFO>
+
+2018-03-08 00:52:37 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_1730374461&since_id=1>
+
+2018-03-08 00:52:38 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5428295399&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=31)
+2018-03-08 00:52:38 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302831730374461_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=31)
+2018-03-08 00:52:38 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5428295399&since_id=1>
+
+2018-03-08 00:52:38 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302831730374461_-_INFO>
+
+2018-03-08 00:52:38 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5861840292&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=31)
+2018-03-08 00:52:38 [root] WARNING: ('fans_2_error', 'UNIQUE constraint failed: my_main_fans_2_item_dj.id')
+2018-03-08 00:52:39 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-03-08 00:52:39 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5861840292&since_id=1>
+
+2018-03-08 00:52:39 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302835861840292_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=31)
+2018-03-08 00:52:39 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302835428295399_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=31)
+2018-03-08 00:52:39 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302835861840292_-_INFO>
+
+2018-03-08 00:52:39 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302835428295399_-_INFO>
+
+2018-03-08 00:52:39 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_2868014761&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=31)
+2018-03-08 00:52:39 [root] WARNING: ('fans_2_error', 'UNIQUE constraint failed: my_main_fans_2_item_dj.id')
+2018-03-08 00:52:39 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-03-08 00:52:39 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_2868014761&since_id=1>
+
+2018-03-08 00:52:39 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302832868014761_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=31)
+2018-03-08 00:52:40 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302832868014761_-_INFO>
+
+2018-03-08 00:52:40 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5544823086&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=31)
+2018-03-08 00:52:40 [root] WARNING: ('fans_2_error', 'UNIQUE constraint failed: my_main_fans_2_item_dj.id')
+2018-03-08 00:52:40 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-03-08 00:52:40 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5544823086&since_id=1>
+
+2018-03-08 00:52:40 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302835544823086_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=31)
+2018-03-08 00:52:40 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302835544823086_-_INFO>
+
+2018-03-08 00:52:40 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5217035740&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=31)
+2018-03-08 00:52:40 [root] WARNING: ('fans_2_error', 'UNIQUE constraint failed: my_main_fans_2_item_dj.id')
+2018-03-08 00:52:40 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-03-08 00:52:40 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5217035740&since_id=1>
+
+2018-03-08 00:52:41 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5774460940&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=31)
+2018-03-08 00:52:41 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302835217035740_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=31)
+2018-03-08 00:52:41 [root] WARNING: ('fans_2_error', 'UNIQUE constraint failed: my_main_fans_2_item_dj.id')
+2018-03-08 00:52:41 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-03-08 00:52:41 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5774460940&since_id=1>
+
+2018-03-08 00:52:41 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302835774460940_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=31)
+2018-03-08 00:52:41 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302835217035740_-_INFO>
+
+2018-03-08 00:52:41 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302835774460940_-_INFO>
+
+2018-03-08 00:52:41 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_2635486454&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=31)
+2018-03-08 00:52:41 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_2635486454&since_id=1>
+
+2018-03-08 00:52:42 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302832635486454_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=31)
+2018-03-08 00:52:42 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302832635486454_-_INFO>
+
+2018-03-08 00:52:42 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3090491972&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=31)
+2018-03-08 00:52:42 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3090491972&since_id=1>
+
+2018-03-08 00:52:42 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302833090491972_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=31)
+2018-03-08 00:52:42 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302833090491972_-_INFO>
+
+2018-03-08 00:52:42 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_1766080992&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=31)
+2018-03-08 00:52:42 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_1766080992&since_id=1>
+
+2018-03-08 00:52:43 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302831766080992_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=31)
+2018-03-08 00:52:43 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302831766080992_-_INFO>
+
+2018-03-08 00:52:43 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5284884232&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=31)
+2018-03-08 00:52:43 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5817257921&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=31)
+2018-03-08 00:52:44 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5284884232&since_id=1>
+
+2018-03-08 00:52:44 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5817257921&since_id=1>
+
+2018-03-08 00:52:44 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5856153111&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=31)
+2018-03-08 00:52:44 [root] WARNING: ('fans_2_error', 'UNIQUE constraint failed: my_main_fans_2_item_dj.id')
+2018-03-08 00:52:44 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-03-08 00:52:44 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5856153111&since_id=1>
+
+2018-03-08 00:52:44 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302835817257921_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=31)
+2018-03-08 00:52:44 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302835284884232_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=31)
+2018-03-08 00:52:44 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302835856153111_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=31)
+2018-03-08 00:52:44 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302835817257921_-_INFO>
+
+2018-03-08 00:52:44 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302835284884232_-_INFO>
+
+2018-03-08 00:52:44 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302835856153111_-_INFO>
+
+2018-03-08 00:52:44 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5928487269&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=32)
+2018-03-08 00:52:45 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5928487269&since_id=1>
+
+2018-03-08 00:52:45 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302835928487269_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=32)
+2018-03-08 00:52:45 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5321711329&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=32)
+2018-03-08 00:52:45 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302835928487269_-_INFO>
+
+2018-03-08 00:52:45 [root] WARNING: ('fans_2_error', 'UNIQUE constraint failed: my_main_fans_2_item_dj.id')
+2018-03-08 00:52:45 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-03-08 00:52:45 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5321711329&since_id=1>
+
+2018-03-08 00:52:45 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302835321711329_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=32)
+2018-03-08 00:52:45 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302835321711329_-_INFO>
+
+2018-03-08 00:52:45 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5944006464&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=32)
+2018-03-08 00:52:45 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5944006464&since_id=1>
+
+2018-03-08 00:52:46 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302835944006464_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=32)
+2018-03-08 00:52:46 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5932178503&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=32)
+2018-03-08 00:52:46 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302835944006464_-_INFO>
+
+2018-03-08 00:52:46 [root] WARNING: ('fans_2_error', 'UNIQUE constraint failed: my_main_fans_2_item_dj.id')
+2018-03-08 00:52:46 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-03-08 00:52:46 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5932178503&since_id=1>
+
+2018-03-08 00:52:46 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302835932178503_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=32)
+2018-03-08 00:52:46 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302835932178503_-_INFO>
+
+2018-03-08 00:52:46 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5751025163&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=32)
+2018-03-08 00:52:46 [root] WARNING: ('fans_2_error', 'UNIQUE constraint failed: my_main_fans_2_item_dj.id')
+2018-03-08 00:52:47 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-03-08 00:52:47 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5751025163&since_id=1>
+
+2018-03-08 00:52:47 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302835751025163_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=32)
+2018-03-08 00:52:47 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302835751025163_-_INFO>
+
+2018-03-08 00:52:47 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3830149423&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=32)
+2018-03-08 00:52:47 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3830149423&since_id=1>
+
+2018-03-08 00:52:48 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302833830149423_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=32)
+2018-03-08 00:52:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302833830149423_-_INFO>
+
+2018-03-08 00:52:48 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5626114267&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=32)
+2018-03-08 00:52:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5626114267&since_id=1>
+
+2018-03-08 00:52:48 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302835626114267_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=32)
+2018-03-08 00:52:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302835626114267_-_INFO>
+
+2018-03-08 00:52:49 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302833192223034_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=32)
+2018-03-08 00:52:49 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302833192223034_-_INFO>
+
+2018-03-08 00:52:49 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5234781766&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=32)
+2018-03-08 00:52:49 [root] WARNING: ('fans_2_error', 'UNIQUE constraint failed: my_main_fans_2_item_dj.id')
+2018-03-08 00:52:49 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-03-08 00:52:49 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5234781766&since_id=1>
+
+2018-03-08 00:52:49 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3192223034&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=32)
+2018-03-08 00:52:49 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302835234781766_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=32)
+2018-03-08 00:52:49 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5626193103&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=32)
+2018-03-08 00:52:49 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3192223034&since_id=1>
+
+2018-03-08 00:52:49 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302835234781766_-_INFO>
+
+2018-03-08 00:52:49 [root] WARNING: ('fans_2_error', 'UNIQUE constraint failed: my_main_fans_2_item_dj.id')
+2018-03-08 00:52:49 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-03-08 00:52:49 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5626193103&since_id=1>
+
+2018-03-08 00:52:50 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302835626193103_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=32)
+2018-03-08 00:52:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302835626193103_-_INFO>
+
+2018-03-08 00:52:50 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_2708234361&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=32)
+2018-03-08 00:52:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_2708234361&since_id=1>
+
+2018-03-08 00:52:50 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302832708234361_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=32)
+2018-03-08 00:52:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302832708234361_-_INFO>
+
+2018-03-08 00:52:50 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_2279302321&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=32)
+2018-03-08 00:52:50 [root] WARNING: ('fans_2_error', 'UNIQUE constraint failed: my_main_fans_2_item_dj.id')
+2018-03-08 00:52:51 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-03-08 00:52:51 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_2279302321&since_id=1>
+
+2018-03-08 00:52:51 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302832279302321_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=32)
+2018-03-08 00:52:51 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302832279302321_-_INFO>
+
+2018-03-08 00:52:51 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_2012596265&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=32)
+2018-03-08 00:52:51 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_2012596265&since_id=1>
+
+2018-03-08 00:52:51 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3779877213&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=32)
+2018-03-08 00:52:52 [root] WARNING: ('fans_2_error', 'UNIQUE constraint failed: my_main_fans_2_item_dj.id')
+2018-03-08 00:52:52 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-03-08 00:52:52 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3779877213&since_id=1>
+
+2018-03-08 00:52:52 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302832012596265_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=32)
+2018-03-08 00:52:52 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302833779877213_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=32)
+2018-03-08 00:52:52 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302832012596265_-_INFO>
+
+2018-03-08 00:52:52 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302833779877213_-_INFO>
+
+2018-03-08 00:52:52 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_2129699531&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=32)
+2018-03-08 00:52:52 [root] WARNING: ('fans_2_error', 'UNIQUE constraint failed: my_main_fans_2_item_dj.id')
+2018-03-08 00:52:52 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-03-08 00:52:52 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_2129699531&since_id=1>
+
+2018-03-08 00:52:52 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302832129699531_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=32)
+2018-03-08 00:52:52 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302832129699531_-_INFO>
+
+2018-03-08 00:52:53 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5245071343&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=32)
+2018-03-08 00:52:53 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5245071343&since_id=1>
+
+2018-03-08 00:52:53 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302835245071343_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=32)
+2018-03-08 00:52:53 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302835245071343_-_INFO>
+
+2018-03-08 00:52:53 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_1785249645&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=32)
+2018-03-08 00:52:53 [root] WARNING: ('fans_2_error', 'UNIQUE constraint failed: my_main_fans_2_item_dj.id')
+2018-03-08 00:52:53 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-03-08 00:52:53 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_1785249645&since_id=1>
+
+2018-03-08 00:52:54 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302831785249645_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=32)
+2018-03-08 00:52:54 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302831785249645_-_INFO>
+
+2018-03-08 00:52:54 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5170988624&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=32)
+2018-03-08 00:52:54 [root] WARNING: ('fans_2_error', 'UNIQUE constraint failed: my_main_fans_2_item_dj.id')
+2018-03-08 00:52:54 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-03-08 00:52:54 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5170988624&since_id=1>
+
+2018-03-08 00:52:54 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302835170988624_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=32)
+2018-03-08 00:52:54 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302831141927880_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=33)
+2018-03-08 00:52:54 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302835170988624_-_INFO>
+
+2018-03-08 00:52:54 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302831141927880_-_INFO>
+
+2018-03-08 00:52:55 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_1780985882&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=33)
+2018-03-08 00:52:55 [root] WARNING: ('fans_2_error', 'UNIQUE constraint failed: my_main_fans_2_item_dj.id')
+2018-03-08 00:52:55 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-03-08 00:52:55 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_1780985882&since_id=1>
+
+2018-03-08 00:52:55 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5836482450&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=33)
+2018-03-08 00:52:55 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302831780985882_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=33)
+2018-03-08 00:52:55 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5836482450&since_id=1>
+
+2018-03-08 00:52:55 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302831780985882_-_INFO>
+
+2018-03-08 00:52:56 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_1804771971&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=33)
+2018-03-08 00:52:56 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302835836482450_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=33)
+2018-03-08 00:52:56 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_1804771971&since_id=1>
+
+2018-03-08 00:52:56 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302835836482450_-_INFO>
+
+2018-03-08 00:52:56 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5406275745&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=33)
+2018-03-08 00:52:56 [root] WARNING: ('fans_2_error', 'UNIQUE constraint failed: my_main_fans_2_item_dj.id')
+2018-03-08 00:52:56 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-03-08 00:52:56 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5406275745&since_id=1>
+
+2018-03-08 00:52:56 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302835406275745_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=33)
+2018-03-08 00:52:56 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302835406275745_-_INFO>
+
+2018-03-08 00:52:57 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5465059098&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=33)
+2018-03-08 00:52:57 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302831804771971_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=33)
+2018-03-08 00:52:57 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5465059098&since_id=1>
+
+2018-03-08 00:52:57 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302831804771971_-_INFO>
+
+2018-03-08 00:52:57 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302835465059098_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=33)
+2018-03-08 00:52:57 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5813614782&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=33)
+2018-03-08 00:52:57 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302835465059098_-_INFO>
+
+2018-03-08 00:52:57 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5813614782&since_id=1>
+
+2018-03-08 00:52:57 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302835813614782_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=33)
+2018-03-08 00:52:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302835813614782_-_INFO>
+
+2018-03-08 00:52:58 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5842177306&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=33)
+2018-03-08 00:52:58 [root] WARNING: ('fans_2_error', 'UNIQUE constraint failed: my_main_fans_2_item_dj.id')
+2018-03-08 00:52:58 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-03-08 00:52:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5842177306&since_id=1>
+
+2018-03-08 00:52:58 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302835842177306_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=33)
+2018-03-08 00:52:58 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5342693137&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=33)
+2018-03-08 00:52:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302835842177306_-_INFO>
+
+2018-03-08 00:52:58 [root] WARNING: ('fans_2_error', 'UNIQUE constraint failed: my_main_fans_2_item_dj.id')
+2018-03-08 00:52:58 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-03-08 00:52:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5342693137&since_id=1>
+
+2018-03-08 00:52:58 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302835342693137_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=33)
+2018-03-08 00:52:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302835342693137_-_INFO>
+
+2018-03-08 00:52:59 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_1766006703&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=33)
+2018-03-08 00:52:59 [root] WARNING: ('fans_2_error', 'UNIQUE constraint failed: my_main_fans_2_item_dj.id')
+2018-03-08 00:52:59 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-03-08 00:52:59 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_1766006703&since_id=1>
+
+2018-03-08 00:52:59 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302831766006703_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=33)
+2018-03-08 00:52:59 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302831766006703_-_INFO>
+
+2018-03-08 00:52:59 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_1942674927&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=33)
+2018-03-08 00:52:59 [root] WARNING: ('fans_2_error', 'UNIQUE constraint failed: my_main_fans_2_item_dj.id')
+2018-03-08 00:53:00 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-03-08 00:53:00 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_1942674927&since_id=1>
+
+2018-03-08 00:53:00 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_2524399602&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=33)
+2018-03-08 00:53:00 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5604264917&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=33)
+2018-03-08 00:53:00 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_2524399602&since_id=1>
+
+2018-03-08 00:53:00 [root] WARNING: ('fans_2_error', 'UNIQUE constraint failed: my_main_fans_2_item_dj.id')
+2018-03-08 00:53:01 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-03-08 00:53:01 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5604264917&since_id=1>
+
+2018-03-08 00:53:01 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302835604264917_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=33)
+2018-03-08 00:53:01 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302832524399602_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=33)
+2018-03-08 00:53:01 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302831942674927_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=33)
+2018-03-08 00:53:01 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302835604264917_-_INFO>
+
+2018-03-08 00:53:01 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302832524399602_-_INFO>
+
+2018-03-08 00:53:01 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302831942674927_-_INFO>
+
+2018-03-08 00:53:01 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3288925595&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=33)
+2018-03-08 00:53:01 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3288925595&since_id=1>
+
+2018-03-08 00:53:01 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302833288925595_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=33)
+2018-03-08 00:53:01 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5977062869&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=33)
+2018-03-08 00:53:01 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302833288925595_-_INFO>
+
+2018-03-08 00:53:01 [root] WARNING: ('fans_2_error', 'UNIQUE constraint failed: my_main_fans_2_item_dj.id')
+2018-03-08 00:53:02 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-03-08 00:53:02 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5977062869&since_id=1>
+
+2018-03-08 00:53:02 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302835977062869_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=33)
+2018-03-08 00:53:02 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302835977062869_-_INFO>
+
+2018-03-08 00:53:02 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3919018083&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=33)
+2018-03-08 00:53:02 [root] WARNING: ('fans_2_error', 'UNIQUE constraint failed: my_main_fans_2_item_dj.id')
+2018-03-08 00:53:02 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-03-08 00:53:02 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3919018083&since_id=1>
+
+2018-03-08 00:53:02 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302833919018083_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=33)
+2018-03-08 00:53:02 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302833919018083_-_INFO>
+
+2018-03-08 00:53:02 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5891972581&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=33)
+2018-03-08 00:53:03 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5891972581&since_id=1>
+
+2018-03-08 00:53:03 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5625685768&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=33)
+2018-03-08 00:53:03 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302835891972581_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=33)
+2018-03-08 00:53:03 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5625685768&since_id=1>
+
+2018-03-08 00:53:03 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302835891972581_-_INFO>
+
+2018-03-08 00:53:03 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302835625685768_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=33)
+2018-03-08 00:53:03 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302835625685768_-_INFO>
+
+2018-03-08 00:53:03 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5049917700&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=33)
+2018-03-08 00:53:04 [root] WARNING: ('fans_2_error', 'UNIQUE constraint failed: my_main_fans_2_item_dj.id')
+2018-03-08 00:53:04 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-03-08 00:53:04 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5049917700&since_id=1>
+
+2018-03-08 00:53:04 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302835049917700_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=33)
+2018-03-08 00:53:04 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302835049917700_-_INFO>
+
+2018-03-08 00:53:04 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3895573720&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=33)
+2018-03-08 00:53:04 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3895573720&since_id=1>
+
+2018-03-08 00:53:04 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302833895573720_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=33)
+2018-03-08 00:53:04 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302833895573720_-_INFO>
+
+2018-03-08 00:53:05 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5409574864&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=35)
+2018-03-08 00:53:05 [root] WARNING: ('fans_2_error', 'UNIQUE constraint failed: my_main_fans_2_item_dj.id')
+2018-03-08 00:53:05 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-03-08 00:53:05 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5409574864&since_id=1>
+
+2018-03-08 00:53:05 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302835943551948_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=35)
+2018-03-08 00:53:05 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302835409574864_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=35)
+2018-03-08 00:53:05 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302835943551948_-_INFO>
+
+2018-03-08 00:53:05 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302835409574864_-_INFO>
+
+2018-03-08 00:53:05 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5635744692&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=35)
+2018-03-08 00:53:05 [root] WARNING: ('fans_2_error', 'UNIQUE constraint failed: my_main_fans_2_item_dj.id')
+2018-03-08 00:53:06 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-03-08 00:53:06 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5635744692&since_id=1>
+
+2018-03-08 00:53:06 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_2956041847&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=35)
+2018-03-08 00:53:06 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_2956041847&since_id=1>
+
+2018-03-08 00:53:06 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302835635744692_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=35)
+2018-03-08 00:53:06 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302835635744692_-_INFO>
+
+2018-03-08 00:53:06 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3032102812&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=35)
+2018-03-08 00:53:06 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302832956041847_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=35)
+2018-03-08 00:53:06 [root] WARNING: ('fans_2_error', 'UNIQUE constraint failed: my_main_fans_2_item_dj.id')
+2018-03-08 00:53:07 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-03-08 00:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3032102812&since_id=1>
+
+2018-03-08 00:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302832956041847_-_INFO>
+
+2018-03-08 00:53:07 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302833032102812_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=35)
+2018-03-08 00:53:07 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5966084635&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=35)
+2018-03-08 00:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302833032102812_-_INFO>
+
+2018-03-08 00:53:07 [root] WARNING: ('fans_2_error', 'UNIQUE constraint failed: my_main_fans_2_item_dj.id')
+2018-03-08 00:53:07 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-03-08 00:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5966084635&since_id=1>
+
+2018-03-08 00:53:07 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302835966084635_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=35)
+2018-03-08 00:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302835966084635_-_INFO>
+
+2018-03-08 00:53:07 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5495260242&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=35)
+2018-03-08 00:53:07 [root] WARNING: ('fans_2_error', 'UNIQUE constraint failed: my_main_fans_2_item_dj.id')
+2018-03-08 00:53:08 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-03-08 00:53:08 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5495260242&since_id=1>
+
+2018-03-08 00:53:08 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302835495260242_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=35)
+2018-03-08 00:53:08 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302835495260242_-_INFO>
+
+2018-03-08 00:53:08 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5247095034&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=35)
+2018-03-08 00:53:08 [root] WARNING: ('fans_2_error', 'UNIQUE constraint failed: my_main_fans_2_item_dj.id')
+2018-03-08 00:53:08 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-03-08 00:53:08 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5247095034&since_id=1>
+
+2018-03-08 00:53:08 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302835247095034_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=35)
+2018-03-08 00:53:09 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302835247095034_-_INFO>
+
+2018-03-08 00:53:09 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5534304520&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=35)
+2018-03-08 00:53:09 [root] WARNING: ('fans_2_error', 'UNIQUE constraint failed: my_main_fans_2_item_dj.id')
+2018-03-08 00:53:09 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-03-08 00:53:09 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5534304520&since_id=1>
+
+2018-03-08 00:53:09 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302835534304520_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=35)
+2018-03-08 00:53:09 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5349654610&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=35)
+2018-03-08 00:53:09 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302835534304520_-_INFO>
+
+2018-03-08 00:53:09 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5349654610&since_id=1>
+
+2018-03-08 00:53:10 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5772690770&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=35)
+2018-03-08 00:53:10 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302835349654610_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=35)
+2018-03-08 00:53:10 [root] WARNING: ('fans_2_error', 'UNIQUE constraint failed: my_main_fans_2_item_dj.id')
+2018-03-08 00:53:10 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-03-08 00:53:10 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5772690770&since_id=1>
+
+2018-03-08 00:53:10 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302835349654610_-_INFO>
+
+2018-03-08 00:53:10 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302835772690770_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=35)
+2018-03-08 00:53:10 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302835772690770_-_INFO>
+
+2018-03-08 00:53:10 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_2455197941&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=35)
+2018-03-08 00:53:10 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_2455197941&since_id=1>
+
+2018-03-08 00:53:11 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302832455197941_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=35)
+2018-03-08 00:53:11 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3277913374&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=35)
+2018-03-08 00:53:11 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302832455197941_-_INFO>
+
+2018-03-08 00:53:11 [root] WARNING: ('fans_2_error', 'UNIQUE constraint failed: my_main_fans_2_item_dj.id')
+2018-03-08 00:53:11 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-03-08 00:53:11 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3277913374&since_id=1>
+
+2018-03-08 00:53:11 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302833277913374_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=35)
+2018-03-08 00:53:11 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302833277913374_-_INFO>
+
+2018-03-08 00:53:11 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_2967171267&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=35)
+2018-03-08 00:53:12 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_2967171267&since_id=1>
+
+2018-03-08 00:53:12 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5343835256&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=35)
+2018-03-08 00:53:12 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302832967171267_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=35)
+2018-03-08 00:53:12 [root] WARNING: ('fans_2_error', 'UNIQUE constraint failed: my_main_fans_2_item_dj.id')
+2018-03-08 00:53:12 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-03-08 00:53:12 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5343835256&since_id=1>
+
+2018-03-08 00:53:12 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302832967171267_-_INFO>
+
+2018-03-08 00:53:13 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5531441042&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=35)
+2018-03-08 00:53:13 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5531441042&since_id=1>
+
+2018-03-08 00:53:13 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302835531441042_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=35)
+2018-03-08 00:53:13 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302835343835256_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=35)
+2018-03-08 00:53:13 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302835531441042_-_INFO>
+
+2018-03-08 00:53:13 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302835343835256_-_INFO>
+
+2018-03-08 00:53:13 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5967288914&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=35)
+2018-03-08 00:53:13 [root] WARNING: ('fans_2_error', 'UNIQUE constraint failed: my_main_fans_2_item_dj.id')
+2018-03-08 00:53:13 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-03-08 00:53:13 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5967288914&since_id=1>
+
+2018-03-08 00:53:13 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302835967288914_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=35)
+2018-03-08 00:53:13 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_1931981867&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=35)
+2018-03-08 00:53:13 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302835967288914_-_INFO>
+
+2018-03-08 00:53:13 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_1931981867&since_id=1>
+
+2018-03-08 00:53:14 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302831931981867_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=35)
+2018-03-08 00:53:14 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302831931981867_-_INFO>
+
+2018-03-08 00:53:14 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5320701235&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=35)
+2018-03-08 00:53:14 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5320701235&since_id=1>
+
+2018-03-08 00:53:14 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5841814847&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=35)
+2018-03-08 00:53:14 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302835320701235_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=35)
+2018-03-08 00:53:14 [root] WARNING: ('fans_2_error', 'UNIQUE constraint failed: my_main_fans_2_item_dj.id')
+2018-03-08 00:53:15 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-03-08 00:53:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5841814847&since_id=1>
+
+2018-03-08 00:53:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302835320701235_-_INFO>
+
+2018-03-08 00:53:15 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302835841814847_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=35)
+2018-03-08 00:53:15 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3938644420&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=34)
+2018-03-08 00:53:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302835841814847_-_INFO>
+
+2018-03-08 00:53:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3938644420&since_id=1>
+
+2018-03-08 00:53:15 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5605521963&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=34)
+2018-03-08 00:53:15 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302833938644420_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=34)
+2018-03-08 00:53:16 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5605521963&since_id=1>
+
+2018-03-08 00:53:16 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302833938644420_-_INFO>
+
+2018-03-08 00:53:16 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302835605521963_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=34)
+2018-03-08 00:53:16 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302835605521963_-_INFO>
+
+2018-03-08 00:53:16 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5626253878&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=34)
+2018-03-08 00:53:16 [root] WARNING: ('fans_2_error', 'UNIQUE constraint failed: my_main_fans_2_item_dj.id')
+2018-03-08 00:53:16 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-03-08 00:53:16 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5626253878&since_id=1>
+
+2018-03-08 00:53:16 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302835626253878_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=34)
+2018-03-08 00:53:17 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302835626253878_-_INFO>
+
+2018-03-08 00:53:17 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_1015929547&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=34)
+2018-03-08 00:53:17 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_1015929547&since_id=1>
+
+2018-03-08 00:53:17 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302831015929547_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=34)
+2018-03-08 00:53:17 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302831015929547_-_INFO>
+
+2018-03-08 00:53:17 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5919844148&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=34)
+2018-03-08 00:53:17 [root] WARNING: ('fans_2_error', 'UNIQUE constraint failed: my_main_fans_2_item_dj.id')
+2018-03-08 00:53:18 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-03-08 00:53:18 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5919844148&since_id=1>
+
+2018-03-08 00:53:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302835919844148_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=34)
+2018-03-08 00:53:18 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302835919844148_-_INFO>
+
+2018-03-08 00:53:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3884911295&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=34)
+2018-03-08 00:53:18 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3884911295&since_id=1>
+
+2018-03-08 00:53:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302833884911295_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=34)
+2018-03-08 00:53:18 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302833884911295_-_INFO>
+
+2018-03-08 00:53:19 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3054967661&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=34)
+2018-03-08 00:53:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3054967661&since_id=1>
+
+2018-03-08 00:53:19 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302833054967661_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=34)
+2018-03-08 00:53:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302833054967661_-_INFO>
+
+2018-03-08 00:53:19 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5976496352&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=34)
+2018-03-08 00:53:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5976496352&since_id=1>
+
+2018-03-08 00:53:19 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302835976496352_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=34)
+2018-03-08 00:53:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302835976496352_-_INFO>
+
+2018-03-08 00:53:20 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_2810661522&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=34)
+2018-03-08 00:53:20 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302833053410377_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=34)
+2018-03-08 00:53:20 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3053410377&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=34)
+2018-03-08 00:53:20 [root] WARNING: ('fans_2_error', 'UNIQUE constraint failed: my_main_fans_2_item_dj.id')
+2018-03-08 00:53:20 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-03-08 00:53:20 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_2810661522&since_id=1>
+
+2018-03-08 00:53:20 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302833053410377_-_INFO>
+
+2018-03-08 00:53:20 [root] WARNING: ('fans_2_error', 'UNIQUE constraint failed: my_main_fans_2_item_dj.id')
+2018-03-08 00:53:21 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-03-08 00:53:21 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3053410377&since_id=1>
+
+2018-03-08 00:53:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3214364852&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=34)
+2018-03-08 00:53:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302832810661522_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=34)
+2018-03-08 00:53:21 [root] WARNING: ('fans_2_error', 'UNIQUE constraint failed: my_main_fans_2_item_dj.id')
+2018-03-08 00:53:21 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-03-08 00:53:21 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3214364852&since_id=1>
+
+2018-03-08 00:53:21 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302832810661522_-_INFO>
+
+2018-03-08 00:53:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5924077193&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=34)
+2018-03-08 00:53:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302833214364852_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=34)
+2018-03-08 00:53:21 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5924077193&since_id=1>
+
+2018-03-08 00:53:21 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302833214364852_-_INFO>
+
+2018-03-08 00:53:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302835924077193_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=34)
+2018-03-08 00:53:21 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302835924077193_-_INFO>
+
+2018-03-08 00:53:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_1808635704&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=34)
+2018-03-08 00:53:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_1808635704&since_id=1>
+
+2018-03-08 00:53:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302831808635704_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=34)
+2018-03-08 00:53:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302831808635704_-_INFO>
+
+2018-03-08 00:53:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5973279664&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=34)
+2018-03-08 00:53:22 [root] WARNING: ('fans_2_error', 'UNIQUE constraint failed: my_main_fans_2_item_dj.id')
+2018-03-08 00:53:23 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-03-08 00:53:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5973279664&since_id=1>
+
+2018-03-08 00:53:23 [scrapy.extensions.logstats] INFO: Crawled 223 pages (at 223 pages/min), scraped 204 items (at 204 items/min)
+2018-03-08 00:53:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5679302234&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=34)
+2018-03-08 00:53:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302835973279664_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=34)
+2018-03-08 00:53:23 [root] WARNING: ('fans_2_error', 'UNIQUE constraint failed: my_main_fans_2_item_dj.id')
+2018-03-08 00:53:23 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-03-08 00:53:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5679302234&since_id=1>
+
+2018-03-08 00:53:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302835679302234_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=34)
+2018-03-08 00:53:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302835973279664_-_INFO>
+
+2018-03-08 00:53:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5916148847&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=34)
+2018-03-08 00:53:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302835679302234_-_INFO>
+
+2018-03-08 00:53:23 [root] WARNING: ('fans_2_error', 'UNIQUE constraint failed: my_main_fans_2_item_dj.id')
+2018-03-08 00:53:24 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-03-08 00:53:24 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5916148847&since_id=1>
+
+2018-03-08 00:53:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302835916148847_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=34)
+2018-03-08 00:53:24 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302835916148847_-_INFO>
+
+2018-03-08 00:53:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3210120521&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=34)
+2018-03-08 00:53:24 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3210120521&since_id=1>
+
+2018-03-08 00:53:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_1889313085&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=34)
+2018-03-08 00:53:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302833210120521_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=34)
+2018-03-08 00:53:24 [root] WARNING: ('fans_2_error', 'UNIQUE constraint failed: my_main_fans_2_item_dj.id')
+2018-03-08 00:53:25 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-03-08 00:53:25 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_1889313085&since_id=1>
+
+2018-03-08 00:53:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302831889313085_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=34)
+2018-03-08 00:53:25 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302833210120521_-_INFO>
+
+2018-03-08 00:53:25 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302831889313085_-_INFO>
+
+2018-03-08 00:53:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5399815944&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=34)
+2018-03-08 00:53:25 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5399815944&since_id=1>
+
+2018-03-08 00:53:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302835399815944_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=34)
+2018-03-08 00:53:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302835399815944_-_INFO>
+
+2018-03-08 00:53:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3279265845&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=36)
+2018-03-08 00:53:26 [root] WARNING: ('fans_2_error', 'UNIQUE constraint failed: my_main_fans_2_item_dj.id')
+2018-03-08 00:53:26 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-03-08 00:53:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3279265845&since_id=1>
+
+2018-03-08 00:53:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302833279265845_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=36)
+2018-03-08 00:53:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302833279265845_-_INFO>
+
+2018-03-08 00:53:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302831919784553_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=36)
+2018-03-08 00:53:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302831919784553_-_INFO>
+
+2018-03-08 00:53:27 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3099157247&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=36)
+2018-03-08 00:53:27 [root] WARNING: ('fans_2_error', 'UNIQUE constraint failed: my_main_fans_2_item_dj.id')
+2018-03-08 00:53:27 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-03-08 00:53:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3099157247&since_id=1>
+
+2018-03-08 00:53:27 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_1919784553&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=36)
+2018-03-08 00:53:27 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302833099157247_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=36)
+2018-03-08 00:53:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_1919784553&since_id=1>
+
+2018-03-08 00:53:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302833099157247_-_INFO>
+
+2018-03-08 00:53:27 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3247019774&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=36)
+2018-03-08 00:53:27 [root] WARNING: ('fans_2_error', 'UNIQUE constraint failed: my_main_fans_2_item_dj.id')
+2018-03-08 00:53:27 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-03-08 00:53:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3247019774&since_id=1>
+
+2018-03-08 00:53:27 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302833247019774_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=36)
+2018-03-08 00:53:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302833247019774_-_INFO>
+
+2018-03-08 00:53:27 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5774790428&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=36)
+2018-03-08 00:53:28 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5774790428&since_id=1>
+
+2018-03-08 00:53:28 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302835774790428_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=36)
+2018-03-08 00:53:28 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302835774790428_-_INFO>
+
+2018-03-08 00:53:28 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302835507426572_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=36)
+2018-03-08 00:53:28 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5507426572&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=36)
+2018-03-08 00:53:28 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302835507426572_-_INFO>
+
+2018-03-08 00:53:28 [root] WARNING: ('fans_2_error', 'UNIQUE constraint failed: my_main_fans_2_item_dj.id')
+2018-03-08 00:53:29 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-03-08 00:53:29 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5507426572&since_id=1>
+
+2018-03-08 00:53:29 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_1800415894&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=36)
+2018-03-08 00:53:29 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_1800415894&since_id=1>
+
+2018-03-08 00:53:29 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302831800415894_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=36)
+2018-03-08 00:53:29 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302831800415894_-_INFO>
+
+2018-03-08 00:53:29 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_1683216057&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=36)
+2018-03-08 00:53:29 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_1683216057&since_id=1>
+
+2018-03-08 00:53:30 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5613345822&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=36)
+2018-03-08 00:53:30 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302831683216057_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=36)
+2018-03-08 00:53:30 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5613345822&since_id=1>
+
+2018-03-08 00:53:30 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302831683216057_-_INFO>
+
+2018-03-08 00:53:30 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5646781708&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=36)
+2018-03-08 00:53:30 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302835613345822_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=36)
+2018-03-08 00:53:30 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5646781708&since_id=1>
+
+2018-03-08 00:53:31 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302835613345822_-_INFO>
+
+2018-03-08 00:53:31 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5725999986&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=36)
+2018-03-08 00:53:31 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302835646781708_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=36)
+2018-03-08 00:53:31 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5725999986&since_id=1>
+
+2018-03-08 00:53:31 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302835646781708_-_INFO>
+
+2018-03-08 00:53:31 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302835725999986_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=36)
+2018-03-08 00:53:31 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302835725999986_-_INFO>
+
+2018-03-08 00:53:31 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5619450593&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=36)
+2018-03-08 00:53:31 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5619450593&since_id=1>
+
+2018-03-08 00:53:32 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302835619450593_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=36)
+2018-03-08 00:53:32 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5183529539&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=36)
+2018-03-08 00:53:32 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302835619450593_-_INFO>
+
+2018-03-08 00:53:32 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5183529539&since_id=1>
+
+2018-03-08 00:53:32 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302835183529539_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=36)
+2018-03-08 00:53:32 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302835183529539_-_INFO>
+
+2018-03-08 00:53:32 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5772047479&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=36)
+2018-03-08 00:53:32 [root] WARNING: ('fans_2_error', 'UNIQUE constraint failed: my_main_fans_2_item_dj.id')
+2018-03-08 00:53:32 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-03-08 00:53:32 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5772047479&since_id=1>
+
+2018-03-08 00:53:33 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302835772047479_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=36)
+2018-03-08 00:53:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302835772047479_-_INFO>
+
+2018-03-08 00:53:33 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5230229833&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=36)
+2018-03-08 00:53:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5230229833&since_id=1>
+
+2018-03-08 00:53:33 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_2538119732&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=36)
+2018-03-08 00:53:33 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302835230229833_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=36)
+2018-03-08 00:53:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_2538119732&since_id=1>
+
+2018-03-08 00:53:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302835230229833_-_INFO>
+
+2018-03-08 00:53:34 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302832538119732_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=36)
+2018-03-08 00:53:34 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302832538119732_-_INFO>
+
+2018-03-08 00:53:34 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5884114147&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=36)
+2018-03-08 00:53:34 [root] WARNING: ('fans_2_error', 'UNIQUE constraint failed: my_main_fans_2_item_dj.id')
+2018-03-08 00:53:34 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-03-08 00:53:34 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5884114147&since_id=1>
+
+2018-03-08 00:53:34 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5939105384&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=36)
+2018-03-08 00:53:35 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302835939105384_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=36)
+2018-03-08 00:53:35 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5939105384&since_id=1>
+
+2018-03-08 00:53:35 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302835884114147_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=36)
+2018-03-08 00:53:35 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302835939105384_-_INFO>
+
+2018-03-08 00:53:35 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302835884114147_-_INFO>
+
+2018-03-08 00:53:35 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302832406328824_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=1)
+2018-03-08 00:53:35 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6412790134&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=1)
+2018-03-08 00:53:35 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302832406328824_-_INFO>
+
+2018-03-08 00:53:35 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6412790134&since_id=1>
+
+2018-03-08 00:53:35 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302836412790134_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=1)
+2018-03-08 00:53:35 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302836412790134_-_INFO>
+
+2018-03-08 00:53:36 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5628937838&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=1)
+2018-03-08 00:53:36 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302835628937838_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=1)
+2018-03-08 00:53:36 [root] WARNING: ('fans_2_error', 'UNIQUE constraint failed: my_main_fans_2_item_dj.id')
+2018-03-08 00:53:36 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-03-08 00:53:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5628937838&since_id=1>
+
+2018-03-08 00:53:36 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_1678457990&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=1)
+2018-03-08 00:53:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302835628937838_-_INFO>
+
+2018-03-08 00:53:36 [root] WARNING: ('fans_2_error', 'UNIQUE constraint failed: my_main_fans_2_item_dj.id')
+2018-03-08 00:53:36 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-03-08 00:53:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_1678457990&since_id=1>
+
+2018-03-08 00:53:36 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302831678457990_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=1)
+2018-03-08 00:53:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302831678457990_-_INFO>
+
+2018-03-08 00:53:37 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_2751228055&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=1)
+2018-03-08 00:53:37 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_2751228055&since_id=1>
+
+2018-03-08 00:53:37 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302832751228055_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=1)
+2018-03-08 00:53:37 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302832751228055_-_INFO>
+
+2018-03-08 00:53:37 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_2850356177&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=1)
+2018-03-08 00:53:37 [root] WARNING: ('fans_2_error', 'UNIQUE constraint failed: my_main_fans_2_item_dj.id')
+2018-03-08 00:53:38 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-03-08 00:53:38 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_2850356177&since_id=1>
+
+2018-03-08 00:53:38 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302832850356177_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=1)
+2018-03-08 00:53:38 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302832850356177_-_INFO>
+
+2018-03-08 00:53:38 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_1929279330&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=1)
+2018-03-08 00:53:38 [root] WARNING: ('fans_2_error', 'UNIQUE constraint failed: my_main_fans_2_item_dj.id')
+2018-03-08 00:53:38 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-03-08 00:53:38 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_1929279330&since_id=1>
+
+2018-03-08 00:53:39 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5995003165&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=1)
+2018-03-08 00:53:39 [root] WARNING: ('fans_2_error', 'UNIQUE constraint failed: my_main_fans_2_item_dj.id')
+2018-03-08 00:53:39 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-03-08 00:53:39 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5995003165&since_id=1>
+
+2018-03-08 00:53:39 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302835995003165_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=1)
+2018-03-08 00:53:39 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5266421310&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=1)
+2018-03-08 00:53:39 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302831929279330_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=1)
+2018-03-08 00:53:39 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302835995003165_-_INFO>
+
+2018-03-08 00:53:39 [root] WARNING: ('fans_2_error', 'UNIQUE constraint failed: my_main_fans_2_item_dj.id')
+2018-03-08 00:53:39 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-03-08 00:53:39 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5266421310&since_id=1>
+
+2018-03-08 00:53:39 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302831929279330_-_INFO>
+
+2018-03-08 00:53:40 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302835266421310_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=1)
+2018-03-08 00:53:40 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3124922084&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=1)
+2018-03-08 00:53:40 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302835266421310_-_INFO>
+
+2018-03-08 00:53:40 [root] WARNING: ('fans_2_error', 'UNIQUE constraint failed: my_main_fans_2_item_dj.id')
+2018-03-08 00:53:40 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-03-08 00:53:40 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3124922084&since_id=1>
+
+2018-03-08 00:53:40 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302833124922084_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=1)
+2018-03-08 00:53:40 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302833124922084_-_INFO>
+
+2018-03-08 00:53:40 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_2902983263&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=1)
+2018-03-08 00:53:40 [root] WARNING: ('fans_2_error', 'UNIQUE constraint failed: my_main_fans_2_item_dj.id')
+2018-03-08 00:53:40 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-03-08 00:53:40 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_2902983263&since_id=1>
+
+2018-03-08 00:53:40 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302832902983263_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=1)
+2018-03-08 00:53:41 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302832902983263_-_INFO>
+
+2018-03-08 00:53:41 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6040884321&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=1)
+2018-03-08 00:53:41 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6040884321&since_id=1>
+
+2018-03-08 00:53:41 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302836040884321_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=1)
+2018-03-08 00:53:41 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302836040884321_-_INFO>
+
+2018-03-08 00:53:41 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5706662689&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=1)
+2018-03-08 00:53:41 [root] WARNING: ('fans_2_error', 'UNIQUE constraint failed: my_main_fans_2_item_dj.id')
+2018-03-08 00:53:42 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-03-08 00:53:42 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5706662689&since_id=1>
+
+2018-03-08 00:53:42 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302835706662689_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=1)
+2018-03-08 00:53:42 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3824467103&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=1)
+2018-03-08 00:53:42 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302835706662689_-_INFO>
+
+2018-03-08 00:53:42 [root] WARNING: ('fans_2_error', 'UNIQUE constraint failed: my_main_fans_2_item_dj.id')
+2018-03-08 00:53:42 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-03-08 00:53:42 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3824467103&since_id=1>
+
+2018-03-08 00:53:42 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302833824467103_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=1)
+2018-03-08 00:53:42 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5490753060&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=1)
+2018-03-08 00:53:42 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302833824467103_-_INFO>
+
+2018-03-08 00:53:43 [root] WARNING: ('fans_2_error', 'UNIQUE constraint failed: my_main_fans_2_item_dj.id')
+2018-03-08 00:53:43 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-03-08 00:53:43 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5490753060&since_id=1>
+
+2018-03-08 00:53:43 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302835490753060_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=1)
+2018-03-08 00:53:43 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302835490753060_-_INFO>
+
+2018-03-08 00:53:43 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5862055627&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=1)
+2018-03-08 00:53:43 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302835862055627_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=1)
+2018-03-08 00:53:43 [root] WARNING: ('fans_2_error', 'UNIQUE constraint failed: my_main_fans_2_item_dj.id')
+2018-03-08 00:53:43 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-03-08 00:53:43 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5862055627&since_id=1>
+
+2018-03-08 00:53:43 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6449904415&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=1)
+2018-03-08 00:53:44 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302835862055627_-_INFO>
+
+2018-03-08 00:53:44 [root] WARNING: ('fans_2_error', 'UNIQUE constraint failed: my_main_fans_2_item_dj.id')
+2018-03-08 00:53:44 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-03-08 00:53:44 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6449904415&since_id=1>
+
+2018-03-08 00:53:44 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302836449904415_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=1)
+2018-03-08 00:53:44 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302836449904415_-_INFO>
+
+2018-03-08 00:53:44 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5656092220&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=1)
+2018-03-08 00:53:44 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5656092220&since_id=1>
+
+2018-03-08 00:53:45 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5253620189&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=1)
+2018-03-08 00:53:45 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302835656092220_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=1)
+2018-03-08 00:53:45 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5253620189&since_id=1>
+
+2018-03-08 00:53:45 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302835656092220_-_INFO>
+
+2018-03-08 00:53:45 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302835253620189_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=1)
+2018-03-08 00:53:45 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302835253620189_-_INFO>
+
+2018-03-08 00:53:45 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_2547982493&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=1)
+2018-03-08 00:53:46 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302832547982493_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=1)
+2018-03-08 00:53:46 [root] WARNING: ('fans_2_error', 'UNIQUE constraint failed: my_main_fans_2_item_dj.id')
+2018-03-08 00:53:46 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-03-08 00:53:46 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_2547982493&since_id=1>
+
+2018-03-08 00:53:46 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302835593148302_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=2)
+2018-03-08 00:53:46 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302832547982493_-_INFO>
+
+2018-03-08 00:53:46 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302835593148302_-_INFO>
+
+2018-03-08 00:53:46 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_2985305993&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=2)
+2018-03-08 00:53:46 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_2985305993&since_id=1>
+
+2018-03-08 00:53:47 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3501845887&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=2)
+2018-03-08 00:53:47 [root] WARNING: ('fans_2_error', 'UNIQUE constraint failed: my_main_fans_2_item_dj.id')
+2018-03-08 00:53:47 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-03-08 00:53:47 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3501845887&since_id=1>
+
+2018-03-08 00:53:47 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302832985305993_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=2)
+2018-03-08 00:53:47 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302832985305993_-_INFO>
+
+2018-03-08 00:53:47 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302833501845887_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=2)
+2018-03-08 00:53:47 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5289836363&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=2)
+2018-03-08 00:53:47 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302833501845887_-_INFO>
+
+2018-03-08 00:53:47 [root] WARNING: ('fans_2_error', 'UNIQUE constraint failed: my_main_fans_2_item_dj.id')
+2018-03-08 00:53:48 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-03-08 00:53:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5289836363&since_id=1>
+
+2018-03-08 00:53:48 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302835289836363_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=2)
+2018-03-08 00:53:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302835289836363_-_INFO>
+
+2018-03-08 00:53:48 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5715584094&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=2)
+2018-03-08 00:53:48 [root] WARNING: ('fans_2_error', 'UNIQUE constraint failed: my_main_fans_2_item_dj.id')
+2018-03-08 00:53:48 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-03-08 00:53:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5715584094&since_id=1>
+
+2018-03-08 00:53:48 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6244246429&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=2)
+2018-03-08 00:53:49 [root] WARNING: ('fans_2_error', 'UNIQUE constraint failed: my_main_fans_2_item_dj.id')
+2018-03-08 00:53:49 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-03-08 00:53:49 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6244246429&since_id=1>
+
+2018-03-08 00:53:49 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302836244246429_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=2)
+2018-03-08 00:53:49 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302835715584094_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=2)
+2018-03-08 00:53:49 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302836244246429_-_INFO>
+
+2018-03-08 00:53:49 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302835715584094_-_INFO>
+
+2018-03-08 00:53:49 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5974672977&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=2)
+2018-03-08 00:53:49 [root] WARNING: ('fans_2_error', 'UNIQUE constraint failed: my_main_fans_2_item_dj.id')
+2018-03-08 00:53:49 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-03-08 00:53:49 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5974672977&since_id=1>
+
+2018-03-08 00:53:49 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302835974672977_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=2)
+2018-03-08 00:53:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302835974672977_-_INFO>
+
+2018-03-08 00:53:50 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6273565302&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=2)
+2018-03-08 00:53:50 [root] WARNING: ('fans_2_error', 'UNIQUE constraint failed: my_main_fans_2_item_dj.id')
+2018-03-08 00:53:50 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-03-08 00:53:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6273565302&since_id=1>
+
+2018-03-08 00:53:50 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302836273565302_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=2)
+2018-03-08 00:53:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302836273565302_-_INFO>
+
+2018-03-08 00:53:51 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6270085808&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=2)
+2018-03-08 00:53:51 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302836270085808_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=2)
+2018-03-08 00:53:51 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6270085808&since_id=1>
+
+2018-03-08 00:53:51 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302836270085808_-_INFO>
+
+2018-03-08 00:53:51 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5949868662&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=2)
+2018-03-08 00:53:51 [root] WARNING: ('fans_2_error', 'UNIQUE constraint failed: my_main_fans_2_item_dj.id')
+2018-03-08 00:53:52 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-03-08 00:53:52 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5949868662&since_id=1>
+
+2018-03-08 00:53:52 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302835949868662_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=2)
+2018-03-08 00:53:52 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302835949868662_-_INFO>
+
+2018-03-08 00:53:52 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5062059542&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=2)
+2018-03-08 00:53:52 [root] WARNING: ('fans_2_error', 'UNIQUE constraint failed: my_main_fans_2_item_dj.id')
+2018-03-08 00:53:52 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-03-08 00:53:52 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5062059542&since_id=1>
+
+2018-03-08 00:53:52 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302835062059542_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=2)
+2018-03-08 00:53:52 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302835062059542_-_INFO>
+
+2018-03-08 00:53:52 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_1770506404&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=2)
+2018-03-08 00:53:53 [root] WARNING: ('fans_2_error', 'UNIQUE constraint failed: my_main_fans_2_item_dj.id')
+2018-03-08 00:53:53 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-03-08 00:53:53 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_1770506404&since_id=1>
+
+2018-03-08 00:53:53 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302831770506404_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=2)
+2018-03-08 00:53:53 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302831770506404_-_INFO>
+
+2018-03-08 00:53:53 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3799196391&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=2)
+2018-03-08 00:53:53 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3799196391&since_id=1>
+
+2018-03-08 00:53:53 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302833799196391_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=2)
+2018-03-08 00:53:54 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302833799196391_-_INFO>
+
+2018-03-08 00:53:54 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6472088897&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=2)
+2018-03-08 00:53:54 [root] WARNING: ('fans_2_error', 'UNIQUE constraint failed: my_main_fans_2_item_dj.id')
+2018-03-08 00:53:54 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-03-08 00:53:54 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6472088897&since_id=1>
+
+2018-03-08 00:53:54 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302836472088897_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=2)
+2018-03-08 00:53:54 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302836472088897_-_INFO>
+
+2018-03-08 00:53:54 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6445926206&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=2)
+2018-03-08 00:53:54 [root] WARNING: ('fans_2_error', 'UNIQUE constraint failed: my_main_fans_2_item_dj.id')
+2018-03-08 00:53:55 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-03-08 00:53:55 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6445926206&since_id=1>
+
+2018-03-08 00:53:55 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6375258329&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=2)
+2018-03-08 00:53:55 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6375258329&since_id=1>
+
+2018-03-08 00:53:55 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5999663101&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=2)
+2018-03-08 00:53:55 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302836375258329_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=2)
+2018-03-08 00:53:56 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5999663101&since_id=1>
+
+2018-03-08 00:53:56 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302836375258329_-_INFO>
+
+2018-03-08 00:53:56 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302836445926206_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=2)
+2018-03-08 00:53:56 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302835999663101_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=2)
+2018-03-08 00:53:56 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302836445926206_-_INFO>
+
+2018-03-08 00:53:56 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302835999663101_-_INFO>
+
+2018-03-08 00:53:56 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6380428831&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=2)
+2018-03-08 00:53:56 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6380428831&since_id=1>
+
+2018-03-08 00:53:56 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302836380428831_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=2)
+2018-03-08 00:53:56 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302836380428831_-_INFO>
+
+2018-03-08 00:53:57 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6012398259&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=4)
+2018-03-08 00:53:57 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302835313729699_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=4)
+2018-03-08 00:53:57 [root] WARNING: ('fans_2_error', 'UNIQUE constraint failed: my_main_fans_2_item_dj.id')
+2018-03-08 00:53:57 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-03-08 00:53:57 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6012398259&since_id=1>
+
+2018-03-08 00:53:57 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302835313729699_-_INFO>
+
+2018-03-08 00:53:57 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5268039217&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=4)
+2018-03-08 00:53:57 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302836012398259_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=4)
+2018-03-08 00:53:57 [root] WARNING: ('fans_2_error', 'UNIQUE constraint failed: my_main_fans_2_item_dj.id')
+2018-03-08 00:53:58 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-03-08 00:53:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5268039217&since_id=1>
+
+2018-03-08 00:53:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302836012398259_-_INFO>
+
+2018-03-08 00:53:58 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302835268039217_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=4)
+2018-03-08 00:53:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302835268039217_-_INFO>
+
+2018-03-08 00:53:58 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5235858850&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=4)
+2018-03-08 00:53:58 [root] WARNING: ('fans_2_error', 'UNIQUE constraint failed: my_main_fans_2_item_dj.id')
+2018-03-08 00:53:58 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-03-08 00:53:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5235858850&since_id=1>
+
+2018-03-08 00:53:58 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302835235858850_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=4)
+2018-03-08 00:53:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302835235858850_-_INFO>
+
+2018-03-08 00:53:58 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5977627432&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=4)
+2018-03-08 00:53:59 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5977627432&since_id=1>
+
+2018-03-08 00:53:59 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5546179805&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=4)
+2018-03-08 00:53:59 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302835977627432_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=4)
+2018-03-08 00:53:59 [root] WARNING: ('fans_2_error', 'UNIQUE constraint failed: my_main_fans_2_item_dj.id')
+2018-03-08 00:53:59 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-03-08 00:53:59 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5546179805&since_id=1>
+
+2018-03-08 00:53:59 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302835546179805_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=4)
+2018-03-08 00:53:59 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302835977627432_-_INFO>
+
+2018-03-08 00:54:00 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302835546179805_-_INFO>
+
+2018-03-08 00:54:00 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6020473754&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=4)
+2018-03-08 00:54:00 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6020473754&since_id=1>
+
+2018-03-08 00:54:00 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302836020473754_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=4)
+2018-03-08 00:54:00 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302836020473754_-_INFO>
+
+2018-03-08 00:54:00 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_1959660814&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=4)
+2018-03-08 00:54:00 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_1959660814&since_id=1>
+
+2018-03-08 00:54:01 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302831959660814_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=4)
+2018-03-08 00:54:01 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302831959660814_-_INFO>
+
+2018-03-08 00:54:01 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5832204664&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=4)
+2018-03-08 00:54:01 [root] WARNING: ('fans_2_error', 'UNIQUE constraint failed: my_main_fans_2_item_dj.id')
+2018-03-08 00:54:01 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-03-08 00:54:01 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5832204664&since_id=1>
+
+2018-03-08 00:54:01 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302835832204664_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=4)
+2018-03-08 00:54:01 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302835832204664_-_INFO>
+
+2018-03-08 00:54:01 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5857433281&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=4)
+2018-03-08 00:54:02 [root] WARNING: ('fans_2_error', 'UNIQUE constraint failed: my_main_fans_2_item_dj.id')
+2018-03-08 00:54:02 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-03-08 00:54:02 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5857433281&since_id=1>
+
+2018-03-08 00:54:02 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302835857433281_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=4)
+2018-03-08 00:54:02 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302835857433281_-_INFO>
+
+2018-03-08 00:54:02 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5462307298&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=4)
+2018-03-08 00:54:02 [root] WARNING: ('fans_2_error', 'UNIQUE constraint failed: my_main_fans_2_item_dj.id')
+2018-03-08 00:54:02 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-03-08 00:54:02 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5462307298&since_id=1>
+
+2018-03-08 00:54:02 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302835462307298_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=4)
+2018-03-08 00:54:02 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302835462307298_-_INFO>
+
+2018-03-08 00:54:03 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6330307621&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=4)
+2018-03-08 00:54:03 [root] WARNING: ('fans_2_error', 'UNIQUE constraint failed: my_main_fans_2_item_dj.id')
+2018-03-08 00:54:03 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-03-08 00:54:03 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6330307621&since_id=1>
+
+2018-03-08 00:54:03 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302836330307621_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=4)
+2018-03-08 00:54:03 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302836330307621_-_INFO>
+
+2018-03-08 00:54:03 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6178271243&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=4)
+2018-03-08 00:54:03 [root] WARNING: ('fans_2_error', 'UNIQUE constraint failed: my_main_fans_2_item_dj.id')
+2018-03-08 00:54:03 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-03-08 00:54:03 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6178271243&since_id=1>
+
+2018-03-08 00:54:03 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302836178271243_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=4)
+2018-03-08 00:54:03 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5577976138&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=4)
+2018-03-08 00:54:03 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302836178271243_-_INFO>
+
+2018-03-08 00:54:04 [root] WARNING: ('fans_2_error', 'UNIQUE constraint failed: my_main_fans_2_item_dj.id')
+2018-03-08 00:54:04 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-03-08 00:54:04 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5577976138&since_id=1>
+
+2018-03-08 00:54:04 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302835577976138_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=4)
+2018-03-08 00:54:04 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302835577976138_-_INFO>
+
+2018-03-08 00:54:04 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6067239050&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=4)
+2018-03-08 00:54:04 [root] WARNING: ('fans_2_error', 'UNIQUE constraint failed: my_main_fans_2_item_dj.id')
+2018-03-08 00:54:05 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-03-08 00:54:05 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6067239050&since_id=1>
+
+2018-03-08 00:54:05 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302836067239050_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=4)
+2018-03-08 00:54:05 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302836067239050_-_INFO>
+
+2018-03-08 00:54:05 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6004078848&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=4)
+2018-03-08 00:54:05 [root] WARNING: ('fans_2_error', 'UNIQUE constraint failed: my_main_fans_2_item_dj.id')
+2018-03-08 00:54:05 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-03-08 00:54:05 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6004078848&since_id=1>
+
+2018-03-08 00:54:05 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302836004078848_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=4)
+2018-03-08 00:54:06 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302836004078848_-_INFO>
+
+2018-03-08 00:54:06 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5999077430&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=4)
+2018-03-08 00:54:06 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5999077430&since_id=1>
+
+2018-03-08 00:54:06 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302835999077430_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=4)
+2018-03-08 00:54:06 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302835999077430_-_INFO>
+
+2018-03-08 00:54:06 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6032950782&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=4)
+2018-03-08 00:54:07 [root] WARNING: ('fans_2_error', 'UNIQUE constraint failed: my_main_fans_2_item_dj.id')
+2018-03-08 00:54:07 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-03-08 00:54:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6032950782&since_id=1>
+
+2018-03-08 00:54:07 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302836032950782_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=4)
+2018-03-08 00:54:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302836032950782_-_INFO>
+
+2018-03-08 00:54:07 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302836091137247_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=3)
+2018-03-08 00:54:07 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6091137247&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=3)
+2018-03-08 00:54:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302836091137247_-_INFO>
+
+2018-03-08 00:54:07 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_2475448824&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=3)
+2018-03-08 00:54:07 [root] WARNING: ('fans_2_error', 'UNIQUE constraint failed: my_main_fans_2_item_dj.id')
+2018-03-08 00:54:08 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-03-08 00:54:08 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6091137247&since_id=1>
+
+2018-03-08 00:54:08 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_2475448824&since_id=1>
+
+2018-03-08 00:54:08 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302832475448824_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=3)
+2018-03-08 00:54:08 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302832475448824_-_INFO>
+
+2018-03-08 00:54:08 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6013226639&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=3)
+2018-03-08 00:54:08 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6013226639&since_id=1>
+
+2018-03-08 00:54:08 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302836013226639_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=3)
+2018-03-08 00:54:08 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5486439721&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=3)
+2018-03-08 00:54:08 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302836013226639_-_INFO>
+
+2018-03-08 00:54:08 [root] WARNING: ('fans_2_error', 'UNIQUE constraint failed: my_main_fans_2_item_dj.id')
+2018-03-08 00:54:09 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-03-08 00:54:09 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5486439721&since_id=1>
+
+2018-03-08 00:54:09 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302835486439721_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=3)
+2018-03-08 00:54:09 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302835486439721_-_INFO>
+
+2018-03-08 00:54:09 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6038166242&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=3)
+2018-03-08 00:54:09 [root] WARNING: ('fans_2_error', 'UNIQUE constraint failed: my_main_fans_2_item_dj.id')
+2018-03-08 00:54:09 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-03-08 00:54:09 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6038166242&since_id=1>
+
+2018-03-08 00:54:09 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302836038166242_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=3)
+2018-03-08 00:54:09 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302836038166242_-_INFO>
+
+2018-03-08 00:54:09 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5714287575&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=3)
+2018-03-08 00:54:09 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5714287575&since_id=1>
+
+2018-03-08 00:54:10 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302835714287575_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=3)
+2018-03-08 00:54:10 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302835714287575_-_INFO>
+
+2018-03-08 00:54:10 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6393742348&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=3)
+2018-03-08 00:54:10 [root] WARNING: ('fans_2_error', 'UNIQUE constraint failed: my_main_fans_2_item_dj.id')
+2018-03-08 00:54:10 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-03-08 00:54:10 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6393742348&since_id=1>
+
+2018-03-08 00:54:10 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302836393742348_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=3)
+2018-03-08 00:54:11 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_2847740885&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=3)
+2018-03-08 00:54:11 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302836393742348_-_INFO>
+
+2018-03-08 00:54:11 [root] WARNING: ('fans_2_error', 'UNIQUE constraint failed: my_main_fans_2_item_dj.id')
+2018-03-08 00:54:11 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-03-08 00:54:11 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_2847740885&since_id=1>
+
+2018-03-08 00:54:11 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5594466287&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=3)
+2018-03-08 00:54:11 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5594466287&since_id=1>
+
+2018-03-08 00:54:11 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302832847740885_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=3)
+2018-03-08 00:54:11 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302832847740885_-_INFO>
+
+2018-03-08 00:54:11 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302835594466287_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=3)
+2018-03-08 00:54:11 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302835594466287_-_INFO>
+
+2018-03-08 00:54:12 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6357814421&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=3)
+2018-03-08 00:54:12 [root] WARNING: ('fans_2_error', 'UNIQUE constraint failed: my_main_fans_2_item_dj.id')
+2018-03-08 00:54:12 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-03-08 00:54:12 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6357814421&since_id=1>
+
+2018-03-08 00:54:12 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302836357814421_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=3)
+2018-03-08 00:54:12 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5677943850&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=3)
+2018-03-08 00:54:12 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302836357814421_-_INFO>
+
+2018-03-08 00:54:12 [root] WARNING: ('fans_2_error', 'UNIQUE constraint failed: my_main_fans_2_item_dj.id')
+2018-03-08 00:54:12 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-03-08 00:54:12 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5677943850&since_id=1>
+
+2018-03-08 00:54:12 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302835677943850_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=3)
+2018-03-08 00:54:12 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302835677943850_-_INFO>
+
+2018-03-08 00:54:13 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5936072478&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=3)
+2018-03-08 00:54:13 [root] WARNING: ('fans_2_error', 'UNIQUE constraint failed: my_main_fans_2_item_dj.id')
+2018-03-08 00:54:13 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-03-08 00:54:13 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5936072478&since_id=1>
+
+2018-03-08 00:54:13 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302835936072478_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=3)
+2018-03-08 00:54:13 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302835936072478_-_INFO>
+
+2018-03-08 00:54:13 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5290738770&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=3)
+2018-03-08 00:54:13 [root] WARNING: ('fans_2_error', 'UNIQUE constraint failed: my_main_fans_2_item_dj.id')
+2018-03-08 00:54:14 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-03-08 00:54:14 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5290738770&since_id=1>
+
+2018-03-08 00:54:14 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302835290738770_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=3)
+2018-03-08 00:54:14 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5692902819&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=3)
+2018-03-08 00:54:14 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302835290738770_-_INFO>
+
+2018-03-08 00:54:14 [root] WARNING: ('fans_2_error', 'UNIQUE constraint failed: my_main_fans_2_item_dj.id')
+2018-03-08 00:54:14 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-03-08 00:54:14 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5692902819&since_id=1>
+
+2018-03-08 00:54:14 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302835692902819_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=3)
+2018-03-08 00:54:14 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302835692902819_-_INFO>
+
+2018-03-08 00:54:14 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5144505224&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=3)
+2018-03-08 00:54:14 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5144505224&since_id=1>
+
+2018-03-08 00:54:15 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302835144505224_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=3)
+2018-03-08 00:54:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302835144505224_-_INFO>
+
+2018-03-08 00:54:15 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5975384106&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=3)
+2018-03-08 00:54:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5975384106&since_id=1>
+
+2018-03-08 00:54:15 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302835975384106_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=3)
+2018-03-08 00:54:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302835975384106_-_INFO>
+
+2018-03-08 00:54:15 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6431358886&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=3)
+2018-03-08 00:54:15 [root] WARNING: ('fans_2_error', 'UNIQUE constraint failed: my_main_fans_2_item_dj.id')
+2018-03-08 00:54:16 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-03-08 00:54:16 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6431358886&since_id=1>
+
+2018-03-08 00:54:16 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302836431358886_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=3)
+2018-03-08 00:54:16 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302836431358886_-_INFO>
+
+2018-03-08 00:54:16 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6310100053&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=5)
+2018-03-08 00:54:16 [root] WARNING: ('fans_2_error', 'UNIQUE constraint failed: my_main_fans_2_item_dj.id')
+2018-03-08 00:54:16 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-03-08 00:54:16 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6310100053&since_id=1>
+
+2018-03-08 00:54:16 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302836310100053_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=5)
+2018-03-08 00:54:17 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302836310100053_-_INFO>
+
+2018-03-08 00:54:17 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6055129876&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=5)
+2018-03-08 00:54:17 [root] WARNING: ('fans_2_error', 'UNIQUE constraint failed: my_main_fans_2_item_dj.id')
+2018-03-08 00:54:17 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-03-08 00:54:17 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_6055129876&since_id=1>
+
+2018-03-08 00:54:17 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5797910293&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=5)
+2018-03-08 00:54:17 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302836055129876_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=5)
+2018-03-08 00:54:17 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5797910293&since_id=1>
+
+2018-03-08 00:54:18 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302836055129876_-_INFO>
+
+2018-03-08 00:54:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302835797910293_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=5)
+2018-03-08 00:54:18 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302835797910293_-_INFO>
+
+2018-03-08 00:54:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5247258925&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=5)
+2018-03-08 00:54:18 [root] WARNING: ('fans_2_error', 'UNIQUE constraint failed: my_main_fans_2_item_dj.id')
+2018-03-08 00:54:18 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-03-08 00:54:18 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5247258925&since_id=1>
+
+2018-03-08 00:54:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302835247258925_-_INFO> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=5)
+2018-03-08 00:54:18 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?containerid=2302835247258925_-_INFO>
+
+2018-03-08 00:54:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_5839782511&since_id=1> (referer: https://m.weibo.cn/api/container/getIndex?containerid=231051_-_fans_-_3912883937&since_id=5)
+2018-03-08 00:54:19 [root] WARNING: ('fans_2_error', 'UNIQUE constraint failed: my_main_fans_2_item_dj.id')

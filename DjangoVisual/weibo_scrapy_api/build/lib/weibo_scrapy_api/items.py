@@ -46,13 +46,6 @@ class fans_1_Item(scrapy.Item):
 class fans_2_Item(scrapy.Item):
     page=scrapy.Field()
     master_id=scrapy.Field()
-
-    # id=scrapy.Field()
-    # follow_count=scrapy.Field()
-    # followers_count=scrapy.Field()
-    # statuses_count=scrapy.Field()
-    # verified_type=scrapy.Field()
-
 class post_Item(scrapy.Item):
     page=scrapy.Field()
 

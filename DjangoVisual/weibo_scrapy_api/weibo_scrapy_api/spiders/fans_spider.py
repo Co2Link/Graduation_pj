@@ -31,9 +31,6 @@ class fans_spider(scrapy.Spider):
                     if 'item_name' in sub_card and sub_card['item_name'] == '所在地':
                         location=sub_card['item_content']
                         check=1
-                    # if sub_card['item_name']=='注册时间':
-                    #     reg_time=sub_card['item_content']
-                    #     check=2
         if check:
             yield scrapy.Request(url=self.user_urls.format(self.id), callback=self.parse_1,meta={'location': location})
         else:
@@ -48,7 +45,6 @@ class fans_spider(scrapy.Spider):
             logging(('KeyError',str(e)))
         item=UserItem()     #User
         item['location']=response.meta['location']
-        # item['reg_time']=response.meta['reg_time']
         item['id']=self.id
         item['description']=user_info['description']
         item['follow_count']=user_info['follow_count']
@@ -62,7 +58,7 @@ class fans_spider(scrapy.Spider):
         try:
             fans_num=user_info['followers_count']
         except KeyError as e:
-            logging(('KeyError', str(e)))
+            logging.warning(('KeyError', str(e)))
         if int(fans_num/20)>250:
             pages=250
         else:
@@ -97,7 +93,7 @@ class fans_spider(scrapy.Spider):
                         yield scrapy.Request(url=self.fans_urls.format(id, 1), callback=self.parse_fans_3,
                                              meta={'master_id': id})
             except KeyError as e:
-                logging(str(e))
+                logging.warning(str(e))
 
     def parse_fans_2(self,response):    #info_urls  获取第一层粉丝的所在地与注册时间
         cards = json.loads(response.text)['data']['cards']
@@ -107,8 +103,6 @@ class fans_spider(scrapy.Spider):
                 for sub_card in card['card_group']:
                     if 'item_name'in sub_card and sub_card['item_name'] == '所在地':
                         location = sub_card['item_content']
-                    # if sub_card['item_name'] == '注册时间':
-                    #     reg_time = sub_card['item_content']
         item=fans_1_Item()      #第一层粉丝
         item['master_id']=response.meta['master_id']
         item['id']=response.meta['id']
@@ -130,23 +124,5 @@ class fans_spider(scrapy.Spider):
                 item['page']=card_group
                 item['master_id']=response.meta['master_id']
                 yield item
-                # for card in card_group:
-                #     if card['card_type'] == 10:
-                        # user = card['user']
-                        # item = fans_2_Item()  # 第二层粉丝
-                        # item['master_id'] = response.meta['master_id']
-                        # item['id'] = user['id']
-                        # item['followers_count'] = user['followers_count']
-                        # item['follow_count'] = user['follow_count']
-                        # item['statuses_count'] = user['statuses_count']
-                        # item['verified_type'] = user['verified_type']
-                        # yield item
             except KeyError as e:
                 logging.warning(str(e))
-
-
-
-
-
-
-

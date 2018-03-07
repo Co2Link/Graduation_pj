@@ -106,16 +106,6 @@ class WeiboScrapyApiPipeline(object):
             except Exception as e:
                 logging.debug(('Exception_2',str(e)))
         elif isinstance(item,fans_2_Item):              #fans_2
-            # try:
-            #     item_dj=fans_2_Item_dj(**item)
-            #     item_dj.save()
-            # except Exception as e:
-            #     logging.warning(('dj_3',str(e)))
-            # self.count_fans_2+=1
-            # try:
-            #     self.fans_2_col.insert_one(dict(item))
-            # except Exception as e:
-            #     logging.debug(('Exception_3',str(e)))
             page=item['page']
             master_id=item['master_id']
             item_list=[]
@@ -148,11 +138,6 @@ class WeiboScrapyApiPipeline(object):
                     card_list.append(my_dict)
                                                             # dj
                     item_list.append(post_Item_dj(**my_dict))
-                    # try:
-                    #     item_dj=post_Item_dj(**my_dict)
-                    #     item_dj.save()
-                    # except Exception as e:
-                    #     logging.warning(('dj_4', str(e)))
             try:
                 post_Item_dj.objects.bulk_create(item_list)
             except Exception as e:

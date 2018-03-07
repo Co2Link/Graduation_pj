@@ -47,9 +47,10 @@ def clean_dict(my_dict, attr_list):  #数据整理，清洗
             my_dict_clean['author_id']=my_dict['user']['id']
         elif attr=='retweeted_status':          #转发微博的信息
             if 'retweeted_status'in my_dict:
-                my_dict_clean['retweeted_status']=True
+                my_dict_clean[attr]=True
+                my_dict_clean['retweeted_text']=my_dict[attr]['text']
             else:
-                my_dict_clean['retweeted_status'] = False
+                my_dict_clean[attr] = False
         else:
             my_dict_clean[attr] = my_dict[attr]
 
@@ -68,7 +69,7 @@ class WeiboScrapyApiPipeline(object):
     def __init__(self):
         #数据库操作
         self.CONN=pymongo.MongoClient('localhost',27017)
-        self.DBNAME='syn_7'
+        self.DBNAME='syn_9'
         self.user_col=self.CONN[self.DBNAME]['user']
         self.fans_1_col=self.CONN[self.DBNAME]['fans_1']
         self.fans_2_col=self.CONN[self.DBNAME]['fans_2']
@@ -81,15 +82,16 @@ class WeiboScrapyApiPipeline(object):
         self.count_user=0
         self.count_fans_1=0
         self.count_fans_2=0
+        #用于去重的list
+        self.fans_2_buf=[]
+        self.post_buf=[]
     def process_item(self, item, spider):
         if isinstance(item,UserItem):               # User
             self.count_user+=1
             try:
-                item_dj=UserItem_dj(**item)
-                item_dj.save()
+                UserItem_dj(**item).save()
             except Exception as e:
                 logging.warning(('dj_1',str(e)))
-
             try:
                 self.user_col.insert_one(dict(item))
             except Exception as e:
@@ -97,8 +99,7 @@ class WeiboScrapyApiPipeline(object):
         elif isinstance(item,fans_1_Item):              #fans_1
             self.count_fans_1+=1
             try:
-                item_dj=fans_1_Item_dj(**item)
-                item_dj.save()
+                fans_1_Item_dj(**item).save()
             except Exception as e:
                 logging.warning(('dj_2',str(e)))
             try:
@@ -116,10 +117,17 @@ class WeiboScrapyApiPipeline(object):
                     user=card['user']
                     card_list.append(fans_2_to_dict(user,attr_list,master_id))
                     item_list.append(fans_2_Item_dj(**fans_2_to_dict(user,attr_list,master_id)))
+            """
+            fans_2中经常会遇到重复写入，
+            并且可能与数据库中已存在的其他user的fans_2重复，故不能去重后一次性写入，
+            每次写入一页，遇到重复时，将该页逐个写入。
+            """
             try:
                 fans_2_Item_dj.objects.bulk_create(item_list)
             except Exception as e:
                 logging.warning(('fans_2_error',str(e)))
+                for i in item_list:
+                    i.save()
             try:
                 result = self.fans_2_col.insert_many(card_list, ordered=False)
             except pymongo.errors.BulkWriteError as e:
@@ -138,10 +146,8 @@ class WeiboScrapyApiPipeline(object):
                     card_list.append(my_dict)
                                                             # dj
                     item_list.append(post_Item_dj(**my_dict))
-            try:
-                post_Item_dj.objects.bulk_create(item_list)
-            except Exception as e:
-                logging.warning(('post_error',str(e)))
+
+            self.post_buf+=item_list    #用buf来缓存所有的数据
             try:
                 result = self.post_col.insert_many(card_list, ordered=False)
             except pymongo.errors.BulkWriteError as e:
@@ -152,3 +158,14 @@ class WeiboScrapyApiPipeline(object):
         logging.debug(('count_user',self.count_user))
         logging.debug(('count_fans_1',self.count_fans_1))
         logging.debug(('count_fans_2',self.count_fans_2))
+
+        post_clean_list=[]      #去重
+        post_id_set=set()
+        for i in self.post_buf:
+            if not i.id in post_id_set:
+                post_clean_list.append(i)
+                post_id_set.add(i.id)
+        try:
+            post_Item_dj.objects.bulk_create(post_clean_list)
+        except Exception as e:
+            logging.warning(('post_error',str(e)))

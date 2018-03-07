@@ -58,5 +58,6 @@ class post_Item_dj(models.Model):
     source=models.CharField(max_length=50)
     text=models.TextField()
     retweeted_status=models.BooleanField()
+    retweeted_text=models.TextField(null=True)
     def __str__(self):
         return str(self.id)

@@ -119,8 +119,6 @@ class fans_spider(scrapy.Spider):
         item['verified_type']=response.meta['verified_type']
         item['screen_name']=response.meta['screen_name']
         item['location']=location
-
-        # item['reg_time']=reg_time
         yield item
 
     def parse_fans_3(self,response):       #fans_urls 获取粉丝的第一页粉丝
