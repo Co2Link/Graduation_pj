@@ -117,12 +117,9 @@ class WeiboScrapyApiPipeline(object):
                     user=card['user']
                     card_list.append(fans_2_to_dict(user,attr_list,master_id))
                     item_list.append(fans_2_Item_dj(**fans_2_to_dict(user,attr_list,master_id)))
-            """
-            fans_2中经常会遇到重复写入，
-            并且可能与数据库中已存在的其他user的fans_2重复，故不能去重后一次性写入，
-            每次写入一页，遇到重复时，将该页逐个写入。
-            """
-            try:
+
+            # self.fans_2_buf+=item_list  #用buf来缓存所有的数据
+            try:    #fans_2中经常会遇到重复写入，并且可能与数据库中已存在的其他user的fans_2d，故不能
                 fans_2_Item_dj.objects.bulk_create(item_list)
             except Exception as e:
                 logging.warning(('fans_2_error',str(e)))
@@ -155,9 +152,19 @@ class WeiboScrapyApiPipeline(object):
         return DropItem()
 
     def close_spider(self,spider):
-        logging.debug(('count_user',self.count_user))
-        logging.debug(('count_fans_1',self.count_fans_1))
-        logging.debug(('count_fans_2',self.count_fans_2))
+        # logging.debug(('count_user',self.count_user))
+        # logging.debug(('count_fans_1',self.count_fans_1))
+        # logging.debug(('count_fans_2',self.count_fans_2))
+        # fans_2_clean_list=[]      #去重
+        # fans_2_id_set=set()
+        # for i in self.fans_2_buf:
+        #     if not i.id in fans_2_id_set:
+        #         fans_2_clean_list.append(i)
+        #         fans_2_id_set.add(i.id)
+        # try:
+        #     fans_2_Item_dj.objects.bulk_create(fans_2_clean_list)
+        # except Exception as e:
+        #     logging.warning(('post_error',str(e)))
 
         post_clean_list=[]      #去重
         post_id_set=set()
