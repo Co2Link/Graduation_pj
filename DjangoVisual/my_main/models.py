@@ -2,6 +2,10 @@ from django.db import models
 
 # Create your models here.
 
+class ScrapyItem(models.Model):
+    id=models.IntegerField(primary_key=True)
+    task_id=models.CharField(max_length=50)
+
 class UserItem_dj(models.Model):
     id=models.CharField(max_length=100,primary_key=True)
 

@@ -8,7 +8,7 @@ from django.views.decorators.http import require_http_methods
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from scrapyd_api import ScrapydAPI
-from .models import UserItem_dj,fans_1_Item_dj,fans_2_Item_dj,post_Item_dj
+from .models import UserItem_dj,fans_1_Item_dj,fans_2_Item_dj,post_Item_dj,ScrapyItem
 
 scrapyd = ScrapydAPI('http://localhost:6800')
 
@@ -22,9 +22,19 @@ def crawl(request):
             return JsonResponse({'error': 'Missing  args'})
         if not id.isdigit():
             return JsonResponse({'error': 'id is invalid'})
-        task = scrapyd.schedule('default', 'fans',id=id)
-        return JsonResponse({'task_id': task, 'id': id, 'status': 'started'})
 
+        result=ScrapyItem.objects.filter(id=id) #查询是否已经执行过该id的爬虫
+        if result:
+            status = scrapyd.job_status('default', result[0].task_id)
+            if status:  #未查询到任务，则返回空字符串
+                return JsonResponse({'status': status})
+            else:
+                return JsonResponse({'note':'started before'})
+        else:
+            task = scrapyd.schedule('default', 'fans', id=id)
+            item=ScrapyItem(id=id,task_id=task)
+            item.save()
+            return JsonResponse({'task_id': task, 'id': id, 'status': 'started'})
     elif request.method == 'GET':
         task_id = request.GET.get('task_id', None)
         if not task_id:

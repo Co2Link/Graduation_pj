@@ -128,17 +128,21 @@ class fans_spider(scrapy.Spider):
         if result!=[]:
             try:
                 card_group=result[0]['card_group']
-                for card in card_group:
-                    if card['card_type'] == 10:
-                        user = card['user']
-                        item = fans_2_Item()  # 第二层粉丝
-                        item['master_id'] = response.meta['master_id']
-                        item['id'] = user['id']
-                        item['followers_count'] = user['followers_count']
-                        item['follow_count'] = user['follow_count']
-                        item['statuses_count'] = user['statuses_count']
-                        item['verified_type'] = user['verified_type']
-                        yield item
+                item=fans_2_Item()
+                item['page']=card_group
+                item['master_id']=response.meta['master_id']
+                yield item
+                # for card in card_group:
+                #     if card['card_type'] == 10:
+                        # user = card['user']
+                        # item = fans_2_Item()  # 第二层粉丝
+                        # item['master_id'] = response.meta['master_id']
+                        # item['id'] = user['id']
+                        # item['followers_count'] = user['followers_count']
+                        # item['follow_count'] = user['follow_count']
+                        # item['statuses_count'] = user['statuses_count']
+                        # item['verified_type'] = user['verified_type']
+                        # yield item
             except KeyError as e:
                 logging.warning(str(e))
 

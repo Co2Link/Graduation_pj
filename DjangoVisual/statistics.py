@@ -28,25 +28,31 @@ def fans_fans_num(id):
     num_list=[]
     result=fans_1.find(filter={"master_id":id})
     for i in result:
-        if i['followers_count']==178552579 or i['followers_count']==508029:
-            continue
+        # if i['followers_count']==178552579 or i['followers_count']==508029:
+        #     continue
         num_list.append(i['followers_count'])
-    # the histogram of the data
+    count_dict={'0-100':0,'100-1k':0,'1k-10k':0,'10k-100k':0,'大于100k':0}
+    print('len:',len(num_list))
     print(num_list)
-    my_array=np.array(num_list)
-    print(my_array)
-    print(type(my_array))
-    print(my_array.shape)
-    label=['0-100','100-1k','1k-1w','1w-10w']
+    for i in num_list:
+        if i>=0 and i<100:
+            count_dict['0-100']+=1
+        elif i>=100 and i<1000:
+            count_dict['100-1k']+=1
+        elif i>=1000 and i<10000:
+            count_dict['1k-10k']+=1
+        elif i>=10000 and i<100000:
+            count_dict['10k-100k']+=1
+        elif i>=100000:
+            count_dict['大于100k']+=1
+    print(count_dict)
 
-    n, bins, patches = plt.hist(x=my_array,bins=[10,100,1000,10000], density=False,label=['0-100','100-1k','1k-1w','1w-10w'], facecolor='g', alpha=0.75)  #alpha 颜色深度
-    # n, bins, patches = plt.hist(x=x,bins=10,facecolor='g', alpha=0.75)
 
-
-    plt.xlabel('Smarts')
-    plt.ylabel('Probability')
-    plt.title('Histogram of IQ')
-    # plt.axis([0, 1000, 0, 100])
+    # n, bins, patches = plt.hist(x=count_dict,density=False, facecolor='g', alpha=0.75)  #alpha 颜色深度
+    # n, bins, patches = pl|t.hist(x=x,bins=10,facecolor='g', alpha=0.75)
+    label=['0-100','100-1k','1k-10k','10k-100k','大于100k']
+    height=[count_dict[i] for i in label]
+    plt.bar(x=[1,2,3,4,5],height=height,tick_label=label,visable=True)
     plt.grid(True)
     plt.show()
 

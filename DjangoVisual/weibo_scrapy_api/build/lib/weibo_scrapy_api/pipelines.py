@@ -50,7 +50,16 @@ def clean_dict(my_dict, attr_list):  #数据整理，清洗
                 my_dict_clean['retweeted_status']=True
             else:
                 my_dict_clean['retweeted_status'] = False
+        else:
             my_dict_clean[attr] = my_dict[attr]
+
+    return my_dict_clean
+
+def fans_2_to_dict(my_dict,attr_list,master_id):
+    my_dict_clean={}
+    my_dict_clean['master_id']=master_id
+    for attr in attr_list:
+        my_dict_clean[attr]=my_dict[attr]
     return my_dict_clean
 
 
@@ -59,7 +68,7 @@ class WeiboScrapyApiPipeline(object):
     def __init__(self):
         #数据库操作
         self.CONN=pymongo.MongoClient('localhost',27017)
-        self.DBNAME='syn'
+        self.DBNAME='syn_7'
         self.user_col=self.CONN[self.DBNAME]['user']
         self.fans_1_col=self.CONN[self.DBNAME]['fans_1']
         self.fans_2_col=self.CONN[self.DBNAME]['fans_2']
@@ -76,11 +85,7 @@ class WeiboScrapyApiPipeline(object):
         if isinstance(item,UserItem):               # User
             self.count_user+=1
             try:
-                item_dj = UserItem_dj(id=item['id'], description=item['description'], follow_count=item['follow_count'],
-                                      followers_count=item['followers_count'], gender=item['gender'],
-                                      statuses_count=item['statuses_count'],
-                                      verified_type=item['verified_type'], screen_name=item['screen_name'],
-                                      location=item['location'])
+                item_dj=UserItem_dj(**item)
                 item_dj.save()
             except Exception as e:
                 logging.warning(('dj_1',str(e)))
@@ -92,11 +97,7 @@ class WeiboScrapyApiPipeline(object):
         elif isinstance(item,fans_1_Item):              #fans_1
             self.count_fans_1+=1
             try:
-                item_dj = fans_1_Item_dj(master_id=item['master_Id'],id=item['id'], follow_count=item['follow_count'],
-                                      followers_count=item['followers_count'], gender=item['gender'],
-                                      statuses_count=item['statuses_count'],
-                                      verified_type=item['verified_type'], screen_name=item['screen_name'],
-                                      location=item['location'])
+                item_dj=fans_1_Item_dj(**item)
                 item_dj.save()
             except Exception as e:
                 logging.warning(('dj_2',str(e)))
@@ -105,42 +106,57 @@ class WeiboScrapyApiPipeline(object):
             except Exception as e:
                 logging.debug(('Exception_2',str(e)))
         elif isinstance(item,fans_2_Item):              #fans_2
+            # try:
+            #     item_dj=fans_2_Item_dj(**item)
+            #     item_dj.save()
+            # except Exception as e:
+            #     logging.warning(('dj_3',str(e)))
+            # self.count_fans_2+=1
+            # try:
+            #     self.fans_2_col.insert_one(dict(item))
+            # except Exception as e:
+            #     logging.debug(('Exception_3',str(e)))
+            page=item['page']
+            master_id=item['master_id']
+            item_list=[]
+            card_list = []
+            attr_list=['id','follow_count','followers_count','statuses_count','verified_type']
+            for card in page:
+                if card['card_type']==10:
+                    user=card['user']
+                    card_list.append(fans_2_to_dict(user,attr_list,master_id))
+                    item_list.append(fans_2_Item_dj(**fans_2_to_dict(user,attr_list,master_id)))
             try:
-                item_dj = fans_2_Item_dj(master_id=item['master_id'],id=item['id'],
-                                         follow_count=item['follow_count'],
-                                      followers_count=item['followers_count'],
-                                      statuses_count=item['statuses_count'],
-                                      verified_type=item['verified_type'])
-                item_dj.save()
+                fans_2_Item_dj.objects.bulk_create(item_list)
             except Exception as e:
-                logging.warning(('dj_3',str(e)))
-            self.count_fans_2+=1
+                logging.warning(('fans_2_error',str(e)))
             try:
-                self.fans_2_col.insert_one(dict(item))
-            except Exception as e:
-                logging.debug(('Exception_3',str(e)))
+                result = self.fans_2_col.insert_many(card_list, ordered=False)
+            except pymongo.errors.BulkWriteError as e:
+                logging.debug(('BulkWriteError: ', str(e)))
+
+
         elif isinstance(item,post_Item):                   #post
             attr_list = ['author_id', 'attitudes_count', 'comments_count', 'created_at', 'id', 'pics', 'reposts_count',
                          'source', 'text', 'retweeted_status']
             page = item['page']
             card_list = []
+            item_list=[]
             for card in page:
                 if card['card_type'] == 9:
                     my_dict=clean_dict(card['mblog'], attr_list)
                     card_list.append(my_dict)
                                                             # dj
-                    try:
-                        item_dj = post_Item_dj(author_id=my_dict['author_id'],
-                                               attitudes_count=my_dict['attitudes_count'],
-                                               comments_count=my_dict['comments_count'],
-                                               created_at=my_dict['created_at'],
-                                               created_at_org=my_dict['created_at_org'], id=my_dict['id'],
-                                               pics=my_dict['dics'], reposts_count=my_dict['reposts_count'],
-                                               source=my_dict['source'], text=my_dict['text'],
-                                               retweeted_status=my_dict['retweeted_status'])
-                        item_dj.save()
-                    except Exception as e:
-                        logging.warning(('dj_4', str(e)))
+                    item_list.append(post_Item_dj(**my_dict))
+                    # try:
+                    #     item_dj=post_Item_dj(**my_dict)
+                    #     item_dj.save()
+                    # except Exception as e:
+                    #     logging.warning(('dj_4', str(e)))
+            try:
+                post_Item_dj.objects.bulk_create(item_list)
+            except Exception as e:
+                logging.warning(('post_error',str(e)))
             try:
                 result = self.post_col.insert_many(card_list, ordered=False)
             except pymongo.errors.BulkWriteError as e:

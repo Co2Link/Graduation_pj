@@ -73,10 +73,10 @@ class WeiboScrapyApiPipeline(object):
     def __init__(self):
         #数据库操作
         self.CONN=pymongo.MongoClient('localhost',27017)
-        self.user_col=self.CONN['mongodb_test']['user']
-        self.fans_1_col=self.CONN['mongodb_test']['fans_1']
-        self.fans_2_col=self.CONN['mongodb_test']['fans_2']
-        self.post_col=self.CONN['mongodb_test']['post']
+        self.user_col=self.CONN['mongodb_test_1']['user']
+        self.fans_1_col=self.CONN['mongodb_test_1']['fans_1']
+        self.fans_2_col=self.CONN['mongodb_test_1']['fans_2']
+        self.post_col=self.CONN['mongodb_test_1']['post']
         self.user_col.create_index([('id', pymongo.ASCENDING)], unique=True)
         self.fans_1_col.create_index([('id', pymongo.ASCENDING)], unique=True)
         self.fans_2_col.create_index([('id', pymongo.ASCENDING)], unique=True)

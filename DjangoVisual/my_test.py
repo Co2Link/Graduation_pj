@@ -10,7 +10,8 @@ def crawl(id):
 
 
 def main():
-    clean()
+    # clean()
+    crawl(1880235003)
 
 
 

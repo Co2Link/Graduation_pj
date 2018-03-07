@@ -55,13 +55,20 @@ def clean_dict(my_dict, attr_list):  #数据整理，清洗
 
     return my_dict_clean
 
+def fans_2_to_dict(my_dict,attr_list,master_id):
+    my_dict_clean={}
+    my_dict_clean['master_id']=master_id
+    for attr in attr_list:
+        my_dict_clean[attr]=my_dict[attr]
+    return my_dict_clean
+
 
 
 class WeiboScrapyApiPipeline(object):
     def __init__(self):
         #数据库操作
         self.CONN=pymongo.MongoClient('localhost',27017)
-        self.DBNAME='syn_4'
+        self.DBNAME='syn_7'
         self.user_col=self.CONN[self.DBNAME]['user']
         self.fans_1_col=self.CONN[self.DBNAME]['fans_1']
         self.fans_2_col=self.CONN[self.DBNAME]['fans_2']
@@ -99,31 +106,42 @@ class WeiboScrapyApiPipeline(object):
             except Exception as e:
                 logging.debug(('Exception_2',str(e)))
         elif isinstance(item,fans_2_Item):              #fans_2
+            page=item['page']
+            master_id=item['master_id']
+            item_list=[]
+            card_list = []
+            attr_list=['id','follow_count','followers_count','statuses_count','verified_type']
+            for card in page:
+                if card['card_type']==10:
+                    user=card['user']
+                    card_list.append(fans_2_to_dict(user,attr_list,master_id))
+                    item_list.append(fans_2_Item_dj(**fans_2_to_dict(user,attr_list,master_id)))
             try:
-                item_dj=fans_2_Item_dj(**item)
-                item_dj.save()
+                fans_2_Item_dj.objects.bulk_create(item_list)
             except Exception as e:
-                logging.warning(('dj_3',str(e)))
-            self.count_fans_2+=1
+                logging.warning(('fans_2_error',str(e)))
             try:
-                self.fans_2_col.insert_one(dict(item))
-            except Exception as e:
-                logging.debug(('Exception_3',str(e)))
+                result = self.fans_2_col.insert_many(card_list, ordered=False)
+            except pymongo.errors.BulkWriteError as e:
+                logging.debug(('BulkWriteError: ', str(e)))
+
+
         elif isinstance(item,post_Item):                   #post
             attr_list = ['author_id', 'attitudes_count', 'comments_count', 'created_at', 'id', 'pics', 'reposts_count',
                          'source', 'text', 'retweeted_status']
             page = item['page']
             card_list = []
+            item_list=[]
             for card in page:
                 if card['card_type'] == 9:
                     my_dict=clean_dict(card['mblog'], attr_list)
                     card_list.append(my_dict)
                                                             # dj
-                    try:
-                        item_dj=post_Item_dj(**my_dict)
-                        item_dj.save()
-                    except Exception as e:
-                        logging.warning(('dj_4', str(e)))
+                    item_list.append(post_Item_dj(**my_dict))
+            try:
+                post_Item_dj.objects.bulk_create(item_list)
+            except Exception as e:
+                logging.warning(('post_error',str(e)))
             try:
                 result = self.post_col.insert_many(card_list, ordered=False)
             except pymongo.errors.BulkWriteError as e:
