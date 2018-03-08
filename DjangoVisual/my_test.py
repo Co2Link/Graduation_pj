@@ -1,4 +1,5 @@
 import  requests
+import urllib.request
 import datetime
 from matplotlib.dates import drange,date2num
 
@@ -18,7 +19,7 @@ def main():
     b=3912883937
     c=5723240588
     e=1740329954
-    crawl(e)
+    # crawl(e)
     # if 0 and 1 or 0:
     #     print('fuck')
     # d1=datetime.datetime.strptime('2015-6-1', '%Y-%m-%d')
@@ -29,6 +30,11 @@ def main():
     # ddelta=datetime.timedelta(days=10)
     # dates=drange(d1,d2,ddelta)
     # print(dates)
+    url='https://wx4.sinaimg.cn/orj480/70172289ly8fmnmkfz173j20qo0qogo8.jpg'
+    response = urllib.request.urlopen(url=url)
+    buf=response.read()
+    with open('cat_500_600.jpg', 'wb') as f:
+        f.write(buf)
 
 
 

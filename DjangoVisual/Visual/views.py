@@ -1,8 +1,8 @@
 from django.shortcuts import render
 from django.http import JsonResponse
-from my_main.models import ScrapyItem
+from my_main.models import ScrapyItem,UserItem_dj
 from django.views.decorators.csrf import csrf_exempt
-from .matplot_visual import post_freq,fans_num,gender
+from .matplot_visual import post_freq,fans_num,gender,fans_authen,get_pic
 from scrapyd_api import ScrapydAPI
 
 # Create your views here.
@@ -25,7 +25,28 @@ def search_user(request):
             post_freq(id)
             gender(id)
             fans_num(id)
-            return render(request, 'Visual/dashboard.html', context={'tips': '用户id: {}'.format(id), 'pics': True})
+            fans_authen(id)
+            user=UserItem_dj.objects.get(id=id)
+            get_pic(user.avatar_hd)
+            if user.gender=='m':
+                dgender='男'
+            else:
+                dgender='女'
+            if user.verified_type == -1:
+                verified_type = '普通'
+            elif user.verified_type == 200:
+                verified_type = '初级达人'
+            elif user.verified_type == 220:
+                verified_type = '高级达人'
+            elif user.verified_type == 0:
+                verified_type = '黄V'
+            else:
+                verified_type='蓝V'
+
+            return render(request, 'Visual/dashboard.html', context={'tips': '用户id: {}'.format(id), 'pics': True,'user_name':user.screen_name,
+                                                                     'description':user.description,'location':user.location,'follow_count':user.follow_count,
+                                                                     'followers_count':user.followers_count,'gender':dgender,
+                                                                     'statuses_count':user.statuses_count,'verified_type':verified_type})
     else:
         task = scrapyd.schedule('default', 'fans', id=id)
         item=ScrapyItem(id=id,task_id=task)

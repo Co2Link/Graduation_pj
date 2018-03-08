@@ -18,6 +18,8 @@ class UserItem_dj(models.Model):
     screen_name=models.CharField(max_length=30)
 
     location=models.CharField(max_length=50)
+
+    avatar_hd=models.TextField(null=True)
     def __str__(self):
         return str(self.id)
 

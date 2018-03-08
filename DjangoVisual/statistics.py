@@ -20,18 +20,22 @@ def gender(id):
     print(sizes)
     plt.pie(sizes, labels=labels, autopct='%1.1f%%', shadow=False)
     plt.savefig(fname='D:/Python/Graduation_pj/DjangoVisual/static/images/gender')
+    plt.legend()
     plt.show()
 
 def anti_zombie(result_list):   #返回完整的表，与只含僵尸的表
     complete_list=[]
     dirty_list=[]
+    clean_list=[]
     for i in result_list:
         complete_list.append(i)
         if i['statuses_count']==0 or i['followers_count']<i['follow_count']/10 and i['follow_count']>100:
             print('粉丝:{}'.format(i['followers_count']),'关注:{}'.format(i['follow_count']))
             print(i['id'])
             dirty_list.append(i)
-    return [complete_list,dirty_list]
+        else:
+            clean_list.append(i)
+    return [complete_list,dirty_list,clean_list]
 def multi_bar(result_list): #   为每个list画一个bar
     count=0 #区分两个列表，一个完整，一个僵尸
     for dif_list in result_list:
@@ -73,7 +77,7 @@ def fans_num(id):
     id=str(id)
     fans_1=db['fans_1']
     result=fans_1.find(filter={"master_id":id})
-    multi_bar(anti_zombie(result))
+    multi_bar(anti_zombie(result)[:1]) ##
 
 def post_freq(id):
     id=int(id)
@@ -111,15 +115,55 @@ def post_freq(id):
     plt.savefig(fname='D:\Python\Graduation_pj\DjangoVisual\static\images\post_freq')
     plt.show()
 
+def fans_authen(id):
+    id=str(id)
+    fans_1=db['fans_1']
+    cursor=fans_1.find(filter={'master_id':id})
+    cursor=anti_zombie(cursor)[2]
+    verified_dict={}
+    for i in cursor:
+        if i['verified_type'] in verified_dict:
+            verified_dict[i['verified_type']]+=1
+        else:
+            verified_dict[i['verified_type']]=1
+    # print(verified_dict)
+    name_verified_dict={}
+    for key,value in verified_dict.items():
+        if key==-1:
+            name_verified_dict['普通']=verified_dict[key]
+        elif key==200:
+            name_verified_dict['初级达人']=verified_dict[key]
+        elif key==220:
+            name_verified_dict['高级达人']=verified_dict[key]
+        elif key==0:
+            name_verified_dict['黄V']=verified_dict[key]
+        else:
+            if '蓝V' in name_verified_dict:
+                name_verified_dict['蓝V']+=verified_dict[key]
+            else:
+                name_verified_dict['蓝V']=verified_dict[key]
+    # print(name_verified_dict)
+    x_list=[]
+    label_list=[]
+    for key,value in name_verified_dict.items():
+        x_list.append(value)
+        label_list.append(key)
+    plt.pie(x=x_list,labels=label_list,autopct='%1.1f%%', shadow=False)
+    plt.legend()
+    # plt.show()
+
+
+
 def main():
     nine=3279873201
     a=1880564361
     b=3912883937
     c=5723240588
     # # gender('3597829674')
-    fans_num(a)
+    # fans_num(a)
     # gender(nine)
     # post_freq(a)
+    fans_authen(nine)
 if __name__=='__main__':
     main()
 

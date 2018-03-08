@@ -25,6 +25,8 @@ class UserItem(scrapy.Item):
 
     location=scrapy.Field()
 
+    avatar_hd=scrapy.Field()
+
 class fans_1_Item(scrapy.Item):
     master_id=scrapy.Field()
 

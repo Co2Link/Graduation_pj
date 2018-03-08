@@ -178,11 +178,14 @@
                                             <!--<button type="submit"><span class="ion-ios-search-strong"></span></button>-->
                                         <!--</form>-->
                                     <!--</div>-->
+                                    {% if pics %}
+                                        <img src="{% static 'images/user.jpg' %}" style="width: 100%; height: 100%">
+                                    {% endif %}
                                 </div>
                                 <div class="footer">
                                     <hr />
                                     <div class="stats">
-                                        <i class="ti-reload"></i> Updated now
+                                        <b>{{user_name}}</b>
                                     </div>
                                 </div>
                             </div>
@@ -198,16 +201,17 @@
                                         </div>
                                     </div>
                                     <div class="col-xs-7">
-                                        <div class="numbers">
-                                            <p>Revenue</p>
-                                            $1,345
-                                        </div>
+                                        <!--<div class="numbers">-->
+                                            <p>所在地--  {{location}}</p>
+                                            <p>性别----  {{gender}}</p>
+                                            <p>认证----  {{verified_type}}</p>
+                                        <!--</div>-->
                                     </div>
                                 </div>
                                 <div class="footer">
                                     <hr />
                                     <div class="stats">
-                                        <i class="ti-calendar"></i> Last day
+                                        <i class="ti-calendar"></i> 基本信息
                                     </div>
                                 </div>
                             </div>
@@ -223,16 +227,17 @@
                                         </div>
                                     </div>
                                     <div class="col-xs-7">
-                                        <div class="numbers">
-                                            <p>Errors</p>
-                                            23
-                                        </div>
+                                        {{description}}
+                                        <!--<div class="numbers">-->
+                                            <!--<p>Errors</p>-->
+                                            <!--23-->
+                                        <!--</div>-->
                                     </div>
                                 </div>
                                 <div class="footer">
                                     <hr />
                                     <div class="stats">
-                                        <i class="ti-timer"></i> In the last hour
+                                        <i class="ti-timer"></i> 简介
                                     </div>
                                 </div>
                             </div>
@@ -248,45 +253,100 @@
                                         </div>
                                     </div>
                                     <div class="col-xs-7">
-                                        <div class="numbers">
-                                            <p>Followers</p>
-                                            +45
-                                        </div>
+                                        <p>微博数--  {{statuses_count}}</p>
+                                        <p>关注数--  {{follow_count}}</p>
+                                        <p>粉丝数--  {{followers_count}}</p>
+                                        <!--<div class="numbers">-->
+                                            <!--<p>Followers</p>-->
+                                            <!--+45-->
+                                        <!--</div>-->
                                     </div>
                                 </div>
                                 <div class="footer">
                                     <hr />
                                     <div class="stats">
-                                        <i class="ti-reload"></i> Updated now
+                                        <i class="ti-reload"></i> 统计
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="row">
+                <!--<div class="row">-->
 
-                    <div class="col-md-12">
+                    <!--<div class="col-md-12">-->
+                        <!--<div class="card">-->
+                            <!--<div class="header">-->
+                                <!--<h4 class="title">Users Behavior</h4>-->
+                                <!--<p class="category">用户发微博频率</p>-->
+                            <!--</div>-->
+                            <!--<div class="content">-->
+                                <!--{% if pics %}-->
+                                    <!--<img src="{% static 'images/post_freq.png' %}" style="max-width:800px; max-width:600px">-->
+                                    <!--&lt;!&ndash;<img src="{% static 'images/post_freq.png' %}" style="width: 100%; height: 100%">&ndash;&gt;-->
+                                <!--{% endif %}-->
+                                <!--&lt;!&ndash;<div id="chartHours" class="ct-chart"></div>&ndash;&gt;-->
+                                <!--<div class="footer">-->
+                                    <!--<div class="chart-legend">-->
+                                        <!--<i class="fa fa-circle text-info"></i> Open-->
+                                        <!--<i class="fa fa-circle text-danger"></i> Click-->
+                                        <!--<i class="fa fa-circle text-warning"></i> Click Second Time-->
+                                    <!--</div>-->
+                                    <!--<hr>-->
+                                    <!--<div class="stats">-->
+                                        <!--<i class="ti-reload"></i> Updated 3 minutes ago-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <div class="row">
+                    <div class="col-md-6">
                         <div class="card">
                             <div class="header">
-                                <h4 class="title">Users Behavior</h4>
-                                <p class="category">用户发微博频率</p>
+                                <h4 class="title">用户发微博频率</h4>
+                                <p class="category">Last Campaign Performance</p>
                             </div>
                             <div class="content">
                                 {% if pics %}
-                                    <img src="{% static 'images/post_freq.png' %}" style="max-width:800px; max-width:600px">
-                                    <!--<img src="{% static 'images/post_freq.png' %}" style="width: 100%; height: 100%">-->
+                                    <!--<img src="{% static 'images/post_freq.png' %}" style="max-width:800px; max-width:600px">-->
+                                    <img src="{% static 'images/post_freq.png' %}" style="width: 100%; height: 100%">
                                 {% endif %}
-                                <!--<div id="chartHours" class="ct-chart"></div>-->
                                 <div class="footer">
                                     <div class="chart-legend">
                                         <i class="fa fa-circle text-info"></i> Open
-                                        <i class="fa fa-circle text-danger"></i> Click
-                                        <i class="fa fa-circle text-warning"></i> Click Second Time
+                                        <i class="fa fa-circle text-danger"></i> Bounce
+                                        <i class="fa fa-circle text-warning"></i> Unsubscribe
                                     </div>
                                     <hr>
                                     <div class="stats">
-                                        <i class="ti-reload"></i> Updated 3 minutes ago
+                                        <i class="ti-timer"></i> Campaign sent 2 days ago
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card ">
+                            <div class="header">
+                                <h4 class="title">粉丝认证</h4>
+                                <p class="category">All products including Taxes</p>
+                            </div>
+                            <div class="content">
+                                <!--<div id="chartActivity" class="ct-chart"></div>-->
+                                {%if pics %}
+                                    <img src="{% static 'images/dfans_authen.png' %}" style="width: 100%; height: 100%">
+                                {% endif %}
+
+                                <div class="footer">
+                                    <div class="chart-legend">
+                                        <i class="fa fa-circle text-info"></i> Tesla Model S
+                                        <i class="fa fa-circle text-warning"></i> BMW 5 Series
+                                    </div>
+                                    <hr>
+                                    <div class="stats">
+                                        <i class="ti-check"></i> Data information certified
                                     </div>
                                 </div>
                             </div>

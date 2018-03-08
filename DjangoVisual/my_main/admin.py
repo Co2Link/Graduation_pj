@@ -2,7 +2,7 @@ from django.contrib import admin
 from .models import UserItem_dj,fans_1_Item_dj,fans_2_Item_dj,post_Item_dj,ScrapyItem
 
 class UserAdmin(admin.ModelAdmin):
-    list_display = ['id','screen_name','description','gender']
+    list_display = ['id','screen_name','avatar_hd']
 class fans_1Admin(admin.ModelAdmin):
     list_display = ['id','master_id','screen_name','gender']
 class fans_2Admin(admin.ModelAdmin):

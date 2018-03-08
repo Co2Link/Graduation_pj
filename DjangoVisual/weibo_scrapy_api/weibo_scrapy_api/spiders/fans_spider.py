@@ -53,6 +53,7 @@ class fans_spider(scrapy.Spider):
         item['statuses_count'] = user_info['statuses_count']
         item['verified_type'] = user_info['verified_type']
         item['screen_name']=user_info['screen_name']
+        item['avatar_hd']=user_info['avatar_hd']
         yield item
 
         try:
