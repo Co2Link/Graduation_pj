@@ -35,12 +35,13 @@ def crawl(request):
             item=ScrapyItem(id=id,task_id=task)
             item.save()
             return JsonResponse({'task_id': task, 'id': id, 'status': 'started'})
-    elif request.method == 'GET':
-        task_id = request.GET.get('task_id', None)
-        if not task_id:
-            return JsonResponse({'error': 'Missing args'})
-        status = scrapyd.job_status('default', task_id)
-        return JsonResponse({'status': status})
+    # elif request.method == 'GET':
+    #     result = ScrapyItem.objects.filter(id=id)
+    #     task_id = request.GET.get('task_id', None)
+    #     if not task_id:
+    #         return JsonResponse({'error': 'Missing args'})
+    #     status = scrapyd.job_status('default', task_id)
+    #     return JsonResponse({'status': status})
 
 def clean(request):
     item_list=UserItem_dj.objects.all()

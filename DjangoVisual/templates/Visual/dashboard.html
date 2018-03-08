@@ -119,7 +119,15 @@
                         <span class="icon-bar bar2"></span>
                         <span class="icon-bar bar3"></span>
                     </button>
-                    <a class="navbar-brand" href="#">Dashboard</a>
+                    <div id="search-form" class="search-form">
+                        <form role="search" method="post" id="searchform" action="{% url 'Visual:search_user' %}">
+                            <input type="search" name="id" placeholder="搜索" required>
+                            <button type="submit"><span class="ion-ios-search-strong"></span></button>
+                        </form>
+                    </div>
+                    <div>
+                        <p>{{tips}}</p>
+                    </div>
                 </div>
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-right">
@@ -164,12 +172,12 @@
                         <div class="card">
                             <div class="content">
                                 <div class="row">
-                                    <div id="search-form" class="search-form">
-                                        <form role="search" method="post" id="searchform" action="{% url 'my_main:crawl' %}">
-                                            <input type="search" name="id" placeholder="搜索" required>
-                                            <button type="submit"><span class="ion-ios-search-strong"></span></button>
-                                        </form>
-                                    </div>
+                                    <!--<div id="search-form" class="search-form">-->
+                                        <!--<form role="search" method="post" id="searchform" action="{% url 'my_main:crawl' %}">-->
+                                            <!--<input type="search" name="id" placeholder="搜索" required>-->
+                                            <!--<button type="submit"><span class="ion-ios-search-strong"></span></button>-->
+                                        <!--</form>-->
+                                    <!--</div>-->
                                 </div>
                                 <div class="footer">
                                     <hr />
@@ -262,10 +270,13 @@
                         <div class="card">
                             <div class="header">
                                 <h4 class="title">Users Behavior</h4>
-                                <p class="category">24 Hours performance</p>
+                                <p class="category">用户发微博频率</p>
                             </div>
                             <div class="content">
-                                <img src="{% static 'images/pic.jpg' %}">
+                                {% if pics %}
+                                    <img src="{% static 'images/post_freq.png' %}" style="max-width:800px; max-width:600px">
+                                    <!--<img src="{% static 'images/post_freq.png' %}" style="width: 100%; height: 100%">-->
+                                {% endif %}
                                 <!--<div id="chartHours" class="ct-chart"></div>-->
                                 <div class="footer">
                                     <div class="chart-legend">
@@ -286,12 +297,13 @@
                     <div class="col-md-6">
                         <div class="card">
                             <div class="header">
-                                <h4 class="title">Email Statistics</h4>
+                                <h4 class="title">粉丝性别比例</h4>
                                 <p class="category">Last Campaign Performance</p>
                             </div>
                             <div class="content">
-                                <img src="{% static 'images/fig.png' %}" style="width: 100%; height: 100%">
-
+                                {% if pics %}
+                                    <img src="{% static 'images/gender.png' %}" style="width: 100%; height: 100%">
+                                {% endif %}
                                 <div class="footer">
                                     <div class="chart-legend">
                                         <i class="fa fa-circle text-info"></i> Open
@@ -309,11 +321,14 @@
                     <div class="col-md-6">
                         <div class="card ">
                             <div class="header">
-                                <h4 class="title">2015 Sales</h4>
+                                <h4 class="title">粉丝的粉丝数</h4>
                                 <p class="category">All products including Taxes</p>
                             </div>
                             <div class="content">
-                                <div id="chartActivity" class="ct-chart"></div>
+                                <!--<div id="chartActivity" class="ct-chart"></div>-->
+                                {%if pics %}
+                                    <img src="{% static 'images/dfans_num.png' %}" style="width: 100%; height: 100%">
+                                {% endif %}
 
                                 <div class="footer">
                                     <div class="chart-legend">

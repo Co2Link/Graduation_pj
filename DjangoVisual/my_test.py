@@ -1,4 +1,6 @@
 import  requests
+import datetime
+from matplotlib.dates import drange,date2num
 
 def clean():
     result=requests.get(url='http://127.0.0.1:8000/api/clean/')
@@ -15,7 +17,18 @@ def main():
     a=1880564361
     b=3912883937
     c=5723240588
-    crawl(b)
+    e=1740329954
+    crawl(e)
+    # if 0 and 1 or 0:
+    #     print('fuck')
+    # d1=datetime.datetime.strptime('2015-6-1', '%Y-%m-%d')
+    # d2=datetime.datetime.strptime('2015-11-1', '%Y-%m-%d')
+    # d3=date2num(d2)
+    # print(d3)
+    # print(d1.timestamp()/86400)
+    # ddelta=datetime.timedelta(days=10)
+    # dates=drange(d1,d2,ddelta)
+    # print(dates)
 
 
 
