@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.http import JsonResponse
 from my_main.models import ScrapyItem,UserItem_dj
 from django.views.decorators.csrf import csrf_exempt
-from .matplot_visual import post_freq,fans_num,gender,fans_authen,get_pic
+from .matplot_visual import create_pic
 from scrapyd_api import ScrapydAPI
 
 # Create your views here.
@@ -22,12 +22,14 @@ def search_user(request):
         if status=='running':  #未查询到任务，则返回空字符串
             return render(request,'Visual/dashboard.html',context={'tips':'爬取数据中，请等待','pics':False})
         else:
-            post_freq(id)
-            gender(id)
-            fans_num(id)
-            fans_authen(id)
+            creation=create_pic(id)
+            creation.gender()
+            creation.fans_num()
+            creation.post_freq()
+            creation.get_pic()
+            creation.fans_authen()
+
             user=UserItem_dj.objects.get(id=id)
-            get_pic(user.avatar_hd)
             if user.gender=='m':
                 dgender='男'
             else:

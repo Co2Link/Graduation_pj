@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 import datetime
 from matplotlib.dates import DateFormatter
 import pandas as pd
+import urllib.request
 
 plt.rcParams['font.sans-serif']=['SimHei'] #用来正常显示中文标签
 plt.rcParams['axes.unicode_minus']=False #用来正常显示负号
@@ -30,8 +31,8 @@ def anti_zombie(result_list):   #返回完整的表，与只含僵尸的表
     for i in result_list:
         complete_list.append(i)
         if i['statuses_count']==0 or i['followers_count']<i['follow_count']/10 and i['follow_count']>100:
-            print('粉丝:{}'.format(i['followers_count']),'关注:{}'.format(i['follow_count']))
-            print(i['id'])
+            # print('粉丝:{}'.format(i['followers_count']),'关注:{}'.format(i['follow_count']))
+            # print(i['id'])
             dirty_list.append(i)
         else:
             clean_list.append(i)
@@ -96,7 +97,7 @@ def post_freq(id):
         post_list.append({'created_at':datetime.datetime.strptime(key,'%Y-%m-%d'),'time':value})
     # print(post_list)
     new_post_list=sorted(post_list,key=lambda post:post['created_at'])          #排序
-    print(new_post_list)
+    # print(new_post_list)
     # plt.plot_date(x=[post['created_at'] for post in new_post_list],y=[post['time'] for post in new_post_list],fmt='r')
     max_time=new_post_list[-1]['created_at']
     pad_post_list=[]                                    #  填充
@@ -150,7 +151,13 @@ def fans_authen(id):
         label_list.append(key)
     plt.pie(x=x_list,labels=label_list,autopct='%1.1f%%', shadow=False)
     plt.legend()
-    # plt.show()
+    plt.show()
+
+def get_pic(url):
+    response = urllib.request.urlopen(url=url)
+    buf=response.read()
+    with open('D:/Python/Graduation_pj/DjangoVisual/static/images/user.jpg', 'wb') as f:
+        f.write(buf)
 
 
 
@@ -159,11 +166,14 @@ def main():
     a=1880564361
     b=3912883937
     c=5723240588
+    get_pic('https://wx4.sinaimg.cn/orj480/c37ee4b1ly8fnxr3t4h6ij20yi0yi0vi.jpg')
+
+
     # # gender('3597829674')
     # fans_num(a)
     # gender(nine)
     # post_freq(a)
-    fans_authen(nine)
+    # fans_authen(nine)
 if __name__=='__main__':
     main()
 
