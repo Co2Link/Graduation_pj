@@ -4,6 +4,8 @@ from my_main.models import ScrapyItem,UserItem_dj
 from django.views.decorators.csrf import csrf_exempt
 from .matplot_visual import create_pic
 from scrapyd_api import ScrapydAPI
+from .data import location_count
+import json
 
 # Create your views here.
 scrapyd = ScrapydAPI('http://localhost:6800')
@@ -44,11 +46,11 @@ def search_user(request):
                 verified_type = '黄V'
             else:
                 verified_type='蓝V'
-
-            return render(request, 'Visual/dashboard.html', context={'tips': '用户id: {}'.format(id), 'pics': True,'user_name':user.screen_name,
-                                                                     'description':user.description,'location':user.location,'follow_count':user.follow_count,
-                                                                     'followers_count':user.followers_count,'gender':dgender,
-                                                                     'statuses_count':user.statuses_count,'verified_type':verified_type})
+            user_info_dict={'user_name':user.screen_name, 'description':user.description,
+                            'location':user.location,'follow_count':user.follow_count,
+                            'followers_count':user.followers_count,'gender':dgender,
+                            'statuses_count':user.statuses_count,'verified_type':verified_type}
+            return render(request, 'Visual/dashboard.html', context={'tips': '用户id: {}'.format(id), 'pics': True,'user_info_dict':user_info_dict,'option_js':json.dumps(location_count(id))})
     else:
         task = scrapyd.schedule('default', 'fans', id=id)
         item=ScrapyItem(id=id,task_id=task)
@@ -57,3 +59,4 @@ def search_user(request):
 
 def index(request):
     return render(request,'Visual/dashboard.html',context={'tips':'消息提示','pics':False})
+

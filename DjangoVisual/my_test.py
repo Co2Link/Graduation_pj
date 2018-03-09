@@ -30,11 +30,12 @@ def main():
     # ddelta=datetime.timedelta(days=10)
     # dates=drange(d1,d2,ddelta)
     # print(dates)
-    url='https://wx4.sinaimg.cn/orj480/70172289ly8fmnmkfz173j20qo0qogo8.jpg'
-    response = urllib.request.urlopen(url=url)
-    buf=response.read()
-    with open('cat_500_600.jpg', 'wb') as f:
-        f.write(buf)
+    # url='https://wx4.sinaimg.cn/orj480/70172289ly8fmnmkfz173j20qo0qogo8.jpg'
+    # response = urllib.request.urlopen(url=url)
+    # buf=response.read()
+    # with open('cat_500_600.jpg', 'wb') as f:
+    #     f.write(buf)
+    print(second=datetime.datetime().now().second)
 
 
 
