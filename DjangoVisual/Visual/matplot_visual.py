@@ -7,8 +7,7 @@ from matplotlib.dates import DateFormatter
 import pandas as pd
 import urllib.request
 
-plt.rcParams['font.sans-serif']=['SimHei'] #用来正常显示中文标签
-plt.rcParams['axes.unicode_minus']=False #用来正常显示负号
+### matplotlib画图
 
 class create_pic():
     def __init__(self,id):

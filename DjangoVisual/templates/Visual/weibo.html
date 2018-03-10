@@ -1,0 +1,58 @@
+{% extends 'Visual_base.html' %}
+{% block main %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="header">
+                    <h3 class="title">微博内容</h3>
+                </div>
+                <div class="content">
+                    {% if post %}
+                    </br>
+                    <p>{{post.text|safe}}</p>
+                    {% endif %}
+                    <div class="footer">
+                        <div class="chart-legend">
+                        </div>
+                        <hr>
+                        <div class="stats">
+                            {% if post %}
+                            <p>点赞数: {{post.attitudes_count}}  评论数: {{post.comments_count}}  转发数: {{post.reposts_count}}</p>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+{% endblock %}
+
+{% block nav %}
+<div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar bar1"></span>
+                        <span class="icon-bar bar2"></span>
+                        <span class="icon-bar bar3"></span>
+                    </button>
+                    <div id="search-form" class="search-form">
+                        <form role="search" method="post" id="searchform" action="{% url 'Visual:search_weibo' %}">
+                            <input type="search" name="id" placeholder="搜索" required>
+                            <button type="submit"><span class="ion-ios-search-strong"></span></button>
+                        </form>
+                    </div>
+                    <div>
+                        <p>{{tips}}</p>
+                    </div>
+                </div>
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                    </ul>
+
+                </div>
+            </div>
+{% endblock %}

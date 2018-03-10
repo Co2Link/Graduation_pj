@@ -1,5 +1,6 @@
 import datetime
 import pymongo as pymongo
+### 生成EChart的option数据
 
 # import random
 # random.seed(datetime.datetime.now().second)
