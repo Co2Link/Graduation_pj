@@ -63,3 +63,10 @@ class post_Item_dj(models.Model):
     retweeted_text=models.TextField(null=True)
     def __str__(self):
         return str(self.id)
+
+class test_model(models.Model):
+    sid=models.IntegerField()
+    master_id=models.IntegerField()
+    test_field=models.CharField(max_length=100)
+    class Meta:
+        unique_together = ("sid", "master_id")

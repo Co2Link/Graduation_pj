@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import UserItem_dj,fans_1_Item_dj,fans_2_Item_dj,post_Item_dj,ScrapyItem
+from .models import UserItem_dj,fans_1_Item_dj,fans_2_Item_dj,post_Item_dj,ScrapyItem,test_model
 
 class UserAdmin(admin.ModelAdmin):
     list_display = ['id','screen_name','avatar_hd']
@@ -17,3 +17,4 @@ admin.site.register(fans_1_Item_dj,fans_1Admin)
 admin.site.register(fans_2_Item_dj,fans_2Admin)
 admin.site.register(post_Item_dj,postAdmin)
 admin.site.register(ScrapyItem,scrapyAdmin)
+admin.site.register(test_model)
