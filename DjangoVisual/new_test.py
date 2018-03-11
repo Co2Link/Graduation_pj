@@ -35,7 +35,9 @@ def main():
     # buf=response.read()
     # with open('cat_500_600.jpg', 'wb') as f:
     #     f.write(buf)
-    print(datetime.datetime.now().second)
+    for page in range(1, 11):
+        print(page)
+
 
 
 

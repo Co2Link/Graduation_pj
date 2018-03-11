@@ -1,6 +1,8 @@
 import  requests
 import urllib.request
 import datetime
+import pymongo
+import json
 from matplotlib.dates import drange,date2num
 
 def clean():
@@ -11,6 +13,26 @@ def crawl(id):
     print(result.text)
 
 
+def check_user_exist_and_esttimate_time(id,time_dict):
+    time=0
+    result=requests.get(url='https://m.weibo.cn/api/container/getIndex?containerid=100505{}'.format(id))
+    try:
+        userInfo=json.loads(result.text)['data']['userInfo']
+        followers_count=userInfo['followers_count']
+        statuses_count=userInfo['statuses_count']
+    except Exception as e:
+        return 0
+    #calculate time
+    if followers_count/20>250:
+        time+=250+250*19*3
+    else:
+        time+=followers_count/18
+    if statuses_count/10>10:
+        time+=10
+    else:
+        time+=statuses_count/10
+    time_dict['time']=time/220
+    return True
 
 def main():
     # clean()
@@ -19,23 +41,12 @@ def main():
     b=3912883937
     c=5723240588
     e=1740329954
-    # crawl(e)
-    # if 0 and 1 or 0:
-    #     print('fuck')
-    # d1=datetime.datetime.strptime('2015-6-1', '%Y-%m-%d')
-    # d2=datetime.datetime.strptime('2015-11-1', '%Y-%m-%d')
-    # d3=date2num(d2)
-    # print(d3)
-    # print(d1.timestamp()/86400)
-    # ddelta=datetime.timedelta(days=10)
-    # dates=drange(d1,d2,ddelta)
-    # print(dates)
-    # url='https://wx4.sinaimg.cn/orj480/70172289ly8fmnmkfz173j20qo0qogo8.jpg'
-    # response = urllib.request.urlopen(url=url)
-    # buf=response.read()
-    # with open('cat_500_600.jpg', 'wb') as f:
-    #     f.write(buf)
-    print(second=datetime.datetime().now().second)
+    time_dict={}
+    if check_user_exist_and_esttimate_time('3279873201',time_dict):
+        print(time_dict)
+    else:
+        print('fuck')
+
 
 
 

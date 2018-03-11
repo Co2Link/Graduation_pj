@@ -60,7 +60,10 @@ def fans_2_to_dict(my_dict,attr_list,master_id):
     my_dict_clean={}
     my_dict_clean['master_id']=master_id
     for attr in attr_list:
-        my_dict_clean[attr]=my_dict[attr]
+        if attr=='sid':
+            my_dict_clean['sid'] = my_dict['id']
+        else:
+            my_dict_clean[attr] = my_dict[attr]
     return my_dict_clean
 
 
@@ -69,14 +72,14 @@ class WeiboScrapyApiPipeline(object):
     def __init__(self):
         #数据库操作
         self.CONN=pymongo.MongoClient('localhost',27017)
-        self.DBNAME='syn_9'
+        self.DBNAME='syn_10'
         self.user_col=self.CONN[self.DBNAME]['user']
         self.fans_1_col=self.CONN[self.DBNAME]['fans_1']
         self.fans_2_col=self.CONN[self.DBNAME]['fans_2']
         self.post_col=self.CONN[self.DBNAME]['post']
         self.user_col.create_index([('id', pymongo.ASCENDING)], unique=True)
-        self.fans_1_col.create_index([('id', pymongo.ASCENDING)], unique=True)
-        self.fans_2_col.create_index([('id', pymongo.ASCENDING)], unique=True)
+        self.fans_1_col.create_index([('sid', pymongo.ASCENDING),('master_id',pymongo.ASCENDING)], unique=True)
+        self.fans_2_col.create_index([('sid', pymongo.ASCENDING),('master_id',pymongo.ASCENDING)], unique=True)
         self.post_col.create_index([('id', pymongo.ASCENDING)], unique=True)
         #debug变量
         self.count_user=0
@@ -111,7 +114,7 @@ class WeiboScrapyApiPipeline(object):
             master_id=item['master_id']
             item_list=[]
             card_list = []
-            attr_list=['id','follow_count','followers_count','statuses_count','verified_type']
+            attr_list=['sid','follow_count','followers_count','statuses_count','verified_type']
             for card in page:
                 if card['card_type']==10:
                     user=card['user']
@@ -124,7 +127,10 @@ class WeiboScrapyApiPipeline(object):
             except Exception as e:
                 logging.warning(('fans_2_error',str(e)))
                 for i in item_list:
-                    i.save()
+                    try:
+                        i.save()
+                    except Exception as e:
+                        logging.warning(('fans_2_error_sub',str(e)))
             try:
                 result = self.fans_2_col.insert_many(card_list, ordered=False)
             except pymongo.errors.BulkWriteError as e:

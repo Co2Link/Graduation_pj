@@ -110,35 +110,6 @@
             </div>
         </div>
     </div>
-    <!--<div class="row">-->
-
-        <!--<div class="col-md-12">-->
-            <!--<div class="card">-->
-                <!--<div class="header">-->
-                    <!--<h4 class="title">Users Behavior</h4>-->
-                    <!--<p class="category">用户发微博频率</p>-->
-                <!--</div>-->
-                <!--<div class="content">-->
-                    <!--{% if pics %}-->
-                        <!--<img src="{% static 'images/post_freq.png' %}" style="max-width:800px; max-width:600px">-->
-                        <!--&lt;!&ndash;<img src="{% static 'images/post_freq.png' %}" style="width: 100%; height: 100%">&ndash;&gt;-->
-                    <!--{% endif %}-->
-                    <!--&lt;!&ndash;<div id="chartHours" class="ct-chart"></div>&ndash;&gt;-->
-                    <!--<div class="footer">-->
-                        <!--<div class="chart-legend">-->
-                            <!--<i class="fa fa-circle text-info"></i> Open-->
-                            <!--<i class="fa fa-circle text-danger"></i> Click-->
-                            <!--<i class="fa fa-circle text-warning"></i> Click Second Time-->
-                        <!--</div>-->
-                        <!--<hr>-->
-                        <!--<div class="stats">-->
-                            <!--<i class="ti-reload"></i> Updated 3 minutes ago-->
-                        <!--</div>-->
-                    <!--</div>-->
-                <!--</div>-->
-            <!--</div>-->
-        <!--</div>-->
-    <!--</div>-->
     <div class="row">
         <div class="col-md-6">
             <div class="card">
@@ -245,6 +216,24 @@
     <div class="row">
         <div class="col-md-2"></div>
         <div class="col-md-8">
+            <div class="card ">
+                <div class="header">
+                    <h4 class="title">微博关键字</h4>
+                    <!--<p class="category">All products including Taxes</p>-->
+                </div>
+                <div class="content">
+                    <!--<div id="chartActivity" class="ct-chart"></div>-->
+                    {%if pics %}
+                        <img src="{% static 'images/single_weibo.png' %}" style="width: 100%; height: 100%">
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
             <!--<div class="card">-->
                 <!--<div class="header">-->
                     <!--<h4 class="title">粉丝地区分布</h4>-->
@@ -255,13 +244,6 @@
         </div>
         <div class="col-md-2"></div>
     </div>
-    <!--<div class="row">-->
-        <!--<div class="col-md-12">-->
-            <!--<div class="card">-->
-                <!--<div id="main" style="height:400px"></div>-->
-            <!--</div>-->
-        <!--</div>-->
-    <!--</div>-->
 </div>
 {% endblock %}
 

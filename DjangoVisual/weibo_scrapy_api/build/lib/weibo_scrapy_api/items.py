@@ -9,8 +9,6 @@ import scrapy
 
 
 class WeiboScrapyApiItem(scrapy.Item):
-    # define the fields for your item here like:
-    # name = scrapy.Field()
     user=scrapy.Field()
     master_id=scrapy.Field()
 
@@ -26,14 +24,13 @@ class UserItem(scrapy.Item):
     screen_name=scrapy.Field()
 
     location=scrapy.Field()
-    # reg_time=scrapy.Field()
+
+    avatar_hd=scrapy.Field()
 
 class fans_1_Item(scrapy.Item):
-    # page=scrapy.Field()
-
     master_id=scrapy.Field()
 
-    id=scrapy.Field()
+    sid=scrapy.Field()
     follow_count=scrapy.Field()
     followers_count=scrapy.Field()
     gender=scrapy.Field()
@@ -42,7 +39,6 @@ class fans_1_Item(scrapy.Item):
     screen_name=scrapy.Field()
 
     location=scrapy.Field()
-    # reg_time=scrapy.Field()
 class fans_2_Item(scrapy.Item):
     page=scrapy.Field()
     master_id=scrapy.Field()

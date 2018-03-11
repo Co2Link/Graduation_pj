@@ -87,7 +87,7 @@ class fans_spider(scrapy.Spider):
                         # 下面一句会报 ‘dictionary update sequence element #0 has length 9; 2 is required’的错误
                         # yield scrapy.Request(url=self.info_urls.format(id),callback=self.parse_fans_2,meta={'master_id':self.id,'id':user['id'],'follow_count':user['follow_count'],'followers_count':user['followers_count'],'gender':user['gender'],'statuses_count':user['statuses_count'],'verified_type':user['verified_type']})
                         yield scrapy.Request(url=self.info_urls.format(id), callback=self.parse_fans_2,
-                                             meta={'master_id': master_id, 'id': id, 'follow_count': follow_count,
+                                             meta={'master_id': master_id, 'sid': id, 'follow_count': follow_count,
                                                    'followers_count': followers_count, 'gender': gender,
                                                    'statuses_count': statuses_count, 'verified_type': verified_type,
                                                    'screen_name': screen_name})
@@ -106,7 +106,7 @@ class fans_spider(scrapy.Spider):
                         location = sub_card['item_content']
         item=fans_1_Item()      #第一层粉丝
         item['master_id']=response.meta['master_id']
-        item['id']=response.meta['id']
+        item['sid']=response.meta['sid']
         item['follow_count']=response.meta['follow_count']
         item['followers_count']=response.meta['followers_count']
         item['gender']=response.meta['gender']

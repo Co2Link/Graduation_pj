@@ -14,12 +14,12 @@ class create_pic():
         plt.rcParams['font.sans-serif'] = ['SimHei']  # 用来正常显示中文标签
         plt.rcParams['axes.unicode_minus'] = False  # 用来正常显示负号
         self.CONN = pymongo.MongoClient('localhost', 27017)
-        self.db = self.CONN['syn_9']
+        self.db = self.CONN['syn_10']
         self.id=str(id)
     def __del__(self):
         self.CONN.close()
     def get_pic(self):
-        user=self.db['user'].find_one(filter={'id':str(self.id)})
+        user=self.db['user'].find_one(filter={'id':self.id})
         with urllib.request.urlopen(url=user['avatar_hd']) as response:  # 必须关闭连接
             buf = response.read()
         with open('D:/Python/Graduation_pj/DjangoVisual/static/images/user.jpg', 'wb') as f:
@@ -93,7 +93,7 @@ class create_pic():
 
     def post_freq(self):
         post = self.db['post']
-        result = post.find(filter={'author_id': int(self.id)})[:10]
+        result = post.find(filter={'author_id': int(self.id)})
         post_dict = {}
         for i in result:  # 统计频率
             date = i['created_at']
@@ -105,6 +105,7 @@ class create_pic():
         for key, value in post_dict.items():  # 转为list， 并且转为datetime
             post_list.append({'created_at': datetime.datetime.strptime(key, '%Y-%m-%d'), 'time': value})
         new_post_list = sorted(post_list, key=lambda post: post['created_at'])  # 排序
+        print(new_post_list)
         max_time = new_post_list[-1]['created_at']
         pad_post_list = []  # 填充
         for i in range(10):  # 从最近一天起，取10天
@@ -240,7 +241,7 @@ def fans_num(id):
 def post_freq(id):
     id=int(id)
     post=db['post']
-    result=post.find(filter={'author_id':id})[:10]
+    result=post.find(filter={'author_id':id})
     post_dict={}
     for i in result:    #统计频率
         date=i['created_at']
@@ -315,12 +316,9 @@ def main():
     c=5723240588
     # # gender('3597829674')
     # fans_num(str(nine))
-    w=create_pic(nine)
-    w.get_pic()
-    w.fans_authen()
+    w=create_pic(b)
     w.post_freq()
-    w.gender()
-    w.fans_num()
+
 if __name__=='__main__':
     main()
 

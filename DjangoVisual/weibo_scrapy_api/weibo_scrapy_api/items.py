@@ -30,7 +30,7 @@ class UserItem(scrapy.Item):
 class fans_1_Item(scrapy.Item):
     master_id=scrapy.Field()
 
-    id=scrapy.Field()
+    sid=scrapy.Field()
     follow_count=scrapy.Field()
     followers_count=scrapy.Field()
     gender=scrapy.Field()

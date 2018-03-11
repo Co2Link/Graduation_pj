@@ -40,7 +40,7 @@ def add_word(list):
         jieba.add_word(items)
 # add_word(my_words_list)
 # text = open(path.join(d, text_path),'rb').read()
-def jiebaclearText(text,stopwords_path):
+def jiebaclearText(text,stopwords_path,my_word_list_del):
     mywordlist = []
     seg_list = jieba.cut(text, cut_all=False)
     liststr="/ ".join(seg_list)
@@ -54,7 +54,11 @@ def jiebaclearText(text,stopwords_path):
     for myword in liststr.split('/'):
         if not(myword.strip() in f_stop_seg_list) and len(myword.strip())>1:
             mywordlist.append(myword)
-    return ''.join(mywordlist)
+    clean_word_list=[]
+    for i in mywordlist:
+        if not i.strip() in my_word_list_del:
+            clean_word_list.append(i)
+    return ''.join(clean_word_list)
 
 # if isCN:
 #     text = jiebaclearText(text,stopwords_path)
@@ -91,6 +95,8 @@ def create_wordcloud(text):
     max_words=int(len(text)/30)
     if max_words<3:
         max_words=3
+    elif max_words>20:
+        max_words=20
 
     my_word_list=['路明非']
     add_word(my_word_list)
@@ -106,7 +112,9 @@ def create_wordcloud(text):
                    random_state=10,
                    width=800, height=600, margin=2,  # 设置图片默认的大小,但是如果使用背景图片的话,那么保存的图片大小将会按照其大小保存,margin为词语边缘距离
                    )
-    text = jiebaclearText(text,stopwords_path)
+    ## 需要去掉的词
+    my_word_list_del=['微博','链接','全文']
+    text = jiebaclearText(text,stopwords_path,my_word_list_del)
 
     wc.generate(text)
 
@@ -117,6 +125,7 @@ def create_wordcloud(text):
     # plt.show()
 
     wc.to_file('D:/Python/Graduation_pj/DjangoVisual/static/images/single_weibo.png')
+    plt.close()
 
 def main():
     text = open('wordcloud_file/lz.txt', 'rb').read()

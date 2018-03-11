@@ -3,7 +3,7 @@ from django.db import models
 # Create your models here.
 
 class ScrapyItem(models.Model):
-    id=models.IntegerField(primary_key=True)
+    id=models.CharField(max_length=100,primary_key=True)
     task_id=models.CharField(max_length=50)
 
 class UserItem_dj(models.Model):
@@ -22,11 +22,10 @@ class UserItem_dj(models.Model):
     avatar_hd=models.TextField(null=True)
     def __str__(self):
         return str(self.id)
-
 class fans_1_Item_dj(models.Model):
     master_id=models.CharField(max_length=100)
 
-    id=models.CharField(max_length=100,primary_key=True)
+    sid=models.CharField(max_length=100,null=True)
     follow_count = models.IntegerField()
     followers_count = models.IntegerField()
     gender = models.CharField(max_length=1)
@@ -36,25 +35,29 @@ class fans_1_Item_dj(models.Model):
 
     location=models.CharField(max_length=50)
     def __str__(self):
-        return str(self.id)
+        return str(self.sid)
+    class Meta:
+        unique_together = ("sid", "master_id")
 
 class fans_2_Item_dj(models.Model):
     master_id = models.CharField(max_length=100)
-    id = models.CharField(max_length=100,primary_key=True)
+    sid = models.CharField(max_length=100,null=True)
     follow_count = models.IntegerField()
     followers_count = models.IntegerField()
     statuses_count = models.IntegerField()
     verified_type=models.IntegerField()
     def __str__(self):
-        return str(self.id)
+        return str(self.sid)
+    class Meta:
+        unique_together = ("sid", "master_id")
 
 class post_Item_dj(models.Model):
-    author_id=models.IntegerField()
+    author_id=models.CharField(max_length=100)
     attitudes_count=models.IntegerField()
     comments_count=models.IntegerField()
     created_at=models.CharField(max_length=20)
     created_at_org=models.CharField(max_length=20)
-    id=models.IntegerField(primary_key=True)
+    id=models.CharField(max_length=100,primary_key=True)
     pics=models.BooleanField()
     reposts_count=models.IntegerField()
     source=models.CharField(max_length=50)
@@ -64,9 +67,9 @@ class post_Item_dj(models.Model):
     def __str__(self):
         return str(self.id)
 
-class test_model(models.Model):
-    sid=models.IntegerField()
-    master_id=models.IntegerField()
-    test_field=models.CharField(max_length=100)
-    class Meta:
-        unique_together = ("sid", "master_id")
+# class test_model(models.Model):
+#     sid=models.IntegerField()
+#     master_id=models.IntegerField()
+#     test_field=models.CharField(max_length=100)
+#     class Meta:
+#         unique_together = ("sid", "master_id")

@@ -71,9 +71,14 @@ class UserView(ListView):
     model = UserItem_dj
     template_name = 'Visual/listing.html'
     context_object_name = 'user_list'
-    paginate_by = 5
+    paginate_by = 10
 
 def show(request,id):
+    ## 防止在用户一览表中点击正在爬取数据的用户
+    result = ScrapyItem.objects.filter(id=id)
+    status = scrapyd.job_status('default', result[0].task_id)
+    if status == 'running':
+        return render(request, 'Visual/dashboard.html', context={'tips': '爬取数据中，请等待', 'pics': False})
 
     creation = create_pic(id)
     creation.gender()
@@ -81,6 +86,10 @@ def show(request,id):
     creation.post_freq()
     creation.get_pic()
     creation.fans_authen()
+    text=''
+    for i in post_Item_dj.objects.filter(author_id=id):
+        text+=i.text
+    create_wordcloud(text)
 
     user = UserItem_dj.objects.get(id=id)
     if user.gender == 'm':
