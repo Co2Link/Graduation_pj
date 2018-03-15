@@ -104,15 +104,16 @@ class fans_spider(scrapy.Spider):
                 for sub_card in card['card_group']:
                     if 'item_name'in sub_card and sub_card['item_name'] == '所在地':
                         location = sub_card['item_content']
-        item=fans_1_Item()      #第一层粉丝
-        item['master_id']=response.meta['master_id']
-        item['sid']=response.meta['sid']
-        item['follow_count']=response.meta['follow_count']
-        item['followers_count']=response.meta['followers_count']
-        item['gender']=response.meta['gender']
-        item['statuses_count']=response.meta['statuses_count']
-        item['verified_type']=response.meta['verified_type']
-        item['screen_name']=response.meta['screen_name']
+        # item=fans_1_Item()      #第一层粉丝
+        # item['master_id']=response.meta['master_id']
+        # item['sid']=response.meta['sid']
+        # item['follow_count']=response.meta['follow_count']
+        # item['followers_count']=response.meta['followers_count']
+        # item['gender']=response.meta['gender']
+        # item['statuses_count']=response.meta['statuses_count']
+        # item['verified_type']=response.meta['verified_type']
+        # item['screen_name']=response.meta['screen_name']
+        item=fans_1_Item(**response.meta)
         item['location']=location
         yield item
 

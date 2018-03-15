@@ -36,6 +36,11 @@ def search_user(request):
                 creation.get_pic()
                 creation.fans_authen()
 
+                text = ''
+                for i in post_Item_dj.objects.filter(author_id=id):
+                    text += i.text
+                create_wordcloud(text)
+
                 user=UserItem_dj.objects.get(id=id)
                 if user.gender=='m':
                     dgender='男'

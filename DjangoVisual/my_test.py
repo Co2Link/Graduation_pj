@@ -41,11 +41,10 @@ def main():
     b=3912883937
     c=5723240588
     e=1740329954
-    time_dict={}
-    if check_user_exist_and_esttimate_time('3279873201',time_dict):
-        print(time_dict)
-    else:
-        print('fuck')
+
+    my_list=[1,2,3]
+    print(my_list[0:1])
+
 
 
 

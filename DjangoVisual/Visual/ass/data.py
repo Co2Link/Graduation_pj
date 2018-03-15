@@ -73,7 +73,8 @@ import pymongo as pymongo
 def location_count(id):         #生成location数据 dict
     id=str(id)
     CONN=pymongo.MongoClient('localhost',27017)
-    cursor=CONN['syn_9']['fans_1'].find(filter={'master_id':id})
+    cursor=CONN['syn_10']['fans_1'].find(filter={'master_id':id})
+    # print(cursor.count())
     city_dict={}
     city_list=['北京', '天津', '上海', '重庆', '河北', '河南', '云南', '辽宁', '黑龙江', '湖南', '安徽', '山东', '新疆', '江苏', '浙江', '江西', '湖北', '广西', '甘肃', '山西', '内蒙古', '陕西', '吉林', '福建', '贵州', '广东', '青海', '西藏', '四川', '宁夏', '海南', '台湾', '香港', '澳门']
     for i in city_list:
@@ -127,7 +128,7 @@ def main():
     a=1880564361
     b=3912883937
     c=5723240588
-    location_count(a)
+    location_count("2745813247")
 
 
 

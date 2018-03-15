@@ -1,2 +1,6 @@
 2018-03-11 11:22:30 [scrapy.utils.log] INFO: Scrapy 1.5.0 started (bot: weibo_scrapy_api)
 2018-03-11 11:22:30 [scrapy.utils.log] INFO: Versions: lxml 4.1.1.0, libxml2 2.9.5, cssselect 1.0.3, parsel 1.2.0, w3lib 1.17.0, Twisted 17.5.0, Python 3.6.2 |Continuum Analytics, Inc.| (default, Jul 20 2017, 12:30:02) [MSC v.1900 64 bit (AMD64)], pyOpenSSL 17.5.0 (OpenSSL 1.0.2n  7 Dec 2017), cryptography 2.1.4, Platform Windows-10-10.0.10586-SP0
+2018-03-12 16:58:39 [scrapy.utils.log] INFO: Scrapy 1.5.0 started (bot: weibo_scrapy_api)
+2018-03-12 16:58:39 [scrapy.utils.log] INFO: Versions: lxml 4.1.1.0, libxml2 2.9.5, cssselect 1.0.3, parsel 1.2.0, w3lib 1.17.0, Twisted 17.5.0, Python 3.6.2 |Continuum Analytics, Inc.| (default, Jul 20 2017, 12:30:02) [MSC v.1900 64 bit (AMD64)], pyOpenSSL 17.5.0 (OpenSSL 1.0.2n  7 Dec 2017), cryptography 2.1.4, Platform Windows-10-10.0.10586-SP0
+2018-03-12 23:03:47 [scrapy.utils.log] INFO: Scrapy 1.5.0 started (bot: weibo_scrapy_api)
+2018-03-12 23:03:47 [scrapy.utils.log] INFO: Versions: lxml 4.1.1.0, libxml2 2.9.5, cssselect 1.0.3, parsel 1.2.0, w3lib 1.17.0, Twisted 17.5.0, Python 3.6.2 |Continuum Analytics, Inc.| (default, Jul 20 2017, 12:30:02) [MSC v.1900 64 bit (AMD64)], pyOpenSSL 17.5.0 (OpenSSL 1.0.2n  7 Dec 2017), cryptography 2.1.4, Platform Windows-10-10.0.10586-SP0

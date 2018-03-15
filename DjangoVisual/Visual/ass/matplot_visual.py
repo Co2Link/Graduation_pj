@@ -105,7 +105,7 @@ class create_pic():
         for key, value in post_dict.items():  # 转为list， 并且转为datetime
             post_list.append({'created_at': datetime.datetime.strptime(key, '%Y-%m-%d'), 'time': value})
         new_post_list = sorted(post_list, key=lambda post: post['created_at'])  # 排序
-        print(new_post_list)
+        # print(new_post_list)
         max_time = new_post_list[-1]['created_at']
         pad_post_list = []  # 填充
         for i in range(10):  # 从最近一天起，取10天

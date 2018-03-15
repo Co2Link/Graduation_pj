@@ -60,7 +60,10 @@ def fans_2_to_dict(my_dict,attr_list,master_id):
     my_dict_clean={}
     my_dict_clean['master_id']=master_id
     for attr in attr_list:
-        my_dict_clean[attr]=my_dict[attr]
+        if attr=='sid':
+            my_dict_clean['sid'] = my_dict['id']
+        else:
+            my_dict_clean[attr] = my_dict[attr]
     return my_dict_clean
 
 
@@ -124,7 +127,10 @@ class WeiboScrapyApiPipeline(object):
             except Exception as e:
                 logging.warning(('fans_2_error',str(e)))
                 for i in item_list:
-                    i.save()
+                    try:
+                        i.save()
+                    except Exception as e:
+                        logging.warning(('fans_2_error_sub',str(e)))
             try:
                 result = self.fans_2_col.insert_many(card_list, ordered=False)
             except pymongo.errors.BulkWriteError as e:
