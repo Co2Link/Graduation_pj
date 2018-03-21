@@ -114,7 +114,7 @@ class WeiboScrapyApiPipeline(object):
             master_id=item['master_id']
             item_list=[]
             card_list = []
-            attr_list=['sid','follow_count','followers_count','statuses_count','verified_type']
+            attr_list=['sid','follow_count','followers_count','statuses_count','verified_type','description']
             for card in page:
                 if card['card_type']==10:
                     user=card['user']

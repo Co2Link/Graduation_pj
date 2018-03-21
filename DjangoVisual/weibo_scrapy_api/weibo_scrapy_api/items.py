@@ -39,6 +39,8 @@ class fans_1_Item(scrapy.Item):
     screen_name=scrapy.Field()
 
     location=scrapy.Field()
+
+    description=scrapy.Field()
 class fans_2_Item(scrapy.Item):
     page=scrapy.Field()
     master_id=scrapy.Field()

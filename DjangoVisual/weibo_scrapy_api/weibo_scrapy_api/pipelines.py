@@ -72,7 +72,7 @@ class WeiboScrapyApiPipeline(object):
     def __init__(self):
         #数据库操作
         self.CONN=pymongo.MongoClient('localhost',27017)
-        self.DBNAME='syn_10'
+        self.DBNAME='syn_11'
         self.user_col=self.CONN[self.DBNAME]['user']
         self.fans_1_col=self.CONN[self.DBNAME]['fans_1']
         self.fans_2_col=self.CONN[self.DBNAME]['fans_2']
@@ -114,7 +114,7 @@ class WeiboScrapyApiPipeline(object):
             master_id=item['master_id']
             item_list=[]
             card_list = []
-            attr_list=['sid','follow_count','followers_count','statuses_count','verified_type']
+            attr_list=['sid','follow_count','followers_count','statuses_count','verified_type','description']
             for card in page:
                 if card['card_type']==10:
                     user=card['user']
