@@ -43,21 +43,46 @@ def add_fied():
 def combine():
     CONN = pymongo.MongoClient('localhost', 27017)
     fans=CONN['new_label']['fans']
-    fans_2=CONN['new_label']['fans_2']
-    origin=CONN['syn_11']['fans_2']
+    fans_2=CONN['new_label']['fans_1']
+    origin=CONN['syn_11']['fans_1']
+    count=0
     for i in fans_2.find():
         doc=origin.find_one(filter={'sid':i['sid']})
-        doc['zombie']=i['zombie']
-        fans.insert(doc)
+        try:
+            doc['zombie'] = i['zombie']
+        except Exception as e:
+            continue
+        try:
+            fans.insert_one(doc)
+            count+=1
+        except pymongo.errors.DuplicateKeyError as e:
+            pass
+    print(count)
+
 
 
 def crawl_mbrank():
     CONN=pymongo.MongoClient('localhost',27017)
     col=CONN['new_label']['fans']
+    count=0
     for i in col.find():
-        if not 'mbrank' in i:
+        if not 'mbrank' in i or not 'mbtype' in i:
+            count+=1
             result = requests.get(url='https://m.weibo.cn/api/container/getIndex?containerid=100505{}'.format(i['sid']))
-            col.find_one_and_update(filter={'sid':i['sid']},update={'$set':{'mbrank':json.loads(result.text)['data']['userInfo']['mbrank']}})
+            try:
+                userInfo=json.loads(result.text)['data']['userInfo']
+                col.find_one_and_update(filter={'sid': i['sid']},
+                                        update={'$set': {'mbrank': userInfo['mbrank'], 'mbtype': userInfo['mbtype']}})
+
+            except Exception as e:
+                print(result.text)
+                print(i['sid'])
+                if '用户不存在' in result.text:
+                    col.find_one_and_delete(filter={'sid':i['sid']})
+                    print("id: {} 不存在,已删除".format(i['sid']))
+    print(count)
+
+
 
 
 
@@ -68,7 +93,8 @@ def main():
     b=3912883937
     c=5723240588
     e=1740329954
-    combine()
+    # combine()
+    crawl_mbrank()
 
 
 
