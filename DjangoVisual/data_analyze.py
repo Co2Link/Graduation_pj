@@ -63,6 +63,47 @@ def ana_fo_foer(data_list):
     plt.show()
 
 
+def ana_ratio(data_list):
+    zombie_list=[]
+    normal_list=[]
+    for i in data_list:
+        if i['follow_count']==0:
+            i['follow_count']=1
+        i['ratio']=i['followers_count']/i['follow_count']
+
+
+        if i['ratio']>10:
+            i['ratio']=10
+        if i['zombie']:
+            zombie_list.append(i)
+        else:
+            normal_list.append(i)
+    plt.plot([i['ratio'] for i in zombie_list],'ko',label='zombie')
+    plt.plot([i['ratio'] for i in normal_list],'b.',label='normal')
+    plt.legend()
+    plt.show()
+    plt.close()
+
+def ana_description(data_list):
+    zombie_list=[]
+    normal_list=[]
+    for i in data_list:
+        if i['zombie']:
+            zombie_list.append(i)
+        else:
+            normal_list.append(i)
+    count_zombie=0
+    count_normal=0
+    for i,ii in zip(zombie_list,normal_list):
+        if i['description']:
+            count_zombie+=1
+        if ii['description']:
+            count_normal+=1
+    print('zombie_description_ratio: {}'.format(count_zombie/len(zombie_list)))
+    print('normal_description_ratio: {}'.format(count_normal/len(normal_list)))
+
+
+
 
 
 def main():
@@ -79,7 +120,11 @@ def main():
     print(count)
 
 
-    ana_fo_foer(data_list)
+    # ana_fo_foer(data_list)
+
+    # ana_ratio(data_list)
+
+    ana_description(data_list)
 
 if __name__ == '__main__':
     main()

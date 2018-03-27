@@ -39,6 +39,9 @@ def feature_extraction(raw_feature_list):
         if raw_feature['follow_count']==0:
             raw_feature['follow_count']=1
         fans_rate=raw_feature['followers_count']/raw_feature['follow_count']
+
+        if fans_rate>10:
+            fans_rate=10
         # fans_rate=(raw_feature['follow_count']+1)/(raw_feature['followers_count']+1)
 
         result.append([fans_rate,verified_type,mb,
@@ -78,16 +81,22 @@ def zombie_detection(data,debug=False):
 
     predict_label=list(svc.predict(X_f[tran_num:]))
     real_label=Y[tran_num:]
+
+    return_list=[]
+
     if debug:
         print('predict_label',predict_label)
         print('real_label   ',real_label)
-        p_count=0
-        for pre,rea in zip(predict_label,real_label):
-            if pre!=rea:
+    p_count=0
+    for pre,rea in zip(predict_label,real_label):
+        if pre!=rea:
+            return_list.append(X[tran_num+p_count]['sid'])
+            if debug:
                 print('sid: {}, real: {}'.format(X[tran_num+p_count]['sid'],rea))
-            p_count+=1
+        p_count+=1
 
-    return score
+
+    return score,return_list
 
 
 
@@ -96,46 +105,26 @@ def main():
     CONN=pymongo.MongoClient('localhost',27017)
     col=CONN['new_label']['fans']
     ave_score=0
-    print(zombie_detection(list(col.find()),debug=True))
+    # print(zombie_detection(list(col.find()),debug=True))
 
-    # for i in range(1000):
-    #     score=zombie_detection(list(col.find()))
-    #     ave_score+=score
-    #     # print(score)
-    #
-    # ave_score/=1000
-    # print(ave_score)
+    total_list=[]
+    for i in range(1000):
+        score,return_list=zombie_detection(list(col.find()))
+        ave_score+=score
+        total_list+=return_list
+        # print(score)
+
+    count_dict={}
+    for i in total_list:
+        if i not in list(count_dict.keys()):
+            count_dict[i]=1
+        else:
+            count_dict[i]+=1
+    print(sorted(count_dict.items(),key=lambda x:x[1]))
 
 
-
-
-
-
-
+    ave_score/=1000
+    print(ave_score)
 
 if __name__ == '__main__':
     main()
-
-# #调用SVC()
-# clf = svm.SVC()
-# #载入鸢尾花数据集
-# iris = datasets.load_iris()
-# X = iris.data
-# print(X)
-# print(type(X))
-# print(X.shape)
-# normDataSet,_,_=autoNorm(X)
-# print(normDataSet)
-# y = iris.target
-# #fit()训练
-# clf.fit(X,y)
-# #predict()预测
-# pre_y = clf.predict(X[5:10])
-# print(pre_y)
-# print(y[5:10])
-# #导入numpy
-# import numpy as np
-# test = np.array([[5.1,2.9,1.8,3.6]])
-# #对test进行预测
-# test_y = clf.predict(test)
-# print(test_y)

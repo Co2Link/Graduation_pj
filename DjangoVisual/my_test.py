@@ -30,17 +30,15 @@ def add_description():
 
 def main():
     # clean()
-    nine=3279873201
+    nine='3279873201'
     a=1880564361
     b=3912883937
     c=5723240588
     e=1740329954
 
-    list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-    slice = random.sample(list, len(list))  # 从list中随机获取5个元素，作为一个片断返回
-    print(slice)
-    print(list)
-
+    my_dict={'a':1,'b':2}
+    my_dict[nine]=1
+    print(my_dict)
 
 
 
