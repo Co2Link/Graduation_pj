@@ -43,22 +43,50 @@ def add_fied():
 def combine(col_name):
     CONN = pymongo.MongoClient('localhost', 27017)
     fans=CONN['new_label']['fans']
-    fans_2=CONN['new_label'][col_name]
-    origin=CONN['syn_11'][col_name]
+    fans_=CONN['new_label'][col_name]
     count=0
-    for i in fans_2.find():
-        doc=origin.find_one(filter={'sid':i['sid']})
-        try:
-            doc['zombie'] = i['zombie']
-        except Exception as e:
-            print(e)
-            continue
-        try:
-            fans.insert_one(doc)
-            count+=1
-        except pymongo.errors.DuplicateKeyError as e:
-            pass
+    for i in fans_.find():
+        if not fans.find_one(filter={'sid':i['sid']}):
+            result_1 = requests.get(
+                url='https://m.weibo.cn/api/container/getIndex?containerid=100505{}'.format(i['sid']))
+            result_2 = requests.get(
+                url='https://m.weibo.cn/api/container/getIndex?containerid=230283{}_-_INFO'.format(i['sid']))
+
+            try:
+                cards = json.loads(result_2.text)['data']['cards']
+                location = '其他'
+                for card in cards:
+                    if 'card_group' in card:
+                        for sub_card in card['card_group']:
+                            if 'item_name' in sub_card and sub_card['item_name'] == '所在地':
+                                location = sub_card['item_content']
+
+                userInfo = json.loads(result_1.text)['data']['userInfo']
+                sid = i['sid']
+                my_dict = {}
+                # my_dict['master_id'] = i['master_id']
+                my_dict['sid'] = sid
+                my_dict['follow_count'] = userInfo['follow_count']
+                my_dict['followers_count'] = userInfo['followers_count']
+                my_dict['statuses_count'] = userInfo['statuses_count']
+                my_dict['verified_type'] = userInfo['verified_type']
+                my_dict['description'] = userInfo['description']
+                my_dict['mbrank'] = userInfo['mbrank']
+                my_dict['mbtype'] = userInfo['mbtype']
+                my_dict['screen_name'] = userInfo['screen_name']
+                my_dict['location'] = location
+                my_dict['zombie'] = i['zombie']
+
+                fans.insert_one(my_dict)
+                count+=1
+            except Exception as e:
+                print(e)
+                print(result_1.text)
+                print(i['sid'])
+                continue
     print(count)
+
+
 
 def update():
     CONN = pymongo.MongoClient('localhost', 27017)
@@ -137,7 +165,7 @@ def main():
     b=3912883937
     c=5723240588
     e=1740329954
-    # combine('fans_2')
+    combine('fans_2')
     # crawl_mbrank()
     # update()
 
@@ -156,12 +184,6 @@ def main():
     #         print('no')
     #         print(i['sid'])
 
-    CONN = pymongo.MongoClient('localhost', 27017)
-    fans=CONN['new_label']['fans']
-    for i in fans.find():
-        if 'location' not in i:
-            print(i['sid'])
-            fans.find_one_and_delete(filter={'sid':i['sid']})
 
 
 
