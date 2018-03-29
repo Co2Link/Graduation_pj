@@ -90,7 +90,7 @@ def combine(col_name):
 
 def update():
     CONN = pymongo.MongoClient('localhost', 27017)
-    fans=CONN['new_label']['fans']
+    fans=CONN['new_label']['fans_test']
     for i in fans.find():
         result_1 = requests.get(url='https://m.weibo.cn/api/container/getIndex?containerid=100505{}'.format(i['sid']))
         result_2=requests.get(url='https://m.weibo.cn/api/container/getIndex?containerid=230283{}_-_INFO'.format(i['sid']))
@@ -110,7 +110,6 @@ def update():
             userInfo = json.loads(result_1.text)['data']['userInfo']
             sid=i['sid']
             my_dict={}
-            my_dict['master_id']=i['master_id']
             my_dict['sid']=sid
             my_dict['follow_count']=userInfo['follow_count']
             my_dict['followers_count']=userInfo['followers_count']
@@ -155,6 +154,12 @@ def crawl_mbrank():
     print(count)
 
 
+def add_test_data():
+    CONN=pymongo.MongoClient('localhost',27017)
+    fans_test=CONN['new_label']['fans_test']
+    fans_test.create_index([('sid',pymongo.ASCENDING)])
+
+
 
 
 
@@ -165,9 +170,9 @@ def main():
     b=3912883937
     c=5723240588
     e=1740329954
-    combine('fans_2')
+    # combine('fans_2')
     # crawl_mbrank()
-    # update()
+    update()
 
     # CONN=pymongo.MongoClient('localhost',27017)
     # fans_1=CONN['new_label']['fans_1']
@@ -183,7 +188,6 @@ def main():
     #     else:
     #         print('no')
     #         print(i['sid'])
-
 
 
 

@@ -36,9 +36,12 @@ def main():
     c=5723240588
     e=1740329954
 
-    my_dict={'a':1,'b':2}
-    my_dict[nine]=1
-    print(my_dict)
+    # my_dict={'a':1,'b':2}
+    # my_dict[nine]=1
+    # print(my_dict)
+    list_1=[1,2,3]
+    list_2=[4,5,6]
+    print(list_2+list_1)
 
 
 

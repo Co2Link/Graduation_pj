@@ -1,4 +1,5 @@
 import pymongo as pymongo
+import re
 import matplotlib.pyplot as plt
 
 plt.rcParams['font.sans-serif'] = ['SimHei']  # 用来正常显示中文标签
@@ -6,8 +7,6 @@ plt.rcParams['axes.unicode_minus'] = False  # 用来正常显示负号
 
 
 def ana_description(data_list):
-    print(col.find().count())
-    print(len(data_list))
     aa = 0
     ab = 0
     ba = 0
@@ -103,6 +102,16 @@ def ana_description(data_list):
     print('normal_description_ratio: {}'.format(count_normal/len(normal_list)))
 
 
+def ana_name_has_num(data_list):
+    zombie_had_count=0
+    normal_had_count=0
+    for i in data_list:
+        if i['zombie'] and re.search(r'\d',i['screen_name']):
+            zombie_had_count+=1
+        elif not i['zombie'] and re.search(r'\d',i['screen_name']):
+            normal_had_count+=1
+    print(zombie_had_count)
+    print(normal_had_count)
 
 
 
@@ -112,19 +121,23 @@ def main():
 
     data_list = list(col.find())
 
-    count=0
+    zombie_count=0
+    normal_count=0
     for i in data_list:
-        if i['follow_count']>1000 and not i['zombie']:
-            print(i['sid'])
-            count+=1
-    print(count)
-
+        if i['zombie']:
+            zombie_count+=1
+        else:
+            normal_count+=1
+    print('zombie: {}'.format(zombie_count))
+    print('normal: {}'.format(normal_count))
 
     # ana_fo_foer(data_list)
 
     # ana_ratio(data_list)
 
-    ana_description(data_list)
+    # ana_description(data_list)
+
+    ana_name_has_num(data_list)
 
 if __name__ == '__main__':
     main()
