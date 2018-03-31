@@ -4,8 +4,17 @@ import datetime
 import pymongo
 import json
 import requests
+import re
+from sklearn.preprocessing import MinMaxScaler
 from matplotlib.dates import drange,date2num
 import random
+import numpy as np
+
+def is_chinese(uchar):
+    if uchar >= u'\u4e00' and uchar <= u'\u9fff':
+        return True
+    else:
+        return False
 
 def clean():
     result=requests.get(url='http://127.0.0.1:8000/api/clean/')
@@ -39,9 +48,11 @@ def main():
     # my_dict={'a':1,'b':2}
     # my_dict[nine]=1
     # print(my_dict)
-    list_1=[1,2,3]
-    list_2=[4,5,6]
-    print(list_2+list_1)
+    my_array=np.array([1,2,3,4])
+    print(my_array[[1,2]])
+    print(type(my_array))
+    for i in range(1,12):
+        print(i)
 
 
 

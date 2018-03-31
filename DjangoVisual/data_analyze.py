@@ -6,6 +6,13 @@ plt.rcParams['font.sans-serif'] = ['SimHei']  # 用来正常显示中文标签
 plt.rcParams['axes.unicode_minus'] = False  # 用来正常显示负号
 
 
+def is_chinese(uchar):
+    if uchar >= u'\u4e00' and uchar <= u'\u9fa5':
+        return True
+    else:
+        return False
+
+
 def ana_description(data_list):
     aa = 0
     ab = 0
@@ -113,6 +120,22 @@ def ana_name_has_num(data_list):
     print(zombie_had_count)
     print(normal_had_count)
 
+def ana_mode_1(data_list):
+    count_zombie=0
+    count_normal=0
+    count_id=0
+    for i in data_list:
+        name=i['screen_name']
+        print(name)
+        if is_chinese(name[0]) and name[-1].isdigit() and str(i['sid']) not in name and i['zombie']:
+            count_zombie+=1
+        elif is_chinese(name[0]) and name[-1].isdigit() and str(i['sid']) not in name and not i['zombie']:
+            count_normal+=1
+        elif str(i['sid']) in name:
+            count_id+=1
+    print(count_zombie)
+    print(count_normal)
+    print(count_id)
 
 
 def main():
@@ -137,7 +160,9 @@ def main():
 
     # ana_description(data_list)
 
-    ana_name_has_num(data_list)
+    # ana_name_has_num(data_list)
+
+    ana_mode_1(data_list)
 
 if __name__ == '__main__':
     main()

@@ -41,6 +41,8 @@ def check_user_exist(id):
 
 
 def main():
+
+    print(crawl_weibo(4223674363559694))
     pass
 
 if __name__ == '__main__':

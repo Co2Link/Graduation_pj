@@ -164,30 +164,14 @@ def add_test_data():
 
 
 def main():
-    # clean()
-    nine=3279873201
-    a=1880564361
-    b=3912883937
-    c=5723240588
-    e=1740329954
-    # combine('fans_2')
-    # crawl_mbrank()
-    update()
+    CONN=pymongo.MongoClient('localhost',27017)
+    fans=CONN['new_label']['fans']
+    fans_test=CONN['new_label']['fans_test']
+    for i in fans_test.find():
+        fans.insert_one(i)
 
-    # CONN=pymongo.MongoClient('localhost',27017)
-    # fans_1=CONN['new_label']['fans_1']
-    # fans_2=CONN['new_label']['fans_2']
-    # fans=CONN['new_label']['fans']
-    # for i in fans.find():
-    #     result_1=fans_1.find_one(filter={'sid':i['sid']})
-    #     result_2=fans_2.find_one(filter={'sid':i['sid']})
-    #     if result_1:
-    #         fans.find_one_and_update(filter={'sid':i['sid']},update={'$set':{'zombie':result_1['zombie']}})
-    #     elif result_2:
-    #         fans.find_one_and_update(filter={'sid': i['sid']}, update={'$set': {'zombie': result_2['zombie']}})
-    #     else:
-    #         print('no')
-    #         print(i['sid'])
+
+
 
 
 
