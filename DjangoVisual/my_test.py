@@ -1,14 +1,7 @@
-import  requests
-import urllib.request
-import datetime
 import pymongo
-import json
 import requests
-import re
-from sklearn.preprocessing import MinMaxScaler
-from matplotlib.dates import drange,date2num
-import random
 import numpy as np
+from sklearn.externals import joblib
 
 def is_chinese(uchar):
     if uchar >= u'\u4e00' and uchar <= u'\u9fff':
@@ -38,21 +31,9 @@ def add_description():
 
 
 def main():
-    # clean()
-    nine='3279873201'
-    a=1880564361
-    b=3912883937
-    c=5723240588
-    e=1740329954
+    svc=joblib.load('svc.model')
+    svc.score()
 
-    # my_dict={'a':1,'b':2}
-    # my_dict[nine]=1
-    # print(my_dict)
-    my_array=np.array([1,2,3,4])
-    print(my_array[[1,2]])
-    print(type(my_array))
-    for i in range(1,12):
-        print(i)
 
 
 

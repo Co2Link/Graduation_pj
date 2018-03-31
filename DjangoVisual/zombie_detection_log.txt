@@ -1,0 +1,30 @@
+filter
+{'f_num': 11, 'mask': [2, 11, 10, 8, 3, 0, 6, 4, 13, 5, 12], 'accuracy': 0.8822424534924534}
+{'f_num': 10, 'mask': [2, 11, 10, 8, 3, 0, 6, 4, 13, 5], 'accuracy': 0.8813333625833625}
+{'f_num': 12, 'mask': [2, 11, 10, 8, 3, 0, 6, 4, 13, 5, 12, 9], 'accuracy': 0.8786303673803675}
+{'f_num': 13, 'mask': [2, 11, 10, 8, 3, 0, 6, 4, 13, 5, 12, 9, 7], 'accuracy': 0.8786221773721774}
+{'f_num': 14, 'mask': [2, 11, 10, 8, 3, 0, 6, 4, 13, 5, 12, 9, 7, 1], 'accuracy': 0.8786221773721774}
+{'f_num': 8, 'mask': [2, 11, 10, 8, 3, 0, 6, 4], 'accuracy': 0.8713904001404001}
+{'f_num': 9, 'mask': [2, 11, 10, 8, 3, 0, 6, 4, 13], 'accuracy': 0.8704813092313092}
+{'f_num': 6, 'mask': [2, 11, 10, 8, 3, 0], 'accuracy': 0.8632575757575758}
+{'f_num': 7, 'mask': [2, 11, 10, 8, 3, 0, 6], 'accuracy': 0.8623240610740611}
+{'f_num': 2, 'mask': [2, 11], 'accuracy': 0.8478679653679654}
+{'f_num': 3, 'mask': [2, 11, 10], 'accuracy': 0.8451487363987364}
+{'f_num': 5, 'mask': [2, 11, 10, 8, 3], 'accuracy': 0.8433554171054173}
+{'f_num': 4, 'mask': [2, 11, 10, 8], 'accuracy': 0.8379089154089154}
+{'f_num': 1, 'mask': [2], 'accuracy': 0.6585851760851761}
+wrapper
+{'f_num': 3, 'mask': [True, False, False, False, False, True, False, False, False, False, False, True, False, False], 'accuracy': 0.8904159354159352}
+{'f_num': 12, 'mask': [True, False, True, True, True, True, True, True, True, True, True, True, False, True], 'accuracy': 0.8804403591903591}
+{'f_num': 13, 'mask': [True, False, True, True, True, True, True, True, True, True, True, True, True, True], 'accuracy': 0.8786221773721774}
+{'f_num': 14, 'mask': [True, True, True, True, True, True, True, True, True, True, True, True, True, True], 'accuracy': 0.8786221773721774}
+{'f_num': 5, 'mask': [True, False, False, False, False, True, False, False, True, True, False, True, False, False], 'accuracy': 0.8786142798642798}
+{'f_num': 4, 'mask': [True, False, False, False, False, True, False, False, True, False, False, True, False, False], 'accuracy': 0.8786062361062361}
+{'f_num': 11, 'mask': [True, False, True, True, False, True, True, True, True, True, True, True, False, True], 'accuracy': 0.8768202293202293}
+{'f_num': 2, 'mask': [False, False, False, False, False, True, False, False, False, False, False, True, False, False], 'accuracy': 0.8759114309114308}
+{'f_num': 6, 'mask': [True, False, False, False, False, True, False, True, True, True, False, True, False, False], 'accuracy': 0.8713905463905464}
+{'f_num': 10, 'mask': [True, False, True, True, False, True, True, True, True, True, False, True, False, True], 'accuracy': 0.8704813092313094}
+{'f_num': 7, 'mask': [True, False, True, False, False, True, False, True, True, True, False, True, False, False], 'accuracy': 0.8704813092313092}
+{'f_num': 8, 'mask': [True, False, True, True, False, True, False, True, True, True, False, True, False, False], 'accuracy': 0.8695722183222184}
+{'f_num': 9, 'mask': [True, False, True, True, False, True, False, True, True, True, False, True, False, True], 'accuracy': 0.8695722183222184}
+{'f_num': 1, 'mask': [False, False, False, False, False, False, False, False, False, False, False, True, False, False], 'accuracy': 0.8542071779571779}

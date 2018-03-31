@@ -25,7 +25,7 @@ class UserItem_dj(models.Model):
 class fans_1_Item_dj(models.Model):
     master_id=models.CharField(max_length=100)
 
-    sid=models.CharField(max_length=100,null=True)
+    sid=models.CharField(max_length=100)
     follow_count = models.IntegerField()
     followers_count = models.IntegerField()
     gender = models.CharField(max_length=1)
@@ -36,6 +36,10 @@ class fans_1_Item_dj(models.Model):
     location=models.CharField(max_length=50)
 
     description = models.CharField(max_length=150,null=True)
+
+    #new
+    mbrank=models.IntegerField()
+    mbtype=models.IntegerField()
     def __str__(self):
         return str(self.sid)
     class Meta:
@@ -43,14 +47,18 @@ class fans_1_Item_dj(models.Model):
 
 class fans_2_Item_dj(models.Model):
     master_id = models.CharField(max_length=100)
-    sid = models.CharField(max_length=100,null=True)
+    sid = models.CharField(max_length=100)
     follow_count = models.IntegerField()
     followers_count = models.IntegerField()
     statuses_count = models.IntegerField()
     verified_type=models.IntegerField()
 
+    #new
+    mbrank=models.IntegerField()
+    mbtype=models.IntegerField()
+    screen_name=models.CharField(max_length=100)
+
     description = models.CharField(max_length=150, null=True)
-    screen_name = models.CharField(max_length=30,null=True)
     def __str__(self):
         return str(self.sid)
     class Meta:

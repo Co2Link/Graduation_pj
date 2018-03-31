@@ -4,12 +4,15 @@ import random
 import re
 import numpy as np
 from sklearn.feature_selection import SelectKBest,chi2,RFE
-from sklearn.model_selection import cross_val_score
-from sklearn.preprocessing import MinMaxScaler
+from sklearn.model_selection import cross_val_score,cross_validate
+from sklearn.preprocessing import MinMaxScaler,StandardScaler
+from sklearn.externals import joblib
+from itertools import combinations
+import time
 from operator import itemgetter
 
 class zombie_detection():
-    def __init__(self):
+    def __init__(self,model=None,mask=None):
         self.CONN=pymongo.MongoClient('localhost',27017)
         self.fans=self.CONN['new_label']['fans']
         data_list=list(self.fans.find())
@@ -20,7 +23,25 @@ class zombie_detection():
             self.X.append(i)
             self.y.append(i['zombie'])
         X_f = self.feature_extraction(self.X)
+        self.Scaler=MinMaxScaler().fit(X_f)
         self.X_f = MinMaxScaler().fit_transform(X_f)
+        if model:
+            self.svc=model
+        else:
+            self.svc=svm.LinearSVC(class_weight='balanced')
+
+    def get_model(self,mask):
+        mean_score=cross_val_score(self.svc,X=np.array(self.X_f)[:, mask],y=self.y,cv=10,scoring='accuracy').mean()
+        print('mean_score: {}'.format(mean_score))
+        self.svc.fit(X=np.array(self.X_f)[:, mask],y=self.y)
+        joblib.dump(self.svc,'svc.model')
+    def load_model(self,model):
+        self.svc=model
+
+    def predict(self,sid):
+        people=self.fans.find(filter={'sid':sid})
+
+
 
     def is_chinese(self,uchar):
         if uchar >= u'\u4e00' and uchar <= u'\u9fa5':
@@ -31,8 +52,8 @@ class zombie_detection():
         result = []
         for raw_feature in raw_feature_list:
             # authentication
-            verified_type_1 = 0;
-            verified_type_2 = 0;
+            verified_type_1 = 0
+            verified_type_2 = 0
             verified_type_3 = 0
             if raw_feature['verified_type'] == -1:  # verified_type
                 verified_type_1 = 1
@@ -100,8 +121,7 @@ class zombie_detection():
     def cross_validation(self,mask=None):
         X_f = self.feature_extraction(self.X,mask)
         X_f = MinMaxScaler().fit_transform(X_f)
-        svc = svm.LinearSVC(class_weight='balanced')
-        scores = cross_val_score(svc,X_f, self.y, cv=10, scoring='accuracy')  # 自动应用分层抽样
+        scores = cross_val_score(self.svc,X_f, self.y, cv=10, scoring='accuracy')  # 自动应用分层抽样
         mean_score=scores.mean()
         return mean_score
     def feature_selection_filter(self,f_num=None):
@@ -119,39 +139,54 @@ class zombie_detection():
             return rank_list[:f_num]
         else:
             return rank_list
-    def feature_selection_filter_wrapper(self,f_num=None):
-        svc=svm.LinearSVC(class_weight='balanced')
-        selector=RFE(svc,n_features_to_select=f_num,step=1)
+    def feature_selection_wrapper(self,f_num=None):
+        selector=RFE(self.svc,n_features_to_select=f_num,step=1)
         selector=selector.fit(self.X_f,self.y)
         selected_mask=list(selector.support_)
         return selected_mask
 
+    def exhaustion(self):
+        # 先用filter过滤掉4个特征
+        mask = sorted(self.feature_selection_filter(10))
+        print(mask)
+        mask_list = []  # 生成所有的组合
+        for i in range(10):
+            mask_list += list(combinations(mask, i + 1))
+        mask_list = [list(i) for i in mask_list]
+        print(len(mask_list))
+        print(mask_list)
+        result_list = []
+        start_time = time.time()
+        print('start_time: {}'.format(start_time))
+        for mask in mask_list:
+            result_dict = {}
+            result_dict['accuracy'] = self.cross_validation(mask)
+            result_dict['mask'] = mask
+            result_dict['f_num'] = len(mask)
+            result_list.append(result_dict)
+            print(result_dict)
+        result_list = sorted(result_list, key=itemgetter('accuracy'), reverse=True)
+        with open('feature_selection_log_2.txt', 'w') as f:
+            f.writelines('original_mask: {}\n'.format(str(mask)))
+            for i in result_list:
+                f.writelines(str(i) + '\n')
+        end_time = time.time()
+        print('end_time: {}'.format(end_time))
+        print('time_cost: {}'.format(end_time - start_time))
+        print('best: {}'.format(str(result_list[0])))
+
+
+
 
 def main():
-    zd=zombie_detection()
-    best_mask=[0,1,2,3,4,5,11,12,13]
-    # zd.cross_validation(best_mask)
-    score_list=[]
-    for f_num in range(1,15):
-        mask=zd.feature_selection_filter(f_num=f_num)
-        score_dict = {}
-        score_dict['f_num']=f_num
-        score_dict['mask']=mask
-        score_dict['accuracy']=zd.cross_validation(mask)
-        score_list.append(score_dict)
-    score_list=sorted(score_list,key=itemgetter('accuracy'),reverse=True)
-    print(score_list)
+    best_mask=[0,1, 2, 3, 4, 5, 11]
+    zd=zombie_detection('svc.model',best_mask)
 
-    # score_list=[]
-    # for f_num in range(1,15):
-    #     mask=zd.feature_selection_filter_wrapper(f_num=f_num)
-    #     score_dict = {}
-    #     score_dict['f_num']=f_num
-    #     score_dict['mask']=mask
-    #     score_dict['accuracy']=zd.cross_validation(mask)
-    #     score_list.append(score_dict)
-    # score_list=sorted(score_list,key=itemgetter('accuracy'),reverse=True)
-    # print(score_list)
+    zd.svc.score()
+
+
+    # zd.exhaustion()
+
 
 
 if __name__ == '__main__':

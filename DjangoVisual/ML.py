@@ -240,7 +240,7 @@ def feature_selection_model(data_list):
 
 def cross_validation(data_list):
     svc=svm.LinearSVC(class_weight='balanced')
-    scores=cross_val_score(svc,)
+
 def main():
     CONN=pymongo.MongoClient('localhost',27017)
     fans=CONN['new_label']['fans']

@@ -85,13 +85,16 @@ class fans_spider(scrapy.Spider):
                         verified_type = user['verified_type']
                         screen_name = user['screen_name']
                         description=user['description']
+                        mbrank=user['mbrank']
+                        mbtype=user['mbtype']
                         # 下面一句会报 ‘dictionary update sequence element #0 has length 9; 2 is required’的错误
                         # yield scrapy.Request(url=self.info_urls.format(id),callback=self.parse_fans_2,meta={'master_id':self.id,'id':user['id'],'follow_count':user['follow_count'],'followers_count':user['followers_count'],'gender':user['gender'],'statuses_count':user['statuses_count'],'verified_type':user['verified_type']})
                         yield scrapy.Request(url=self.info_urls.format(id), callback=self.parse_fans_2,
                                              meta={'master_id': master_id, 'sid': id, 'follow_count': follow_count,
                                                    'followers_count': followers_count, 'gender': gender,
                                                    'statuses_count': statuses_count, 'verified_type': verified_type,
-                                                   'screen_name': screen_name,'description':description})
+                                                   'screen_name': screen_name,'description':description,
+                                                   'mbrank':mbrank,'mbtype':mbtype})
                         yield scrapy.Request(url=self.fans_urls.format(id, 1), callback=self.parse_fans_3,
                                              meta={'master_id': id})
             except KeyError as e:
@@ -116,6 +119,8 @@ class fans_spider(scrapy.Spider):
         item['screen_name']=response.meta['screen_name']
         item['location']=location
         item['description']=response.meta['description']
+        item['mbrank']=response.meta['mbrank']
+        item['mbtype']=response.meta['mbtype']
         yield item
 
     def parse_fans_3(self,response):       #fans_urls 获取粉丝的第一页粉丝

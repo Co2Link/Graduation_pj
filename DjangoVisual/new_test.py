@@ -5,6 +5,7 @@ from matplotlib.dates import drange,date2num
 import pymongo
 import json
 import random
+from itertools import combinations,combinations_with_replacement
 def clean():
     result=requests.get(url='http://127.0.0.1:8000/api/clean/')
     print(result.text)
@@ -15,7 +16,7 @@ def crawl(id):
 def create_new_db():
     CONN=pymongo.MongoClient('localhost',27017)
     col_prefix='fans_2_{}'
-    col=CONN['syn_11']['fans_2']
+    col=CONN['syn_12']['fans_2']
     new_col_1=CONN['label'][col_prefix.format(1)]
     new_col_2 = CONN['label'][col_prefix.format(2)]
     new_col_3 = CONN['label'][col_prefix.format(3)]
@@ -167,8 +168,11 @@ def main():
     CONN=pymongo.MongoClient('localhost',27017)
     fans=CONN['new_label']['fans']
     fans_test=CONN['new_label']['fans_test']
-    for i in fans_test.find():
-        fans.insert_one(i)
+
+
+
+
+
 
 
 

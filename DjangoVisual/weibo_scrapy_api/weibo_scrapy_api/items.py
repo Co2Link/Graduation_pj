@@ -41,6 +41,9 @@ class fans_1_Item(scrapy.Item):
     location=scrapy.Field()
 
     description=scrapy.Field()
+    #new
+    mbrank=scrapy.Field()
+    mbtype=scrapy.Field()
 class fans_2_Item(scrapy.Item):
     page=scrapy.Field()
     master_id=scrapy.Field()

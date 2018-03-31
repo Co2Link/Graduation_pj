@@ -72,7 +72,7 @@ class WeiboScrapyApiPipeline(object):
     def __init__(self):
         #数据库操作
         self.CONN=pymongo.MongoClient('localhost',27017)
-        self.DBNAME='syn_11'
+        self.DBNAME='syn_12'
         self.user_col=self.CONN[self.DBNAME]['user']
         self.fans_1_col=self.CONN[self.DBNAME]['fans_1']
         self.fans_2_col=self.CONN[self.DBNAME]['fans_2']
@@ -86,7 +86,7 @@ class WeiboScrapyApiPipeline(object):
         self.count_fans_1=0
         self.count_fans_2=0
         #用于去重的list
-        self.fans_2_buf=[]
+        # self.fans_2_buf=[]
         self.post_buf=[]
     def process_item(self, item, spider):
         if isinstance(item,UserItem):               # User
@@ -114,19 +114,20 @@ class WeiboScrapyApiPipeline(object):
             master_id=item['master_id']
             item_list=[]
             card_list = []
-            attr_list=['sid','follow_count','followers_count','statuses_count','verified_type','description']
+            attr_list=['sid','follow_count','followers_count','statuses_count','verified_type','description','screen_name','mbrank','mbtype']
             for card in page:
                 if card['card_type']==10:
                     user=card['user']
-                    card_list.append(fans_2_to_dict(user,attr_list,master_id))
-                    item_list.append(fans_2_Item_dj(**fans_2_to_dict(user,attr_list,master_id)))
+                    fans_2_dict=fans_2_to_dict(user,attr_list,master_id)
+                    card_list.append(fans_2_dict)
+                    item_list.append(fans_2_Item_dj(**fans_2_dict))
 
-            # self.fans_2_buf+=item_list  #用buf来缓存所有的数据
-            try:    #fans_2中经常会遇到重复写入，并且可能与数据库中已存在的其他user的fans_2d，故不能
+            # fans_2中经常会遇到重复写入
+            try:
                 fans_2_Item_dj.objects.bulk_create(item_list)
             except Exception as e:
                 logging.warning(('fans_2_error',str(e)))
-                for i in item_list:
+                for i in item_list: #遇到重复，则回滚，逐一插入
                     try:
                         i.save()
                     except Exception as e:

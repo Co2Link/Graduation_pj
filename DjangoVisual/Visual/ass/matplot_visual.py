@@ -14,7 +14,7 @@ class create_pic():
         plt.rcParams['font.sans-serif'] = ['SimHei']  # 用来正常显示中文标签
         plt.rcParams['axes.unicode_minus'] = False  # 用来正常显示负号
         self.CONN = pymongo.MongoClient('localhost', 27017)
-        self.db = self.CONN['syn_11']
+        self.db = self.CONN['syn_12']
         self.id=str(id)
     def __del__(self):
         self.CONN.close()
@@ -162,7 +162,7 @@ class create_pic():
         plt.close()
 
 CONN=pymongo.MongoClient('localhost',27017)
-db=CONN['syn_11']
+db=CONN['syn_12']
 
 def get_pic(url):
     with urllib.request.urlopen(url=url) as response:   #必须关闭连接
