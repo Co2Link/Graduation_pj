@@ -168,6 +168,10 @@ def main():
     CONN=pymongo.MongoClient('localhost',27017)
     fans=CONN['new_label']['fans']
     fans_test=CONN['new_label']['fans_test']
+    fans_test.find()
+    for i in list(fans_test.find()):
+        print(i)
+        print(type(i))
 
 
 

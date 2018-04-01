@@ -14,8 +14,8 @@
       <file leaf-file-name="ML_new.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ML_new.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="41" column="4" lean-forward="false" selection-start-line="41" selection-start-column="4" selection-end-line="41" selection-end-column="4" />
+            <state relative-caret-position="118">
+              <caret line="198" column="26" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="219" selection-end-column="0" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
               </folding>
@@ -23,48 +23,37 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/my_main/views.py">
+      <file leaf-file-name="zd.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Visual/ass/zd.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="900">
-              <caret line="46" column="26" lean-forward="false" selection-start-line="46" selection-start-column="26" selection-end-line="46" selection-end-column="26" />
+            <state relative-caret-position="307">
+              <caret line="89" column="49" lean-forward="false" selection-start-line="89" selection-start-column="49" selection-end-line="89" selection-end-column="49" />
+              <folding>
+                <element signature="e#0#32#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="matplot_visual.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Visual/ass/matplot_visual.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="45" column="32" lean-forward="false" selection-start-line="45" selection-start-column="32" selection-end-line="45" selection-end-column="32" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="data.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Visual/ass/data.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="79" column="23" lean-forward="true" selection-start-line="79" selection-start-column="23" selection-end-line="79" selection-end-column="23" />
-              <folding />
-            </state>
+      <file leaf-file-name="dfans_num.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/images/dfans_num.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_validation.py" pinned="false" current-in-tab="false">
-        <entry file="file://D:/Anaconda2/envs/py3/envs/graduation_pj/Lib/site-packages/sklearn/model_selection/_validation.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="236" column="4" lean-forward="false" selection-start-line="236" selection-start-column="4" selection-end-line="236" selection-end-column="4" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="feature_selection_log_2.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/feature_selection_log_2.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="25">
-              <caret line="1" column="60" lean-forward="false" selection-start-line="1" selection-start-column="41" selection-end-line="1" selection-end-column="60" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="feature_selection_log_1.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/feature_selection_log_1.txt">
+      <file leaf-file-name="user.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/Visual/user.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -73,11 +62,33 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="feature_selection_log.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/feature_selection_log.txt">
+      <file leaf-file-name="dashboard.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/Visual/dashboard.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="25">
-              <caret line="1" column="56" lean-forward="false" selection-start-line="1" selection-start-column="40" selection-end-line="1" selection-end-column="56" />
+            <state relative-caret-position="279">
+              <caret line="196" column="47" lean-forward="false" selection-start-line="196" selection-start-column="47" selection-end-line="196" selection-end-column="47" />
+              <folding>
+                <element signature="n#style#0;n#img#0;n#div#1;n#div#0;n#div#1;n#div#2;n#div#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="validation.py" pinned="false" current-in-tab="false">
+        <entry file="file://D:/Anaconda2/envs/py3/envs/graduation_pj/Lib/site-packages/sklearn/utils/validation.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="179">
+              <caret line="440" column="0" lean-forward="false" selection-start-line="440" selection-start-column="0" selection-end-line="440" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="data.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Visual/ass/data.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2143">
+              <caret line="97" column="10" lean-forward="false" selection-start-line="97" selection-start-column="10" selection-end-line="97" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -86,11 +97,9 @@
       <file leaf-file-name="my_test.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/my_test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="33" column="4" lean-forward="false" selection-start-line="33" selection-start-column="4" selection-end-line="33" selection-end-column="4" />
-              <folding>
-                <element signature="e#0#14#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="337">
+              <caret line="33" column="19" lean-forward="false" selection-start-line="33" selection-start-column="19" selection-end-line="33" selection-end-column="19" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -98,20 +107,8 @@
       <file leaf-file-name="new_test.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/new_test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="171" column="0" lean-forward="false" selection-start-line="171" selection-start-column="0" selection-end-line="171" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#16#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="statistics.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/statistics.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="97">
-              <caret line="166" column="16" lean-forward="false" selection-start-line="166" selection-start-column="16" selection-end-line="166" selection-end-column="16" />
+            <state relative-caret-position="429">
+              <caret line="173" column="20" lean-forward="false" selection-start-line="173" selection-start-column="20" selection-end-line="173" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -129,11 +126,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>location</find>
-      <find>update</find>
-      <find>3055126841</find>
-      <find>master_id</find>
-      <find>5203612390</find>
       <find>create_index</find>
       <find>extract</find>
       <find>pop</find>
@@ -141,7 +133,6 @@
       <find>print</find>
       <find>92</find>
       <find>count</find>
-      <find>sample</find>
       <find>8823921568627451</find>
       <find>8803333333333333</find>
       <find>8804117647058822</find>
@@ -156,9 +147,15 @@
       <find>score</find>
       <find>chi2</find>
       <find>mean_sc</find>
-      <find>feature_extraction</find>
       <find>change_feature</find>
       <find>syn_11</find>
+      <find>get_mo</find>
+      <find>sample</find>
+      <find>feature_extraction</find>
+      <find>log.txt</find>
+      <find>dfans_num</find>
+      <find>predict</find>
+      <find>anti_zombie</find>
     </findStrings>
     <dirStrings>
       <dir>D:\Python\Graduation_pj\DjangoVisual\weibo_scrapy_api</dir>
@@ -167,8 +164,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/weibo_scrapy_api/scrapy.cfg" />
-        <option value="$PROJECT_DIR$/main/views.py" />
         <option value="$PROJECT_DIR$/main/models.py" />
         <option value="$PROJECT_DIR$/main/admin.py" />
         <option value="$PROJECT_DIR$/test.py" />
@@ -206,7 +201,6 @@
         <option value="$PROJECT_DIR$/Visual/ass/my_wordcloud.py" />
         <option value="$PROJECT_DIR$/add_field.py" />
         <option value="$PROJECT_DIR$/Visual/views.py" />
-        <option value="$PROJECT_DIR$/Visual/ass/matplot_visual.py" />
         <option value="$PROJECT_DIR$/data_analyze.py" />
         <option value="$PROJECT_DIR$/Visual/ass/crawl.py" />
         <option value="$PROJECT_DIR$/weibo_scrapy_api/weibo_scrapy_api/items.py" />
@@ -214,18 +208,21 @@
         <option value="$PROJECT_DIR$/weibo_scrapy_api/weibo_scrapy_api/pipelines.py" />
         <option value="$PROJECT_DIR$/my_main/models.py" />
         <option value="$PROJECT_DIR$/ML.py" />
-        <option value="$PROJECT_DIR$/new_test.py" />
+        <option value="$PROJECT_DIR$/Visual/ass/data.py" />
         <option value="$PROJECT_DIR$/my_test.py" />
         <option value="$PROJECT_DIR$/ML_new.py" />
-        <option value="$PROJECT_DIR$/Visual/ass/data.py" />
+        <option value="$PROJECT_DIR$/Visual/ass/zombie_detection.py" />
+        <option value="$PROJECT_DIR$/new_test.py" />
+        <option value="$PROJECT_DIR$/Visual/ass/matplot_visual.py" />
+        <option value="$PROJECT_DIR$/Visual/ass/zd.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="472" />
-    <option name="y" value="64" />
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="x" value="332" />
+    <option name="y" value="134" />
     <option name="width" value="1338" />
-    <option name="height" value="1092" />
+    <option name="height" value="1026" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -242,6 +239,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -252,7 +251,24 @@
             <path>
               <item name="DjangoVisual" type="b2602c69:ProjectViewProjectNode" />
               <item name="DjangoVisual" type="462c0819:PsiDirectoryNode" />
-              <item name="my_main" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DjangoVisual" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DjangoVisual" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DjangoVisual" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DjangoVisual" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DjangoVisual" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DjangoVisual" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="Visual" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="DjangoVisual" type="b2602c69:ProjectViewProjectNode" />
@@ -269,8 +285,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -279,16 +293,16 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Python\Graduation_pj\DjangoVisual\Visual\ass\wordcloud_file" />
-      <recent name="D:\Python\Graduation_pj\DjangoVisual\templates\Visual" />
-      <recent name="D:\Python\Graduation_pj\DjangoVisual\static\images" />
-      <recent name="D:\Python\Graduation_pj\DjangoVisual\static" />
-      <recent name="D:\Python\Graduation_pj\DjangoVisual\Visual" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Python\Graduation_pj\DjangoVisual\Visual\ass\wordcloud_file" />
       <recent name="D:\Python\Graduation_pj\DjangoVisual\Visual\ass" />
+      <recent name="D:\Python\Graduation_pj\DjangoVisual\static\images" />
+      <recent name="D:\Python\Graduation_pj\DjangoVisual\static" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Python\Graduation_pj\DjangoVisual\Visual\ass" />
+      <recent name="D:\Python\Graduation_pj\DjangoVisual\Visual\ass\wordcloud_file" />
+      <recent name="D:\Python\Graduation_pj\DjangoVisual\templates\Visual" />
       <recent name="D:\Python\Graduation_pj\DjangoVisual\static\images" />
       <recent name="D:\Python\Graduation_pj\DjangoVisual\static" />
     </key>
@@ -305,7 +319,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.ML_new">
+  <component name="RunManager" selected="Python.new_test">
     <configuration name="ML_new" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -405,8 +419,8 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.ML_new" />
-        <item index="1" class="java.lang.String" itemvalue="Python.new_test" />
+        <item index="0" class="java.lang.String" itemvalue="Python.new_test" />
+        <item index="1" class="java.lang.String" itemvalue="Python.ML_new" />
         <item index="2" class="java.lang.String" itemvalue="Python.my_test" />
         <item index="3" class="java.lang.String" itemvalue="Python.crawl" />
         <item index="4" class="java.lang.String" itemvalue="Python.data_analyze" />
@@ -439,20 +453,19 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="472" y="64" width="1338" height="1092" extended-state="0" />
-    <editor active="true" />
+    <frame x="332" y="134" width="1338" height="1026" extended-state="1" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26970634" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26970634" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32893157" sideWeight="0.49711934" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36646706" sideWeight="0.3026197" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991013" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32947233" sideWeight="0.49577168" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32337245" sideWeight="0.6973803" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.347876" sideWeight="0.6973803" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.10204082" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3407325" sideWeight="0.49141824" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33983928" sideWeight="0.49141824" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -507,23 +520,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/user.jpg" />
-    <entry file="file://$PROJECT_DIR$/static/images/dfans_authen.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/images/dfans_num.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/images/gender.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Visual/ass/WordCloudDefautColors.png" />
     <entry file="file://$PROJECT_DIR$/static/images/user.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -538,13 +534,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15625">
           <caret line="642" column="8" lean-forward="false" selection-start-line="642" selection-start-column="8" selection-end-line="642" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/Visual/dashboard.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="224" column="68" lean-forward="false" selection-start-line="224" selection-start-column="68" selection-end-line="224" selection-end-column="68" />
         </state>
       </provider>
     </entry>
@@ -623,13 +612,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Visual/ass/matplot_visual.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://D:/Anaconda2/envs/py3/envs/graduation_pj/Lib/site-packages/matplotlib/pyplot.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="488">
@@ -688,7 +670,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="525">
           <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -696,14 +677,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="12150">
           <caret line="494" column="0" lean-forward="false" selection-start-line="494" selection-start-column="0" selection-end-line="494" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/Anaconda2/envs/py3/envs/graduation_pj/Lib/site-packages/sklearn/utils/validation.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="440" column="0" lean-forward="false" selection-start-line="440" selection-start-column="0" selection-end-line="440" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -788,29 +761,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/my_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="33" column="4" lean-forward="false" selection-start-line="33" selection-start-column="4" selection-end-line="33" selection-end-column="4" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/new_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="171" column="0" lean-forward="false" selection-start-line="171" selection-start-column="0" selection-end-line="171" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#16#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/statistics.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="97">
+        <state relative-caret-position="4025">
           <caret line="166" column="16" lean-forward="false" selection-start-line="166" selection-start-column="16" selection-end-line="166" selection-end-column="16" />
           <folding />
         </state>
@@ -842,19 +795,9 @@
     </entry>
     <entry file="file://D:/Anaconda2/envs/py3/envs/graduation_pj/Lib/site-packages/sklearn/model_selection/_validation.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
+        <state relative-caret-position="5400">
           <caret line="236" column="4" lean-forward="false" selection-start-line="236" selection-start-column="4" selection-end-line="236" selection-end-column="4" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ML_new.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="41" column="4" lean-forward="false" selection-start-line="41" selection-start-column="4" selection-end-line="41" selection-end-column="4" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -866,11 +809,102 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://D:/Anaconda2/envs/py3/envs/graduation_pj/Lib/site-packages/pymongo/cursor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="201">
+          <caret line="614" column="0" lean-forward="false" selection-start-line="614" selection-start-column="0" selection-end-line="614" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Anaconda2/envs/py3/envs/graduation_pj/Lib/site-packages/sklearn/linear_model/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="323" column="0" lean-forward="false" selection-start-line="323" selection-start-column="0" selection-end-line="323" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="337">
+          <caret line="33" column="19" lean-forward="false" selection-start-line="33" selection-start-column="19" selection-end-line="33" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ML_new.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="118">
+          <caret line="198" column="26" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="219" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Visual/ass/data.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="79" column="23" lean-forward="true" selection-start-line="79" selection-start-column="23" selection-end-line="79" selection-end-column="23" />
+        <state relative-caret-position="2143">
+          <caret line="97" column="10" lean-forward="false" selection-start-line="97" selection-start-column="10" selection-end-line="97" selection-end-column="10" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Anaconda2/envs/py3/envs/graduation_pj/Lib/site-packages/sklearn/utils/validation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="440" column="0" lean-forward="false" selection-start-line="440" selection-start-column="0" selection-end-line="440" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Visual/dashboard.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="196" column="47" lean-forward="false" selection-start-line="196" selection-start-column="47" selection-end-line="196" selection-end-column="47" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#div#1;n#div#0;n#div#1;n#div#2;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Visual/user.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/images/dfans_num.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/new_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="429">
+          <caret line="173" column="20" lean-forward="false" selection-start-line="173" selection-start-column="20" selection-end-line="173" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Visual/ass/matplot_visual.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="45" column="32" lean-forward="false" selection-start-line="45" selection-start-column="32" selection-end-line="45" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Visual/ass/zd.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="307">
+          <caret line="89" column="49" lean-forward="false" selection-start-line="89" selection-start-column="49" selection-end-line="89" selection-end-column="49" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

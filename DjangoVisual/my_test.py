@@ -31,8 +31,9 @@ def add_description():
 
 
 def main():
-    svc=joblib.load('svc.model')
-    svc.score()
+    my_list=[1,2,3]
+    if type(my_list)==list:
+        print('fuck')
 
 
 

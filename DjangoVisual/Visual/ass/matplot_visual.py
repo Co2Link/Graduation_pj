@@ -6,6 +6,7 @@ import datetime
 from matplotlib.dates import DateFormatter
 import pandas as pd
 import urllib.request
+from . import zd
 
 ### matplotlib画图
 
@@ -41,12 +42,14 @@ class create_pic():
         complete_list = []
         dirty_list = []
         clean_list = []
-        for i in result_list:
-            complete_list.append(i)
-            if i['statuses_count'] == 0 or i['followers_count'] < i['follow_count'] / 10 and i['follow_count'] > 100:
-                dirty_list.append(i)
+        my_zd = zd.zombie_detection('svc.model', zd.best_mask)
+        predict_list = my_zd.predict(result_list)
+        for zombie, peopel in zip(predict_list, result_list):
+            complete_list.append(peopel)
+            if zombie:
+                dirty_list.append(peopel)
             else:
-                clean_list.append(i)
+                clean_list.append(peopel)
         return [complete_list, dirty_list, clean_list]
 
     def multi_bar(self,result_list):  # 为每个list画一个bar
@@ -89,7 +92,7 @@ class create_pic():
     def fans_num(self):
         fans_1 = self.db['fans_1']
         result = fans_1.find(filter={"master_id": self.id})
-        self.multi_bar(self.anti_zombie(result)[:2])
+        self.multi_bar(self.anti_zombie(list(result))[:2])
 
     def post_freq(self):
         post = self.db['post']
@@ -129,7 +132,7 @@ class create_pic():
     def fans_authen(self):
         fans_1 = self.db['fans_1']
         cursor = fans_1.find(filter={'master_id': self.id})
-        cursor = self.anti_zombie(cursor)[2]
+        cursor = self.anti_zombie(list(cursor))[2]
         verified_dict = {}
         for i in cursor:
             if i['verified_type'] in verified_dict:
@@ -188,12 +191,22 @@ def anti_zombie(result_list):   #返回完整的表，与只含僵尸的表
     complete_list=[]
     dirty_list=[]
     clean_list=[]
-    for i in result_list:
-        complete_list.append(i)
-        if i['statuses_count']==0 or i['followers_count']<i['follow_count']/10 and i['follow_count']>100:
-            dirty_list.append(i)
+    my_zd=zd.zombie_detection('svc.model',zd.best_mask)
+    predict_list=my_zd.predict(result_list)
+    for zombie,peopel in zip(predict_list,result_list):
+        complete_list.append(peopel)
+        if zombie:
+            dirty_list.append(peopel)
         else:
-            clean_list.append(i)
+            clean_list.append(peopel)
+
+    # for i in result_list:
+    #     complete_list.append(i)
+    #     if i['statuses_count']==0 or i['followers_count']<i['follow_count']/10 and i['follow_count']>100:
+    #         dirty_list.append(i)
+    #     else:
+    #         clean_list.append(i)
+
     return [complete_list,dirty_list,clean_list]
 def multi_bar(result_list): #   为每个list画一个bar
     count=0 #区分两个列表，一个完整，一个僵尸

@@ -13,20 +13,25 @@ from operator import itemgetter
 
 class zombie_detection():
     def __init__(self,model=None,mask=None):
+        #db
         self.CONN=pymongo.MongoClient('localhost',27017)
         self.fans=self.CONN['new_label']['fans']
         data_list=list(self.fans.find())
-        self.data_list=random.sample(data_list,len(data_list))
-        # self.data_list=data_list
+        self.data_list=random.sample(data_list,len(data_list))  #乱序
+        #分离标签与数据
         self.X = [];self.y = []
         for i in self.data_list:
             self.X.append(i)
             self.y.append(i['zombie'])
-        X_f = self.feature_extraction(self.X)
+        #特征选择
+        X_f = self.feature_extraction(self.X,mask)
         self.Scaler=MinMaxScaler().fit(X_f)
         self.X_f = MinMaxScaler().fit_transform(X_f)
+        self.Min=self.Scaler.data_min_
+        self.Range=self.Scaler.data_range_
+        self.mask=mask
         if model:
-            self.svc=model
+            self.svc=joblib.load(model)
         else:
             self.svc=svm.LinearSVC(class_weight='balanced')
 
@@ -34,13 +39,17 @@ class zombie_detection():
         mean_score=cross_val_score(self.svc,X=np.array(self.X_f)[:, mask],y=self.y,cv=10,scoring='accuracy').mean()
         print('mean_score: {}'.format(mean_score))
         self.svc.fit(X=np.array(self.X_f)[:, mask],y=self.y)
+        self.mask=mask
         joblib.dump(self.svc,'svc.model')
-    def load_model(self,model):
-        self.svc=model
-
-    def predict(self,sid):
-        people=self.fans.find(filter={'sid':sid})
-
+    def predict(self,people):
+        if type(people)==list:
+            X_f = self.feature_extraction(people, mask=self.mask)
+            X_f = ((np.array(X_f) - self.Min) / self.Range).tolist()
+            return self.svc.predict(X_f)
+        else:
+            X_f=self.feature_extraction([people],mask=self.mask)[0]
+            X_f=((np.array(X_f)-self.Min)/self.Range).tolist()
+            return self.svc.predict([X_f])[0]
 
 
     def is_chinese(self,uchar):
@@ -181,8 +190,22 @@ class zombie_detection():
 def main():
     best_mask=[0,1, 2, 3, 4, 5, 11]
     zd=zombie_detection('svc.model',best_mask)
+    # print(zd.predict(5776518482))
+    fans_list=list(zd.fans.find())
+    count=0
+    people=zd.fans.aggregate([{'$sample': {'size': 1}}])
+    for i in people:
+        print(i['sid'])
+        print(i['zombie'])
+        print(zd.predict(i))
+    # predict_list=zd.predict(fans_list)
+    # for pre,rea in zip(predict_list,fans_list):
+    #     if pre==rea['zombie']:
+    #         count+=1
+    # print(count)
 
-    zd.svc.score()
+
+
 
 
     # zd.exhaustion()
