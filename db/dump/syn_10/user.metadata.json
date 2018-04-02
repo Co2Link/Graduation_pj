@@ -1,1 +1,0 @@
-{"options":{},"indexes":[{"v":2,"key":{"_id":1},"name":"_id_","ns":"syn_10.user"},{"v":2,"unique":true,"key":{"id":1},"name":"id_1","ns":"syn_10.user"}],"uuid":"23b29afd4b5845338f099921723ba0b0"}

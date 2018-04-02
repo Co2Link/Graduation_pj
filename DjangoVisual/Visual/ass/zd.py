@@ -11,14 +11,19 @@ from itertools import combinations
 import time
 from operator import itemgetter
 
-
-best_mask=[0,1, 2, 3, 4, 5, 11]
+#1104+600测出来的最佳mask
+best_mask=[0, 2, 3, 5, 6, 10, 11]
 class zombie_detection():
     def __init__(self,model=None,mask=None):
         #db
         self.CONN=pymongo.MongoClient('localhost',27017)
         self.fans=self.CONN['new_label']['fans']
         data_list=list(self.fans.find())
+        ### new
+        self.new_fans=self.CONN['new_label']['new_fans']
+        data_list+=list(self.new_fans.find())
+        ###
+
         self.data_list=random.sample(data_list,len(data_list))  #乱序
         #分离标签与数据
         self.X = [];self.y = []
@@ -36,13 +41,20 @@ class zombie_detection():
             self.svc=joblib.load(model)
         else:
             self.svc=svm.LinearSVC(class_weight='balanced')
+            # self.svc=svm.SVC(class_weight='balanced')
 
-    def get_model(self,mask):
-        mean_score=cross_val_score(self.svc,X=np.array(self.X_f)[:, mask],y=self.y,cv=10,scoring='accuracy').mean()
-        print('mean_score: {}'.format(mean_score))
-        self.svc.fit(X=np.array(self.X_f)[:, mask],y=self.y)
+    def get_model(self,mask=None):
+        X_f = self.feature_extraction(self.X,mask)
+        scaler=MinMaxScaler()
+        X_f = scaler.fit_transform(X_f)
+        score_list=cross_val_score(self.svc,X=X_f,y=self.y,cv=10,scoring='accuracy')
+        print('mean_score: {}'.format(score_list.mean()))
+        self.svc.fit(X=X_f,y=self.y)
         self.mask=mask
+        self.Min=scaler.data_min_
+        self.Range=scaler.data_range_
         joblib.dump(self.svc,'svc.model')
+
     def predict(self,people):
         if type(people)==list:
             X_f = self.feature_extraction(people, mask=self.mask)
@@ -141,7 +153,7 @@ class zombie_detection():
         select_bset=SelectKBest(chi2, k=5)
         select_bset.fit(self.X_f, self.y)
         scores_list=select_bset.scores_
-        # print(scores_list)
+        print(scores_list)
         rank_list=[]
         for i in sorted(scores_list,reverse=True):
             for ii,count in zip(scores_list,range(len(scores_list))):
@@ -179,7 +191,7 @@ class zombie_detection():
             result_list.append(result_dict)
             print(result_dict)
         result_list = sorted(result_list, key=itemgetter('accuracy'), reverse=True)
-        with open('feature_selection_log_2.txt', 'w') as f:
+        with open('feature_selection_log_new_600_whole.txt', 'w') as f:
             f.writelines('original_mask: {}\n'.format(str(mask)))
             for i in result_list:
                 f.writelines(str(i) + '\n')
@@ -190,23 +202,60 @@ class zombie_detection():
 
 
 
-
 def main():
-    best_mask=[0,1, 2, 3, 4, 5, 11]
-    zd=zombie_detection('svc.model',best_mask)
-    # print(zd.predict(5776518482))
-    fans_list=list(zd.fans.find())
+    CONN=pymongo.MongoClient('localhost',27017)
+
+    zd=zombie_detection()
+
+    #特征选择
+    # zd.exhaustion()
+
+    #训练并储存模型
+    zd.get_model(best_mask)
+
+    #real_test
     count=0
-    people=zd.fans.aggregate([{'$sample': {'size': 1}}])
-    for i in people:
-        print(i['sid'])
-        print(i['zombie'])
-        print(zd.predict(i))
+    fans_list=list(CONN['syn_12']['fans_1'].find(filter={'master_id':'1621036195'}))
+    print(len(fans_list))
+    predict_list=zd.predict(fans_list)
+    for i,fans in zip(predict_list,fans_list):
+        if i:
+            print(fans['sid'])
+            count+=1
+    print(count)
+
+    #test old_zombie
+    # count = 0
+    # test_num=1000
+    # fans_list=random.sample(list(fans.find()),test_num)
     # predict_list=zd.predict(fans_list)
     # for pre,rea in zip(predict_list,fans_list):
     #     if pre==rea['zombie']:
     #         count+=1
-    # print(count)
+    # print(count/test_num)
+
+
+    #test new_zombie
+    # count=0
+    # fans_list=list(new_zombie.find())
+    # predict_list=zd.predict(fans_list)
+    # for pre,rea in zip(predict_list,fans_list):
+    #     if pre==rea['zombie']:
+    #         count+=1
+    # print(count/len(predict_list))
+
+
+    # new
+    # count=0
+    # fans_1=CONN['syn_12']['fans_1']
+    # fans_list=list(fans_1.find(filter={'master_id':'3065368482'}))
+    # predict_list=zd.predict(fans_list)
+    # for i in predict_list:
+    #     if i :
+    #         count+=1
+    # print(count/len(predict_list))
+    # print(len(predict_list))
+
 
 if __name__ == '__main__':
     main()

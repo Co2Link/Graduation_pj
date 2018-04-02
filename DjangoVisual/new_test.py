@@ -89,12 +89,14 @@ def combine(col_name):
 
 
 
-def update():
+def update(col_name):
     CONN = pymongo.MongoClient('localhost', 27017)
-    fans=CONN['new_label']['fans_test']
+    fans=CONN['new_label'][col_name]
     for i in fans.find():
+
         result_1 = requests.get(url='https://m.weibo.cn/api/container/getIndex?containerid=100505{}'.format(i['sid']))
         result_2=requests.get(url='https://m.weibo.cn/api/container/getIndex?containerid=230283{}_-_INFO'.format(i['sid']))
+        print(i['sid'])
 
 
 
@@ -129,6 +131,46 @@ def update():
             print(result_1.text)
             print(i['sid'])
             continue
+
+def crawl_complete(col_name):
+    CONN = pymongo.MongoClient('localhost', 27017)
+    fans=CONN['new_label'][col_name]
+    for i in fans.find():
+        if 'follow_count'not in i:
+            result_1 = requests.get(url='https://m.weibo.cn/api/container/getIndex?containerid=100505{}'.format(i['sid']))
+            result_2=requests.get(url='https://m.weibo.cn/api/container/getIndex?containerid=230283{}_-_INFO'.format(i['sid']))
+            print(i['sid'])
+            try:
+                cards = json.loads(result_2.text)['data']['cards']
+                location='其他'
+                for card in cards:
+                    if 'card_group' in card:
+                        for sub_card in card['card_group']:
+                            if 'item_name' in sub_card and sub_card['item_name'] == '所在地':
+                                location = sub_card['item_content']
+
+                userInfo = json.loads(result_1.text)['data']['userInfo']
+                sid=i['sid']
+                my_dict={}
+                my_dict['sid']=sid
+                my_dict['follow_count']=userInfo['follow_count']
+                my_dict['followers_count']=userInfo['followers_count']
+                my_dict['statuses_count']=userInfo['statuses_count']
+                my_dict['verified_type']=userInfo['verified_type']
+                my_dict['description']=userInfo['description']
+                my_dict['mbrank']=userInfo['mbrank']
+                my_dict['mbtype']=userInfo['mbtype']
+                my_dict['screen_name']=userInfo['screen_name']
+                my_dict['location']=location
+                my_dict['zombie']=i['zombie']
+
+                fans.find_one_and_replace(filter={'sid':sid},replacement=my_dict)
+            except Exception as e:
+                print(e)
+                print(result_1.text)
+                print(i['sid'])
+                continue
+
 
 
 
@@ -167,11 +209,10 @@ def add_test_data():
 def main():
     CONN=pymongo.MongoClient('localhost',27017)
     fans=CONN['new_label']['fans']
-    fans_test=CONN['new_label']['fans_test']
-    fans_test.find()
-    for i in list(fans_test.find()):
-        print(i)
-        print(type(i))
+
+    # update('new_fans')
+    crawl_complete('new_fans')
+
 
 
 

@@ -1,5 +1,6 @@
 import pymongo
 import requests
+import random
 import numpy as np
 from sklearn.externals import joblib
 
@@ -18,22 +19,32 @@ def crawl(id):
 
 def add_description():
     CONN=pymongo.MongoClient('localhost',27017)
-    new_col=CONN['new_label']['fans']
-    str_list=[]
-    valid_list=[]
-    for i in new_col.find():
-        str_list.append(i['descriptiodn'])
-        if not i['description']:
-            valid_list.append(i['description'])
-    print(str_list)
-    print(len(str_list))
-    print(len(valid_list))
+    fans_1=CONN['syn_12']['fans_1']
+
+    new_zombie=CONN['label']['new_zombie']
+
+
+    new_zombie.create_index([('sid',pymongo.ASCENDING)],unique=True)
+    data_list=list(fans_1.find(filter={'master_id':3065368482}))
+    random_list=random.sample(data_list,600)
+    new_zombie.insert_many(random_list)
+
+
+
+
 
 
 def main():
-    my_list=[1,2,3]
-    if type(my_list)==list:
-        print('fuck')
+    CONN=pymongo.MongoClient('localhost',27017)
+    fans_1=CONN['syn_12']['fans_1']
+
+    new_zombie=CONN['label']['new_zombie']
+
+
+    new_zombie.create_index([('sid',pymongo.ASCENDING)],unique=True)
+    data_list=list(fans_1.find(filter={'master_id':'3065368482'}))
+    random_list=random.sample(data_list,600)
+    new_zombie.insert_many(random_list)
 
 
 

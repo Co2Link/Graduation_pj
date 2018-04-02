@@ -121,17 +121,17 @@ class WeiboScrapyApiPipeline(object):
                     fans_2_dict=fans_2_to_dict(user,attr_list,master_id)
                     card_list.append(fans_2_dict)
                     item_list.append(fans_2_Item_dj(**fans_2_dict))
-
+            ### fans_2写入django影响爬虫速度，故放弃写入django
             # fans_2中经常会遇到重复写入
-            try:
-                fans_2_Item_dj.objects.bulk_create(item_list)
-            except Exception as e:
-                logging.warning(('fans_2_error',str(e)))
-                for i in item_list: #遇到重复，则回滚，逐一插入
-                    try:
-                        i.save()
-                    except Exception as e:
-                        logging.warning(('fans_2_error_sub',str(e)))
+            # try:
+            #     fans_2_Item_dj.objects.bulk_create(item_list)
+            # except Exception as e:
+            #     logging.warning(('fans_2_error',str(e)))
+            #     for i in item_list: #遇到重复，则回滚，逐一插入
+            #         try:
+            #             i.save()
+            #         except Exception as e:
+            #             logging.warning(('fans_2_error_sub',str(e)))
             try:
                 result = self.fans_2_col.insert_many(card_list, ordered=False)
             except pymongo.errors.BulkWriteError as e:
