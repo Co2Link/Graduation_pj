@@ -33,18 +33,24 @@ def add_description():
 
 
 
-
+def int_up(num):
+    if num>int(num):
+        return int(num)+1
+    else:
+        return int(num)
 def main():
-    CONN=pymongo.MongoClient('localhost',27017)
-    fans_1=CONN['syn_12']['fans_1']
+    # CONN=pymongo.MongoClient('localhost',27017)
+    # fans_1=CONN['syn_12']['fans_1']
+    #
+    # new_zombie=CONN['label']['new_zombie']
 
-    new_zombie=CONN['label']['new_zombie']
 
+    # new_zombie.create_index([('sid',pymongo.ASCENDING)],unique=True)
+    # data_list=list(fans_1.find(filter={'master_id':'3065368482'}))
+    # random_list=random.sample(data_list,600)
+    # new_zombie.insert_many(random_list)
 
-    new_zombie.create_index([('sid',pymongo.ASCENDING)],unique=True)
-    data_list=list(fans_1.find(filter={'master_id':'3065368482'}))
-    random_list=random.sample(data_list,600)
-    new_zombie.insert_many(random_list)
+    print(int_up(3))
 
 
 
