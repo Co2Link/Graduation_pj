@@ -14,7 +14,7 @@
       <file leaf-file-name="zd.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Visual/ass/zd.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
+            <state relative-caret-position="3125">
               <caret line="136" column="81" lean-forward="false" selection-start-line="136" selection-start-column="81" selection-end-line="136" selection-end-column="81" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
@@ -26,14 +26,14 @@
       <file leaf-file-name="ML_new.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ML_new.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="218">
+            <state relative-caret-position="4775">
               <caret line="202" column="27" lean-forward="false" selection-start-line="202" selection-start-column="27" selection-end-line="202" selection-end-column="27" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="matplot_visual.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="matplot_visual.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Visual/ass/matplot_visual.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="258">
@@ -46,7 +46,7 @@
       <file leaf-file-name="pipelines.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/weibo_scrapy_api/weibo_scrapy_api/pipelines.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
+            <state relative-caret-position="2925">
               <caret line="123" column="48" lean-forward="false" selection-start-line="123" selection-start-column="48" selection-end-line="123" selection-end-column="48" />
               <folding />
             </state>
@@ -60,11 +60,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="my_test.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="my_test.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/my_test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="45" column="44" lean-forward="false" selection-start-line="45" selection-start-column="44" selection-end-line="45" selection-end-column="44" />
+            <state relative-caret-position="350">
+              <caret line="14" column="22" lean-forward="true" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
@@ -75,7 +75,7 @@
       <file leaf-file-name="new_test.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/new_test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="430">
+            <state relative-caret-position="4100">
               <caret line="171" column="3" lean-forward="false" selection-start-line="171" selection-start-column="3" selection-end-line="171" selection-end-column="3" />
               <folding />
             </state>
@@ -187,8 +187,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="559" />
-    <option name="y" value="56" />
+    <option name="x" value="121" />
+    <option name="y" value="53" />
     <option name="width" value="1338" />
     <option name="height" value="935" />
   </component>
@@ -207,7 +207,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -215,22 +215,11 @@
               <item name="DjangoVisual" type="b2602c69:ProjectViewProjectNode" />
               <item name="DjangoVisual" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="DjangoVisual" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DjangoVisual" type="462c0819:PsiDirectoryNode" />
-              <item name="Visual" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DjangoVisual" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DjangoVisual" type="462c0819:PsiDirectoryNode" />
-              <item name="Visual" type="462c0819:PsiDirectoryNode" />
-              <item name="ass" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -399,25 +388,25 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="559" y="56" width="1338" height="935" extended-state="0" />
+    <frame x="121" y="53" width="1338" height="935" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29520866" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2946154" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32893157" sideWeight="0.49711934" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36646706" sideWeight="0.3026197" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991013" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32692307" sideWeight="0.6973803" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32947233" sideWeight="0.49577168" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32692307" sideWeight="0.6973803" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26352397" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33983928" sideWeight="0.49141824" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991013" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -514,34 +503,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://D:/Anaconda2/envs/py3/envs/graduation_pj/Lib/site-packages/sklearn/utils/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1125">
-          <caret line="60" column="28" lean-forward="false" selection-start-line="60" selection-start-column="28" selection-end-line="60" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/Anaconda2/envs/py3/envs/graduation_pj/Lib/json/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8775">
-          <caret line="353" column="0" lean-forward="false" selection-start-line="353" selection-start-column="0" selection-end-line="353" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/Anaconda2/envs/py3/envs/graduation_pj/Lib/site-packages/matplotlib/pyplot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="488">
-          <caret line="3713" column="4" lean-forward="false" selection-start-line="3713" selection-start-column="4" selection-end-line="3713" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/Anaconda2/envs/py3/envs/graduation_pj/Lib/json/decoder.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="488">
-          <caret line="341" column="0" lean-forward="false" selection-start-line="341" selection-start-column="0" selection-end-line="341" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://D:/Anaconda2/envs/py3/envs/graduation_pj/Lib/site-packages/sklearn/utils/__init__.py" />
+    <entry file="file://D:/Anaconda2/envs/py3/envs/graduation_pj/Lib/json/__init__.py" />
+    <entry file="file://D:/Anaconda2/envs/py3/envs/graduation_pj/Lib/site-packages/matplotlib/pyplot.py" />
+    <entry file="file://D:/Anaconda2/envs/py3/envs/graduation_pj/Lib/json/decoder.py" />
     <entry file="file://$PROJECT_DIR$/Visual/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -570,29 +535,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://D:/Anaconda2/envs/py3/envs/graduation_pj/Lib/site-packages/sklearn/feature_selection/univariate_selection.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3950">
-          <caret line="170" column="4" lean-forward="false" selection-start-line="170" selection-start-column="4" selection-end-line="170" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/Anaconda2/envs/py3/envs/graduation_pj/Lib/site-packages/numpy/core/_methods.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/Anaconda2/envs/py3/envs/graduation_pj/Lib/site-packages/sklearn/base.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="12150">
-          <caret line="494" column="0" lean-forward="false" selection-start-line="494" selection-start-column="0" selection-end-line="494" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://D:/Anaconda2/envs/py3/envs/graduation_pj/Lib/site-packages/sklearn/feature_selection/univariate_selection.py" />
+    <entry file="file://D:/Anaconda2/envs/py3/envs/graduation_pj/Lib/site-packages/numpy/core/_methods.py" />
+    <entry file="file://D:/Anaconda2/envs/py3/envs/graduation_pj/Lib/site-packages/sklearn/base.py" />
     <entry file="file://$PROJECT_DIR$/Visual/ass/crawl.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="850">
@@ -630,14 +575,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://D:/Anaconda2/envs/py3/envs/graduation_pj/Lib/site-packages/pymongo/collection.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="1228" column="8" lean-forward="false" selection-start-line="1228" selection-start-column="8" selection-end-line="1228" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://D:/Anaconda2/envs/py3/envs/graduation_pj/Lib/site-packages/pymongo/collection.py" />
     <entry file="file://$PROJECT_DIR$/manage.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -660,28 +598,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/feature_selection_log.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="1" column="56" lean-forward="false" selection-start-line="1" selection-start-column="40" selection-end-line="1" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/feature_selection_log_1.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/Anaconda2/envs/py3/envs/graduation_pj/Lib/site-packages/sklearn/model_selection/_validation.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5400">
-          <caret line="236" column="4" lean-forward="false" selection-start-line="236" selection-start-column="4" selection-end-line="236" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/feature_selection_log.txt" />
+    <entry file="file://$PROJECT_DIR$/feature_selection_log_1.txt" />
+    <entry file="file://D:/Anaconda2/envs/py3/envs/graduation_pj/Lib/site-packages/sklearn/model_selection/_validation.py" />
     <entry file="file://$PROJECT_DIR$/my_main/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="900">
@@ -689,22 +608,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://D:/Anaconda2/envs/py3/envs/graduation_pj/Lib/site-packages/pymongo/cursor.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="614" column="0" lean-forward="false" selection-start-line="614" selection-start-column="0" selection-end-line="614" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/Anaconda2/envs/py3/envs/graduation_pj/Lib/site-packages/sklearn/linear_model/base.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="323" column="0" lean-forward="false" selection-start-line="323" selection-start-column="0" selection-end-line="323" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://D:/Anaconda2/envs/py3/envs/graduation_pj/Lib/site-packages/pymongo/cursor.py" />
+    <entry file="file://D:/Anaconda2/envs/py3/envs/graduation_pj/Lib/site-packages/sklearn/linear_model/base.py" />
     <entry file="file://$PROJECT_DIR$/Visual/ass/data.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2143">
@@ -713,20 +618,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://D:/Anaconda2/envs/py3/envs/graduation_pj/Lib/site-packages/sklearn/utils/validation.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="440" column="0" lean-forward="false" selection-start-line="440" selection-start-column="0" selection-end-line="440" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://D:/Anaconda2/envs/py3/envs/graduation_pj/Lib/site-packages/sklearn/utils/validation.py" />
     <entry file="file://$PROJECT_DIR$/templates/Visual/dashboard.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4900">
           <caret line="196" column="47" lean-forward="false" selection-start-line="196" selection-start-column="47" selection-end-line="196" selection-end-column="47" />
-          <folding>
-            <element signature="n#style#0;n#img#0;n#div#1;n#div#0;n#div#1;n#div#2;n#div#0;n#!!top" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -734,39 +630,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://D:/Anaconda2/envs/py3/envs/graduation_pj/Lib/random.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7700">
-          <caret line="316" column="0" lean-forward="false" selection-start-line="316" selection-start-column="0" selection-end-line="316" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://D:/Anaconda2/envs/py3/envs/graduation_pj/Lib/random.py" />
     <entry file="file://$PROJECT_DIR$/weibo_scrapy_api/weibo_scrapy_api/middlewares.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
           <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/my_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="45" column="44" lean-forward="false" selection-start-line="45" selection-start-column="44" selection-end-line="45" selection-end-column="44" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/new_test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="430">
+        <state relative-caret-position="4100">
           <caret line="171" column="3" lean-forward="false" selection-start-line="171" selection-start-column="3" selection-end-line="171" selection-end-column="3" />
           <folding />
         </state>
@@ -776,26 +653,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="125">
           <caret line="5" column="53" lean-forward="false" selection-start-line="5" selection-start-column="41" selection-end-line="5" selection-end-column="53" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://D:/Anaconda2/envs/py3/envs/graduation_pj/Lib/site-packages/pymongo/mongo_client.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="81" column="8" lean-forward="false" selection-start-line="81" selection-start-column="8" selection-end-line="81" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharmCE2017.3/system/python_stubs/1982443136/itertools.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="137" column="8" lean-forward="false" selection-start-line="137" selection-start-column="8" selection-end-line="137" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://D:/Anaconda2/envs/py3/envs/graduation_pj/Lib/site-packages/pymongo/mongo_client.py" />
+    <entry file="file://$USER_HOME$/.PyCharmCE2017.3/system/python_stubs/1982443136/itertools.py" />
     <entry file="file://$PROJECT_DIR$/static/images/dfans_num.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -803,7 +665,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/weibo_scrapy_api/weibo_scrapy_api/pipelines.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
+        <state relative-caret-position="2925">
           <caret line="123" column="48" lean-forward="false" selection-start-line="123" selection-start-column="48" selection-end-line="123" selection-end-column="48" />
           <folding />
         </state>
@@ -811,7 +673,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ML_new.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
+        <state relative-caret-position="4775">
           <caret line="202" column="27" lean-forward="false" selection-start-line="202" selection-start-column="27" selection-end-line="202" selection-end-column="27" />
           <folding />
         </state>
@@ -819,7 +681,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Visual/ass/zd.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
+        <state relative-caret-position="3125">
           <caret line="136" column="81" lean-forward="false" selection-start-line="136" selection-start-column="81" selection-end-line="136" selection-end-column="81" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
@@ -827,27 +689,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/zombie_detection_log.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="451">
-          <caret line="20" column="58" lean-forward="false" selection-start-line="20" selection-start-column="57" selection-end-line="20" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/feature_selection_log_2.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/zombie_detection_log.txt" />
+    <entry file="file://$PROJECT_DIR$/feature_selection_log_2.txt" />
     <entry file="file://$PROJECT_DIR$/Visual/ass/matplot_visual.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="258">
           <caret line="113" column="36" lean-forward="false" selection-start-line="113" selection-start-column="36" selection-end-line="113" selection-end-column="36" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="14" column="22" lean-forward="true" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
