@@ -1,13 +1,13 @@
 from django.shortcuts import render
 from my_main.models import ScrapyItem,UserItem_dj,post_Item_dj
 from django.views.decorators.csrf import csrf_exempt
-from Visual.ass.matplot_visual import create_pic
+from Visual.ass.matplot_visual import create_pic,sentiment_pic
 from scrapyd_api import ScrapydAPI
 from Visual.ass.data import location_count
 import json
 from Visual.ass.crawl import crawl_weibo,check_user_exist
 from django.views.generic import ListView
-from Visual.ass.my_wordcloud import create_wordcloud
+from Visual.ass.my_wordcloud import create_wordcloud,dealHtmlTags
 
 # Create your views here.
 scrapyd = ScrapydAPI('http://localhost:6800')
@@ -133,6 +133,7 @@ def search_weibo(request):
         post=post_Item_dj(**post_dict)
         create_wordcloud(post.text)
         text_len=len(post.text)
+        sentiment_pic(dealHtmlTags(post.text))
         return render(request, 'Visual/weibo.html',
                       context={'tips': '微博id: {}    微博长度: {}'.format(id,text_len), 'post': post})
 def weibo(request):

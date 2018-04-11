@@ -2,23 +2,15 @@ from multiprocessing import Process, Queue,Pool
 from snownlp import SnowNLP,sentiment
 import os, time, random
 
-ODpath='C:/Users/asd/OneDrive/transfer/data/'
+ODpath='E:/data/buf/'
+
 # 写数据进程执行的代码:
-def write(data_list,q):
-    print('Process to write: %s' % os.getpid())
-    for i in data_list:
-        print('Put %s to queue...' % i)
-        s=SnowNLP(i)
-        score=s.sentiments
-        if score>0.8:
-            q.put({'string':i,'type':'pos'})
-        elif score<0.3:
-            q.put({'string':i,'type':'neg'})
 def write_new(data_list):
-    print('Process to write: %s' % os.getpid())
+    # print('Process to write: %s' % os.getpid())
     ret_list=[]
     s = sentiment.Sentiment()
     s.load(fname=ODpath + 'sentiment.marshal')
+    # s.load()
     for i in data_list:
         score=s.classify(i)
         ret_list.append({'string':i,'score':score})
@@ -38,12 +30,9 @@ def splist(list,s=None,n=None):
         s=int_up(len(list)/n)
     return [list[i:i+s] for i in range(len(list)) if i%s==0]
 
-def sentiment_multiprocess(data_list,thread_num=7):
+def sentiment_multiprocess(data_list,thread_num=8):
     print('data_list len: {}'.format(len(data_list)))
     my_splist = splist(data_list, n=thread_num)
-
-    for i, count in zip(my_splist, range(len(my_splist))):
-        print('no. {}: {}'.format(count+1, len(i)))
     pool = Pool(processes=thread_num)
     process_list=[]
     start=time.time()
@@ -115,8 +104,16 @@ def test():
 if __name__=='__main__':
 
     start=time.time()
-    div_set(ratio=0.8)
+    div_set(ratio=0.9)
     train()
     test()
     end=time.time()
     print('total time cost: {}'.format(str(end-start)))
+    # with open(r'D:\Anaconda2\envs\py3\envs\graduation_pj\Lib\site-packages\snownlp\normal\stopwords.txt','r',encoding='utf-8') as f:
+    #     for i in f.readlines():
+    #         print(i)
+    # my_str='#一毛钱的浪漫#我同学的男朋友在刚跟她谈恋爱的时候，找了她出生的那年的一毛钱硬币，然后一直磨，磨成图片的样子，还专门把1993那里留了下来。――别人的男朋友真好[泪]  via@Gemini???'
+    # print(SnowNLP(my_str).words)
+
+
+

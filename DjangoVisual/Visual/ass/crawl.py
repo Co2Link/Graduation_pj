@@ -17,13 +17,18 @@ def crawl_weibo(id):
             return 0
     searchobj = re.search(r'"{}": "(.+)",'.format('text'), result.text)
     post_dict['text']=searchobj.group(1)
-    searchobj=re.search(r'"{}": "(.+)",'.format('longTextContent'), result.text)
+    # searchobj=re.search(r'"{}": "(.+)",'.format('longTextContent'), result.text)
+    searchobj=re.search(r'"retweeted_status".+"text": "(.+)",.+"textLength"', result.text,re.DOTALL)
     if searchobj:
         post_dict['retweeted_status']=True
         post_dict['retweeted_text']=searchobj.group(1)
     else:
         post_dict['retweeted_status'] = False
     return post_dict
+
+
+
+
 
 def check_user_exist(id):
     result=requests.get(url='https://m.weibo.cn/api/container/getIndex?containerid=230283{}_-_INFO'.format(id))
@@ -42,7 +47,7 @@ def check_user_exist(id):
 
 def main():
 
-    print(crawl_weibo(4223674363559694))
+    print(crawl_weibo(4227198048631523))
     pass
 
 if __name__ == '__main__':

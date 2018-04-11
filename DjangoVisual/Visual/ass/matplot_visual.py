@@ -6,7 +6,7 @@ import datetime
 from matplotlib.dates import DateFormatter
 import pandas as pd
 import urllib.request
-from . import zd
+from . import zd,emotion_analyze
 
 ### matplotlib画图
 
@@ -163,6 +163,16 @@ class create_pic():
         plt.legend()
         plt.savefig(fname='D:\Python\Graduation_pj\DjangoVisual\static\images\dfans_authen')
         plt.close()
+
+def sentiment_pic(sent):
+    score=emotion_analyze.sentiment_single(sent)
+    plt.rcParams['font.sans-serif'] = ['SimHei']  # 用来正常显示中文标签
+    plt.rcParams['axes.unicode_minus'] = False  # 用来正常显示负号
+    plt.pie(x=[score,1-score],labels=['积极度',' '],autopct='%1.1f%%',shadow=False)
+    plt.savefig(fname='D:\Python\Graduation_pj\DjangoVisual\static\images\emotion_analyze')
+    plt.close()
+
+
 
 CONN=pymongo.MongoClient('localhost',27017)
 db=CONN['syn_12']
