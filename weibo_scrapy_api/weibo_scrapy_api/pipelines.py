@@ -8,7 +8,7 @@ import pymongo as pymongo
 import logging
 import datetime
 import re
-from .items import UserItem,fans_2_Item,fans_1_Item,post_Item
+from .items import UserItem,fans_2_Item,fans_1_Item,post_Item,comment_Item
 from scrapy.exceptions import DropItem
 
 def clean_time(time):
@@ -72,15 +72,18 @@ def clean_dict(my_dict, attr_list):  #数据整理，清洗
 class WeiboScrapyApiPipeline(object):
     def __init__(self):
         #数据库操作
+        self.DBNAME = 'syn_12'
         self.CONN=pymongo.MongoClient('localhost',27017)
         self.user_col=self.CONN['mongodb_test_1']['user']
         self.fans_1_col=self.CONN['mongodb_test_1']['fans_1']
         self.fans_2_col=self.CONN['mongodb_test_1']['fans_2']
         self.post_col=self.CONN['mongodb_test_1']['post']
+        self.comments_col=self.CONN[self.DBNAME]['comments']
         self.user_col.create_index([('id', pymongo.ASCENDING)], unique=True)
         self.fans_1_col.create_index([('id', pymongo.ASCENDING)], unique=True)
         self.fans_2_col.create_index([('id', pymongo.ASCENDING)], unique=True)
         self.post_col.create_index([('id', pymongo.ASCENDING)], unique=True)
+        self.comments_col.create_index([('id', pymongo.ASCENDING)], unique=True)
         #debug变量
         self.count_user=0
         self.count_fans_1=0
@@ -114,6 +117,22 @@ class WeiboScrapyApiPipeline(object):
                     card_list.append(clean_dict(card['mblog'], attr_list))
             try:
                 result = self.post_col.insert_many(card_list, ordered=False)
+            except pymongo.errors.BulkWriteError as e:
+                logging.debug(('BulkWriteError: ', str(e)))
+        elif isinstance(item,comment_Item):
+            page=item['page']
+            comments_list=[]
+            for i in page:
+                comments_list.append({'created_at':clean_time(i['created_at']),
+                                      'id':i['id'],
+                                      'like_counts':i['like_counts'],
+                                      'source':i['source'],
+                                      'text':i['text'],
+                                      'user_id':i['user']['id'],
+                                      'screen_name':i['user']['screen_name'],
+                                      'post_id':int(item['post_id'])})
+            try:
+                result=self.comments_col.insert_many(comments_list,ordered=False)
             except pymongo.errors.BulkWriteError as e:
                 logging.debug(('BulkWriteError: ', str(e)))
         return DropItem()

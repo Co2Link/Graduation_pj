@@ -60,5 +60,9 @@ class post_Item(scrapy.Item):
     # text=scrapy.Field()
     page=scrapy.Field()
 
+class comment_Item(scrapy.Item):
+    page=scrapy.Field()
+    post_id=scrapy.Field()
+
 
 

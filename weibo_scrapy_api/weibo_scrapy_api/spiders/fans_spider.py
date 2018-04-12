@@ -45,7 +45,7 @@ class fans_spider(scrapy.Spider):
         try:
             user_info = result['data']['userInfo']
         except KeyError as e:
-            logging(('KeyError',str(e)))
+            logging.warning(('KeyError',str(e)))
         item=UserItem()     #User
         item['location']=response.meta['location']
         # item['reg_time']=response.meta['reg_time']

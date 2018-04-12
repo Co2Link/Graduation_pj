@@ -47,8 +47,13 @@ class fans_1_Item(scrapy.Item):
 class fans_2_Item(scrapy.Item):
     page=scrapy.Field()
     master_id=scrapy.Field()
+
 class post_Item(scrapy.Item):
     page=scrapy.Field()
+
+class comment_Item(scrapy.Item):
+    page=scrapy.Field()
+    post_id=scrapy.Field()
 
 
 

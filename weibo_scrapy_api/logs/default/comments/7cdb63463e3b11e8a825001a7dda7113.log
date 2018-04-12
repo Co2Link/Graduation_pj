@@ -1,0 +1,242 @@
+2018-04-12 18:23:08 [scrapy.utils.log] INFO: Scrapy 1.5.0 started (bot: weibo_scrapy_api)
+2018-04-12 18:23:08 [scrapy.utils.log] INFO: Versions: lxml 4.1.1.0, libxml2 2.9.5, cssselect 1.0.3, parsel 1.2.0, w3lib 1.17.0, Twisted 17.5.0, Python 3.6.2 |Continuum Analytics, Inc.| (default, Jul 20 2017, 12:30:02) [MSC v.1900 64 bit (AMD64)], pyOpenSSL 17.5.0 (OpenSSL 1.0.2n  7 Dec 2017), cryptography 2.1.4, Platform Windows-10-10.0.10586-SP0
+2018-04-12 18:23:08 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'weibo_scrapy_api', 'CONCURRENT_REQUESTS_PER_IP': 300, 'DOWNLOAD_DELAY': 0.2, 'LOG_FILE': 'logs\\default\\comments\\7cdb63463e3b11e8a825001a7dda7113.log', 'NEWSPIDER_MODULE': 'weibo_scrapy_api.spiders', 'ROBOTSTXT_OBEY': True, 'SPIDER_MODULES': ['weibo_scrapy_api.spiders']}
+2018-04-12 18:23:08 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2018-04-12 18:23:08 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2018-04-12 18:23:08 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2018-04-12 18:23:09 [scrapy.middleware] INFO: Enabled item pipelines:
+['weibo_scrapy_api.pipelines.WeiboScrapyApiPipeline']
+2018-04-12 18:23:09 [scrapy.core.engine] INFO: Spider opened
+2018-04-12 18:23:09 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-04-12 18:23:09 [scrapy.extensions.telnet] DEBUG: Telnet console listening on 127.0.0.1:6023
+2018-04-12 18:23:09 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/robots.txt> (referer: None)
+2018-04-12 18:23:09 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/comments/show?id=4227951300263381&page=1> (referer: None)
+2018-04-12 18:23:09 [root] DEBUG: ('max', 46)
+2018-04-12 18:23:09 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/comments/show?id=4227951300263381&page=17> (referer: https://m.weibo.cn/api/comments/show?id=4227951300263381&page=1)
+2018-04-12 18:23:10 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-04-12 18:23:10 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/comments/show?id=4227951300263381&page=17>
+
+2018-04-12 18:23:10 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/comments/show?id=4227951300263381&page=16> (referer: https://m.weibo.cn/api/comments/show?id=4227951300263381&page=1)
+2018-04-12 18:23:10 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-04-12 18:23:10 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/comments/show?id=4227951300263381&page=16>
+
+2018-04-12 18:23:10 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/comments/show?id=4227951300263381&page=15> (referer: https://m.weibo.cn/api/comments/show?id=4227951300263381&page=1)
+2018-04-12 18:23:10 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/comments/show?id=4227951300263381&page=14> (referer: https://m.weibo.cn/api/comments/show?id=4227951300263381&page=1)
+2018-04-12 18:23:10 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-04-12 18:23:10 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/comments/show?id=4227951300263381&page=15>
+
+2018-04-12 18:23:10 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-04-12 18:23:10 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/comments/show?id=4227951300263381&page=14>
+
+2018-04-12 18:23:11 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/comments/show?id=4227951300263381&page=13> (referer: https://m.weibo.cn/api/comments/show?id=4227951300263381&page=1)
+2018-04-12 18:23:11 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-04-12 18:23:11 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/comments/show?id=4227951300263381&page=13>
+
+2018-04-12 18:23:11 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/comments/show?id=4227951300263381&page=11> (referer: https://m.weibo.cn/api/comments/show?id=4227951300263381&page=1)
+2018-04-12 18:23:11 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/comments/show?id=4227951300263381&page=12> (referer: https://m.weibo.cn/api/comments/show?id=4227951300263381&page=1)
+2018-04-12 18:23:11 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-04-12 18:23:11 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/comments/show?id=4227951300263381&page=11>
+
+2018-04-12 18:23:11 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-04-12 18:23:11 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/comments/show?id=4227951300263381&page=12>
+
+2018-04-12 18:23:11 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/comments/show?id=4227951300263381&page=9> (referer: https://m.weibo.cn/api/comments/show?id=4227951300263381&page=1)
+2018-04-12 18:23:11 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-04-12 18:23:11 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/comments/show?id=4227951300263381&page=9>
+
+2018-04-12 18:23:11 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/comments/show?id=4227951300263381&page=10> (referer: https://m.weibo.cn/api/comments/show?id=4227951300263381&page=1)
+2018-04-12 18:23:11 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-04-12 18:23:11 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/comments/show?id=4227951300263381&page=10>
+
+2018-04-12 18:23:12 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/comments/show?id=4227951300263381&page=8> (referer: https://m.weibo.cn/api/comments/show?id=4227951300263381&page=1)
+2018-04-12 18:23:12 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-04-12 18:23:12 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/comments/show?id=4227951300263381&page=8>
+
+2018-04-12 18:23:12 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/comments/show?id=4227951300263381&page=7> (referer: https://m.weibo.cn/api/comments/show?id=4227951300263381&page=1)
+2018-04-12 18:23:12 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-04-12 18:23:12 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/comments/show?id=4227951300263381&page=7>
+
+2018-04-12 18:23:12 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/comments/show?id=4227951300263381&page=5> (referer: https://m.weibo.cn/api/comments/show?id=4227951300263381&page=1)
+2018-04-12 18:23:12 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-04-12 18:23:12 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/comments/show?id=4227951300263381&page=5>
+
+2018-04-12 18:23:12 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/comments/show?id=4227951300263381&page=4> (referer: https://m.weibo.cn/api/comments/show?id=4227951300263381&page=1)
+2018-04-12 18:23:13 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-04-12 18:23:13 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/comments/show?id=4227951300263381&page=4>
+
+2018-04-12 18:23:13 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/comments/show?id=4227951300263381&page=3> (referer: https://m.weibo.cn/api/comments/show?id=4227951300263381&page=1)
+2018-04-12 18:23:13 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-04-12 18:23:13 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/comments/show?id=4227951300263381&page=3>
+
+2018-04-12 18:23:13 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/comments/show?id=4227951300263381&page=2> (referer: https://m.weibo.cn/api/comments/show?id=4227951300263381&page=1)
+2018-04-12 18:23:13 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-04-12 18:23:13 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/comments/show?id=4227951300263381&page=2>
+
+2018-04-12 18:23:13 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/comments/show?id=4227951300263381&page=6> (referer: https://m.weibo.cn/api/comments/show?id=4227951300263381&page=1)
+2018-04-12 18:23:13 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/comments/show?id=4227951300263381&page=46> (referer: https://m.weibo.cn/api/comments/show?id=4227951300263381&page=1)
+2018-04-12 18:23:13 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-04-12 18:23:13 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/comments/show?id=4227951300263381&page=6>
+
+2018-04-12 18:23:13 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-04-12 18:23:13 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/comments/show?id=4227951300263381&page=46>
+
+2018-04-12 18:23:13 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/comments/show?id=4227951300263381&page=45> (referer: https://m.weibo.cn/api/comments/show?id=4227951300263381&page=1)
+2018-04-12 18:23:14 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-04-12 18:23:14 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/comments/show?id=4227951300263381&page=45>
+
+2018-04-12 18:23:14 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/comments/show?id=4227951300263381&page=44> (referer: https://m.weibo.cn/api/comments/show?id=4227951300263381&page=1)
+2018-04-12 18:23:14 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-04-12 18:23:14 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/comments/show?id=4227951300263381&page=44>
+
+2018-04-12 18:23:14 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/comments/show?id=4227951300263381&page=43> (referer: https://m.weibo.cn/api/comments/show?id=4227951300263381&page=1)
+2018-04-12 18:23:14 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-04-12 18:23:14 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/comments/show?id=4227951300263381&page=43>
+
+2018-04-12 18:23:14 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/comments/show?id=4227951300263381&page=42> (referer: https://m.weibo.cn/api/comments/show?id=4227951300263381&page=1)
+2018-04-12 18:23:14 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-04-12 18:23:14 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/comments/show?id=4227951300263381&page=42>
+
+2018-04-12 18:23:14 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/comments/show?id=4227951300263381&page=41> (referer: https://m.weibo.cn/api/comments/show?id=4227951300263381&page=1)
+2018-04-12 18:23:14 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-04-12 18:23:14 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/comments/show?id=4227951300263381&page=41>
+
+2018-04-12 18:23:15 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/comments/show?id=4227951300263381&page=40> (referer: https://m.weibo.cn/api/comments/show?id=4227951300263381&page=1)
+2018-04-12 18:23:15 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/comments/show?id=4227951300263381&page=39> (referer: https://m.weibo.cn/api/comments/show?id=4227951300263381&page=1)
+2018-04-12 18:23:15 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-04-12 18:23:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/comments/show?id=4227951300263381&page=40>
+
+2018-04-12 18:23:15 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-04-12 18:23:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/comments/show?id=4227951300263381&page=39>
+
+2018-04-12 18:23:15 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/comments/show?id=4227951300263381&page=38> (referer: https://m.weibo.cn/api/comments/show?id=4227951300263381&page=1)
+2018-04-12 18:23:15 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-04-12 18:23:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/comments/show?id=4227951300263381&page=38>
+
+2018-04-12 18:23:15 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/comments/show?id=4227951300263381&page=37> (referer: https://m.weibo.cn/api/comments/show?id=4227951300263381&page=1)
+2018-04-12 18:23:15 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-04-12 18:23:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/comments/show?id=4227951300263381&page=37>
+
+2018-04-12 18:23:15 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/comments/show?id=4227951300263381&page=36> (referer: https://m.weibo.cn/api/comments/show?id=4227951300263381&page=1)
+2018-04-12 18:23:15 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-04-12 18:23:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/comments/show?id=4227951300263381&page=36>
+
+2018-04-12 18:23:16 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/comments/show?id=4227951300263381&page=35> (referer: https://m.weibo.cn/api/comments/show?id=4227951300263381&page=1)
+2018-04-12 18:23:16 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-04-12 18:23:16 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/comments/show?id=4227951300263381&page=35>
+
+2018-04-12 18:23:16 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/comments/show?id=4227951300263381&page=34> (referer: https://m.weibo.cn/api/comments/show?id=4227951300263381&page=1)
+2018-04-12 18:23:16 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-04-12 18:23:16 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/comments/show?id=4227951300263381&page=34>
+
+2018-04-12 18:23:16 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/comments/show?id=4227951300263381&page=33> (referer: https://m.weibo.cn/api/comments/show?id=4227951300263381&page=1)
+2018-04-12 18:23:16 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-04-12 18:23:16 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/comments/show?id=4227951300263381&page=33>
+
+2018-04-12 18:23:17 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/comments/show?id=4227951300263381&page=31> (referer: https://m.weibo.cn/api/comments/show?id=4227951300263381&page=1)
+2018-04-12 18:23:17 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/comments/show?id=4227951300263381&page=32> (referer: https://m.weibo.cn/api/comments/show?id=4227951300263381&page=1)
+2018-04-12 18:23:17 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-04-12 18:23:17 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/comments/show?id=4227951300263381&page=31>
+
+2018-04-12 18:23:17 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/comments/show?id=4227951300263381&page=30> (referer: https://m.weibo.cn/api/comments/show?id=4227951300263381&page=1)
+2018-04-12 18:23:17 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-04-12 18:23:17 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/comments/show?id=4227951300263381&page=32>
+
+2018-04-12 18:23:17 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-04-12 18:23:17 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/comments/show?id=4227951300263381&page=30>
+
+2018-04-12 18:23:17 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/comments/show?id=4227951300263381&page=29> (referer: https://m.weibo.cn/api/comments/show?id=4227951300263381&page=1)
+2018-04-12 18:23:17 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-04-12 18:23:17 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/comments/show?id=4227951300263381&page=29>
+
+2018-04-12 18:23:17 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/comments/show?id=4227951300263381&page=28> (referer: https://m.weibo.cn/api/comments/show?id=4227951300263381&page=1)
+2018-04-12 18:23:17 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-04-12 18:23:17 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/comments/show?id=4227951300263381&page=28>
+
+2018-04-12 18:23:17 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/comments/show?id=4227951300263381&page=27> (referer: https://m.weibo.cn/api/comments/show?id=4227951300263381&page=1)
+2018-04-12 18:23:18 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-04-12 18:23:18 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/comments/show?id=4227951300263381&page=27>
+
+2018-04-12 18:23:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/comments/show?id=4227951300263381&page=26> (referer: https://m.weibo.cn/api/comments/show?id=4227951300263381&page=1)
+2018-04-12 18:23:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/comments/show?id=4227951300263381&page=25> (referer: https://m.weibo.cn/api/comments/show?id=4227951300263381&page=1)
+2018-04-12 18:23:18 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-04-12 18:23:18 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/comments/show?id=4227951300263381&page=26>
+
+2018-04-12 18:23:18 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-04-12 18:23:18 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/comments/show?id=4227951300263381&page=25>
+
+2018-04-12 18:23:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/comments/show?id=4227951300263381&page=23> (referer: https://m.weibo.cn/api/comments/show?id=4227951300263381&page=1)
+2018-04-12 18:23:19 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/comments/show?id=4227951300263381&page=24> (referer: https://m.weibo.cn/api/comments/show?id=4227951300263381&page=1)
+2018-04-12 18:23:19 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/comments/show?id=4227951300263381&page=22> (referer: https://m.weibo.cn/api/comments/show?id=4227951300263381&page=1)
+2018-04-12 18:23:19 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-04-12 18:23:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/comments/show?id=4227951300263381&page=23>
+
+2018-04-12 18:23:19 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-04-12 18:23:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/comments/show?id=4227951300263381&page=24>
+
+2018-04-12 18:23:19 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-04-12 18:23:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/comments/show?id=4227951300263381&page=22>
+
+2018-04-12 18:23:19 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/comments/show?id=4227951300263381&page=21> (referer: https://m.weibo.cn/api/comments/show?id=4227951300263381&page=1)
+2018-04-12 18:23:19 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-04-12 18:23:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/comments/show?id=4227951300263381&page=21>
+
+2018-04-12 18:23:19 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/comments/show?id=4227951300263381&page=19> (referer: https://m.weibo.cn/api/comments/show?id=4227951300263381&page=1)
+2018-04-12 18:23:19 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/comments/show?id=4227951300263381&page=20> (referer: https://m.weibo.cn/api/comments/show?id=4227951300263381&page=1)
+2018-04-12 18:23:19 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-04-12 18:23:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/comments/show?id=4227951300263381&page=19>
+
+2018-04-12 18:23:19 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-04-12 18:23:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/comments/show?id=4227951300263381&page=20>
+
+2018-04-12 18:23:19 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/comments/show?id=4227951300263381&page=18> (referer: https://m.weibo.cn/api/comments/show?id=4227951300263381&page=1)
+2018-04-12 18:23:20 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-04-12 18:23:20 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/comments/show?id=4227951300263381&page=18>
+
+2018-04-12 18:23:20 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/comments/show?id=4227951300263381&page=1> (referer: https://m.weibo.cn/api/comments/show?id=4227951300263381&page=1)
+2018-04-12 18:23:20 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-04-12 18:23:20 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/comments/show?id=4227951300263381&page=1>
+
+2018-04-12 18:23:20 [scrapy.core.engine] INFO: Closing spider (finished)
+2018-04-12 18:23:20 [root] DEBUG: ('count_user', 0)
+2018-04-12 18:23:20 [root] DEBUG: ('count_fans_1', 0)
+2018-04-12 18:23:20 [root] DEBUG: ('count_fans_2', 0)
+2018-04-12 18:23:20 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 18909,
+ 'downloader/request_count': 48,
+ 'downloader/request_method_count/GET': 48,
+ 'downloader/response_bytes': 96730,
+ 'downloader/response_count': 48,
+ 'downloader/response_status_count/200': 48,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2018, 4, 12, 10, 23, 20, 491530),
+ 'item_scraped_count': 46,
+ 'log_count/DEBUG': 145,
+ 'log_count/INFO': 7,
+ 'request_depth_max': 1,
+ 'response_received_count': 48,
+ 'scheduler/dequeued': 47,
+ 'scheduler/dequeued/memory': 47,
+ 'scheduler/enqueued': 47,
+ 'scheduler/enqueued/memory': 47,
+ 'start_time': datetime.datetime(2018, 4, 12, 10, 23, 9, 40449)}
+2018-04-12 18:23:20 [scrapy.core.engine] INFO: Spider closed (finished)

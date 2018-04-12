@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from my_main.models import ScrapyItem,UserItem_dj,post_Item_dj
+from my_main.models import ScrapyItem,UserItem_dj,post_Item_dj,new_post_Item_dj,comments_Item_dj
 from django.views.decorators.csrf import csrf_exempt
 from Visual.ass.matplot_visual import create_pic,sentiment_pic
 from scrapyd_api import ScrapydAPI
@@ -8,7 +8,7 @@ import json
 from Visual.ass.crawl import crawl_weibo,check_user_exist
 from django.views.generic import ListView
 from Visual.ass.my_wordcloud import create_wordcloud,dealHtmlTags
-
+from django.core.paginator import Paginator,EmptyPage,PageNotAnInteger
 # Create your views here.
 scrapyd = ScrapydAPI('http://localhost:6800')
 @csrf_exempt
@@ -76,7 +76,27 @@ class UserView(ListView):
     model = UserItem_dj
     template_name = 'Visual/listing.html'
     context_object_name = 'user_list'
-    paginate_by = 10
+    paginate_by = 5
+
+def comments(request,post_id):
+    comments_list = comments_Item_dj.objects.filter(post_id=post_id)
+    print('len: {}'.format(len(comments_list)))
+    paginator = Paginator(comments_list, 5) # 每页显示 25 个联系人
+
+    page = request.GET.get('page')
+    try:
+        contacts = paginator.page(page)
+    except PageNotAnInteger:
+        # 如果用户请求的页码号不是整数，显示第一页
+        contacts = paginator.page(1)
+    except EmptyPage:
+        # 如果用户请求的页码号超过了最大页码号，显示最后一页
+        contacts = paginator.page(paginator.num_pages)
+
+    print('contact: {}'.format(contacts))
+
+    return render(request, 'Visual/comments.html', {'contacts': contacts})
+
 
 def show(request,id):
     ## 防止在用户一览表中点击正在爬取数据的用户
@@ -84,7 +104,7 @@ def show(request,id):
     status = scrapyd.job_status('default', result[0].task_id)
     if status == 'running':
         return render(request, 'Visual/dashboard.html', context={'tips': '爬取数据中，请等待', 'pics': False})
-
+    ##pic
     creation = create_pic(id)
     creation.gender()
     creation.fans_num()
@@ -95,7 +115,7 @@ def show(request,id):
     for i in post_Item_dj.objects.filter(author_id=id):
         text+=i.text
     create_wordcloud(text)
-
+    ##data
     user = UserItem_dj.objects.get(id=id)
     if user.gender == 'm':
         dgender = '男'
@@ -121,20 +141,33 @@ def show(request,id):
 @csrf_exempt
 def search_weibo(request):
     id = request.POST.get('id', None)
-    if not id:
+    if not id:  #检测输入合法性
         return render(request, 'Visual/weibo.html', context={'tips': '请输入微博id'})
     if not id.isdigit():
         return render(request, 'Visual/weibo.html', context={'tips': '请输入微博id，数字'})
 
-    post_dict=crawl_weibo(id)
-    if post_dict==0:    #微博不存在
-        return render(request,'Visual/weibo.html',context={'tips':'微博id不存在'})
+    result=ScrapyItem.objects.filter(id=str(id))
+    if result :  #查找是否已经爬取
+        status = scrapyd.job_status('default', result[0].task_id)
+        if status=='running':   #检测是否正在爬
+            return render(request, 'Visual/weibo.html', context={'tips': '正在爬取数据，请等待'})
+        else:
+            post=new_post_Item_dj.objects.get(id=id)
+            comments_list = comments_Item_dj.objects.filter(post_id=id)
+            create_wordcloud(post.text)
+            sentiment_pic(dealHtmlTags(post.text))
+            return render(request,'Visual/weibo.html',context={'tips':'微博id: {}'.format(id),'post':post,'comments_list':comments_list})
     else:
-        post=post_Item_dj(**post_dict)
-        create_wordcloud(post.text)
-        text_len=len(post.text)
-        sentiment_pic(dealHtmlTags(post.text))
-        return render(request, 'Visual/weibo.html',
-                      context={'tips': '微博id: {}    微博长度: {}'.format(id,text_len), 'post': post})
+        post_dict = crawl_weibo(id)
+        if post_dict!=0: #检测微博是否存在
+            post=new_post_Item_dj(**post_dict)
+            post.save()
+            task_id = scrapyd.schedule('default', 'comments', id=id) #启动爬虫
+            item=ScrapyItem(id=id,task_id=task_id)
+            item.save()                         #存储ScrapyItem 用于查询爬虫状态
+            return render(request, 'Visual/weibo.html', context={'tips': '开始爬取数据，请等待'})
+        else:
+            return render(request, 'Visual/weibo.html', context={'tips': '微博id不存在'})
+
 def weibo(request):
     return render(request, 'Visual/weibo.html',context={'tips':'请输入微博id'})

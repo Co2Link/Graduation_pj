@@ -8,10 +8,10 @@ import pymongo as pymongo
 import logging
 import datetime
 import re
-from .items import UserItem,fans_2_Item,fans_1_Item,post_Item
+from .items import UserItem,fans_2_Item,fans_1_Item,post_Item,comment_Item
 from scrapy.exceptions import DropItem
-from my_main.models import UserItem_dj,fans_1_Item_dj,fans_2_Item_dj,post_Item_dj
-def clean_time(time):
+from my_main.models import UserItem_dj,fans_1_Item_dj,fans_2_Item_dj,post_Item_dj,comments_Item_dj
+def clean_time(time,null_to_str=False):
     today = datetime.datetime.now().date()
     if '小时' in time:  # x分钟前；x小时前
         hours=int(re.search('(\d+)',time).group(1))
@@ -32,7 +32,10 @@ def clean_time(time):
         this_year = str(today)[:5] + time
         time = this_year
     elif len(time)!=10:
-        time=None
+        if null_to_str:
+            return 'null'
+        else:
+            return None
     return time
 
 def clean_dict(my_dict, attr_list):  #数据整理，清洗
@@ -77,10 +80,12 @@ class WeiboScrapyApiPipeline(object):
         self.fans_1_col=self.CONN[self.DBNAME]['fans_1']
         self.fans_2_col=self.CONN[self.DBNAME]['fans_2']
         self.post_col=self.CONN[self.DBNAME]['post']
+        self.comments_col=self.CONN[self.DBNAME]['comments']
         self.user_col.create_index([('id', pymongo.ASCENDING)], unique=True)
         self.fans_1_col.create_index([('sid', pymongo.ASCENDING),('master_id',pymongo.ASCENDING)], unique=True)
         self.fans_2_col.create_index([('sid', pymongo.ASCENDING),('master_id',pymongo.ASCENDING)], unique=True)
         self.post_col.create_index([('id', pymongo.ASCENDING)], unique=True)
+        self.comments_col.create_index([('id', pymongo.ASCENDING)], unique=True)
         #debug变量
         self.count_user=0
         self.count_fans_1=0
@@ -136,8 +141,6 @@ class WeiboScrapyApiPipeline(object):
                 result = self.fans_2_col.insert_many(card_list, ordered=False)
             except pymongo.errors.BulkWriteError as e:
                 logging.debug(('BulkWriteError: ', str(e)))
-
-
         elif isinstance(item,post_Item):                   #post
             attr_list = ['author_id', 'attitudes_count', 'comments_count', 'created_at', 'id', 'pics', 'reposts_count',
                          'source', 'text', 'retweeted_status']
@@ -156,6 +159,34 @@ class WeiboScrapyApiPipeline(object):
                 result = self.post_col.insert_many(card_list, ordered=False)
             except pymongo.errors.BulkWriteError as e:
                 logging.debug(('BulkWriteError: ', str(e)))
+        elif isinstance(item,comment_Item):
+            page=item['page']
+            comments_list=[]
+            item_list=[]
+            for i in page:
+                comment_dict={'created_at':clean_time(i['created_at'],null_to_str=True),
+                                      'id':i['id'],
+                                      'like_counts':i['like_counts'],
+                                      'source':i['source'],
+                                      'text':i['text'],
+                                      'user_id':i['user']['id'],
+                                      'screen_name':i['user']['screen_name'],
+                                      'post_id':int(item['post_id'])}
+                comments_list.append(comment_dict)
+                item_list.append(comments_Item_dj(**comment_dict))
+            try:    #mongodb 插入
+                result=self.comments_col.insert_many(comments_list,ordered=False)
+            except pymongo.errors.BulkWriteError as e:
+                logging.debug(('BulkWriteError: ', str(e)))
+            try:    #dj 插入
+                comments_Item_dj.objects.bulk_create(item_list)
+            except Exception as e:
+                logging.warning(('comments_error',str(e)))
+                for i in item_list: #遇到重复，则回滚，逐一插入
+                    try:
+                        i.save()
+                    except Exception as e:
+                        logging.warning(('comments_error_sub',str(e)))
         return DropItem()
 
     def close_spider(self,spider):
