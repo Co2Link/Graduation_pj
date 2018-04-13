@@ -4,7 +4,7 @@ from django.views.decorators.csrf import csrf_exempt
 from Visual.ass.matplot_visual import create_pic,sentiment_pic,sentiment_pic_multi
 from scrapyd_api import ScrapydAPI
 from Visual.ass.data import location_count
-import json
+import json,time
 from Visual.ass.crawl import crawl_weibo,check_user_exist
 from django.views.generic import ListView
 from Visual.ass.my_wordcloud import create_wordcloud,dealHtmlTags
@@ -111,12 +111,15 @@ def show(request,id):
     if status == 'running':
         return render(request, 'Visual/dashboard.html', context={'tips': '爬取数据中，请等待', 'pics': False})
     ##pic
+    start=time.time()
     creation = create_pic(id)
     creation.gender()
     creation.fans_num()
     creation.post_freq()
     creation.get_pic()
     creation.fans_authen()
+    end=time.time()
+    print('pic time: {}'.format(str(end-start)))
     text=''
     for i in post_Item_dj.objects.filter(author_id=id):
         text+=i.text

@@ -3,11 +3,12 @@ import requests
 import re
 from snownlp import SnowNLP
 
+def one():
+    return [1,2,3],3
+
 def main():
-    my_str='草你妈'
-    s=SnowNLP(my_str)
-    score=s.sentiments
-    print('sentiment: {}'.format(score))
+    a,b,c,d=one()
+    print(a,b,c,d)
 
 
 

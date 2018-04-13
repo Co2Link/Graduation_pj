@@ -173,17 +173,6 @@
                     {% if pics %}
                         <img src="{% static 'images/gender.png' %}" style="width: 100%; height: 100%">
                     {% endif %}
-                    <div class="footer">
-                        <div class="chart-legend">
-                            <!--<i class="fa fa-circle text-info"></i> Open-->
-                            <!--<i class="fa fa-circle text-danger"></i> Bounce-->
-                            <!--<i class="fa fa-circle text-warning"></i> Unsubscribe-->
-                        </div>
-                        <hr>
-                        <div class="stats">
-                            <!--<i class="ti-timer"></i> Campaign sent 2 days ago-->
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -198,24 +187,25 @@
                     {%if pics %}
                         <img src="{% static 'images/dfans_num.png' %}" style="width: 100%; height: 100%">
                     {% endif %}
-
-                    <div class="footer">
-                        <div class="chart-legend">
-                            <!--<i class="fa fa-circle text-info"></i> Tesla Model S-->
-                            <!--<i class="fa fa-circle text-warning"></i> BMW 5 Series-->
-                        </div>
-                        <hr>
-                        <div class="stats">
-                            <!--<i class="ti-check"></i> Data information certified-->
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
     </div>
     <div class="row">
-        <div class="col-md-2"></div>
-        <div class="col-md-8">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="header">
+                    <h4 class="title">僵尸粉比例</h4>
+                    <!--<p class="category">Last Campaign Performance</p>-->
+                </div>
+                <div class="content">
+                    {% if pics %}
+                        <img src="{% static 'images/zombie_ratio.png' %}" style="width: 100%; height: 100%">
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
             <div class="card ">
                 <div class="header">
                     <h4 class="title">微博关键字</h4>
@@ -229,7 +219,6 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-2"></div>
     </div>
     <div class="row">
         <div class="col-md-2"></div>

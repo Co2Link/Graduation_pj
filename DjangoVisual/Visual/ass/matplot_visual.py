@@ -1,5 +1,5 @@
 import pymongo as pymongo
-import matplotlib
+import matplotlib,time
 matplotlib.use('Agg')       #解决matplotlib存储图像在django中应用的问题
 import matplotlib.pyplot as plt
 import datetime
@@ -92,8 +92,12 @@ class create_pic():
     def fans_num(self):
         fans_1 = self.db['fans_1']
         result = fans_1.find(filter={"master_id": self.id})
-        self.multi_bar(self.anti_zombie(list(result))[0:2])
-
+        complete_list,dirty_list,_=self.anti_zombie(list(result))
+        zombie_ratio=len(dirty_list)/len(complete_list)
+        self.multi_bar([complete_list,dirty_list])
+        plt.pie(x=[zombie_ratio,1-zombie_ratio],labels=['僵尸粉比例',' '],autopct='%1.1f%%', shadow=False)
+        plt.savefig(fname='D:\Python\Graduation_pj\DjangoVisual\static\images\zombie_ratio')
+        plt.close()
     def post_freq(self):
         post = self.db['post']
         result = post.find(filter={'author_id': int(self.id)})
@@ -168,6 +172,7 @@ def sentiment_pic(sent):
     score=0
     if type(sent)==list:
         for i in sent:
+
             score += emotion_analyze.sentiment_single(i)
         score/=len(sent)
     else:
@@ -200,10 +205,16 @@ def main():
     a=1880564361
     b=3912883937
     c=5723240588
-    # # gender('3597829674')
-    # fans_num(str(nine))
-    # w=create_pic(b)
-    # w.post_freq()
+
+    start=time.time()
+    creation = create_pic(2842266491)
+    creation.gender()
+    creation.fans_num()
+    creation.post_freq()
+    creation.get_pic()
+    creation.fans_authen()
+    end=time.time()
+    print('time: {}'.format(end-start))
 
 if __name__=='__main__':
     main()

@@ -11,49 +11,36 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Visual/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="108">
+              <caret line="114" column="21" lean-forward="false" selection-start-line="114" selection-start-column="21" selection-end-line="114" selection-end-column="21" />
+              <folding>
+                <element signature="e#0#35#0" expanded="true" />
+                <element signature="e#716#3312#0" expanded="false" />
+                <element signature="e#1112#3218#0" expanded="false" />
+                <element signature="e#1200#2981#0" expanded="false" />
+                <element signature="e#1448#2981#0" expanded="false" />
+                <element signature="e#3456#3575#0" expanded="false" />
+                <element signature="e#6157#7579#0" expanded="false" />
+                <element signature="e#6491#7043#0" expanded="false" />
+                <element signature="e#6704#7043#0" expanded="false" />
+                <element signature="e#7062#7579#0" expanded="false" />
+                <element signature="e#8007#8596#0" expanded="false" />
+                <element signature="e#8615#9121#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="test.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="3" column="26" lean-forward="false" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Bayes.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Bayes.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="27" column="55" lean-forward="true" selection-start-line="27" selection-start-column="55" selection-end-line="27" selection-end-column="55" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="bayes.py" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/Downloads/machinelearninginaction-master/Ch04/bayes.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="46" selection-end-column="33" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="weibo.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/Visual/weibo.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="125">
-              <caret line="87" column="10" lean-forward="false" selection-start-line="87" selection-start-column="10" selection-end-line="87" selection-end-column="10" />
+            <state relative-caret-position="150">
+              <caret line="6" column="16" lean-forward="false" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
               <folding>
-                <element signature="n#div#0;n#div#0;n#!!top" expanded="false" />
-                <element signature="n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-                <element signature="n#div#1;n#div#0;n#div#0;n#!!top" expanded="false" />
-                <element signature="n#div#1;n#div#0;n#!!top" expanded="false" />
-                <element signature="n#div#0;n#div#1;n#div#0;n#!!top" expanded="false" />
-                <element signature="n#div#1;n#div#1;n#div#0;n#!!top" expanded="false" />
-                <element signature="n#div#1;n#!!top" expanded="false" />
+                <element signature="e#0#15#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -73,20 +60,77 @@
         <entry file="file://D:/Anaconda2/envs/py3/envs/graduation_pj/Lib/site-packages/snownlp/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="175">
-              <caret line="36" column="30" lean-forward="true" selection-start-line="36" selection-start-column="30" selection-end-line="36" selection-end-column="30" />
+              <caret line="36" column="30" lean-forward="false" selection-start-line="36" selection-start-column="30" selection-end-line="36" selection-end-column="30" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
         <entry file="file://D:/Anaconda2/envs/py3/envs/graduation_pj/Lib/site-packages/snownlp/sentiment/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="145">
-              <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="42" selection-end-column="21" />
+            <state relative-caret-position="875">
+              <caret line="38" column="23" lean-forward="false" selection-start-line="38" selection-start-column="23" selection-end-line="38" selection-end-column="23" />
               <folding>
                 <element signature="e#24#63#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dashboard.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/Visual/dashboard.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="350">
+              <caret line="240" column="18" lean-forward="false" selection-start-line="240" selection-start-column="18" selection-end-line="240" selection-end-column="18" />
+              <folding>
+                <element signature="n#div#0;n#div#0;n#!!top" expanded="false" />
+                <element signature="n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+                <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+                <element signature="n#div#1;n#div#0;n#div#0;n#!!top" expanded="false" />
+                <element signature="n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="false" />
+                <element signature="n#div#2;n#div#0;n#div#0;n#!!top" expanded="false" />
+                <element signature="n#div#0;n#div#2;n#div#0;n#div#0;n#!!top" expanded="false" />
+                <element signature="n#div#3;n#div#0;n#div#0;n#!!top" expanded="false" />
+                <element signature="n#div#1;n#div#0;n#!!top" expanded="false" />
+                <element signature="n#div#0;n#div#1;n#div#0;n#!!top" expanded="false" />
+                <element signature="n#div#1;n#div#1;n#div#0;n#!!top" expanded="false" />
+                <element signature="n#div#2;n#div#0;n#!!top" expanded="false" />
+                <element signature="n#div#1;n#div#2;n#div#0;n#!!top" expanded="false" />
+                <element signature="n#div#3;n#div#0;n#!!top" expanded="false" />
+                <element signature="n#div#0;n#div#3;n#div#0;n#!!top" expanded="false" />
+                <element signature="n#div#0;n#div#0;n#div#3;n#div#0;n#!!top" expanded="false" />
+                <element signature="n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#!!top" expanded="false" />
+                <element signature="n#div#1;n#div#0;n#div#0;n#div#3;n#div#0;n#!!top" expanded="false" />
+                <element signature="n#div#4;n#div#0;n#!!top" expanded="false" />
+                <element signature="n#style#0;n#div#0;n#div#1;n#div#4;n#div#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="matplot_visual.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Visual/ass/matplot_visual.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-4050">
+              <caret line="17" column="12" lean-forward="false" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
+              <folding>
+                <element signature="e#0#25#0" expanded="true" />
+                <element signature="e#2430#2855#0" expanded="false" />
+                <element signature="e#3273#3576#0" expanded="false" />
+                <element signature="e#4424#4571#0" expanded="false" />
+                <element signature="e#4993#5271#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="zd.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Visual/ass/zd.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="484">
+              <caret line="136" column="81" lean-forward="false" selection-start-line="136" selection-start-column="81" selection-end-line="136" selection-end-column="81" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -98,41 +142,6 @@
               <caret line="75" column="25" lean-forward="false" selection-start-line="75" selection-start-column="21" selection-end-line="75" selection-end-column="25" />
               <folding>
                 <element signature="e#24#63#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="dashboard.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/Visual/dashboard.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="325">
-              <caret line="216" column="0" lean-forward="false" selection-start-line="216" selection-start-column="0" selection-end-line="216" selection-end-column="36" />
-              <folding>
-                <element signature="n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-                <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-                <element signature="n#div#1;n#div#0;n#div#0;n#!!top" expanded="false" />
-                <element signature="n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="false" />
-                <element signature="n#div#2;n#div#0;n#div#0;n#!!top" expanded="false" />
-                <element signature="n#div#0;n#div#2;n#div#0;n#div#0;n#!!top" expanded="false" />
-                <element signature="n#div#3;n#div#0;n#div#0;n#!!top" expanded="false" />
-                <element signature="n#div#0;n#div#1;n#div#0;n#!!top" expanded="false" />
-                <element signature="n#div#1;n#div#1;n#div#0;n#!!top" expanded="false" />
-                <element signature="n#div#2;n#div#0;n#!!top" expanded="false" />
-                <element signature="n#div#1;n#div#3;n#div#0;n#!!top" expanded="false" />
-                <element signature="n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="statistics.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/statistics.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#25#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -150,11 +159,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>text</find>
-      <find>id</find>
-      <find>jects.filte</find>
-      <find>objects.filter</find>
-      <find>Item</find>
       <find>create_wordcloud</find>
       <find>该id不存在</find>
       <find>if</find>
@@ -180,6 +184,11 @@
       <find>setOf</find>
       <find>class</find>
       <find>trainNB0</find>
+      <find>anti_zombie</find>
+      <find>pie</find>
+      <find>close</find>
+      <find>zd</find>
+      <find>ass</find>
     </findStrings>
     <dirStrings>
       <dir>D:\Python\Graduation_pj\DjangoVisual\weibo_scrapy_api</dir>
@@ -188,7 +197,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/DjangoVisual/settings.py" />
         <option value="$PROJECT_DIR$/my_main/urls.py" />
         <option value="$PROJECT_DIR$/weibo_scrapy_api/weibo_scrapy_api/settings.py" />
         <option value="$PROJECT_DIR$/weibo_scrapy_api/weibo_scrapy_api/middlewares.py" />
@@ -207,7 +215,6 @@
         <option value="$PROJECT_DIR$/templates/Visual_base.html" />
         <option value="$PROJECT_DIR$/Visual/ass/wordcloud.py" />
         <option value="$PROJECT_DIR$/Visual/ass/wordcloud_file/lz.txt" />
-        <option value="$PROJECT_DIR$/templates/Visual/dashboard.html" />
         <option value="$PROJECT_DIR$/add_field.py" />
         <option value="$PROJECT_DIR$/data_analyze.py" />
         <option value="$PROJECT_DIR$/ML.py" />
@@ -229,22 +236,24 @@
         <option value="$PROJECT_DIR$/weibo_scrapy_api/weibo_scrapy_api/pipelines.py" />
         <option value="$PROJECT_DIR$/templates/Visual/listing.html" />
         <option value="$PROJECT_DIR$/Visual/ass/emotion_analyze.py" />
-        <option value="$PROJECT_DIR$/Visual/ass/matplot_visual.py" />
         <option value="$PROJECT_DIR$/Visual/urls.py" />
         <option value="$PROJECT_DIR$/templates/Visual/comments.html" />
-        <option value="$PROJECT_DIR$/Visual/views.py" />
         <option value="$PROJECT_DIR$/Visual/ass/my_wordcloud.py" />
         <option value="$PROJECT_DIR$/templates/Visual/weibo.html" />
         <option value="D:/Anaconda2/envs/py3/envs/graduation_pj/Lib/site-packages/snownlp/classification/bayes.py" />
         <option value="$USER_HOME$/Downloads/machinelearninginaction-master/Ch04/bayes.py" />
         <option value="$PROJECT_DIR$/Bayes.py" />
         <option value="$PROJECT_DIR$/test.py" />
+        <option value="$PROJECT_DIR$/templates/Visual/dashboard.html" />
+        <option value="$PROJECT_DIR$/Visual/views.py" />
+        <option value="$PROJECT_DIR$/Visual/ass/matplot_visual.py" />
+        <option value="$PROJECT_DIR$/Visual/ass/test.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="352" />
-    <option name="y" value="130" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="383" />
+    <option name="y" value="78" />
     <option name="width" value="1266" />
     <option name="height" value="860" />
   </component>
@@ -270,6 +279,17 @@
             <path>
               <item name="DjangoVisual" type="b2602c69:ProjectViewProjectNode" />
               <item name="DjangoVisual" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DjangoVisual" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DjangoVisual" type="462c0819:PsiDirectoryNode" />
+              <item name="Visual" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DjangoVisual" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DjangoVisual" type="462c0819:PsiDirectoryNode" />
+              <item name="Visual" type="462c0819:PsiDirectoryNode" />
+              <item name="ass" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -311,7 +331,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.test">
+  <component name="RunManager" selected="Python.test (1)">
     <configuration name="Bayes" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -366,7 +386,7 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="my_wordcloud" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="test (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -378,7 +398,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="DjangoVisual" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Visual/ass/my_wordcloud.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Visual/ass/test.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -405,17 +425,17 @@
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Python.test" />
       <item index="1" class="java.lang.String" itemvalue="Python.matplot_visual" />
-      <item index="2" class="java.lang.String" itemvalue="Python.my_wordcloud" />
-      <item index="3" class="java.lang.String" itemvalue="Python.bayes" />
-      <item index="4" class="java.lang.String" itemvalue="Python.Bayes" />
+      <item index="2" class="java.lang.String" itemvalue="Python.bayes" />
+      <item index="3" class="java.lang.String" itemvalue="Python.Bayes" />
+      <item index="4" class="java.lang.String" itemvalue="Python.test (1)" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.test" />
-        <item index="1" class="java.lang.String" itemvalue="Python.Bayes" />
-        <item index="2" class="java.lang.String" itemvalue="Python.bayes" />
-        <item index="3" class="java.lang.String" itemvalue="Python.my_wordcloud" />
-        <item index="4" class="java.lang.String" itemvalue="Python.matplot_visual" />
+        <item index="0" class="java.lang.String" itemvalue="Python.test (1)" />
+        <item index="1" class="java.lang.String" itemvalue="Python.matplot_visual" />
+        <item index="2" class="java.lang.String" itemvalue="Python.test" />
+        <item index="3" class="java.lang.String" itemvalue="Python.Bayes" />
+        <item index="4" class="java.lang.String" itemvalue="Python.bayes" />
       </list>
     </recent_temporary>
   </component>
@@ -445,7 +465,8 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="352" y="130" width="1266" height="860" extended-state="1" />
+    <frame x="383" y="78" width="1266" height="860" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24959083" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32893157" sideWeight="0.49711934" order="10" side_tool="false" content_ui="tabs" />
@@ -453,7 +474,7 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991013" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32947233" sideWeight="0.49577168" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.42695037" sideWeight="0.6973803" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30496454" sideWeight="0.6973803" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26352397" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
@@ -512,7 +533,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Visual/views.py</url>
-          <line>197</line>
+          <line>200</line>
           <option name="timeStamp" value="17" />
         </line-breakpoint>
       </breakpoints>
@@ -521,14 +542,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/python-skeletons/re.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6300">
-          <caret line="252" column="8" lean-forward="false" selection-start-line="252" selection-start-column="8" selection-end-line="252" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://D:/Anaconda2/envs/py3/envs/graduation_pj/Lib/_strptime.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
@@ -690,29 +703,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Visual/ass/zd.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
-          <caret line="136" column="81" lean-forward="false" selection-start-line="136" selection-start-column="81" selection-end-line="136" selection-end-column="81" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://D:/Anaconda2/envs/py3/envs/graduation_pj/Lib/multiprocessing/pool.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="215">
           <caret line="260" column="8" lean-forward="false" selection-start-line="260" selection-start-column="8" selection-end-line="260" selection-end-column="8" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Visual/ass/matplot_visual.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="182" column="40" lean-forward="false" selection-start-line="182" selection-start-column="39" selection-end-line="182" selection-end-column="40" />
-          <folding>
-            <element signature="e#312#7056#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -792,27 +787,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Visual/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-908">
-          <caret line="97" column="28" lean-forward="false" selection-start-line="97" selection-start-column="28" selection-end-line="97" selection-end-column="28" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-            <element signature="e#711#3307#0" expanded="false" />
-            <element signature="e#1107#3213#0" expanded="false" />
-            <element signature="e#1195#2976#0" expanded="false" />
-            <element signature="e#1443#2976#0" expanded="false" />
-            <element signature="e#3451#3570#0" expanded="false" />
-            <element signature="e#6061#7483#0" expanded="false" />
-            <element signature="e#6395#6947#0" expanded="false" />
-            <element signature="e#6608#6947#0" expanded="false" />
-            <element signature="e#6966#7483#0" expanded="false" />
-            <element signature="e#7911#8500#0" expanded="false" />
-            <element signature="e#8519#9025#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Visual/ass/wordcloud_file/stopwords1893.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -844,28 +818,7 @@
         <state relative-caret-position="-150">
           <caret line="78" column="16" lean-forward="false" selection-start-line="78" selection-start-column="16" selection-end-line="78" selection-end-column="16" />
           <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/Visual/dashboard.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="216" column="0" lean-forward="false" selection-start-line="216" selection-start-column="0" selection-end-line="216" selection-end-column="36" />
-          <folding>
-            <element signature="n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#div#1;n#div#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#div#2;n#div#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#div#0;n#div#2;n#div#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#div#3;n#div#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#div#0;n#div#1;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#div#1;n#div#1;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#div#2;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#div#1;n#div#3;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" expanded="false" />
+            <element signature="e#0#19#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -875,7 +828,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#25#0" expanded="true" />
+            <element signature="e#0#25#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -883,7 +836,7 @@
     <entry file="file://$PROJECT_DIR$/Bayes.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
-          <caret line="27" column="55" lean-forward="true" selection-start-line="27" selection-start-column="55" selection-end-line="27" selection-end-column="55" />
+          <caret line="27" column="55" lean-forward="false" selection-start-line="27" selection-start-column="55" selection-end-line="27" selection-end-column="55" />
           <folding />
         </state>
       </provider>
@@ -912,14 +865,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ML_emotion.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="1" column="25" lean-forward="false" selection-start-line="1" selection-start-column="25" selection-end-line="1" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://D:/Anaconda2/envs/py3/envs/graduation_pj/Lib/site-packages/snownlp/classification/bayes.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="603">
@@ -930,28 +875,118 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="3" column="26" lean-forward="false" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://D:/Anaconda2/envs/py3/envs/graduation_pj/Lib/site-packages/snownlp/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="175">
-          <caret line="36" column="30" lean-forward="true" selection-start-line="36" selection-start-column="30" selection-end-line="36" selection-end-column="30" />
+          <caret line="36" column="30" lean-forward="false" selection-start-line="36" selection-start-column="30" selection-end-line="36" selection-end-column="30" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://D:/Anaconda2/envs/py3/envs/graduation_pj/Lib/site-packages/snownlp/sentiment/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="42" selection-end-column="21" />
+        <state relative-caret-position="875">
+          <caret line="38" column="23" lean-forward="false" selection-start-line="38" selection-start-column="23" selection-end-line="38" selection-end-column="23" />
           <folding>
             <element signature="e#24#63#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="6" column="16" lean-forward="false" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Visual/dashboard.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="240" column="18" lean-forward="false" selection-start-line="240" selection-start-column="18" selection-end-line="240" selection-end-column="18" />
+          <folding>
+            <element signature="n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#div#2;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#2;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#div#3;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#1;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#div#1;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#div#2;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#div#2;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#div#3;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#3;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#0;n#div#3;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#div#0;n#div#0;n#div#3;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#div#4;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#4;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Visual/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="114" column="21" lean-forward="false" selection-start-line="114" selection-start-column="21" selection-end-line="114" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+            <element signature="e#716#3312#0" expanded="false" />
+            <element signature="e#1112#3218#0" expanded="false" />
+            <element signature="e#1200#2981#0" expanded="false" />
+            <element signature="e#1448#2981#0" expanded="false" />
+            <element signature="e#3456#3575#0" expanded="false" />
+            <element signature="e#6157#7579#0" expanded="false" />
+            <element signature="e#6491#7043#0" expanded="false" />
+            <element signature="e#6704#7043#0" expanded="false" />
+            <element signature="e#7062#7579#0" expanded="false" />
+            <element signature="e#8007#8596#0" expanded="false" />
+            <element signature="e#8615#9121#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ML_emotion.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="1" column="25" lean-forward="false" selection-start-line="1" selection-start-column="25" selection-end-line="1" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Visual/ass/zd.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="136" column="81" lean-forward="false" selection-start-line="136" selection-start-column="81" selection-end-line="136" selection-end-column="81" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Visual/ass/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="8" column="23" lean-forward="false" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Visual/ass/matplot_visual.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4050">
+          <caret line="17" column="12" lean-forward="false" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+            <element signature="e#2430#2855#0" expanded="false" />
+            <element signature="e#3273#3576#0" expanded="false" />
+            <element signature="e#4424#4571#0" expanded="false" />
+            <element signature="e#4993#5271#0" expanded="false" />
           </folding>
         </state>
       </provider>
