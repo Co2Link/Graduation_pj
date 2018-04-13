@@ -165,12 +165,30 @@ class create_pic():
         plt.close()
 
 def sentiment_pic(sent):
-    score=emotion_analyze.sentiment_single(sent)
+    score=0
+    if type(sent)==list:
+        for i in sent:
+            score += emotion_analyze.sentiment_single(i)
+        score/=len(sent)
+    else:
+        score=emotion_analyze.sentiment_single(sent)
     plt.rcParams['font.sans-serif'] = ['SimHei']  # 用来正常显示中文标签
     plt.rcParams['axes.unicode_minus'] = False  # 用来正常显示负号
     plt.pie(x=[score,1-score],labels=['积极度',' '],autopct='%1.1f%%',shadow=False)
     plt.savefig(fname='D:\Python\Graduation_pj\DjangoVisual\static\images\emotion_analyze')
     plt.close()
+
+
+def sentiment_pic_multi(sent_list):
+    ret_list=emotion_analyze.new_multi_process(sent_list)
+    avg_score=0
+    score_list=[]
+    for i in ret_list:
+        avg_score+=i['score']
+        score_list.append(i['score'])
+    avg_score/=len(ret_list)
+    return avg_score,score_list
+
 
 
 
@@ -184,8 +202,8 @@ def main():
     c=5723240588
     # # gender('3597829674')
     # fans_num(str(nine))
-    w=create_pic(b)
-    w.post_freq()
+    # w=create_pic(b)
+    # w.post_freq()
 
 if __name__=='__main__':
     main()

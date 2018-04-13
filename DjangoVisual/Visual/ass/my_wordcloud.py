@@ -2,39 +2,13 @@ from os import path
 from scipy.misc import imread
 import matplotlib.pyplot as plt
 import jieba
+import pymongo as pymongo
 from html.parser import HTMLParser
+from snownlp import SnowNLP,sentiment
 
 
 from wordcloud import WordCloud,ImageColorGenerator
 
-# 获取当前文件路径
-# __file__ 为当前文件, 在ide中运行此行会报错,可改为
-# d = path.dirname('.')
-# d = path.dirname(__file__)
-#
-# stopwords = {}
-# isCN = 1 #默认启用中文分词
-# back_coloring_path = "wordcloud_file/timg.jpg" # 设置背景图片路径
-# text_path = 'wordcloud_file/lz.txt' #设置要分析的文本路径
-# font_path = 'wordcloud_file/simkai.ttf' # 为matplotlib设置中文字体路径没
-# stopwords_path = 'wordcloud_file/stopwords1893.txt' # 停用词词表
-# imgname1 = "WordCloudDefautColors.png" # 保存的图片名字1(只按照背景图片形状)
-# imgname2 = "WordCloudColorsByImg.png"# 保存的图片名字2(颜色按照背景图片颜色布局生成)
-#
-# my_words_list = ['路明非'] # 在结巴的词库中添加新词
-#
-# back_coloring = imread(path.join(d, back_coloring_path))# 设置背景图片
-#
-# # 设置词云属性
-# wc = WordCloud(font_path=font_path,  # 设置字体
-#                background_color="white",  # 背景颜色
-#                max_words=2500,  # 词云显示的最大词数
-#                # mask=back_coloring,  # 设置背景图片
-#                max_font_size=100,  # 字体最大值
-#                random_state=10,
-#                width=800, height=600, margin=2,# 设置图片默认的大小,但是如果使用背景图片的话,那么保存的图片大小将会按照其大小保存,margin为词语边缘距离
-#                )
-# 添加自己的词库分词
 def add_word(list):
     for items in list:
         jieba.add_word(items)
@@ -44,37 +18,18 @@ def jiebaclearText(text,stopwords_path,my_word_list_del):
     mywordlist = []
     seg_list = jieba.cut(text, cut_all=False)
     liststr="/ ".join(seg_list)
-    f_stop = open(stopwords_path,'rb')
-    try:
-        f_stop_text = f_stop.read( )
-        f_stop_text=str(f_stop_text,'utf-8')
-    finally:
-        f_stop.close( )
-    f_stop_seg_list=f_stop_text.split('\n')
+    with open(stopwords_path,'r',encoding='utf-8') as f:
+        f_stop_seg_list = f.readlines()
+        f_stop_seg_list = [i.strip() for i in f_stop_seg_list]
     for myword in liststr.split('/'):
         if not(myword.strip() in f_stop_seg_list) and len(myword.strip())>1:
             mywordlist.append(myword)
+
     clean_word_list=[]
     for i in mywordlist:
         if not i.strip() in my_word_list_del:
             clean_word_list.append(i)
     return ''.join(clean_word_list)
-
-# if isCN:
-#     text = jiebaclearText(text,stopwords_path)
-#
-# # 生成词云, 可以用generate输入全部文本(wordcloud对中文分词支持不好,建议启用中文分词),也可以我们计算好词频后使用generate_from_frequencies函数
-# wc.generate(text)
-#
-# plt.figure()
-# # 以下代码显示图片
-# plt.imshow(wc)
-# plt.axis("off")
-# plt.show()
-# # 绘制词云
-#
-# # 保存图片
-# wc.to_file(path.join(d, imgname1))
 
 def dealHtmlTags(html):
     '''''
@@ -110,12 +65,11 @@ def create_wordcloud(text):
                    max_words=max_words,  # 词云显示的最大词数
                    max_font_size=100,  # 字体最大值
                    random_state=10,
-                   width=800, height=600, margin=2,  # 设置图片默认的大小,但是如果使用背景图片的话,那么保存的图片大小将会按照其大小保存,margin为词语边缘距离
+                   width=800, height=600, margin=2,collocations=False  # 设置图片默认的大小,但是如果使用背景图片的话,那么保存的图片大小将会按照其大小保存,margin为词语边缘距离
                    )
     ## 需要去掉的词
-    my_word_list_del=['微博','链接','全文']
+    my_word_list_del=['微博','链接','全文','回复','啊啊','啊啊啊','哈哈','哈哈哈','哈哈哈哈','啊啊啊啊']
     text = jiebaclearText(text,stopwords_path,my_word_list_del)
-
     wc.generate(text)
 
     plt.figure()
@@ -128,8 +82,17 @@ def create_wordcloud(text):
     plt.close()
 
 def main():
-    text = open('wordcloud_file/lz.txt', 'rb').read()
+    CONN=pymongo.MongoClient('localhost',27017)
+    col=CONN['syn_12']['comments']
+
+    post_id=4226462758878143
+
+    text_list=list(col.find({'post_id':post_id}))
+    text=''
+    for i in text_list:
+        text+=' '+i['text']
     create_wordcloud(text)
+
 
 if __name__ == '__main__':
     main()

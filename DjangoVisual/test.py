@@ -1,12 +1,15 @@
 import datetime
 import requests
 import re
+from snownlp import SnowNLP
 
 def main():
-    result = requests.get(url='https://m.weibo.cn/status/{}'.format(4227198048631523))
-    print(result.text)
-    result=re.findall(r'"reposts_count": (.+),',result.text)
-    print(result[0])
+    my_str='草你妈'
+    s=SnowNLP(my_str)
+    score=s.sentiments
+    print('sentiment: {}'.format(score))
+
+
 
 
 

@@ -3,38 +3,6 @@
 {% block main %}
 <div class="container-fluid">
     <div class="row">
-        <div class="col-md-6">
-            <div class="card">
-                <div class="header">
-                    <h3 class="title">关键字</h3>
-                </div>
-                <div class="content">
-                    </br>
-                    <img src="{% static 'images/single_weibo.png' %}" style="width: 100%; height: 100%">
-                    <div class="footer">
-                        <div class="stats">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-6">
-            <div class="card">
-                <div class="header">
-                    <h3 class="title">情感分析</h3>
-                </div>
-                <div class="content">
-                    </br>
-                    <img src="{% static 'images/emotion_analyze.png' %}" style="width: 100%; height: 100%">
-                    <div class="footer">
-                        <div class="stats">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="row">
         <div class="col-md-12">
             <div class="card card-plain">
                 <div class="header">
@@ -44,8 +12,8 @@
                 <div class="content table-responsive table-full-width">
                     <table class="table table-hover">
                         <thead>
-                            <th>昵称</th>
-                            <th>评论</th>
+                            <!--<th>昵称</th>-->
+                            <!--<th>评论</th>-->
                             <!--<th>粉丝数</th>-->
                             <!--<th>微博数</th>-->
                             <!--<th>认证类型</th>-->
@@ -85,8 +53,48 @@
             </div>
         </div>
     </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="header">
+                    <h3 class="title">关键字</h3>
+                </div>
+                <div class="content">
+                    </br>
+                    <img src="{% static 'images/single_weibo.png' %}" style="width: 100%; height: 100%">
+                    <div class="footer">
+                        <div class="stats">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card">
+                <div class="header">
+                    <h3 class="title">情感分析</h3>
+                </div>
+                <div class="content">
+                    </br>
+                    <img src="{% static 'images/emotion_analyze.png' %}" style="width: 100%; height: 100%">
+                    <div class="footer">
+                        <div class="stats">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 {% endblock %}
 
 {% block nav %}
+<div class="container-fluid">
+    <div class="navbar-header">
+        <div>
+            <p>{{tips}}</p>
+            <a href="{%url 'Visual:show_weibo' id=post_id%}">微博分析</a>
+        </div>
+    </div>
+</div>
 {% endblock %}

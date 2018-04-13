@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from my_main.models import ScrapyItem,UserItem_dj,post_Item_dj,new_post_Item_dj,comments_Item_dj
 from django.views.decorators.csrf import csrf_exempt
-from Visual.ass.matplot_visual import create_pic,sentiment_pic
+from Visual.ass.matplot_visual import create_pic,sentiment_pic,sentiment_pic_multi
 from scrapyd_api import ScrapydAPI
 from Visual.ass.data import location_count
 import json
@@ -80,10 +80,19 @@ class UserView(ListView):
 
 def comments(request,post_id):
     comments_list = comments_Item_dj.objects.filter(post_id=post_id)
-    print('len: {}'.format(len(comments_list)))
+
     paginator = Paginator(comments_list, 5) # 每页显示 25 个联系人
 
     page = request.GET.get('page')
+    # print('page :{}'.format(page))
+    if page==None:   ##只在跳转到第一页时更新图片，节省后面翻页时的刷新时间
+        text = ''
+        text_list = []
+        for i in comments_list:
+            text += i.text
+            text_list.append(i.text)
+        create_wordcloud(text)
+        sentiment_pic(text_list)
     try:
         contacts = paginator.page(page)
     except PageNotAnInteger:
@@ -92,10 +101,7 @@ def comments(request,post_id):
     except EmptyPage:
         # 如果用户请求的页码号超过了最大页码号，显示最后一页
         contacts = paginator.page(paginator.num_pages)
-
-    print('contact: {}'.format(contacts))
-
-    return render(request, 'Visual/comments.html', {'contacts': contacts})
+    return render(request, 'Visual/comments.html', {'contacts': contacts,'tips':'微博id: {}'.format(post_id),'post_id':post_id})
 
 
 def show(request,id):
@@ -171,3 +177,32 @@ def search_weibo(request):
 
 def weibo(request):
     return render(request, 'Visual/weibo.html',context={'tips':'请输入微博id'})
+
+def show_weibo(request,id):
+    if not id:  # 检测输入合法性
+        return render(request, 'Visual/weibo.html', context={'tips': '请输入微博id'})
+    if not id.isdigit():
+        return render(request, 'Visual/weibo.html', context={'tips': '请输入微博id，数字'})
+    result = ScrapyItem.objects.filter(id=str(id))
+    if result:  # 查找是否已经爬取
+        status = scrapyd.job_status('default', result[0].task_id)
+        if status == 'running':  # 检测是否正在爬
+            return render(request, 'Visual/weibo.html', context={'tips': '正在爬取数据，请等待'})
+        else:
+            post = new_post_Item_dj.objects.get(id=id)
+            comments_list = comments_Item_dj.objects.filter(post_id=id)
+            create_wordcloud(post.text)
+            sentiment_pic(dealHtmlTags(post.text))
+            return render(request, 'Visual/weibo.html',
+                          context={'tips': '微博id: {}'.format(id), 'post': post, 'comments_list': comments_list})
+    else:
+        post_dict = crawl_weibo(id)
+        if post_dict != 0:  # 检测微博是否存在
+            post = new_post_Item_dj(**post_dict)
+            post.save()
+            task_id = scrapyd.schedule('default', 'comments', id=id)  # 启动爬虫
+            item = ScrapyItem(id=id, task_id=task_id)
+            item.save()  # 存储ScrapyItem 用于查询爬虫状态
+            return render(request, 'Visual/weibo.html', context={'tips': '开始爬取数据，请等待'})
+        else:
+            return render(request, 'Visual/weibo.html', context={'tips': '微博id不存在'})
