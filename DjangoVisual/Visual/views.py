@@ -69,6 +69,7 @@ def search_user(request):
     else:
         return render(request, 'Visual/dashboard.html', context={'tips': '该id不存在'})
 
+
 def index(request):
     return render(request,'Visual/dashboard.html',context={'tips':'请输入用户id','pics':False})
 
@@ -76,6 +77,12 @@ class UserView(ListView):
     model = UserItem_dj
     template_name = 'Visual/listing.html'
     context_object_name = 'user_list'
+    paginate_by = 5
+
+class weiboView(ListView):
+    model = new_post_Item_dj
+    template_name = 'Visual/listing_weibo.html'
+    context_object_name = 'post_list'
     paginate_by = 5
 
 def comments(request,post_id):

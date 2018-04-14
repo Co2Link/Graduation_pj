@@ -32,6 +32,12 @@ class create_pic():
         result_m = fans_1.find(filter={'gender': 'm', 'master_id': self.id})
         result_f = fans_1.find(filter={'gender': 'f', 'master_id': self.id})
         sizes = [result_m.count(), result_f.count()]
+
+        dirty_list_f,clean_list_f=self.anti_zombie(list(result_f))[1:]
+        dirty_list_m,clean_list_m=self.anti_zombie(list(result_m))[1:]
+        sizes = [len(clean_list_m), len(clean_list_f)]
+        print('dirty_len male: {}, female {}'.format(len(dirty_list_m),len(dirty_list_f)))
+
         plt.pie(sizes, labels=labels, autopct='%1.1f%%', shadow=False)
         plt.legend()
         plt.savefig(fname='D:/Python/Graduation_pj/DjangoVisual/static/images/gender')
@@ -135,7 +141,7 @@ class create_pic():
     def fans_authen(self):
         fans_1 = self.db['fans_1']
         cursor = fans_1.find(filter={'master_id': self.id})
-        # cursor = self.anti_zombie(list(cursor))[2]
+        cursor = self.anti_zombie(list(cursor))[2]
         cursor=list(cursor)
         verified_dict = {}
         for i in cursor:

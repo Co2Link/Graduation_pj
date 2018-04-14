@@ -11,6 +11,9 @@ import re
 from .items import UserItem,fans_2_Item,fans_1_Item,post_Item,comment_Item
 from scrapy.exceptions import DropItem
 from my_main.models import UserItem_dj,fans_1_Item_dj,fans_2_Item_dj,post_Item_dj,comments_Item_dj
+
+
+
 def clean_time(time,null_to_str=False):
     today = datetime.datetime.now().date()
     if '小时' in time:  # x分钟前；x小时前

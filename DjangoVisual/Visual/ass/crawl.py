@@ -10,6 +10,10 @@ comments=CONN['syn_12']['comments']
 def main():
     pass
 
+def clean_text(text):
+    text=re.sub(pattern=r'\\"',repl='"',string=text)
+    return text
+
 def datetime_fmt(datetime_str):
     return str(datetime.datetime.strptime(datetime_str, '%a %b %d %H:%M:%S %z %Y').date())
 
@@ -30,11 +34,11 @@ def crawl_weibo(id):
         else:
             return 0
     searchobj = re.search(r'"{}": "(.+)",'.format('text'), result.text)
-    post_dict['text']=searchobj.group(1)
+    post_dict['text']=clean_text(searchobj.group(1)) #将 \" 替换为 "  解决表情显示问题
     searchobj=re.search(r'"retweeted_status".+"text": "(.+)",.+"textLength"', result.text,re.DOTALL)
     if searchobj:
         post_dict['retweeted_status']=True
-        post_dict['retweeted_text']=searchobj.group(1)
+        post_dict['retweeted_text']=clean_text(searchobj.group(1))
     else:
         post_dict['retweeted_status'] = False
 

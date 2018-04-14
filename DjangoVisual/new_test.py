@@ -161,16 +161,41 @@ def crawl_complete(col_name):
                 my_dict['mbrank']=userInfo['mbrank']
                 my_dict['mbtype']=userInfo['mbtype']
                 my_dict['screen_name']=userInfo['screen_name']
+                my_dict['gender']=userInfo['gender']
                 my_dict['location']=location
                 my_dict['zombie']=i['zombie']
-
                 fans.find_one_and_replace(filter={'sid':sid},replacement=my_dict)
             except Exception as e:
+
                 print(e)
                 print(result_1.text)
                 print(i['sid'])
                 continue
 
+
+def crawl_gender(col_name):
+    CONN = pymongo.MongoClient('localhost', 27017)
+    fans=CONN['new_label'][col_name]
+    update_count=0
+    fail_count=0
+    for i in fans.find():
+        if 'gender' not in i:
+            try:
+
+                result_1 = requests.get(
+                    url='https://m.weibo.cn/api/container/getIndex?containerid=100505{}'.format(i['sid']))
+                fans.find_one_and_update(filter={'sid': i['sid']}, update={
+                    '$set': {'gender': json.loads(result_1.text)['data']['userInfo']['gender']}})
+                print(i['sid'])
+                update_count+=1
+            except Exception as e:
+                fail_count+=1
+                print(e)
+                print(i['sid'])
+                print(result_1.text)
+                continue
+    print('update_count: {}'.format(update_count))
+    print('fail_count: {}'.format(fail_count))
 
 
 
@@ -233,32 +258,9 @@ def add_description():
 
 
 def main():
-    CONN=pymongo.MongoClient('localhost',27017)
-    fans=CONN['new_label']['fans']
-
-    # update('new_fans')
-    crawl_complete('new_fans')
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    print('fuck')
+    crawl_gender('fans')
+    crawl_gender('new_fans')
 
 if __name__=='__main__':
     main()

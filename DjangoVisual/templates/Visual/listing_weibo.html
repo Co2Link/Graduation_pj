@@ -1,0 +1,59 @@
+{% extends 'Visual_base.html' %}
+{% load staticfiles %}
+{% block main %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card card-plain">
+                <div class="header">
+                    <h2 class="title">微博一览表</h2>
+                    </br>
+                </div>
+                <div class="content table-responsive table-full-width">
+                    <table class="table table-hover">
+                        <thead>
+                            <th>id</th>
+                            <th>正文</th>
+                            <!--<th>粉丝数</th>-->
+                            <!--<th>微博数</th>-->
+                            <!--<th>认证类型</th>-->
+                            <!--<th>id</th>-->
+                        </thead>
+                        <tbody>
+                        {% for post in post_list %}
+                            <tr>
+                                <!--<td href="{% url 'Visual:show' id=user.id %}">{{user.screen_name}}</td>-->
+                                <td><a href="{% url 'Visual:show_weibo' id=post.id %}" class="more-link">{{post.id}}</a></td>
+                                <td>{{post.text|safe}}</td>
+                                <!--<td>{{user.followers_count}}</td>-->
+                                <!--<td>{{user.statuses_count}}</td>-->
+                                <!--<td>{{user.verified_type}}</td>-->
+                                <!--<td>{{user.id}}</td>-->
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+
+                </div>
+                {% if is_paginated %}
+                <div class="pagination-simple">
+                  <!-- 如果当前页还有上一页，显示一个上一页的按钮 -->
+                  {% if page_obj.has_previous %}
+                    <a href="?page={{ page_obj.previous_page_number }}">上一页</a>
+                  {% endif %}
+                  <!-- 显示当前页面信息 -->
+                  <span class="current">第 {{ page_obj.number }} 页 / 共 {{ paginator.num_pages }} 页</span>
+                  <!-- 如果当前页还有下一页，显示一个下一页的按钮 -->
+                  {% if page_obj.has_next %}
+                    <a href="?page={{ page_obj.next_page_number }}">下一页</a>
+                  {% endif %}
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block nav %}
+{% endblock %}
