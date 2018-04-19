@@ -22,7 +22,6 @@
                         <tbody>
                         {% for post in post_list %}
                             <tr>
-                                <!--<td href="{% url 'Visual:show' id=user.id %}">{{user.screen_name}}</td>-->
                                 <td><a href="{% url 'Visual:show_weibo' id=post.id %}" class="more-link">{{post.id}}</a></td>
                                 <td>{{post.text|safe}}</td>
                                 <!--<td>{{user.followers_count}}</td>-->

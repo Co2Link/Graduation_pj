@@ -14,8 +14,8 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Visual/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="25">
-              <caret line="69" column="83" lean-forward="false" selection-start-line="69" selection-start-column="83" selection-end-line="69" selection-end-column="83" />
+            <state relative-caret-position="171">
+              <caret line="113" column="4" lean-forward="false" selection-start-line="113" selection-start-column="4" selection-end-line="113" selection-end-column="4" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
                 <element signature="e#716#3312#0" expanded="false" />
@@ -53,45 +53,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="matplot_visual.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Visual/ass/matplot_visual.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="700">
-              <caret line="29" column="31" lean-forward="false" selection-start-line="29" selection-start-column="31" selection-end-line="29" selection-end-column="31" />
-              <folding>
-                <element signature="e#2720#3145#0" expanded="false" />
-                <element signature="e#4560#6201#0" expanded="false" />
-                <element signature="e#4714#4861#0" expanded="false" />
-                <element signature="e#5283#5561#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="my_wordcloud.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Visual/ass/my_wordcloud.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="20" column="9" lean-forward="false" selection-start-line="20" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
-              <folding>
-                <element signature="e#0#19#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
-              <caret line="19" column="30" lean-forward="false" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
-              <folding>
-                <element signature="e#0#15#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="comments_spider.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/weibo_scrapy_api/weibo_scrapy_api/spiders/comments_spider.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -102,11 +63,41 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="crawl.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="crawl.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Visual/ass/crawl.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1597">
               <caret line="73" column="26" lean-forward="false" selection-start-line="73" selection-start-column="26" selection-end-line="73" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Visual/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="11" column="46" lean-forward="false" selection-start-line="11" selection-start-column="46" selection-end-line="11" selection-end-column="46" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="listing_weibo.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/Visual/listing_weibo.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="24" column="51" lean-forward="true" selection-start-line="24" selection-start-column="51" selection-end-line="24" selection-end-column="51" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="comments.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/Visual/comments.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="25" column="57" lean-forward="false" selection-start-line="25" selection-start-column="57" selection-end-line="25" selection-end-column="57" />
               <folding />
             </state>
           </provider>
@@ -146,7 +137,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>comments</find>
       <find>listing</find>
       <find>tips</find>
       <find>{% url</find>
@@ -176,6 +166,7 @@
       <find>alt=</find>
       <find>auto</find>
       <find>bar</find>
+      <find>Visual:show</find>
     </findStrings>
     <dirStrings>
       <dir>D:\Python\Graduation_pj\DjangoVisual\weibo_scrapy_api</dir>
@@ -225,9 +216,7 @@
         <option value="$PROJECT_DIR$/Visual/urls.py" />
         <option value="$PROJECT_DIR$/templates/Visual/icons.html" />
         <option value="$PROJECT_DIR$/templates/Visual/listing.html" />
-        <option value="$PROJECT_DIR$/templates/Visual/listing_weibo.html" />
         <option value="$PROJECT_DIR$/templates/Visual_base.html" />
-        <option value="$PROJECT_DIR$/templates/Visual/comments.html" />
         <option value="$PROJECT_DIR$/my_main/admin.py" />
         <option value="$PROJECT_DIR$/weibo_scrapy_api/weibo_scrapy_api/pipelines.py" />
         <option value="$PROJECT_DIR$/Visual/ass/crawl.py" />
@@ -235,12 +224,14 @@
         <option value="$PROJECT_DIR$/Visual/ass/my_wordcloud.py" />
         <option value="$PROJECT_DIR$/test.py" />
         <option value="$PROJECT_DIR$/Visual/ass/test.py" />
+        <option value="$PROJECT_DIR$/templates/Visual/listing_weibo.html" />
+        <option value="$PROJECT_DIR$/templates/Visual/comments.html" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="124" />
-    <option name="y" value="217" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="646" />
+    <option name="y" value="216" />
     <option name="width" value="1266" />
     <option name="height" value="727" />
   </component>
@@ -281,19 +272,6 @@
               <item name="DjangoVisual" type="b2602c69:ProjectViewProjectNode" />
               <item name="DjangoVisual" type="462c0819:PsiDirectoryNode" />
               <item name="weibo_scrapy_api" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DjangoVisual" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DjangoVisual" type="462c0819:PsiDirectoryNode" />
-              <item name="weibo_scrapy_api" type="462c0819:PsiDirectoryNode" />
-              <item name="weibo_scrapy_api" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DjangoVisual" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DjangoVisual" type="462c0819:PsiDirectoryNode" />
-              <item name="weibo_scrapy_api" type="462c0819:PsiDirectoryNode" />
-              <item name="weibo_scrapy_api" type="462c0819:PsiDirectoryNode" />
-              <item name="spiders" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -470,11 +448,13 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="124" y="217" width="1266" height="727" extended-state="1" />
+    <frame x="646" y="216" width="1266" height="727" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24959083" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32893157" sideWeight="0.49711934" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36646706" sideWeight="0.3026197" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991013" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32947233" sideWeight="0.49577168" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17363344" sideWeight="0.6973803" order="6" side_tool="false" content_ui="tabs" />
@@ -487,7 +467,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991013" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -736,13 +715,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Visual/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="10" column="31" lean-forward="true" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/Visual/weibo.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="325">
@@ -754,20 +726,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="302">
           <caret line="79" column="29" lean-forward="false" selection-start-line="79" selection-start-column="29" selection-end-line="79" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/Visual/listing_weibo.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-25">
-          <caret line="8" column="40" lean-forward="false" selection-start-line="8" selection-start-column="40" selection-end-line="8" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/Visual/comments.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="16" column="39" lean-forward="false" selection-start-line="16" selection-start-column="39" selection-end-line="16" selection-end-column="39" />
         </state>
       </provider>
     </entry>
@@ -887,26 +845,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Visual/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="69" column="83" lean-forward="false" selection-start-line="69" selection-start-column="83" selection-end-line="69" selection-end-column="83" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-            <element signature="e#716#3312#0" expanded="false" />
-            <element signature="e#1112#3218#0" expanded="false" />
-            <element signature="e#1200#2981#0" expanded="false" />
-            <element signature="e#1448#2981#0" expanded="false" />
-            <element signature="e#6321#7743#0" expanded="false" />
-            <element signature="e#6655#7207#0" expanded="false" />
-            <element signature="e#6868#7207#0" expanded="false" />
-            <element signature="e#7226#7743#0" expanded="false" />
-            <element signature="e#8171#8760#0" expanded="false" />
-            <element signature="e#8779#9285#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/weibo_scrapy_api/setup.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -927,6 +865,50 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1597">
           <caret line="73" column="26" lean-forward="false" selection-start-line="73" selection-start-column="26" selection-end-line="73" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Visual/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="113" column="4" lean-forward="false" selection-start-line="113" selection-start-column="4" selection-end-line="113" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+            <element signature="e#716#3312#0" expanded="false" />
+            <element signature="e#1112#3218#0" expanded="false" />
+            <element signature="e#1200#2981#0" expanded="false" />
+            <element signature="e#1448#2981#0" expanded="false" />
+            <element signature="e#6321#7743#0" expanded="false" />
+            <element signature="e#6655#7207#0" expanded="false" />
+            <element signature="e#6868#7207#0" expanded="false" />
+            <element signature="e#7226#7743#0" expanded="false" />
+            <element signature="e#8171#8760#0" expanded="false" />
+            <element signature="e#8779#9285#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Visual/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="11" column="46" lean-forward="false" selection-start-line="11" selection-start-column="46" selection-end-line="11" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Visual/listing_weibo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="24" column="51" lean-forward="true" selection-start-line="24" selection-start-column="51" selection-end-line="24" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Visual/comments.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="25" column="57" lean-forward="false" selection-start-line="25" selection-start-column="57" selection-end-line="25" selection-end-column="57" />
           <folding />
         </state>
       </provider>
