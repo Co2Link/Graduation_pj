@@ -72,7 +72,7 @@ def clean_dict(my_dict, attr_list):  #数据整理，清洗
 class WeiboScrapyApiPipeline(object):
     def __init__(self):
         #数据库操作
-        self.DBNAME = 'syn_12'
+        self.DBNAME = 'syn_test'
         self.CONN=pymongo.MongoClient('localhost',27017)
         self.user_col=self.CONN['mongodb_test_1']['user']
         self.fans_1_col=self.CONN['mongodb_test_1']['fans_1']

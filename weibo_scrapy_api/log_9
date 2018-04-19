@@ -1,0 +1,77 @@
+2018-04-19 18:50:52 [scrapy.utils.log] INFO: Scrapy 1.5.0 started (bot: weibo_scrapy_api)
+2018-04-19 18:50:52 [scrapy.utils.log] INFO: Versions: lxml 4.1.1.0, libxml2 2.9.5, cssselect 1.0.3, parsel 1.2.0, w3lib 1.17.0, Twisted 17.5.0, Python 3.6.2 |Continuum Analytics, Inc.| (default, Jul 20 2017, 12:30:02) [MSC v.1900 64 bit (AMD64)], pyOpenSSL 17.5.0 (OpenSSL 1.0.2n  7 Dec 2017), cryptography 2.1.4, Platform Windows-10-10.0.10586-SP0
+2018-04-19 18:50:52 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'weibo_scrapy_api', 'CONCURRENT_REQUESTS_PER_IP': 1600, 'DOWNLOAD_DELAY': 0.0375, 'LOG_FILE': 'log_9', 'NEWSPIDER_MODULE': 'weibo_scrapy_api.spiders', 'ROBOTSTXT_OBEY': True, 'SPIDER_MODULES': ['weibo_scrapy_api.spiders']}
+2018-04-19 18:50:52 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2018-04-19 18:50:52 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'weibo_scrapy_api.middlewares.ABProxyMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2018-04-19 18:50:52 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2018-04-19 18:50:52 [scrapy.middleware] INFO: Enabled item pipelines:
+['weibo_scrapy_api.pipelines.WeiboScrapyApiPipeline']
+2018-04-19 18:50:52 [scrapy.core.engine] INFO: Spider opened
+2018-04-19 18:50:52 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-04-19 18:50:52 [scrapy.extensions.telnet] DEBUG: Telnet console listening on 127.0.0.1:6023
+2018-04-19 18:50:53 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/robots.txt> (referer: None)
+2018-04-19 18:50:53 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?containerid=2302833279873201_-_INFO> (referer: None)
+2018-04-19 18:50:54 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?value=3279873201&containerid=1076033279873201&page=6> (referer: None)
+2018-04-19 18:50:54 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-04-19 18:50:54 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?value=3279873201&containerid=1076033279873201&page=6>
+
+2018-04-19 18:50:54 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?value=3279873201&containerid=1076033279873201&page=3> (referer: None)
+2018-04-19 18:50:54 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?value=3279873201&containerid=1076033279873201&page=2> (referer: None)
+2018-04-19 18:50:54 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-04-19 18:50:54 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?value=3279873201&containerid=1076033279873201&page=3>
+
+2018-04-19 18:50:54 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-04-19 18:50:54 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?value=3279873201&containerid=1076033279873201&page=2>
+
+2018-04-19 18:50:54 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?value=3279873201&containerid=1076033279873201&page=1> (referer: None)
+2018-04-19 18:50:54 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-04-19 18:50:54 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?value=3279873201&containerid=1076033279873201&page=1>
+
+2018-04-19 18:50:54 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?value=3279873201&containerid=1076033279873201&page=5> (referer: None)
+2018-04-19 18:50:54 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-04-19 18:50:54 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?value=3279873201&containerid=1076033279873201&page=5>
+
+2018-04-19 18:50:55 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?value=3279873201&containerid=1076033279873201&page=7> (referer: None)
+2018-04-19 18:50:55 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?value=3279873201&containerid=1076033279873201&page=10> (referer: None)
+2018-04-19 18:50:55 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-04-19 18:50:55 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?value=3279873201&containerid=1076033279873201&page=7>
+
+2018-04-19 18:50:55 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-04-19 18:50:55 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?value=3279873201&containerid=1076033279873201&page=10>
+
+2018-04-19 18:50:55 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?value=3279873201&containerid=1076033279873201&page=4> (referer: None)
+2018-04-19 18:50:56 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-04-19 18:50:56 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?value=3279873201&containerid=1076033279873201&page=4>
+
+2018-04-19 18:50:57 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?value=3279873201&containerid=1076033279873201&page=9> (referer: None)
+2018-04-19 18:50:57 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-04-19 18:50:57 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?value=3279873201&containerid=1076033279873201&page=9>
+
+2018-04-19 18:50:58 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://m.weibo.cn/api/container/getIndex?value=3279873201&containerid=1076033279873201&page=8> (referer: None)
+2018-04-19 18:50:58 [root] DEBUG: ('BulkWriteError: ', 'batch op errors occurred')
+2018-04-19 18:50:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://m.weibo.cn/api/container/getIndex?value=3279873201&containerid=1076033279873201&page=8>
+
+2018-04-19 18:51:12 [scrapy.crawler] INFO: Received SIGINT, shutting down gracefully. Send again to force 
+2018-04-19 18:51:12 [scrapy.core.engine] INFO: Closing spider (shutdown)
+2018-04-19 18:51:13 [scrapy.crawler] INFO: Received SIGINT twice, forcing unclean shutdown

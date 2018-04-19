@@ -68,7 +68,7 @@ def create_wordcloud(text):
                    width=800, height=600, margin=2,collocations=False  # 设置图片默认的大小,但是如果使用背景图片的话,那么保存的图片大小将会按照其大小保存,margin为词语边缘距离
                    )
     ## 需要去掉的词
-    my_word_list_del=['网页','微博','链接','全文','回复','啊啊','啊啊啊','哈哈','哈哈哈','哈哈哈哈','啊啊啊啊']
+    my_word_list_del=['每次','网页','微博','链接','全文','回复','啊啊','啊啊啊','哈哈','哈哈哈','哈哈哈哈','啊啊啊啊']
     text = jiebaclearText(text,stopwords_path,my_word_list_del)
     wc.generate(text)
 

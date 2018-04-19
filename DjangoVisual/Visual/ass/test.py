@@ -2,6 +2,15 @@ from Visual.ass.matplot_visual import create_pic
 import sys
 import time
 
+def my_test(url):
+    import requests
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (Windows; U; Windows NT 6.1;'
+                      ' en-US; rv:1.9.1.6) Gecko/20091201 Firefox/3.5.6'
+    }
+    result = requests.get(url=url,headers=headers)
+    print(result.text)
+
 def main():
     start=time.time()
     creation = create_pic(2842266491)

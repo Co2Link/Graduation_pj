@@ -3,22 +3,28 @@ import requests
 import re
 from snownlp import SnowNLP
 import pymongo as pymongo
+import matplotlib.pyplot as plt
 
-def one():
-    return [1,2,3],3
+plt.rcParams['font.sans-serif'] = ['SimHei']  # 用来正常显示中文标签
+plt.rcParams['axes.unicode_minus'] = False  # 用来正常显示负号
 
-def clean_text(text):
-    text=re.sub(pattern=r'\\"',repl='"',string=text)
-    return text
+def bar():
+    height=[2.97,3.13,3.4,3.61,3.76]
+    tick_label=['2016年Q3','2016年Q4','2017年Q1','2017年Q2','2017年Q3']
+    container=plt.bar(x=[1, 2, 3, 4, 5], height=height,width=0.3, tick_label=tick_label,color='gray')
+    for i in container:
+        cor = (i.get_x() + i.get_width() / 2, i.get_height())
+        plt.text(cor[0], cor[1], '%.1f' % cor[1], ha='center', va='bottom', fontsize=11)
+    plt.ylabel('微博月活跃人数（单位：亿）')
+    plt.xlabel('季度')
+    plt.savefig('pic/微博月活跃人数')
+    plt.show()
+    # plt.savefig(fname='D:\Python\Graduation_pj\DjangoVisual\static\images\dfans_num')
+    # plt.close()
 
 
 
 def main():
-    CONN=pymongo.MongoClient('localhost',27017)
-    col=CONN['mongodb_test_1']['post']
-    post=col.find_one({'id':123})
-    text=r"马上飞回国啦！跟老美一起high了几天，挑战了美国南部最大的pizza，25km/h的跑步机，等等等等等，后面慢慢剪出来！<span class=\"url-icon\"><img src=\"//h5.sinaimg.cn/m/emoticon/icon/others/d_doge-d903433c82.png\" style=\"width:1em;height:1em;\" alt=\"[doge]\"></span><span class=\"url-icon\"><img src=\"//h5.sinaimg.cn/m/emoticon/icon/others/d_doge-d903433c82.png\" style=\"width:1em;height:1em;\" alt=\"[doge]\"></span><span class=\"url-icon\"><img src=\"//h5.sinaimg.cn/m/emoticon/icon/others/d_doge-d903433c82.png\" style=\"width:1em;height:1em;\" alt=\"[doge]\"></span> <a data-url=\"http://t.cn/RqzrF15\" href=\"http://weibo.com/p/1001018000117031000000005\" data-hide=\"\"><span class=\"url-icon\"><img src=\"https://h5.sinaimg.cn/upload/2015/09/25/3/timeline_card_small_location_default.png\"></span></i><span class=\"surl-text\">美国·芝加哥</a> ​"
-    print(text)
-    print(clean_text(text))
+    bar()
 if __name__ == '__main__':
     main()

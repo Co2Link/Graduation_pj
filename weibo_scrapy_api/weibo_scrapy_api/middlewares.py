@@ -9,12 +9,25 @@ from scrapy import signals
 from scrapy.exceptions import IgnoreRequest
 from gzip import GzipFile
 from io import BytesIO
+import base64
 import json
 import logging
 def dezip(data):
     buf = BytesIO(data)
     f = GzipFile(fileobj=buf)
     return f.read()
+
+proxyServer = "http://http-dyn.abuyun.com:9020"
+proxyUser = "H4NP63YB53Z83A3D"
+proxyPass = "38B0B9E121802BB5"
+# for Python3
+proxyAuth = "Basic " + base64.urlsafe_b64encode(bytes((proxyUser + ":" + proxyPass), "ascii")).decode("utf8")
+
+class ABProxyMiddleware(object):
+    """ 阿布云ip代理配置 """
+    def process_request(self, request, spider):
+        request.meta["proxy"] = proxyServer
+        request.headers["Proxy-Authorization"] = proxyAuth
 
 class WeiboScrapyApiSpiderMiddleware(object):
     # Not all methods need to be defined. If a method is not defined,
