@@ -4,9 +4,12 @@ import re
 from snownlp import SnowNLP
 import pymongo as pymongo
 import matplotlib.pyplot as plt
+import random
 
 plt.rcParams['font.sans-serif'] = ['SimHei']  # 用来正常显示中文标签
 plt.rcParams['axes.unicode_minus'] = False  # 用来正常显示负号
+
+
 
 def bar():
     height=[2.97,3.13,3.4,3.61,3.76]
@@ -23,8 +26,10 @@ def bar():
     # plt.close()
 
 
-
 def main():
-    bar()
+    # bar()
+    my_list=[1,2,3]
+    print(random.choice(my_list))
+    print(random.randint(1,10))
 if __name__ == '__main__':
     main()

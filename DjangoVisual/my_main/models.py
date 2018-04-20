@@ -104,5 +104,6 @@ class comments_Item_dj(models.Model):
     screen_name=models.CharField(max_length=30)
     post_id=models.CharField(max_length=100)
 
+    score=models.FloatField(default=-1)
     def __str__(self):
         return str(self.id)

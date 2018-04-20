@@ -14,6 +14,7 @@
                         <thead>
                             <th>昵称</th>
                             <th>评论</th>
+                            <th>情感评分</th>
                             <!--<th>粉丝数</th>-->
                             <!--<th>微博数</th>-->
                             <!--<th>认证类型</th>-->
@@ -25,6 +26,7 @@
                             <tr>
                                 <td>{{comment.screen_name}}</td>
                                 <td>{{comment.text|safe}}</td>
+                                <td>{{comment.score}}</td>
                                 <!--<td>{{user.followers_count}}</td>-->
                                 <!--<td>{{user.statuses_count}}</td>-->
                                 <!--<td>{{user.verified_type}}</td>-->

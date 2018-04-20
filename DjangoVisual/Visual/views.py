@@ -4,11 +4,12 @@ from django.views.decorators.csrf import csrf_exempt
 from Visual.ass.matplot_visual import create_pic,sentiment_pic,sentiment_pic_multi
 from scrapyd_api import ScrapydAPI
 from Visual.ass.data import location_count
-import json,time
+import json,time,random
 from Visual.ass.crawl import crawl_weibo,check_user_exist
 from django.views.generic import ListView
 from Visual.ass.my_wordcloud import create_wordcloud,dealHtmlTags
 from django.core.paginator import Paginator,EmptyPage,PageNotAnInteger
+from django.db import transaction
 # Create your views here.
 scrapyd = ScrapydAPI('http://localhost:6800')
 @csrf_exempt
@@ -87,9 +88,6 @@ class weiboView(ListView):
 
 def comments(request,post_id):
     comments_list = comments_Item_dj.objects.filter(post_id=post_id)
-
-    paginator = Paginator(comments_list, 5) # 每页显示 25 个联系人
-
     page = request.GET.get('page')
     # print('page :{}'.format(page))
     if page==None:   ##只在跳转到第一页时更新图片，节省后面翻页时的刷新时间
@@ -99,7 +97,15 @@ def comments(request,post_id):
             text += i.text
             text_list.append(i.text)
         create_wordcloud(text)
-        sentiment_pic(text_list)
+        score_list=sentiment_pic(text_list)
+        start=time.time()
+        with transaction.atomic():
+            for comment, score in zip(comments_list, score_list):
+                comment.score = score
+                comment.save()
+        end=time.time()
+        print('update time cost:{}'.format(str(end-start)))
+    paginator = Paginator(comments_list, 5)  # 每页显示 25 个联系人
     try:
         contacts = paginator.page(page)
     except PageNotAnInteger:
@@ -109,7 +115,6 @@ def comments(request,post_id):
         # 如果用户请求的页码号超过了最大页码号，显示最后一页
         contacts = paginator.page(paginator.num_pages)
     return render(request, 'Visual/comments.html', {'contacts': contacts,'tips':'微博id: {}'.format(post_id),'post_id':post_id})
-
 
 def show(request,id):
     ## 防止在用户一览表中点击正在爬取数据的用户

@@ -175,12 +175,11 @@ class create_pic():
         plt.close()
 
 def sentiment_pic(sent):
-    score=0
+    score_list=[]
     if type(sent)==list:
         for i in sent:
-
-            score += emotion_analyze.sentiment_single(i)
-        score/=len(sent)
+            score_list.append(emotion_analyze.sentiment_single(i))
+        score=sum(score_list)/len(score_list)
     else:
         score=emotion_analyze.sentiment_single(sent)
     plt.rcParams['font.sans-serif'] = ['SimHei']  # 用来正常显示中文标签
@@ -188,8 +187,7 @@ def sentiment_pic(sent):
     plt.pie(x=[score,1-score],labels=['积极度',' '],autopct='%1.1f%%',shadow=False)
     plt.savefig(fname='D:\Python\Graduation_pj\DjangoVisual\static\images\emotion_analyze')
     plt.close()
-
-
+    return score_list
 def sentiment_pic_multi(sent_list):
     ret_list=emotion_analyze.new_multi_process(sent_list)
     avg_score=0
