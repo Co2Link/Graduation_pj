@@ -34,7 +34,6 @@ class zombie_detection():
             self.svc=joblib.load(model)
         else:
             self.svc=svm.LinearSVC(class_weight='balanced')
-
     def get_model(self,mask):
         mean_score=cross_val_score(self.svc,X=np.array(self.X_f)[:, mask],y=self.y,cv=10,scoring='accuracy').mean()
         print('mean_score: {}'.format(mean_score))
@@ -120,7 +119,6 @@ class zombie_detection():
             all_feature=[fans_rate,verified_type_1,verified_type_2,verified_type_3,mb,
                            description_len,number_num,name_len,num_ratio,unique_char_num,
                            name_has_num,raw_feature['follow_count'],raw_feature['followers_count'],raw_feature['statuses_count']]
-
             if mask: #特征选择
                 selected_feature =np.array(all_feature)[mask].tolist()
             else:
@@ -143,7 +141,6 @@ class zombie_detection():
             for ii,count in zip(scores_list,range(len(scores_list))):
                 if i==ii:
                    rank_list.append(count)
-
         if f_num:
             return rank_list[:f_num]
         else:
@@ -184,9 +181,6 @@ class zombie_detection():
         print('time_cost: {}'.format(end_time - start_time))
         print('best: {}'.format(str(result_list[0])))
 
-
-
-
 def main():
     best_mask=[0,1, 2, 3, 4, 5, 11]
     zd=zombie_detection('svc.model',best_mask)
@@ -203,11 +197,6 @@ def main():
     #     if pre==rea['zombie']:
     #         count+=1
     # print(count)
-
-
-
-
-
     # zd.exhaustion()
 
 

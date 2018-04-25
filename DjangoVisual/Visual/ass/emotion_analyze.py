@@ -1,14 +1,9 @@
 from snownlp import sentiment
 from multiprocessing import Pool
+from .my_wordcloud import dealHtmlTags
 from collections import Iterable
 import time
 
-
-# class my_sentiment():
-#     def __init__(self):
-#         s=sentiment.Sentiment()
-#         self.s=s.load('D:/Python/Graduation_pj/DjangoVisual/Visual/ass/sentiment.marshal')
-#     def
 
 s = sentiment.Sentiment()
 s.load('D:/Python/Graduation_pj/DjangoVisual/Visual/ass/sentiment.marshal')
@@ -52,7 +47,8 @@ def sentiment_multiprocess(data_list,thread_num=7):
     return result_list
 
 def sentiment_single(sent):
-    return s.classify(sent)
+    sent=sent.split('//')[0] #去掉转发内容，若只有转发内容，则取转发内容，若为多重转发，则取最近的转发内容
+    return s.classify(dealHtmlTags(sent))
 
 def new_multi_process(data_list,thread_num=7):
     start=time.time()

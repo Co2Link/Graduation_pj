@@ -1,8 +1,10 @@
 from multiprocessing import Process, Queue,Pool
 from snownlp import SnowNLP,sentiment
-import os, time, random
+import time, random,re
 
-ODpath='E:/data/buf/'
+from sklearn.model_selection import train_test_split
+ODpath='E:/data/buf/9/'
+TDpath='E:/data/buf/train/'
 
 # 写数据进程执行的代码:
 def write_new(data_list):
@@ -15,7 +17,6 @@ def write_new(data_list):
         score=s.classify(i)
         ret_list.append({'string':i,'score':score})
     return ret_list
-
 
 # 读数据进程执行的代码:
 
@@ -53,14 +54,74 @@ def cov2unicode(path,sourceEncoding):
     with open(path,'w',encoding='utf-8') as f:
         f.write(buf)
 
+def clean_post(sent):
+    result=re.sub('回复.+?:','',sent)
+    ret=re.sub('@[^ :：]+','',result)
+    ret=re.sub(r'http:[a-zA-Z0-9/._]*','',ret)
+    return ret
+
 def div_set(ratio):
-    with open(ODpath+'neg60000.txt','r',encoding='gbk') as f_neg,open(ODpath+'pos60000.txt','r',encoding='gbk')as f_pos:
+    with open(TDpath+'neg60000.txt','r',encoding='gbk') as f_neg,open(TDpath+'pos60000.txt','r',encoding='gbk')as f_pos:
         pos_list=f_pos.readlines()
         neg_list=f_neg.readlines()
-        pos_tran=random.sample(pos_list,int(len(pos_list)*ratio))
-        neg_tran=random.sample(neg_list,int(len(neg_list)*ratio))
-        pos_test=list(set(pos_list)^set(pos_tran))
-        neg_test=list(set(neg_list)^set(neg_tran))
+        print(neg_list[20])
+        print(neg_list[20].split('//'))
+
+        #去掉转发内容
+        new_pos_list=[]
+        new_neg_list=[]
+        for p in pos_list:
+            sp=p.split('//')
+            if not sp[0] or sp[0]==' ' or sp[0]=='转': #没有内容
+                clean_sent=p
+            else:
+                clean_sent=sp[0].strip()+'\n'
+            clean_sent=clean_post(clean_sent).strip()+'\n'
+            if clean_sent=='\n':                #有内容 但为@的内容
+                new_pos_list.append(p)
+            else:
+                new_pos_list.append(clean_sent)
+        for p in neg_list:
+            sp=p.split('//')
+            if not sp[0] or sp[0]==' ' or sp[0]=='转':
+                clean_sent=p
+            else:
+                clean_sent=sp[0].strip()+'\n'
+            clean_sent=clean_post(clean_sent).strip()+'\n'
+            if clean_sent=='\n':
+                new_neg_list.append(p)
+            else:
+                new_neg_list.append(clean_sent)
+
+        #去掉@名字；回复
+        new_pos_list=[clean_post(i).strip()+'\n' for i in new_pos_list]
+        new_neg_list=[clean_post(i).strip()+'\n' for i in new_neg_list]
+
+        need_ret=1
+        if not need_ret:
+            pass
+        else:
+            new_pos_list = [clean_post(i).strip() + '\n' for i in pos_list]
+            new_neg_list = [clean_post(i).strip() + '\n' for i in neg_list]
+
+        # new_neg_list=neg_list
+        # new_pos_list=pos_list
+
+        #debug
+        with open(ODpath+'new_neg.txt','w',encoding='utf-8') as pt:
+            pt.writelines(new_neg_list)
+        with open(ODpath+'new_pos.txt','w',encoding='utf-8') as pt:
+            pt.writelines(new_pos_list)
+
+        random.seed(10)
+        pos_tran=random.sample(new_pos_list,int(len(new_pos_list)*ratio))
+        neg_tran=random.sample(new_neg_list,int(len(new_neg_list)*ratio))
+        pos_test=list(set(new_pos_list)^set(pos_tran))
+        neg_test=list(set(new_neg_list)^set(neg_tran))
+        print('pos_tran: {}'.format(len(pos_tran)))
+        print('neg_tran: {}'.format(len(neg_tran)))
+        print('pos_test: {}'.format(len(pos_test)))
+        print('neg_tes: {}'.format(len(neg_test)))
         with open(ODpath+'pos_tran.txt','w',encoding='utf-8') as pt:
             pt.writelines(pos_tran)
         with open(ODpath+'pos_test.txt','w',encoding='utf-8') as pt:
@@ -102,18 +163,9 @@ def test():
 
 
 if __name__=='__main__':
-
-    start=time.time()
-    div_set(ratio=0.9)
+    div_set(0.9)
     train()
     test()
-    end=time.time()
-    print('total time cost: {}'.format(str(end-start)))
-    # with open(r'D:\Anaconda2\envs\py3\envs\graduation_pj\Lib\site-packages\snownlp\normal\stopwords.txt','r',encoding='utf-8') as f:
-    #     for i in f.readlines():
-    #         print(i)
-    # my_str='#一毛钱的浪漫#我同学的男朋友在刚跟她谈恋爱的时候，找了她出生的那年的一毛钱硬币，然后一直磨，磨成图片的样子，还专门把1993那里留了下来。――别人的男朋友真好[泪]  via@Gemini???'
-    # print(SnowNLP(my_str).words)
 
 
 
