@@ -26,47 +26,6 @@
                 </div>
             </div>
         </div>
-        {% if post.retweeted_status %}
-        <div class="col-md-6">
-            <div class="card">
-                <div class="header">
-                    <h3 class="title">转发内容</h3>
-                </div>
-                <div class="content">
-                    {% if post %}
-                    </br>
-                    <p>{{post.retweeted_text|safe}}</p>
-                    {% endif %}
-                    <div class="footer">
-                        <div class="stats">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        {% endif %}
-    </div>
-    <div class="row">
-        {% if post %}
-        <div class="col-md-6">
-            <div class="card">
-                <div class="header">
-                    <h3 class="title">关键字</h3>
-                </div>
-                <div class="content">
-                    {% if post %}
-                    </br>
-                    <img src="{% static 'images/single_weibo.png' %}" style="width: 100%; height: 100%">
-                    {% endif %}
-                    <div class="footer">
-                        <div class="stats">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        {% endif %}
-        {% if post %}
         <div class="col-md-6">
             <div class="card">
                 <div class="header">
@@ -84,27 +43,39 @@
                 </div>
             </div>
         </div>
-        {% endif %}
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="header">
+                    <h3 class="title">转发内容</h3>
+                </div>
+                <div class="content">
+                    {% if post.retweeted_status %}
+                    </br>
+                    <p>{{post.retweeted_text|safe}}</p>
+                    {% endif %}
+                    <div class="footer">
+                        <div class="stats">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 {% endblock %}
 {% block nav %}
 <div class="container-fluid">
                 <div class="navbar-header">
-                    <button type="button" class="navbar-toggle">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar bar1"></span>
-                        <span class="icon-bar bar2"></span>
-                        <span class="icon-bar bar3"></span>
-                    </button>
                     <div id="search-form" class="search-form">
                         <form role="search" method="post" id="searchform" action="{% url 'Visual:search_weibo' %}">
                             <input type="search" name="id" placeholder="搜索" required>
-                            <button type="submit"><span class="ion-ios-search-strong"></span></button>
+                            <button class="unit-0" type="submit" role="button"><i class="fa fa-search" aria-hidden="true"></i></button>
                         </form>
                     </div>
                     <div>
-                        <p>{{tips}}</p>
+                        <h4>{{tips}}</h4>
                         {% if post %}
                             <a href="{%url 'Visual:comments' post_id=post.id%}">评论分析</a>
                         {% endif %}

@@ -2,7 +2,7 @@ from snownlp import sentiment
 from multiprocessing import Pool
 from .my_wordcloud import dealHtmlTags
 from collections import Iterable
-import time
+import time,re
 
 
 s = sentiment.Sentiment()
@@ -46,8 +46,20 @@ def sentiment_multiprocess(data_list,thread_num=7):
     print('time cost: {}'.format(str(end-start)))
     return result_list
 
+def clean_post(sent):
+    result=re.sub('回复.+?:','',sent)
+    ret=re.sub('@[^ :：]+','',result)
+    ret=re.sub(r'http:[a-zA-Z0-9/._]*','',ret)
+    return ret
+
+def clean_post(sent):
+    result=re.sub('回复.+?:','',sent)
+    ret=re.sub('@[^ :：]+','',result)
+    ret=re.sub(r'http:[a-zA-Z0-9/._]*','',ret)
+    return ret
+
 def sentiment_single(sent):
-    sent=sent.split('//')[0] #去掉转发内容，若只有转发内容，则取转发内容，若为多重转发，则取最近的转发内容
+    sent=clean_post(sent).strip() #去掉转发内容，若只有转发内容，则取转发内容，若为多重转发，则取最近的转发内容
     return s.classify(dealHtmlTags(sent))
 
 def new_multi_process(data_list,thread_num=7):
@@ -61,10 +73,8 @@ def new_multi_process(data_list,thread_num=7):
     print('time cost: {}'.format(str(end-start)))
     return ret_list
 def main():
-    with open('E:/data/buf/' + 'neg_test.txt', 'r', encoding='utf-8') as f:
-        data_list=f.readlines()
-        print('len of data_list: {}'.format(len(data_list)))
-        sentiment_multiprocess(data_list)
+    my_sen=sentiment.Sentiment()
+    print(my_sen.handle('我爱你啊我爱你'))
 
 
 if __name__ == '__main__':

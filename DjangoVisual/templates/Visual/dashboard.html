@@ -20,7 +20,11 @@
                     <div class="footer">
                         <hr />
                         <div class="stats">
+                            {% if pics %}
                             <b>{{user_info_dict.user_name}}</b>
+                            {% else %}
+                            <b>用户头像</b>
+                            {% endif %}
                         </div>
                     </div>
                 </div>
@@ -205,14 +209,12 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6" >
             <div class="card ">
                 <div class="header">
-                    <h4 class="title">微博关键字</h4>
-                    <!--<p class="category">All products including Taxes</p>-->
+                    <h4 class="title">微博关键词</h4>
                 </div>
                 <div class="content">
-                    <!--<div id="chartActivity" class="ct-chart"></div>-->
                     {%if pics %}
                         <img src="{% static 'images/single_weibo.png' %}" style="width: 100%; height: 100%">
                     {% endif %}
@@ -223,13 +225,7 @@
     <div class="row">
         <div class="col-md-2"></div>
         <div class="col-md-8">
-            <!--<div class="card">-->
-                <!--<div class="header">-->
-                    <!--<h4 class="title">粉丝地区分布</h4>-->
-                    <!--&lt;!&ndash;<p class="category">Last Campaign Performance</p>&ndash;&gt;-->
-                <!--</div>-->
                 <div id="main" style="width:1000px;height:600px"></div>
-            <!--</div>-->
         </div>
         <div class="col-md-2"></div>
     </div>
@@ -239,53 +235,15 @@
 {% block nav %}
 <div class="container-fluid">
                 <div class="navbar-header">
-                    <button type="button" class="navbar-toggle">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar bar1"></span>
-                        <span class="icon-bar bar2"></span>
-                        <span class="icon-bar bar3"></span>
-                    </button>
                     <div id="search-form" class="search-form">
                         <form role="search" method="post" id="searchform" action="{% url 'Visual:search_user' %}">
                             <input type="search" name="id" placeholder="搜索" required>
-                            <button type="submit"><span class="ion-ios-search-strong"></span></button>
+                            <button class="unit-0" type="submit" role="button"><i class="fa fa-search" aria-hidden="true"></i></button>
                         </form>
                     </div>
                     <div>
-                        <p>{{tips}}</p>
+                        <h4>{{tips}}</h4>
                     </div>
-                </div>
-                <div class="collapse navbar-collapse">
-                    <ul class="nav navbar-nav navbar-right">
-                        <!--<li>-->
-                            <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown">-->
-                                <!--<i class="ti-panel"></i>-->
-								<!--<p>Stats</p>-->
-                            <!--</a>-->
-                        <!--</li>-->
-                        <!--<li class="dropdown">-->
-                              <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown">-->
-                                    <!--<i class="ti-bell"></i>-->
-                                    <!--<p class="notification">5</p>-->
-									<!--<p>Notifications</p>-->
-									<!--<b class="caret"></b>-->
-                              <!--</a>-->
-                              <!--<ul class="dropdown-menu">-->
-                                <!--<li><a href="#">Notification 1</a></li>-->
-                                <!--<li><a href="#">Notification 2</a></li>-->
-                                <!--<li><a href="#">Notification 3</a></li>-->
-                                <!--<li><a href="#">Notification 4</a></li>-->
-                                <!--<li><a href="#">Another notification</a></li>-->
-                              <!--</ul>-->
-                        <!--</li>-->
-						<!--<li>-->
-                            <!--<a href="#">-->
-								<!--<i class="ti-settings"></i>-->
-								<!--<p>Settings</p>-->
-                            <!--</a>-->
-                        <!--</li>-->
-                    </ul>
-
                 </div>
             </div>
 {% endblock %}

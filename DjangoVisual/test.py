@@ -6,6 +6,7 @@ import pymongo as pymongo
 import matplotlib.pyplot as plt
 import random,jieba
 from html.parser import HTMLParser
+import math
 
 plt.rcParams['font.sans-serif'] = ['SimHei']  # 用来正常显示中文标签
 plt.rcParams['axes.unicode_minus'] = False  # 用来正常显示负号
@@ -203,5 +204,14 @@ if __name__ == '__main__':
 
     pos_acc = 0.8507819687212511
     neg_acc = 0.8558298792575239
-    my_New(pos_Len,neg_len,pos_acc,neg_acc)
+    my_dict={'a':1,'b':2}
+
+
+    my_sen=sentiment.Sentiment()
+    my_sen.load(fname="D:/Python/Graduation_pj/DjangoVisual/Visual/ass/sentiment.marshal")
+    my_str='我爱你啊 我爱你'
+    print(my_sen.handle(my_str))
+    kk=my_sen.classify(my_str)
+    print(kk)
     # main()
+

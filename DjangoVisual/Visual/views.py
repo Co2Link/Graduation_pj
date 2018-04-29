@@ -101,7 +101,7 @@ def comments(request,post_id):
         start=time.time()
         with transaction.atomic():
             for comment, score in zip(comments_list, score_list):
-                comment.score = score
+                comment.score = round(score,3)
                 comment.save()
         end=time.time()
         print('update time cost:{}'.format(str(end-start)))
@@ -119,6 +119,7 @@ def comments(request,post_id):
 def show(request,id):
     ## 防止在用户一览表中点击正在爬取数据的用户
     result = ScrapyItem.objects.filter(id=id)
+    print(result)
     status = scrapyd.job_status('default', result[0].task_id)
     if status == 'running':
         return render(request, 'Visual/dashboard.html', context={'tips': '爬取数据中，请等待', 'pics': False})

@@ -12,8 +12,9 @@ import time
 from operator import itemgetter
 
 #1104+600测出来的最佳mask
-best_mask=[0, 2, 3, 5, 6, 10, 11]
-best_mask_2=[0, 2, 3, 4, 5, 6, 10, 11, 13]
+# best_mask=[0, 2, 3, 5, 6, 10, 11]
+# best_mask=[0, 2, 3, 4, 5, 6, 10, 11, 13]
+best_mask=[0, 2, 5, 13]
 class zombie_detection():
     def __init__(self,model=None,mask=None):
         #db
@@ -22,7 +23,8 @@ class zombie_detection():
         data_list=list(self.fans.find())
         ### new
         self.new_fans=self.CONN['new_label']['new_fans']
-        data_list+=list(self.new_fans.find())[:100]
+        random.seed(100)
+        data_list+=random.sample(list(self.new_fans.find()),100)
         ###
 
         # self.data_list=random.sample(data_list,len(data_list))  #乱序
@@ -33,8 +35,8 @@ class zombie_detection():
             self.y.append(i['zombie'])
 
         #划分数据集
-        self.X_train,self.X_test,self.y_train,self.y_test=train_test_split(self.X,self.y,test_size=0.2)
-        self.X_T,self.X_V,self.y_T,self.y_V=train_test_split(self.X_train,self.y_train,test_size=0.2)
+        self.X_train,self.X_test,self.y_train,self.y_test=train_test_split(self.X,self.y,test_size=0.1,random_state=20)
+        self.X_T,self.X_V,self.y_T,self.y_V=train_test_split(self.X_train,self.y_train,test_size=0.1,random_state=20)
 
         #特征抽取
         X_f = self.feature_extraction(self.X_train,mask)
@@ -92,7 +94,7 @@ class zombie_detection():
         train_rate=correct_count/len(self.y_T)
         print('train correct rate: {}'.format(str(train_rate)))
 
-        return {'test':round(test_rate,3),'val':round(val_rate,3),'train':round(train_rate,3),'P':round(P,3),'R':round(R,3),'F':round(F,3)}
+        return {'test':round(test_rate,3),'val':round(mean_score,3),'train':round(train_rate,3),'P':round(P,3),'R':round(R,3),'F':round(F,3)}
     def predict(self,people):
         if type(people)==list:
             X_f = self.feature_extraction(people, mask=self.mask)
@@ -242,7 +244,10 @@ def main():
     # test_1()
     # test_2()
 
-    multi_test(best_mask_2)
+    zd=zombie_detection()
+    # mask=zd.exhaustion()
+
+    print(zd.get_model(mask=best_mask,model_name='svc.model'))
 
 
 

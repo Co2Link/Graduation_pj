@@ -94,8 +94,8 @@ def div_set(ratio):
                 new_neg_list.append(clean_sent)
 
         #去掉@名字；回复
-        new_pos_list=[clean_post(i).strip()+'\n' for i in new_pos_list]
-        new_neg_list=[clean_post(i).strip()+'\n' for i in new_neg_list]
+        # new_pos_list=[clean_post(i).strip()+'\n' for i in new_pos_list]
+        # new_neg_list=[clean_post(i).strip()+'\n' for i in new_neg_list]
 
         need_ret=1
         if not need_ret:
@@ -164,8 +164,8 @@ def test():
 
 if __name__=='__main__':
     div_set(0.9)
-    train()
-    test()
+    # train()
+    # test()
 
 
 

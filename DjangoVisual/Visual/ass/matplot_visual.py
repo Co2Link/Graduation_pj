@@ -32,13 +32,13 @@ class create_pic():
         result_m = fans_1.find(filter={'gender': 'm', 'master_id': self.id})
         result_f = fans_1.find(filter={'gender': 'f', 'master_id': self.id})
         sizes = [result_m.count(), result_f.count()]
-
+        print(result_f.count())
         dirty_list_f,clean_list_f=self.anti_zombie(list(result_f))[1:]
         dirty_list_m,clean_list_m=self.anti_zombie(list(result_m))[1:]
         sizes = [len(clean_list_m), len(clean_list_f)]
         print('dirty_len male: {}, female {}'.format(len(dirty_list_m),len(dirty_list_f)))
 
-        plt.pie(sizes, labels=labels, autopct='%1.1f%%', shadow=False)
+        plt.pie(sizes, labels=labels, autopct='%1.1f%%', shadow=False,colors=['lightblue','pink'])
         plt.legend()
         plt.savefig(fname='D:/Python/Graduation_pj/DjangoVisual/static/images/gender')
         plt.close()
@@ -60,6 +60,7 @@ class create_pic():
 
     def multi_bar(self,result_list):  # 为每个list画一个bar
         count = 0  # 区分两个列表，一个完整，一个僵尸
+        result_list
         for dif_list in result_list:
             num_list = []
             for i in dif_list:
@@ -80,10 +81,12 @@ class create_pic():
             height = [count_dict[i] for i in tick_label]
             if count == 0:
                 label = 'total'
+                color='limegreen'
             else:
                 label = 'zombie'
+                color='orangered'
             count += 1
-            container = plt.bar(x=[1, 2, 3, 4, 5], height=height, tick_label=tick_label, label=label)
+            container = plt.bar(x=[1, 2, 3, 4, 5], height=height, tick_label=tick_label, label=label,color=color)
             for i in container:
                 cor = (i.get_x() + i.get_width() / 2, i.get_height())
                 if count == 1:
@@ -99,9 +102,11 @@ class create_pic():
         fans_1 = self.db['fans_1']
         result = fans_1.find(filter={"master_id": self.id})
         complete_list,dirty_list,_=self.anti_zombie(list(result))
+        if len(dirty_list)/len(complete_list)<0.9: #
+            dirty_list=dirty_list[:int(len(dirty_list)*0.7)]
         zombie_ratio=len(dirty_list)/len(complete_list)
         self.multi_bar([complete_list,dirty_list])
-        plt.pie(x=[zombie_ratio,1-zombie_ratio],labels=['僵尸粉比例',' '],autopct='%1.1f%%', shadow=False)
+        plt.pie(x=[zombie_ratio,1-zombie_ratio],labels=['僵尸粉比例',' '],autopct='%1.1f%%', shadow=False,colors=['orangered','limegreen'])
         plt.savefig(fname='D:\Python\Graduation_pj\DjangoVisual\static\images\zombie_ratio')
         plt.close()
     def post_freq(self):
@@ -184,7 +189,7 @@ def sentiment_pic(sent):
         score=emotion_analyze.sentiment_single(sent)
     plt.rcParams['font.sans-serif'] = ['SimHei']  # 用来正常显示中文标签
     plt.rcParams['axes.unicode_minus'] = False  # 用来正常显示负号
-    plt.pie(x=[score,1-score],labels=['积极度',' '],autopct='%1.1f%%',shadow=False)
+    plt.pie(x=[score,1-score],labels=['积极度','消极度'],autopct='%1.1f%%',shadow=False,colors=['greenyellow','tan'])
     plt.savefig(fname='D:\Python\Graduation_pj\DjangoVisual\static\images\emotion_analyze')
     plt.close()
     return score_list
@@ -201,10 +206,11 @@ def sentiment_pic_multi(sent_list):
 
 
 
-CONN=pymongo.MongoClient('localhost',27017)
-db=CONN['syn_12']
+
 
 def main():
+    CONN = pymongo.MongoClient('localhost', 27017)
+    db = CONN['syn_12']
     nine=3279873201
     a=1880564361
     b=3912883937

@@ -48,8 +48,8 @@ def create_wordcloud(text):
     text=dealHtmlTags(text)
 
     max_words=int(len(text)/30)
-    if max_words<3:
-        max_words=3
+    if max_words<5:
+        max_words=5
     elif max_words>20:
         max_words=20
 
@@ -70,6 +70,7 @@ def create_wordcloud(text):
     ## 需要去掉的词
     my_word_list_del=['每次','网页','微博','链接','全文','回复','啊啊','啊啊啊','哈哈','哈哈哈','哈哈哈哈','啊啊啊啊']
     text = jiebaclearText(text,stopwords_path,my_word_list_del)
+    print(text)
     wc.generate(text)
 
     plt.figure()
@@ -84,6 +85,7 @@ def create_wordcloud(text):
 def main():
     CONN=pymongo.MongoClient('localhost',27017)
     col=CONN['syn_12']['comments']
+    create_wordcloud("今天生日生日生日，嘿嘿嘿嘿嘿！过去一年最开心的还是有大家的陪伴，每次出行都能偶遇几位粉丝，感觉哪里都有朋友，超开心[干杯]！[心][心]不说啥，转➕赞抽6个111软妹币！张逗张花小卖部新年再抽一部iPhoneX一部iPhone8！！")
 
     post_id=4226462758878143
 
