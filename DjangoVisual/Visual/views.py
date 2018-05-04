@@ -31,7 +31,7 @@ def search_user(request):
                 return render(request,'Visual/dashboard.html',context={'tips':'爬取数据中，请等待','pics':False})
             else:
                 creation=create_pic(id)
-                creation.gender()
+                gender=creation.gender()
                 creation.fans_num()
                 creation.post_freq()
                 creation.get_pic()
@@ -61,7 +61,7 @@ def search_user(request):
                                 'location':user.location,'follow_count':user.follow_count,
                                 'followers_count':user.followers_count,'gender':dgender,
                                 'statuses_count':user.statuses_count,'verified_type':verified_type}
-                return render(request, 'Visual/dashboard.html', context={'tips': '用户id: {}'.format(id), 'pics': True,'user_info_dict':user_info_dict,'option_js':json.dumps(location_count(id))})
+                return render(request, 'Visual/dashboard.html', context={'tips': '用户id: {}'.format(id), 'pics': True,'gender':gender,'user_info_dict':user_info_dict,'option_js':json.dumps(location_count(id))})
         else:
             task = scrapyd.schedule('default', 'fans', id=id)
             item=ScrapyItem(id=id,task_id=task)
@@ -126,7 +126,7 @@ def show(request,id):
     ##pic
     start=time.time()
     creation = create_pic(id)
-    creation.gender()
+    gender=creation.gender()
     creation.fans_num()
     creation.post_freq()
     creation.get_pic()
@@ -158,7 +158,7 @@ def show(request,id):
                       'followers_count': user.followers_count, 'gender': dgender,
                       'statuses_count': user.statuses_count, 'verified_type': verified_type}
     return render(request, 'Visual/dashboard.html',
-                  context={'tips': '用户id: {}'.format(id), 'pics': True, 'user_info_dict': user_info_dict,
+                  context={'tips': '用户id: {}'.format(id), 'pics': True, 'user_info_dict': user_info_dict,'gender':gender,
                            'option_js': json.dumps(location_count(id))})
 @csrf_exempt
 def search_weibo(request):

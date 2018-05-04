@@ -12,9 +12,9 @@ import time
 from operator import itemgetter
 
 #1104+600测出来的最佳mask
-# best_mask=[0, 2, 3, 5, 6, 10, 11]
+best_mask=[0, 2, 3, 4, 5, 6, 10, 11,14]
 # best_mask=[0, 2, 3, 4, 5, 6, 10, 11, 13]
-best_mask=[0, 2, 5, 13]
+# best_mask=[0, 2, 5, 13]
 class zombie_detection():
     def __init__(self,model=None,mask=None):
         #db
@@ -23,8 +23,8 @@ class zombie_detection():
         data_list=list(self.fans.find())
         ### new
         self.new_fans=self.CONN['new_label']['new_fans']
-        random.seed(100)
-        data_list+=random.sample(list(self.new_fans.find()),100)
+        random.seed(200)
+        data_list+=random.sample(list(self.new_fans.find()),150)
         ###
 
         # self.data_list=random.sample(data_list,len(data_list))  #乱序
@@ -35,8 +35,8 @@ class zombie_detection():
             self.y.append(i['zombie'])
 
         #划分数据集
-        self.X_train,self.X_test,self.y_train,self.y_test=train_test_split(self.X,self.y,test_size=0.1,random_state=20)
-        self.X_T,self.X_V,self.y_T,self.y_V=train_test_split(self.X_train,self.y_train,test_size=0.1,random_state=20)
+        self.X_train,self.X_test,self.y_train,self.y_test=train_test_split(self.X,self.y,test_size=0.1,random_state=30)
+        self.X_T,self.X_V,self.y_T,self.y_V=train_test_split(self.X_train,self.y_train,test_size=0.1,random_state=30)
 
         #特征抽取
         X_f = self.feature_extraction(self.X_train,mask)
@@ -134,6 +134,13 @@ class zombie_detection():
             if fans_rate > 10:
                 fans_rate = 10
 
+            #followers_num_spec
+            if raw_feature['followers_count']<10:
+                folowers_num_spec=1
+            else:
+                folowers_num_spec=0
+
+
             # number_num
             name = raw_feature['screen_name']
             if name=='':
@@ -173,7 +180,7 @@ class zombie_detection():
 
             all_feature=[fans_rate,verified_type_1,verified_type_2,verified_type_3,mb,
                            description_len,number_num,name_len,num_ratio,unique_char_num,
-                           name_has_num,raw_feature['follow_count'],raw_feature['followers_count'],raw_feature['statuses_count']]
+                           name_has_num,raw_feature['follow_count'],raw_feature['followers_count'],raw_feature['statuses_count'],folowers_num_spec]
 
             if mask: #特征选择
                 selected_feature =np.array(all_feature)[mask].tolist()
@@ -244,10 +251,33 @@ def main():
     # test_1()
     # test_2()
 
-    zd=zombie_detection()
-    # mask=zd.exhaustion()
 
-    print(zd.get_model(mask=best_mask,model_name='svc.model'))
+    # mask=zd.exhaustion()
+    re_list=[]
+    for i in range(1):
+        zd = zombie_detection()
+        re_list.append(zd.get_model(mask=best_mask,model_name='svc.model'))
+    test=0
+    val=0
+    train=0
+    P=0
+    R=0
+    F=0
+    for i in re_list:
+        test+=i['test']
+        val+=i['val']
+        train+=i['train']
+        P+=i['P']
+        R+=i["R"]
+        F+=i['F']
+    print('test: {}'.format(test/len(re_list)))
+    print('val: {}'.format(val/len(re_list)))
+    print('train: {}'.format(train/len(re_list)))
+    print('P: {}'.format(P/len(re_list)))
+    print('R: {}'.format(R/len(re_list)))
+    print('F: {}'.format(F/len(re_list)))
+
+    # print(zd.get_model(mask=best_mask,model_name='svc.model'))
 
 
 
@@ -281,13 +311,19 @@ def main():
 
 
     #test new_zombie
-    # count=0
-    # fans_list=list(new_zombie.find())
-    # predict_list=zd.predict(fans_list)
-    # for pre,rea in zip(predict_list,fans_list):
-    #     if pre==rea['zombie']:
-    #         count+=1
-    # print(count/len(predict_list))
+    count=0
+    zd=zombie_detection(r'D:\Python\Graduation_pj\DjangoVisual\Visual\ass\svc.model',best_mask)
+    new_zombie=pymongo.MongoClient('localhost',27017)['new_label']['new_fans']
+    fans_list=list(new_zombie.find())
+    predict_list=zd.predict(fans_list)
+    for pre,rea in zip(predict_list,fans_list):
+        if pre==rea['zombie']:
+            count+=1
+            new_zombie.find_one_and_update(filter={'sid':rea['sid']},update={'$set':{'predict':True}})
+        else:
+            new_zombie.find_one_and_update(filter={'sid':rea['sid']},update={'$set':{'predict':False}})
+            print(rea['sid'])
+    print(count/len(predict_list))
 
 
     # new

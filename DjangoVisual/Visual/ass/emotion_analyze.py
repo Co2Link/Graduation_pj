@@ -59,8 +59,8 @@ def clean_post(sent):
     return ret
 
 def sentiment_single(sent):
-    sent=clean_post(sent).strip() #去掉转发内容，若只有转发内容，则取转发内容，若为多重转发，则取最近的转发内容
-    return s.classify(dealHtmlTags(sent))
+    sent=clean_post(dealHtmlTags(sent)).strip() #去掉转发内容，若只有转发内容，则取转发内容，若为多重转发，则取最近的转发内容
+    return s.classify(sent)
 
 def new_multi_process(data_list,thread_num=7):
     start=time.time()
